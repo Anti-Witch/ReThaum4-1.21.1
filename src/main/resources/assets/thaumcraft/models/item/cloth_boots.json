@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/clothboots",
+    "layer1": "thaumcraft:item/clothbootsover"
+  }
+}

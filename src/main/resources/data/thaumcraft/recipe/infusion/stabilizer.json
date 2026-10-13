@@ -1,0 +1,36 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "INFUSION",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:pedestal_arcane"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "aspects": {
+    "ordo": 50,
+    "praecantatio": 30,
+    "machina": 20
+  },
+  "result": {
+    "id": "thaumcraft:stabilizer"
+  }
+}

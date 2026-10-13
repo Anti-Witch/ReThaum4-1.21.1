@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "": [
+            { "model": "thaumcraft:block/ancient_stone" },
+            { "model": "thaumcraft:block/ancient_stone", "x": 90 },
+            { "model": "thaumcraft:block/ancient_stone", "x": 180 },
+            { "model": "thaumcraft:block/ancient_stone", "x": 270 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 90 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 180 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 270 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 90, "x": 90 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 90, "x": 180 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 90, "x": 270 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 180, "x": 90 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 180, "x": 180 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 180, "x": 270 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 270, "x": 90 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 270, "x": 180 },
+            { "model": "thaumcraft:block/ancient_stone", "y": 270, "x": 270 }
+        ]
+    }
+}

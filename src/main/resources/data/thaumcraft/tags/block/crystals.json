@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:crystal_air",
+    "thaumcraft:crystal_fire",
+    "thaumcraft:crystal_water",
+    "thaumcraft:crystal_earth",
+    "thaumcraft:crystal_order",
+    "thaumcraft:crystal_entropy"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumcraft:block/brain_box",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "thaumcraft:block/brain_box",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "thaumcraft:block/brain_box",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumcraft:block/brain_box",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

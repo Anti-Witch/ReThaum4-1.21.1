@@ -1,0 +1,74 @@
+{
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "thaumcraft:block/brainbox",
+    "box": "thaumcraft:block/brainbox"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        3,
+        3
+      ],
+      "to": [
+        13,
+        13,
+        13
+      ],
+      "faces": {
+        "down": {
+          "texture": "#box"
+        },
+        "up": {
+          "texture": "#box"
+        },
+        "west": {
+          "texture": "#box"
+        },
+        "north": {
+          "texture": "#box"
+        },
+        "east": {
+          "texture": "#box"
+        },
+        "south": {
+          "texture": "#box"
+        }
+      }
+    },
+    {
+      "from": [
+        6,
+        13,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "down": {
+          "texture": "#box"
+        },
+        "up": {
+          "texture": "#box"
+        },
+        "west": {
+          "texture": "#box"
+        },
+        "north": {
+          "texture": "#box"
+        },
+        "east": {
+          "texture": "#box"
+        },
+        "south": {
+          "texture": "#box"
+        }
+      }
+    }
+  ]
+}

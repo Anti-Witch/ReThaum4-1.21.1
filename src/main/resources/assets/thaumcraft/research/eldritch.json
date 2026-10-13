@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "key": "BASEELDRITCH",
+      "name": "research.BASEELDRITCH.title",
+      "icons": [
+        "thaumcraft:void_seed"
+      ],
+      "category": "ELDRITCH",
+      "location": [
+        0,
+        0
+      ],
+      "parents": [
+        "METALLURGY",
+        "UNLOCKELDRITCH"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "stages": [
+        {
+          "text": "research.BASEELDRITCH.stage.1",
+          "required_knowledge": [
+            "THEORY;BASICS;1",
+            "THEORY;ALCHEMY;1",
+            "THEORY;ELDRITCH;1"
+          ],
+          "warp": 2
+        },
+        {
+          "text": "research.BASEELDRITCH.stage.2",
+          "recipes": [
+            "thaumcraft:voidingot",
+            "thaumcraft:void_stuff"
+          ]
+        }
+      ]
+    },
+    
+    
+    {
+      "key": "VOIDROBEARMOR",
+      "name": "research.VOIDROBEARMOR.title",
+      "icons": [
+        "thaumcraft:void_robe_helm"
+      ],
+      "category": "ELDRITCH",
+      "location": [
+        0,
+        3
+      ],
+      "parents": [
+        "BASEELDRITCH",
+        "ARMORFORTRESS"
+      ],
+      "stages": [
+        {
+          "text": "research.VOIDROBEARMOR.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;ELDRITCH;1",
+            "THEORY;ELDRITCH;1"
+          ],
+          "warp": 1
+        },
+        {
+          "text": "research.VOIDROBEARMOR.stage.2",
+          "recipes": [
+            "thaumcraft:void_robe_helm",
+            "thaumcraft:void_robe_chest",
+            "thaumcraft:void_robe_legs"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PRIMALCRUSHER",
+      "name": "research.PRIMALCRUSHER.title",
+      "icons": [
+        "thaumcraft:primal_crusher"
+      ],
+      "category": "ELDRITCH",
+      "location": [
+        0,
+        -3
+      ],
+      "parents": [
+        "BASEELDRITCH",
+        "ELEMENTALTOOLS"
+      ],
+      "stages": [
+        {
+          "text": "research.PRIMALCRUSHER.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;ELDRITCH;1",
+            "THEORY;ELDRITCH;1"
+          ],
+          "warp": 1
+        },
+        {
+          "text": "research.PRIMALCRUSHER.stage.2",
+          "recipes": [
+            "thaumcraft:primal_crusher"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_primal_staff",
+      "name": "tc.research_name.ROD_primal_staff",
+      "icons": [
+        "thaumcraft:wand_rod_primal_staff"
+      ],
+      "category": "ELDRITCH",
+      "location": [
+        3,
+        3
+      ],
+      "parents": [
+        "BASEELDRITCH",
+        "ROD_silverwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "aer",
+        "ignis",
+        "aqua",
+        "terra",
+        "ordo",
+        "perditio",
+        "instrumentum",
+        "praecantatio"
+      ],
+      "complexity": 3,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_primal_staff.1",
+          "warp": 3,
+          "recipes": [
+            "thaumcraft:wand_rod_primal_staff"
+          ]
+        }
+      ]
+    }
+  ]
+}

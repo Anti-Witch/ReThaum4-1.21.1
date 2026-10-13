@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "thaumcraft:block/silverwoodside",
+    "end": "thaumcraft:block/silverwoodtop"
+  }
+}

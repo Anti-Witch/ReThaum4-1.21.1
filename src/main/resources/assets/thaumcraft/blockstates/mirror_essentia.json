@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=east,linked=false":  { "model": "thaumcraft:block/mirror_essentia", "y": 90 },
+        "facing=west,linked=false":  { "model": "thaumcraft:block/mirror_essentia", "y": 270 },
+        "facing=north,linked=false": { "model": "thaumcraft:block/mirror_essentia" },
+        "facing=south,linked=false": { "model": "thaumcraft:block/mirror_essentia", "y": 180 },
+        "facing=east,linked=true":   { "model": "thaumcraft:block/mirror_essentia_on", "y": 90 },
+        "facing=west,linked=true":   { "model": "thaumcraft:block/mirror_essentia_on", "y": 270 },
+        "facing=north,linked=true":  { "model": "thaumcraft:block/mirror_essentia_on" },
+        "facing=south,linked=true":  { "model": "thaumcraft:block/mirror_essentia_on", "y": 180 }
+    }
+}

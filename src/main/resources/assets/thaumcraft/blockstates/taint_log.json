@@ -1,0 +1,13 @@
+{
+    "variants": {
+        "axis=x": [
+            { "model": "thaumcraft:block/log_taintwood", "x": 90, "y": 90 }
+        ],
+        "axis=y": [
+            { "model": "thaumcraft:block/log_taintwood" }
+        ],
+        "axis=z": [
+            { "model": "thaumcraft:block/log_taintwood", "x": 90 }
+        ]
+    }
+}

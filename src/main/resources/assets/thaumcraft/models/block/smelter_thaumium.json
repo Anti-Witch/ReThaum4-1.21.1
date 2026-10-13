@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumcraft:block/smelter_top",
+    "top": "thaumcraft:block/smelter_top",
+    "side": "thaumcraft:block/smelter_thaumium_side"
+  }
+}

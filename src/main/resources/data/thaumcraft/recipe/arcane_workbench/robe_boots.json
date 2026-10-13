@@ -1,0 +1,18 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "INFUSION",
+  "vis": 100,
+  "crystals": {},
+  "pattern": [
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "thaumcraft:enchanted_fabric"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:cloth_boots"
+  }
+}

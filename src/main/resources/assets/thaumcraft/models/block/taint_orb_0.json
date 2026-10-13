@@ -1,0 +1,36 @@
+{
+  "render_type": "minecraft:translucent",
+    "textures": {
+        "particle": "thaumcraft:block/taint_over_1",
+        "side1": "thaumcraft:block/taint_over_1",
+        "side2": "thaumcraft:block/taint_spore_stalk_1"
+    },
+    "elements": [
+        {
+            "from": [2,0,2],
+            "to": [12,10,12],
+            "faces": {
+                "up": {
+                    "uv": [0,0,10,10],
+                    "texture": "#side1"
+                },
+                "west": {
+                    "uv": [0,0,10,10],
+                    "texture": "#side1"
+                },
+                "east": {
+                    "uv": [0,0,10,10],
+                    "texture": "#side1"
+                },
+                "north": {
+                    "uv": [0,0,10,10],
+                    "texture": "#side1"
+                },
+                "south": {
+                    "uv": [0,0,10,10],
+                    "texture": "#side1"
+                }
+            }
+        }
+    ]
+}

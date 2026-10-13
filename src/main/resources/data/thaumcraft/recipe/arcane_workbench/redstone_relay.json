@@ -1,0 +1,27 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICARTIFACE",
+  "vis": 10,
+  "crystals": {
+    "ordo": 1
+  },
+  "pattern": [
+    "   ",
+    "TGT",
+    "SSS"
+  ],
+  "key": {
+    "T": {
+      "item": "minecraft:redstone_torch"
+    },
+    "G": {
+      "item": "thaumcraft:mechanism_simple"
+    },
+    "S": {
+      "item": "minecraft:stone_slab"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:redstone_relay"
+  }
+}

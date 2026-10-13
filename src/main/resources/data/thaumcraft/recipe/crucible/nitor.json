@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "CRUCIBLE",
+  "catalyst": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "aspects": {
+    "lux": 10,
+    "ignis": 10,
+    "potentia": 5
+  },
+  "result": {
+    "id": "thaumcraft:nitor",
+    "count": 1
+  }
+}

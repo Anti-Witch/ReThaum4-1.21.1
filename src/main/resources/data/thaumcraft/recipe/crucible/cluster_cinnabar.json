@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "CRUCIBLE",
+  "catalyst": {
+    "item": "thaumcraft:cinnabar_ore"
+  },
+  "aspects": {
+    "metallum": 5,
+    "ordo": 5
+  },
+  "result": {
+    "id": "thaumcraft:cluster_cinnabar"
+  }
+}

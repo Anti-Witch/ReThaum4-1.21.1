@@ -1,0 +1,52 @@
+{
+    "variants": {
+        "type=amulet_mundane": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/bauble_amulet"
+            }
+        },
+        "type=ring_mundane": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/bauble_ring"
+            }
+        },
+        "type=girdle_mundane": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/bauble_belt"
+            }
+        },
+        "type=ring_apprentice": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/ring_apprentice"
+            }
+        },
+        "type=amulet_fancy": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/amulet_fancy"
+            }
+        },
+        "type=ring_fancy": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/ring_fancy"
+            }
+        },
+        "type=girdle_fancy": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/girdle_fancy"
+            }
+        },
+        "": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/bauble_amulet"
+            }
+        }
+    }
+}

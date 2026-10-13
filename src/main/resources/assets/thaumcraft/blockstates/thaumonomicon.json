@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "type=cheat": {
+      "model": "thaumcraft:item/thaumonomicon_cheat"
+    },
+    "": {
+      "model": "thaumcraft:item/thaumonomicon"
+    }
+  }
+}

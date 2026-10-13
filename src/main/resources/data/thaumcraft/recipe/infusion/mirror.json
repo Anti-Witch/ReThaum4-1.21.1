@@ -1,0 +1,29 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "MIRROR",
+  "instability": 1,
+  "input": {
+    "item": "thaumcraft:mirrored_glass"
+  },
+  "ingredients": [
+    {
+      "tag": "c:ingots/gold"
+    },
+    {
+      "tag": "c:ingots/gold"
+    },
+    {
+      "tag": "c:ingots/gold"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "aspects": {
+    "motus": 25,
+    "tenebrae": 25,
+    "permutatio": 25
+  },
+  "result": {"id": "thaumcraft:mirror_item"
+  }
+}

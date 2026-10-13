@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=brass": {
+      "model": "thaumcraft:item/brass_ingot"
+    },
+    "type=thaumium": {
+      "model": "thaumcraft:item/thaumium_ingot"
+    },
+    "type=void": {
+      "model": "thaumcraft:item/void_metal_ingot"
+    },
+    "": {
+      "model": "thaumcraft:item/brass_ingot"
+    }
+  }
+}

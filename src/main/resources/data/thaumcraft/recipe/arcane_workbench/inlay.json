@@ -1,0 +1,21 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "INFUSION",
+  "vis": 25,
+  "aspects": {
+    "ordo": 1
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "GGG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:nuggets/gold"
+    }
+  },
+  "result": {"id": "thaumcraft:inlay",
+    "count": 8
+  }
+}

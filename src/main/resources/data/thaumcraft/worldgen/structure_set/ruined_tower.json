@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "thaumcraft:ruined_tower",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 384,
+    "spacing": 12,
+    "separation": 6
+  }
+}

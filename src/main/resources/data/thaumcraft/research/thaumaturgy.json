@@ -1,0 +1,1415 @@
+{
+  "entries": [
+    {
+      "key": "BASICTHAUMATURGY",
+      "name": "tc.research_name.BASICTHAUMATURGY",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand"
+      ],
+      "location": [
+        0,
+        0
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.BASICTHAUMATURGY.1"
+        },
+        {
+          "text": "tc.research_page.BASICTHAUMATURGY.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/cap_iron"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/wand_basic"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSFIRE",
+      "name": "tc.research_name.FOCUSFIRE",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_fire"
+      ],
+      "location": [
+        2,
+        -2
+      ],
+      "aspects": [
+        "ignis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BASICTHAUMATURGY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSFIRE.1"
+        },
+        {
+          "text": "tc.research_page.FOCUSFIRE.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSFROST",
+      "name": "tc.research_name.FOCUSFROST",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_frost"
+      ],
+      "location": [
+        1,
+        -5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "praecantatio:3",
+        "gelum:6"
+      ],
+      "complexity": 1,
+      "parents": [
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSFROST.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSHELLBAT",
+      "name": "tc.research_name.FOCUSHELLBAT",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:textures/foci/vampirebats.png"
+      ],
+      "location": [
+        3,
+        -7
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "iter:3",
+        "bestia:6",
+        "ignis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents_hidden": [
+        "FOCUSFIRE",
+        "INFUSION"
+      ],
+      "triggers": {
+        "entities": [
+          "Firebat"
+        ],
+        "aspects": [
+          "ignis"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSHELLBAT.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSEXCAVATION",
+      "name": "tc.research_name.FOCUSEXCAVATION",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_excavation"
+      ],
+      "location": [
+        0,
+        -3
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "terra:3",
+        "perditio:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSEXCAVATION.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSWARDING",
+      "name": "tc.research_name.FOCUSWARDING",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_warding"
+      ],
+      "location": [
+        -2,
+        -4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "terra:6",
+        "tutamen:3",
+        "ordo:3",
+        "cognitio:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "FOCUSEXCAVATION",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSWARDING.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSSHOCK",
+      "name": "tc.research_name.FOCUSSHOCK",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_shock"
+      ],
+      "location": [
+        3,
+        -5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aer:3",
+        "potentia:6",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSSHOCK.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSTRADE",
+      "name": "tc.research_name.FOCUSTRADE",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_equal_trade"
+      ],
+      "location": [
+        4,
+        -3
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "terra:3",
+        "permutatio:6",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSTRADE.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPORTABLEHOLE",
+      "name": "tc.research_name.FOCUSPORTABLEHOLE",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_portable_hole"
+      ],
+      "location": [
+        7,
+        -2
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "iter:3",
+        "perditio:3",
+        "alienis:6",
+        "aer:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "FOCUSTRADE",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSPORTABLEHOLE.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPOUCH",
+      "name": "tc.research_name.FOCUSPOUCH",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focus_pouch"
+      ],
+      "location": [
+        4,
+        -1
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "vacuos:6",
+        "praecantatio:3",
+        "instrumentum:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSPOUCH.1"
+        }
+      ]
+    },
+    {
+      "key": "CAP_iron",
+      "name": "tc.research_name.CAP_iron",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "meta": [
+        "AUTOUNLOCK"
+      ]
+    },
+    {
+      "key": "CAP_gold",
+      "name": "tc.research_name.CAP_gold",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_cap_gold"
+      ],
+      "location": [
+        3,
+        2
+      ],
+      "aspects": [
+        "metallum:3",
+        "lucrum:3",
+        "instrumentum:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BASICTHAUMATURGY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_gold.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/cap_gold"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CAP_thaumium",
+      "name": "tc.research_name.CAP_thaumium",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_cap_thaumium"
+      ],
+      "location": [
+        5,
+        4
+      ],
+      "aspects": [
+        "metallum:6",
+        "praecantatio:6",
+        "instrumentum:3",
+        "auram:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "CAP_gold",
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_thaumium.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/cap_thaumium_inert"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/cap_thaumium"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CAP_copper",
+      "name": "tc.research_name.CAP_copper",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_cap_copper"
+      ],
+      "location": [
+        2,
+        0
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:3",
+        "instrumentum:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BASICTHAUMATURGY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_copper.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/cap_copper"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CAP_silver",
+      "name": "tc.research_name.CAP_silver",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_cap_silver"
+      ],
+      "location": [
+        5,
+        1
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "metallum:3",
+        "lucrum:3",
+        "instrumentum:3",
+        "auram:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CAP_gold",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_silver.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/cap_silver_inert"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/cap_silver"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_wood",
+      "name": "tc.research_name.ROD_wood",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "meta": [
+        "AUTOUNLOCK"
+      ]
+    },
+    {
+      "key": "ROD_greatwood",
+      "name": "tc.research_name.ROD_greatwood",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_greatwood"
+      ],
+      "location": [
+        -5,
+        2
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "arbor:6",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BASICTHAUMATURGY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_greatwood.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_greatwood"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_reed",
+      "name": "tc.research_name.ROD_reed",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_reed"
+      ],
+      "location": [
+        -5,
+        -1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "aer:6",
+        "herba:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_reed.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_reed"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_blaze",
+      "name": "tc.research_name.ROD_blaze",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_blaze"
+      ],
+      "location": [
+        -7,
+        0
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "ignis:6",
+        "potentia:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_blaze.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_blaze"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_obsidian",
+      "name": "tc.research_name.ROD_obsidian",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_obsidian"
+      ],
+      "location": [
+        -8,
+        2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "terra:6",
+        "ignis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_obsidian.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_obsidian"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_ice",
+      "name": "tc.research_name.ROD_ice",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_ice"
+      ],
+      "location": [
+        -7,
+        4
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "gelum:6",
+        "aqua:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_ice.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_ice"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_quartz",
+      "name": "tc.research_name.ROD_quartz",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_quartz"
+      ],
+      "location": [
+        -5,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "ordo:6",
+        "vitreus:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_quartz.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_quartz"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_bone",
+      "name": "tc.research_name.ROD_bone",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_bone"
+      ],
+      "location": [
+        -3,
+        0
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "perditio:6",
+        "exanimis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_bone.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_bone"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_silverwood",
+      "name": "tc.research_name.ROD_silverwood",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_silverwood"
+      ],
+      "location": [
+        -2,
+        5
+      ],
+      "aspects": [
+        "instrumentum:6",
+        "arbor:6",
+        "praecantatio:9"
+      ],
+      "complexity": 3,
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_silverwood.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_silverwood"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SCEPTRE",
+      "name": "tc.research_name.SCEPTRE",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand"
+      ],
+      "location": [
+        0,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:6",
+        "fabrico:6",
+        "arbor:6",
+        "praecantatio:9"
+      ],
+      "complexity": 3,
+      "parents": [
+        "ROD_silverwood"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.SCEPTRE.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_greatwood_staff",
+      "name": "tc.research_name.ROD_greatwood_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_greatwood_staff"
+      ],
+      "location": [
+        -1,
+        7
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "arbor:6",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ROD_silverwood"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_greatwood_staff.1"
+        },
+        {
+          "text": "tc.research_page.ROD_greatwood_staff.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_greatwood_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_reed_staff",
+      "name": "tc.research_name.ROD_reed_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_reed_staff"
+      ],
+      "location": [
+        -5,
+        -2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "aer:6",
+        "herba:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_reed"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_reed_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_reed_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_blaze_staff",
+      "name": "tc.research_name.ROD_blaze_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_blaze_staff"
+      ],
+      "location": [
+        -8,
+        -1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "ignis:6",
+        "potentia:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_blaze"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_blaze_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_blaze_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_obsidian_staff",
+      "name": "tc.research_name.ROD_obsidian_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_obsidian_staff"
+      ],
+      "location": [
+        -9,
+        2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "terra:6",
+        "ignis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_obsidian"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_obsidian_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_obsidian_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_ice_staff",
+      "name": "tc.research_name.ROD_ice_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_ice_staff"
+      ],
+      "location": [
+        -8,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "gelum:6",
+        "aqua:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_ice"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_ice_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_ice_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_quartz_staff",
+      "name": "tc.research_name.ROD_quartz_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_quartz_staff"
+      ],
+      "location": [
+        -4,
+        6
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "ordo:6",
+        "vitreus:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_quartz"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_quartz_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_quartz_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_bone_staff",
+      "name": "tc.research_name.ROD_bone_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_bone_staff"
+      ],
+      "location": [
+        -2,
+        -1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "perditio:6",
+        "exanimis:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ROD_bone"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_bone_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_bone_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_silverwood_staff",
+      "name": "tc.research_name.ROD_silverwood_staff",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:wand_rod_silverwood_staff"
+      ],
+      "location": [
+        -1,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:6",
+        "arbor:6",
+        "praecantatio:9"
+      ],
+      "complexity": 3,
+      "parents": [
+        "ROD_silverwood"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood_staff"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_silverwood_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/rod_silverwood_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "WANDPED",
+      "name": "tc.research_name.WANDPED",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:recharge_pedestal"
+      ],
+      "location": [
+        -9,
+        -6
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "auram:6",
+        "praecantatio:3",
+        "permutatio:3",
+        "potentia:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "INFUSION",
+        "NODEPRESERVE",
+        "NODESTABILIZER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.WANDPED.1"
+        }
+      ]
+    },
+    {
+      "key": "VISAMULET",
+      "name": "tc.research_name.VISAMULET",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:amulet_vis_found"
+      ],
+      "location": [
+        -9,
+        -8
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "auram:3",
+        "praecantatio:6",
+        "potentia:3",
+        "vacuos:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "WANDPED"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.VISAMULET.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/vis_amulet"
+          ]
+        },
+        {
+          "text": "tc.research_page.VISAMULET.2"
+        }
+      ]
+    },
+    {
+      "key": "WANDPEDFOC",
+      "name": "tc.research_name.WANDPEDFOC",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "location": [
+        -10,
+        -7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "auram:6",
+        "praecantatio:6",
+        "permutatio:6",
+        "potentia:3",
+        "instrumentum:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "WANDPED"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.WANDPEDFOC.1"
+        }
+      ]
+    },
+    {
+      "key": "NODESTABILIZER",
+      "name": "tc.research_name.NODESTABILIZER",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:stabilizer"
+      ],
+      "location": [
+        -7,
+        -4
+      ],
+      "aspects": [
+        "auram:4",
+        "ordo:4",
+        "potentia:4"
+      ],
+      "complexity": 1,
+      "parents": [
+        "NODEPRESERVE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODESTABILIZER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/stabilizer"
+          ]
+        },
+        {
+          "text": "tc.research_page.NODESTABILIZER.2"
+        }
+      ]
+    },
+    {
+      "key": "NODESTABILIZERADV",
+      "name": "tc.research_name.NODESTABILIZERADV",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:stabilizer"
+      ],
+      "location": [
+        -8,
+        -3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "auram:9",
+        "praecantatio:6",
+        "ordo:6",
+        "potentia:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NODESTABILIZER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODESTABILIZERADV.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/stabilizer"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "VISPOWER",
+      "name": "tc.research_name.VISPOWER",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:vis_relay"
+      ],
+      "location": [
+        -5,
+        -6
+      ],
+      "meta": [
+        "SPIKY"
+      ],
+      "aspects": [
+        "auram:3",
+        "machina:3",
+        "potentia:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NODESTABILIZER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.VISPOWER.1"
+        },
+        {
+          "text": "tc.research_page.VISPOWER.2"
+        },
+        {
+          "text": "tc.research_page.VISPOWER.3"
+        },
+        {
+          "text": "tc.research_page.VISPOWER.4"
+        },
+        {
+          "text": "tc.research_page.VISPOWER.5"
+        }
+      ]
+    },
+    {
+      "key": "VISCHARGERELAY",
+      "name": "tc.research_name.VISCHARGERELAY",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:vis_relay"
+      ],
+      "location": [
+        -7,
+        -6
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "auram:3",
+        "machina:3",
+        "potentia:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "VISPOWER",
+        "WANDPED"
+      ],
+      "parents_hidden": [
+        "ROD_greatwood"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.VISCHARGERELAY.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCALMANIPULATION",
+      "name": "tc.research_name.FOCALMANIPULATION",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:focal_manipulator"
+      ],
+      "location": [
+        -3,
+        -8
+      ],
+      "aspects": [
+        "praecantatio:8",
+        "instrumentum:8",
+        "fabrico:5",
+        "vitreus:5",
+        "potentia:5"
+      ],
+      "complexity": 2,
+      "parents": [
+        "VISPOWER"
+      ],
+      "parents_hidden": [
+        "INFUSION",
+        "FOCUSFIRE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCALMANIPULATION.1"
+        },
+        {
+          "text": "tc.research_page.FOCALMANIPULATION.2"
+        }
+      ]
+    },
+    {
+      "key": "VAMPBAT",
+      "name": "tc.research_name.VAMPBAT",
+      "category": "THAUMATURGY",
+      "icons": [
+        "thaumcraft:textures/foci/vampirebats.png"
+      ],
+      "location": [
+        4,
+        -8
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "fames:5",
+        "victus:5",
+        "praecantatio:5"
+      ],
+      "complexity": 1,
+      "parents": [
+        "FOCUSHELLBAT"
+      ],
+      "parents_hidden": [
+        "FOCALMANIPULATION"
+      ],
+      "stages": [
+        {
+          "text": "focus.upgrade.vampirebats.text"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "VOIDMETAL",
+  "instability": 4,
+  "input": {
+    "item": "thaumcraft:thaumium_helm"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    }
+  ],
+  "aspects": {
+    "alienis": 20,
+    "vacuos": 20,
+    "praemunio": 15,
+    "tenebrae": 10
+  },
+  "result": {
+    "id": "thaumcraft:void_helm"
+  }
+}

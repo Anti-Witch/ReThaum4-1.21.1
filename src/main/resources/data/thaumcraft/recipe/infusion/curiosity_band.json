@@ -1,0 +1,42 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "INFUSION",
+  "instability": 5,
+  "input": {
+    "item": "minecraft:gold_ingot"
+  },
+  "ingredients": [
+    {
+      "tag": "c:gems/emerald"
+    },
+    {
+      "item": "minecraft:writable_book"
+    },
+    {
+      "tag": "c:gems/emerald"
+    },
+    {
+      "item": "minecraft:writable_book"
+    },
+    {
+      "tag": "c:gems/emerald"
+    },
+    {
+      "item": "minecraft:writable_book"
+    },
+    {
+      "tag": "c:gems/emerald"
+    },
+    {
+      "item": "minecraft:writable_book"
+    }
+  ],
+  "aspects": {
+    "cognitio": 150,
+    "vacuos": 50,
+    "vinculum": 100
+  },
+  "result": {
+    "id": "thaumcraft:curiosity_band"
+  }
+}

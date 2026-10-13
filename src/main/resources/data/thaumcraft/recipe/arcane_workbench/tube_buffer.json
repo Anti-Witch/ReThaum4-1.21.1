@@ -1,0 +1,29 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "TUBES",
+  "vis": 25,
+  "pattern": [
+    "PVP",
+    "TWT",
+    "PRP"
+  ],
+  "key": {
+    "P": {
+      "item": "thaumcraft:phial_empty"
+    },
+    "V": {
+      "item": "thaumcraft:tube_valve"
+    },
+    "T": {
+      "item": "thaumcraft:tube_normal"
+    },
+    "W": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "R": {
+      "item": "thaumcraft:tube_restricted"
+    }
+  },
+  "result": {"id": "thaumcraft:tube_buffer"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=vision": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/module_vision"
+            }
+        },
+        "type=aggression": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/module_aggression"
+            }
+        },
+        "": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/module_vision"
+            }
+        }
+    }
+}

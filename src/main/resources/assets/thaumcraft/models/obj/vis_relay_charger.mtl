@@ -1,0 +1,11 @@
+# Модель заряджача верстака (TC4 vis_relay.obj, перепечений у блокові координати
+# рендерером TileMagicWorkbenchChargerRenderer). Взято з референсного порту TC4
+# (1.12.2) arcane_workbench_charger.obj/.mtl; map_Kd переведено на NeoForge-конвенцію
+# "#texture" (посилання на textures у models/block/arcane_workbench_charger.json).
+newmtl texture
+Ns 10.0
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.0 0.0 0.0
+d 1.0
+map_Kd #texture

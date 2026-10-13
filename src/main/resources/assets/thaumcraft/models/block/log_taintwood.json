@@ -1,0 +1,12 @@
+{
+    "parent": "minecraft:block/cube",
+    "textures": {
+        "particle": "thaumcraft:block/log_taintwood_top",
+        "up": "thaumcraft:block/log_taintwood_top",
+        "down": "thaumcraft:block/log_taintwood_top",
+        "north": "thaumcraft:block/log_taintwood_0",
+        "south": "thaumcraft:block/log_taintwood_0",
+        "east": "thaumcraft:block/log_taintwood_0",
+        "west": "thaumcraft:block/log_taintwood_0"
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "up=false,down=false,variant=0": { "model": "thaumcraft:block/obsidian_totem_standalone" },
+    "up=false,down=false,variant=1": { "model": "thaumcraft:block/obsidian_totem_standalone" },
+    "up=false,down=false,variant=2": { "model": "thaumcraft:block/obsidian_totem_standalone" },
+    "up=false,down=false,variant=3": { "model": "thaumcraft:block/obsidian_totem_standalone" },
+    "up=false,down=true,variant=0": { "model": "thaumcraft:block/obsidian_totem_body1" },
+    "up=false,down=true,variant=1": { "model": "thaumcraft:block/obsidian_totem_body2" },
+    "up=false,down=true,variant=2": { "model": "thaumcraft:block/obsidian_totem_body3" },
+    "up=false,down=true,variant=3": { "model": "thaumcraft:block/obsidian_totem_body4" },
+    "up=true,down=false,variant=0": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=false,variant=1": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=false,variant=2": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=false,variant=3": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=true,variant=0": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=true,variant=1": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=true,variant=2": { "model": "thaumcraft:block/obsidian_totem_shaded" },
+    "up=true,down=true,variant=3": { "model": "thaumcraft:block/obsidian_totem_shaded" }
+  }
+}

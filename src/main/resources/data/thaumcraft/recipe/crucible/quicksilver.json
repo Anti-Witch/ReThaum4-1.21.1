@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "CRUCIBLE",
+  "catalyst": {
+    "item": "minecraft:redstone"
+  },
+  "aspects": {
+    "metallum": 5,
+    "permutatio": 3
+  },
+  "result": {
+    "id": "thaumcraft:quicksilver"
+  }
+}

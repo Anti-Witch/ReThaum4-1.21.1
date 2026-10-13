@@ -1,0 +1,1344 @@
+{
+  "entries": [
+    {
+      "key": "HUNGRYCHEST",
+      "name": "tc.research_name.HUNGRYCHEST",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:hungry_chest"
+      ],
+      "location": [
+        -1,
+        0
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "fames:3",
+        "vacuos:3"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.HUNGRYCHEST.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/hungry_chest"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "GOLEMFETTER",
+      "name": "tc.research_name.GOLEMFETTER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        4,
+        8
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "vinculum:3",
+        "machina:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMSTONE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMFETTER.1"
+        }
+      ]
+    },
+    {
+      "key": "TRAVELTRUNK",
+      "name": "tc.research_name.TRAVELTRUNK",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:trunk_spawner"
+      ],
+      "location": [
+        0,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "spiritus:3",
+        "iter:3",
+        "arbor:3",
+        "vacuos:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "INFUSION",
+        "GOLEMWOOD"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRAVELTRUNK.1"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.2"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UAI"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UEA"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UFI"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UWA"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UOR"
+        },
+        {
+          "text": "tc.research_page.TRAVELTRUNK.UEN"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMSTRAW",
+      "name": "tc.research_name.GOLEMSTRAW",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        0,
+        2
+      ],
+      "aspects": [
+        "spiritus:3",
+        "motus:3",
+        "messis:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "HUNGRYCHEST"
+      ],
+      "siblings": [
+        "COREGATHER",
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMSTRAW.1"
+        },
+        {
+          "text": "tc.research_page.GOLEMSTRAW.2"
+        },
+        {
+          "text": "tc.research_page.GOLEMSTRAW.3"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMWOOD",
+      "name": "tc.research_name.GOLEMWOOD",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        2,
+        4
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "spiritus:4",
+        "motus:4",
+        "arbor:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMSTRAW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMWOOD.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMTALLOW",
+      "name": "tc.research_name.GOLEMTALLOW",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        4,
+        6
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "spiritus:3",
+        "motus:3",
+        "corpus:3",
+        "praecantatio:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMCLAY",
+        "TALLOW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMTALLOW.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMCLAY",
+      "name": "tc.research_name.GOLEMCLAY",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        2,
+        6
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "spiritus:6",
+        "motus:6",
+        "terra:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMWOOD"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMCLAY.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMFLESH",
+      "name": "tc.research_name.GOLEMFLESH",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        4,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "spiritus:7",
+        "motus:7",
+        "corpus:6",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMWOOD"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMFLESH.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMSTONE",
+      "name": "tc.research_name.GOLEMSTONE",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        2,
+        8
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "spiritus:6",
+        "motus:6",
+        "terra:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMCLAY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMSTONE.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMIRON",
+      "name": "tc.research_name.GOLEMIRON",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        0,
+        10
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "spiritus:9",
+        "motus:9",
+        "metallum:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMSTONE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMIRON.1"
+        }
+      ]
+    },
+    {
+      "key": "GOLEMTHAUMIUM",
+      "name": "tc.research_name.GOLEMTHAUMIUM",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        2,
+        10
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "spiritus:10",
+        "motus:10",
+        "metallum:3",
+        "praecantatio:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "GOLEMIRON",
+        "THAUMIUM"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMTHAUMIUM.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_block"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "GOLEMBELL",
+      "name": "tc.research_name.GOLEMBELL",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_bell"
+      ],
+      "location": [
+        3,
+        0
+      ],
+      "meta": [
+        "STUB"
+      ],
+      "parents": [
+        "GOLEMSTRAW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOLEMBELL.1"
+        },
+        {
+          "text": "tc.research_page.GOLEMBELL.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/golem_bell"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "COREGATHER",
+      "name": "tc.research_name.COREGATHER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -3,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "STUB"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMSTRAW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREGATHER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/golem_core_blank"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREGATHER.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_gather"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "COREFILL",
+      "name": "tc.research_name.COREFILL",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -5,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "fames:3",
+        "permutatio:3",
+        "vacuos:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREGATHER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREFILL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_fill"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "COREEMPTY",
+      "name": "tc.research_name.COREEMPTY",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -5,
+        1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "vacuos:3",
+        "permutatio:3",
+        "lucrum:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREGATHER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREEMPTY.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_empty"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CORESORTING",
+      "name": "tc.research_name.CORESORTING",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -7,
+        2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "vacuos:3",
+        "permutatio:3",
+        "lucrum:3",
+        "fames:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREEMPTY",
+        "COREFILL",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CORESORTING.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/core_sorting"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "COREUSE",
+      "name": "tc.research_name.COREUSE",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -7,
+        0
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "permutatio:3",
+        "machina:3",
+        "humanus:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "COREEMPTY",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREUSE.1"
+        },
+        {
+          "text": "tc.research_page.COREUSE.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/core_use"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREUSE.3"
+        }
+      ]
+    },
+    {
+      "key": "COREHARVEST",
+      "name": "tc.research_name.COREHARVEST",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -2,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "meto:6",
+        "messis:3",
+        "iter:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREGATHER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREHARVEST.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_harvest"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREHARVEST.2"
+        }
+      ]
+    },
+    {
+      "key": "COREFISHING",
+      "name": "tc.research_name.COREFISHING",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -2,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "meto:3",
+        "bestia:3",
+        "fames:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREHARVEST",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREFISHING.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/core_fishing"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREFISHING.2"
+        },
+        {
+          "text": "tc.research_page.COREFISHING.3"
+        },
+        {
+          "text": "tc.research_page.COREFISHING.4"
+        },
+        {
+          "text": "tc.research_page.COREFISHING.5"
+        }
+      ]
+    },
+    {
+      "key": "CORELUMBER",
+      "name": "tc.research_name.CORELUMBER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -1,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "arbor:6",
+        "meto:3",
+        "instrumentum:3",
+        "potentia:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREHARVEST",
+        "ELEMENTALAXE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CORELUMBER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/core_lumber"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "COREGUARD",
+      "name": "tc.research_name.COREGUARD",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -4,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "telum:3",
+        "vinculum:3",
+        "sensus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREGATHER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREGUARD.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_guard"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREGUARD.2"
+        }
+      ]
+    },
+    {
+      "key": "COREBUTCHER",
+      "name": "tc.research_name.COREBUTCHER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -3,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "telum:3",
+        "bestia:3",
+        "sensus:3",
+        "meto:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREGUARD",
+        "COREHARVEST"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREBUTCHER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_butcher"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CORELIQUID",
+      "name": "tc.research_name.CORELIQUID",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -7,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "aqua:3",
+        "permutatio:3",
+        "iter:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "COREFILL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CORELIQUID.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/core_liquid"
+          ]
+        },
+        {
+          "text": "tc.research_page.CORELIQUID.2"
+        }
+      ]
+    },
+    {
+      "key": "COREALCHEMY",
+      "name": "tc.research_name.COREALCHEMY",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_core"
+      ],
+      "location": [
+        -9,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "iter:3",
+        "praecantatio:3",
+        "potentia:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "CORELIQUID",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.COREALCHEMY.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/core_alchemy"
+          ]
+        },
+        {
+          "text": "tc.research_page.COREALCHEMY.2"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEAIR",
+      "name": "tc.research_name.UPGRADEAIR",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        7,
+        -3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aer:6",
+        "motus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEAIR.1"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEEARTH",
+      "name": "tc.research_name.UPGRADEEARTH",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        6,
+        -2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "terra:6",
+        "victus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEEARTH.1"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEFIRE",
+      "name": "tc.research_name.UPGRADEFIRE",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        5,
+        -1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "ignis:6",
+        "potentia:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEFIRE.1"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEWATER",
+      "name": "tc.research_name.UPGRADEWATER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        5,
+        1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:6",
+        "sensus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEWATER.1"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEORDER",
+      "name": "tc.research_name.UPGRADEORDER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        6,
+        2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "ordo:6",
+        "cognitio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEORDER.1"
+        }
+      ]
+    },
+    {
+      "key": "UPGRADEENTROPY",
+      "name": "tc.research_name.UPGRADEENTROPY",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        7,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "perditio:6",
+        "cognitio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOLEMBELL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.UPGRADEENTROPY.1"
+        }
+      ]
+    },
+    {
+      "key": "ADVANCEDGOLEM",
+      "name": "tc.research_name.ADVANCEDGOLEM",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:golem_placer"
+      ],
+      "location": [
+        8,
+        0
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "victus:3",
+        "potentia:3",
+        "cognitio:6",
+        "sensus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "INFUSION",
+        "UPGRADEAIR",
+        "UPGRADEEARTH",
+        "UPGRADEFIRE",
+        "UPGRADEWATER",
+        "UPGRADEORDER",
+        "UPGRADEENTROPY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ADVANCEDGOLEM.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYHAT",
+      "name": "tc.research_name.TINYHAT",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        5,
+        10
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "pannus:2",
+        "victus",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "minecraft:white_wool"
+        ],
+        "aspects": [
+          "pannus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYHAT.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYGLASSES",
+      "name": "tc.research_name.TINYGLASSES",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        6,
+        10
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "pannus:2",
+        "sensus",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "minecraft:white_wool"
+        ],
+        "aspects": [
+          "pannus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYGLASSES.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYBOWTIE",
+      "name": "tc.research_name.TINYBOWTIE",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        7,
+        10
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "pannus:2",
+        "iter",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "minecraft:white_wool"
+        ],
+        "aspects": [
+          "pannus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYBOWTIE.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYFEZ",
+      "name": "tc.research_name.TINYFEZ",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        8,
+        10
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "pannus:2",
+        "potentia",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "minecraft:white_wool"
+        ],
+        "aspects": [
+          "pannus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYFEZ.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYDART",
+      "name": "tc.research_name.TINYDART",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        5,
+        11
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "volatus",
+        "telum:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "aspects": [
+          "telum"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYDART.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYVISOR",
+      "name": "tc.research_name.TINYVISOR",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        6,
+        11
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "sensus",
+        "tutamen:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "aspects": [
+          "tutamen"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYVISOR.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYARMOR",
+      "name": "tc.research_name.TINYARMOR",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        7,
+        11
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum",
+        "tutamen:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "aspects": [
+          "tutamen"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYARMOR.1"
+        }
+      ]
+    },
+    {
+      "key": "TINYHAMMER",
+      "name": "tc.research_name.TINYHAMMER",
+      "category": "GOLEMANCY",
+      "icons": [
+        "thaumcraft:textures/misc/r_golemancy.png"
+      ],
+      "location": [
+        8,
+        11
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum",
+        "telum:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "aspects": [
+          "telum"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.TINYHAMMER.1"
+        }
+      ]
+    }
+  ]
+}

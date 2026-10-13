@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "COREHARVEST",
+  "catalyst": {
+    "type": "neoforge:components",
+    "items": [
+      "thaumcraft:golem_core"
+    ],
+    "components": {},
+    "strict": true
+  },
+  "aspects": {
+    "meto": 5,
+    "messis": 5
+  },
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "components": {
+      "thaumcraft:golem_core_type": 3
+    }
+  }
+}

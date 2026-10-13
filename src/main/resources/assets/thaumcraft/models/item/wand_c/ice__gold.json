@@ -1,0 +1,8 @@
+{
+  "parent": "thaumcraft:item/wand_base",
+  "textures": {
+    "particle": "thaumcraft:models/wand_rod_ice",
+    "wand_rod": "thaumcraft:models/wand_rod_ice",
+    "wand_cap": "thaumcraft:models/wand_cap_gold"
+  }
+}

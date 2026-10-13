@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "thaumcraft:void_metal_block"}
+  ],
+  "result": {"id": "thaumcraft:void_metal_ingot",
+    "count": 9
+  }
+}

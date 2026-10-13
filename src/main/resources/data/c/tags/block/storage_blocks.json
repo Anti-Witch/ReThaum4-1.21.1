@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:brass_block",
+    "thaumcraft:thaumium_block",
+    "thaumcraft:void_metal_block",
+    "thaumcraft:amber_block"
+  ]
+}

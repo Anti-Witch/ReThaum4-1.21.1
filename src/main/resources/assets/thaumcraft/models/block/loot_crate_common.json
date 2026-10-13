@@ -1,0 +1,36 @@
+{
+  "render_type": "minecraft:cutout",
+    "textures": {
+        "side": "thaumcraft:block/crate_side_0",
+        "bottom": "thaumcraft:block/crate_top",
+        "top": "thaumcraft:block/crate_top",
+        "particle": "thaumcraft:block/crate_side_0"
+    },
+    "elements": [
+        {
+            "from": [1,0,1],
+            "to": [15,14,15],
+            "faces": {
+                "up": {
+                    "texture": "#top"
+                },
+                "down": {
+                    "texture": "#bottom",
+                    "cullface": "down"
+                },
+                "west": {
+                    "texture": "#side"
+                },
+                "east": {
+                    "texture": "#side"
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        }
+    ]
+}

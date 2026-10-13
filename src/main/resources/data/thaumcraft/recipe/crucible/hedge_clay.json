@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:dirt"
+  },
+  "aspects": {
+    "aqua": 5,
+    "terra": 5
+  },
+  "result": {
+    "id": "minecraft:clay_ball",
+    "count": 1
+  },
+  "group": "thaumcraft:hedge_transmutation"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "TUBES",
+  "vis": 10,
+  "pattern": [
+    " Q ",
+    "IGI",
+    " B "
+  ],
+  "key": {
+    "Q": {
+      "item": "thaumcraft:quicksilver"
+    },
+    "I": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    },
+    "B": {
+      "item": "thaumcraft:brass_nugget"
+    }
+  },
+  "result": {"id": "thaumcraft:tube_normal",
+    "count": 8
+  }
+}

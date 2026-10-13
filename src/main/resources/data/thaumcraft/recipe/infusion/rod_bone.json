@@ -1,0 +1,24 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ROD_bone",
+  "instability": 3,
+  "input": {
+    "item": "minecraft:bone"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:shard_balanced"
+    },
+    {
+      "item": "thaumcraft:shard_entropy"
+    }
+  ],
+  "aspects": {
+    "perditio": 12,
+    "praecantatio": 6,
+    "mortuus": 6
+  },
+  "result": {
+    "id": "thaumcraft:wand_rod_bone"
+  }
+}

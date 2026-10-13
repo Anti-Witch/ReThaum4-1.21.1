@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:gunpowder"
+  },
+  "aspects": {
+    "ignis": 5,
+    "perditio": 5
+  },
+  "result": {
+    "id": "minecraft:gunpowder",
+    "count": 2
+  },
+  "group": "thaumcraft:hedge_duplication"
+}

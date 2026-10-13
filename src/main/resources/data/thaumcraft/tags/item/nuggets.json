@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:thaumium_nugget",
+    "thaumcraft:void_metal_nugget",
+    "thaumcraft:brass_nugget"
+  ]
+}

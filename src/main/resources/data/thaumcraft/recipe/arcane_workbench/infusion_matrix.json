@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "INFUSION",
+  "vis": 150,
+  "crystals": {
+    "aer": 1,
+    "aqua": 1,
+    "ignis": 1,
+    "terra": 1,
+    "ordo": 1,
+    "perditio": 1
+  },
+  "pattern": [
+    "S S",
+    " N ",
+    "S S"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:arcane_stone_brick"
+    },
+    "N": {
+      "item": "thaumcraft:nitor"
+    }
+  },
+  "result": {"id": "thaumcraft:infusion_matrix"
+  }
+}

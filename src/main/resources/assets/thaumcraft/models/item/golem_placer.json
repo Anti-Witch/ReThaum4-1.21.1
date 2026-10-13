@@ -1,0 +1,56 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/golem_straw"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 1
+      },
+      "model": "thaumcraft:item/golem_placer_straw"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 2
+      },
+      "model": "thaumcraft:item/golem_placer_wood"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 3
+      },
+      "model": "thaumcraft:item/golem_placer_tallow"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 4
+      },
+      "model": "thaumcraft:item/golem_placer_clay"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 5
+      },
+      "model": "thaumcraft:item/golem_placer_flesh"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 6
+      },
+      "model": "thaumcraft:item/golem_placer_stone"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 7
+      },
+      "model": "thaumcraft:item/golem_placer_iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_material": 8
+      },
+      "model": "thaumcraft:item/golem_placer_thaumium"
+    }
+  ]
+}

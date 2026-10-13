@@ -1,0 +1,12 @@
+{
+  "type": "thaumcraft:aura_node",
+  "config": {
+    "chance": 0.055,
+    "vertical_range": 64,
+    "prefer_caves": true,
+    "special_node_chance": 0.1,
+    "silverwood": false,
+    "sinister": false,
+    "small": false
+  }
+}

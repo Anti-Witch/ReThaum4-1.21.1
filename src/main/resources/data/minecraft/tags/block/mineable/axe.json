@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:greatwood_log",
+    "thaumcraft:silverwood_log",
+    "thaumcraft:greatwood_planks",
+    "thaumcraft:silverwood_planks",
+    "thaumcraft:greatwood_stairs",
+    "thaumcraft:silverwood_stairs",
+    "thaumcraft:greatwood_slab",
+    "thaumcraft:silverwood_slab",
+    "thaumcraft:table_wood",
+    "thaumcraft:research_table",
+    "thaumcraft:loot_crate_common",
+    "thaumcraft:loot_crate_uncommon",
+    "thaumcraft:loot_crate_rare"
+  ]
+}

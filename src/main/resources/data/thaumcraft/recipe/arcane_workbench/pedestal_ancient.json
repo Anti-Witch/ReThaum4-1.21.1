@@ -1,0 +1,21 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "INFUSION",
+  "vis": 150,
+  "pattern": [
+    "SSS",
+    " B ",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:ancient_stone_slab"
+    },
+    "B": {
+      "item": "thaumcraft:ancient_stone"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:pedestal_ancient"
+  }
+}

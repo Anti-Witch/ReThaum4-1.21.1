@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "PURECOPPER",
+  "catalyst": {
+    "tag": "c:ores/copper"
+  },
+  "aspects": {
+    "metallum": 5,
+    "ordo": 5
+  },
+  "result": {
+    "id": "thaumcraft:cluster_copper"
+  }
+}

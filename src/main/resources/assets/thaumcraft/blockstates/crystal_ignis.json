@@ -1,0 +1,55 @@
+{
+  "variants": {
+    "size=0,gen=1": {
+      "model": "thaumcraft:block/crystal_small"
+    },
+    "size=0,gen=2": {
+      "model": "thaumcraft:block/crystal_small"
+    },
+    "size=0,gen=3": {
+      "model": "thaumcraft:block/crystal_small"
+    },
+    "size=0,gen=4": {
+      "model": "thaumcraft:block/crystal_small"
+    },
+    "size=1,gen=1": {
+      "model": "thaumcraft:block/crystal_medium"
+    },
+    "size=1,gen=2": {
+      "model": "thaumcraft:block/crystal_medium"
+    },
+    "size=1,gen=3": {
+      "model": "thaumcraft:block/crystal_medium"
+    },
+    "size=1,gen=4": {
+      "model": "thaumcraft:block/crystal_medium"
+    },
+    "size=2,gen=1": {
+      "model": "thaumcraft:block/crystal_large"
+    },
+    "size=2,gen=2": {
+      "model": "thaumcraft:block/crystal_large"
+    },
+    "size=2,gen=3": {
+      "model": "thaumcraft:block/crystal_large"
+    },
+    "size=2,gen=4": {
+      "model": "thaumcraft:block/crystal_large"
+    },
+    "size=3,gen=1": {
+      "model": "thaumcraft:block/crystal"
+    },
+    "size=3,gen=2": {
+      "model": "thaumcraft:block/crystal"
+    },
+    "size=3,gen=3": {
+      "model": "thaumcraft:block/crystal"
+    },
+    "size=3,gen=4": {
+      "model": "thaumcraft:block/crystal"
+    },
+    "": {
+      "model": "thaumcraft:block/crystal_large"
+    }
+  }
+}

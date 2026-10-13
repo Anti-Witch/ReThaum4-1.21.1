@@ -1,0 +1,15 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "VOIDMETAL",
+  "catalyst": {
+    "item": "thaumcraft:thaumium_ingot"
+  },
+  "aspects": {
+    "vacuos": 10,
+    "tenebrae": 5,
+    "alkimia": 5
+  },
+  "result": {
+    "id": "thaumcraft:void_metal_ingot"
+  }
+}

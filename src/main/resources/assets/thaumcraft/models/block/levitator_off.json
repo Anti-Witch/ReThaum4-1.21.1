@@ -1,0 +1,10 @@
+{
+  "render_type": "minecraft:cutout",
+    "parent": "thaumcraft:block/levitator_on",
+    "textures": {
+        "particle": "thaumcraft:block/liftertop",
+        "top": "thaumcraft:block/liftertop",
+        "side": "thaumcraft:block/lifterside",
+        "bottom": "thaumcraft:block/arcaneearbottom"
+    }
+}

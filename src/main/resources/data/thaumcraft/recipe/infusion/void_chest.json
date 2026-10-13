@@ -1,0 +1,43 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "VOIDMETAL",
+  "instability": 5,
+  "input": {
+    "item": "thaumcraft:thaumium_chest"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    }
+  ],
+  "aspects": {
+    "alienis": 30,
+    "vacuos": 30,
+    "praemunio": 25,
+    "tenebrae": 15
+  },
+  "result": {
+    "id": "thaumcraft:void_chest"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "thaumcraft:block/item_layer",
+  "textures": {
+    "layer0": "thaumcraft:item/clusterlead"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "render_type": "minecraft:cutout",
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "thaumcraft:block/lamp_side",
+        "side": "thaumcraft:block/lamp_side",
+        "cap": "thaumcraft:block/lamp_top"
+    },
+    "elements": [
+        {
+            "from": [4,2,4],
+            "to": [12,14,12],
+            "faces": {
+                "up": {
+                    "texture": "#cap"
+                },
+                "down": {
+                    "texture": "#cap"
+                },
+                "west": {
+                    "texture": "#side"
+                },
+                "east": {
+                    "texture": "#side"
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        }
+    ]
+}

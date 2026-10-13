@@ -1,0 +1,25 @@
+{
+    "multipart": [
+        {   "when": { "north": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre", "y": 180, "x": 90 }
+        },        
+        {   "when": { "south": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre", "x": 90 }
+        },
+        {   "when": { "east": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre", "y": 270, "x": 90 }
+        },
+        {   "when": { "west": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre", "y": 90, "x": 90 }
+        },
+        {   "when": { "up": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre", "x": 180 }
+        },
+        {   "when": { "down": "true" },
+            "apply": { "model": "thaumcraft:block/taint_fibre" }
+        },
+        {   "when": { "has_crystal": "true" },
+            "apply": { "model": "thaumcraft:block/taint_crystal" }
+        }
+    ]
+}

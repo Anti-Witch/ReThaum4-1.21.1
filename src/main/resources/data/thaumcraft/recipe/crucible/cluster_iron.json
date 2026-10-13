@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "PUREIRON",
+  "catalyst": {
+    "tag": "c:ores/iron"
+  },
+  "aspects": {
+    "metallum": 5,
+    "ordo": 5
+  },
+  "result": {
+    "id": "thaumcraft:cluster_iron"
+  }
+}

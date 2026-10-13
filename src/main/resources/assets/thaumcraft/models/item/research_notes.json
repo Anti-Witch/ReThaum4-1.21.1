@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/researchnotes",
+    "layer1": "thaumcraft:item/researchnotesoverlay"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damaged": 0.98
+      },
+      "model": "thaumcraft:item/discovery_notes"
+    }
+  ]
+}

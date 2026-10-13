@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "K  ",
+    "KK ",
+    "KKK"
+  ],
+  "key": {
+    "K": {"item": "thaumcraft:ancient_stone"}
+  },
+  "result": {"id": "thaumcraft:ancient_stone_stairs",
+    "count": 4
+  }
+}

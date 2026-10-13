@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "#layer0",
+        "particle": "#layer0"
+    }
+}

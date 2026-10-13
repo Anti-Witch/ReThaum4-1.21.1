@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "facing=north,linked=false": { "model": "thaumcraft:block/mirror_item" },
+        "facing=east,linked=false":  { "model": "thaumcraft:block/mirror_item", "y": 90 },
+        "facing=south,linked=false": { "model": "thaumcraft:block/mirror_item", "y": 180 },
+        "facing=west,linked=false":  { "model": "thaumcraft:block/mirror_item", "y": 270 },
+        "facing=north,linked=true":  { "model": "thaumcraft:block/mirror_item_on" },
+        "facing=east,linked=true":   { "model": "thaumcraft:block/mirror_item_on", "y": 90 },
+        "facing=south,linked=true":  { "model": "thaumcraft:block/mirror_item_on", "y": 180 },
+        "facing=west,linked=true":   { "model": "thaumcraft:block/mirror_item_on", "y": 270 }
+    }
+}

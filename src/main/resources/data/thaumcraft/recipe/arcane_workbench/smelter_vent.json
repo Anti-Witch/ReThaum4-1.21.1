@@ -1,0 +1,33 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "DISTILESSENTIA",
+  "vis": 150,
+  "crystals": {
+    "aer": 1
+  },
+  "pattern": [
+    "IBI",
+    "MGA",
+    "IBI"
+  ],
+  "key": {
+    "I": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "B": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "M": {
+      "item": "thaumcraft:filter"
+    },
+    "G": {
+      "item": "thaumcraft:alchemical_brass_block"
+    },
+    "A": {
+      "item": "thaumcraft:filter"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:smelter_vent"
+  }
+}

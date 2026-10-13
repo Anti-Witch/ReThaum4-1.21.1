@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {"item": "thaumcraft:thaumium_nugget"}
+  },
+  "result": {"id": "thaumcraft:thaumium_ingot",
+    "count": 1
+  }
+}

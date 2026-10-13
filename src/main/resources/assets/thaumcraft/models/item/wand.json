@@ -1,0 +1,1139 @@
+{
+  "parent": "thaumcraft:item/wand_base",
+  "overrides": [
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/wood__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/wood__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/wood__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/wood__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/wood__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/wood__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/wood__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/wood__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 1,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/wood__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 2,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/greatwood__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 3,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/silverwood__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 4,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/obsidian__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/ice__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/ice__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/ice__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/ice__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/ice__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/ice__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/ice__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/ice__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 5,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/ice__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/quartz__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/quartz__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/quartz__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/quartz__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/quartz__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/quartz__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/quartz__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/quartz__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 6,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/quartz__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/reed__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/reed__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/reed__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/reed__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/reed__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/reed__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/reed__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/reed__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 7,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/reed__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/blaze__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/blaze__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/blaze__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/blaze__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/blaze__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/blaze__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/blaze__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/blaze__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 8,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/blaze__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/bone__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/bone__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/bone__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/bone__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/bone__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/bone__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/bone__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/bone__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 9,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/bone__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 10,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/greatwood_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 11,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/silverwood_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 12,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/obsidian_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 13,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/blaze_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 14,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/ice_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 15,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/quartz_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 16,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/reed_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 17,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/bone_staff__void_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 1
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__iron"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 2
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__gold"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 3
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__thaumium"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 4
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__copper"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 5
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__silver"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 6
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__silver_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 7
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__thaumium_inert"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 8
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__void"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_rod": 18,
+        "thaumcraft:tc_cap": 9
+      },
+      "model": "thaumcraft:item/wand_c/primal_staff__void_inert"
+    }
+  ]
+}

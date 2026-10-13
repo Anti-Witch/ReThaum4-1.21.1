@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " QQ",
+    " QQ",
+    "S  "
+  ],
+  "key": {
+    "S": {"tag": "c:rods/wooden"},
+    "Q": {"tag": "c:gems/quartz"}
+  },
+  "result": {"id": "thaumcraft:golem_bell",
+    "count": 1
+  }
+}

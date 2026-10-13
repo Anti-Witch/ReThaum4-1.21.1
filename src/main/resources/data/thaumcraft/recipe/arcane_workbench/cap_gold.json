@@ -1,0 +1,9 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CAP_gold",
+  "vis": 25,
+  "crystals": { "ordo": 1, "ignis": 1, "aer": 1 },
+  "pattern": ["NNN", "N N"],
+  "key": { "N": { "item": "minecraft:gold_nugget" } },
+  "result": { "id": "thaumcraft:wand_cap_gold" }
+}

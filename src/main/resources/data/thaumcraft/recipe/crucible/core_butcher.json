@@ -1,0 +1,24 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "COREBUTCHER",
+  "catalyst": {
+    "type": "neoforge:components",
+    "items": [
+      "thaumcraft:golem_core"
+    ],
+    "components": {
+      "thaumcraft:golem_core_type": 4
+    },
+    "strict": true
+  },
+  "aspects": {
+    "corpus": 5,
+    "bestia": 5
+  },
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "components": {
+      "thaumcraft:golem_core_type": 9
+    }
+  }
+}

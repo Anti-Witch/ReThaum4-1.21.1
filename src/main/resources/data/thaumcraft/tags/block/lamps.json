@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:lamp_arcane",
+    "thaumcraft:lamp_growth",
+    "thaumcraft:lamp_fertility"
+  ]
+}

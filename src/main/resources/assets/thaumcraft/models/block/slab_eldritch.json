@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "top": "thaumcraft:block/es_i_1",
+    "bottom": "thaumcraft:block/es_i_1",
+    "side": "thaumcraft:block/es_i_1"
+  }
+}

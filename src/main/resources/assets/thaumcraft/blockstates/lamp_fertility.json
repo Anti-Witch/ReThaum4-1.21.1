@@ -1,0 +1,68 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "enabled": "true"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_fertility_on"
+      }
+    },
+    {
+      "when": {
+        "enabled": "false"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_fertility"
+      }
+    },
+    {
+      "when": {
+        "facing": "up"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_up"
+      }
+    },
+    {
+      "when": {
+        "facing": "down"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_down"
+      }
+    },
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_north"
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_south"
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_east"
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "thaumcraft:block/lamp_nozzle_west"
+      }
+    }
+  ]
+}

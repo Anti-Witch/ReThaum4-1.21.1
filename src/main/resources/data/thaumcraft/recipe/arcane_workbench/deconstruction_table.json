@@ -1,0 +1,27 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "DECONSTRUCTOR",
+  "vis": 20,
+  "crystals": {},
+  "pattern": [
+    " S ",
+    "ATP"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:thaumometer"
+    },
+    "A": {
+      "item": "minecraft:golden_axe"
+    },
+    "T": {
+      "item": "thaumcraft:table_wood"
+    },
+    "P": {
+      "item": "minecraft:golden_pickaxe"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:deconstruction_table"
+  }
+}

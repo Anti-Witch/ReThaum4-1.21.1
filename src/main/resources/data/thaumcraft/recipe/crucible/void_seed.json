@@ -1,0 +1,15 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ELDRITCHMINOR",
+  "catalyst": {
+    "item": "minecraft:wheat_seeds"
+  },
+  "aspects": {
+    "tenebrae": 8,
+    "vacuos": 8,
+    "alienis": 2
+  },
+  "result": {
+    "id": "thaumcraft:void_seed"
+  }
+}

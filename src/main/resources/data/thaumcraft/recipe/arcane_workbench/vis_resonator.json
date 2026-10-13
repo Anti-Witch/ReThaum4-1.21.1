@@ -1,0 +1,20 @@
+{
+  "type": "thaumcraft:arcane_workbench_shapeless",
+  "research": "BASICTHAUMATURGY",
+  "vis": 50,
+  "crystals": {
+    "aer": 1,
+    "aqua": 1
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:plate_iron"
+    },
+    {
+      "tag": "c:gems/quartz"
+    }
+  ],
+  "result": {
+    "id": "thaumcraft:vis_resonator"
+  }
+}

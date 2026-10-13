@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:shard_air",
+    "thaumcraft:shard_fire",
+    "thaumcraft:shard_water",
+    "thaumcraft:shard_earth",
+    "thaumcraft:shard_order",
+    "thaumcraft:shard_entropy"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "INFUSION",
+  "vis": 10,
+  "crystals": {},
+  "pattern": [
+    "SSS",
+    " B ",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:arcane_stone_slab"
+    },
+    "B": {
+      "item": "thaumcraft:arcane_stone"
+    }
+  },
+  "result": {"id": "thaumcraft:pedestal_arcane"
+  }
+}

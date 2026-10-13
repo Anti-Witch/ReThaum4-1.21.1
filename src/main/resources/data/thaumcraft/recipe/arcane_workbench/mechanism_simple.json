@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICARTIFACE",
+  "vis": 10,
+  "crystals": {
+    "ignis": 1,
+    "aqua": 1
+  },
+  "pattern": [
+    " B ",
+    "ISI",
+    " B "
+  ],
+  "key": {
+    "B": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "I": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:mechanism_simple"
+  }
+}

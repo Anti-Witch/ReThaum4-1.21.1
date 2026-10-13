@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "KK",
+    "KK"
+  ],
+  "key": {
+    "K": {"item": "thaumcraft:arcane_stone"}
+  },
+  "result": {"id": "thaumcraft:arcane_stone_brick",
+    "count": 4
+  }
+}

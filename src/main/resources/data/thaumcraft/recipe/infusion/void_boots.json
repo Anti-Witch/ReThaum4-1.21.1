@@ -1,0 +1,31 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "VOIDMETAL",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:thaumium_boots"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    }
+  ],
+  "aspects": {
+    "alienis": 15,
+    "vacuos": 15,
+    "praemunio": 10,
+    "tenebrae": 8
+  },
+  "result": {
+    "id": "thaumcraft:void_boots"
+  }
+}

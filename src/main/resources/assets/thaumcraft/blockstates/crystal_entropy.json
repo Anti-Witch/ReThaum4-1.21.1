@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "size=0": {
+      "model": "thaumcraft:block/crystal_small"
+    },
+    "size=1": {
+      "model": "thaumcraft:block/crystal_medium"
+    },
+    "size=2": {
+      "model": "thaumcraft:block/crystal_large"
+    },
+    "size=3": {
+      "model": "thaumcraft:block/crystal"
+    }
+  }
+}

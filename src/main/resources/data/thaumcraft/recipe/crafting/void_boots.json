@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": {"item": "thaumcraft:void_metal_ingot"}
+  },
+  "result": {"id": "thaumcraft:void_boots",
+    "count": 1
+  }
+}

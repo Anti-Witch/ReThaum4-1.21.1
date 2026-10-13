@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "catalyst": {
+    "item": "minecraft:bone_meal"
+  },
+  "result": {
+    "id": "minecraft:red_dye",
+    "count": 2
+  },
+  "aspects": {
+    "sensus": 5
+  },
+  "research": "ALCHEMICALMANUFACTURE"
+}

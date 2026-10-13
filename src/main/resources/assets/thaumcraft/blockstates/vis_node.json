@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "node_type=0": { "model": "thaumcraft:block/empty" },
+        "node_type=1": { "model": "thaumcraft:block/empty" },
+        "node_type=2": { "model": "thaumcraft:block/empty" },
+        "node_type=3": { "model": "thaumcraft:block/empty" }
+    }
+}

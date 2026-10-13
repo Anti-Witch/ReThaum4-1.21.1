@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "COREFILL",
+  "catalyst": {
+    "type": "neoforge:components",
+    "items": [
+      "thaumcraft:golem_core"
+    ],
+    "components": {},
+    "strict": true
+  },
+  "aspects": {
+    "fames": 5,
+    "vacuos": 5
+  },
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "components": {
+      "thaumcraft:golem_core_type": 0
+    }
+  }
+}

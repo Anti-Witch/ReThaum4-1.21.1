@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thaumcraft:block/plank_silverwood"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "DISTILESSENTIA",
+  "vis": 50,
+  "crystals": {
+    "ignis": 1
+  },
+  "pattern": [
+    "BCB",
+    "SFS",
+    "SSS"
+  ],
+  "key": {
+    "B": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "C": {
+      "item": "thaumcraft:crucible"
+    },
+    "S": {
+      "tag": "c:cobblestones"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:smelter"
+  }
+}

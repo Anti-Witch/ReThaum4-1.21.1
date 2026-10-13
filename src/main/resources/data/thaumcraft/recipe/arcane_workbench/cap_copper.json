@@ -1,0 +1,9 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CAP_copper",
+  "vis": 25,
+  "crystals": { "ordo": 1, "ignis": 1, "aer": 1 },
+  "pattern": ["NNN", "N N"],
+  "key": { "N": { "item": "thaumcraft:copper_nugget" } },
+  "result": { "id": "thaumcraft:wand_cap_copper" }
+}

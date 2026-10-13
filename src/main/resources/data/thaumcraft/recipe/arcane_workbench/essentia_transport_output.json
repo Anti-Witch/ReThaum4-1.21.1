@@ -1,0 +1,31 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "TUBES",
+  "vis": 100,
+  "aspects": {
+    "aer": 1,
+    "aqua": 1
+  },
+  "pattern": [
+    "   ",
+    "BQB",
+    "IGI"
+  ],
+  "key": {
+    "B": {
+      "tag": "thaumcraft:plates/brass"
+    },
+    "Q": {
+      "item": "minecraft:hopper"
+    },
+    "I": {
+      "tag": "thaumcraft:plates/iron"
+    },
+    "G": {
+      "item": "thaumcraft:alchemical_brass_block"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:essentia_output"
+  }
+}

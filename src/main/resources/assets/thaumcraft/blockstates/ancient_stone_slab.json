@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "thaumcraft:block/ancient_stone_slab" },
+    "type=double": { "model": "thaumcraft:block/ancient_stone" },
+    "type=top": { "model": "thaumcraft:block/ancient_stone_slab_top" }
+  }
+}

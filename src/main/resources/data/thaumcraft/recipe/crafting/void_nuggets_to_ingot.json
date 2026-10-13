@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NNN",
+    "NNN"
+  ],
+  "key": {
+    "N": {"item": "thaumcraft:void_metal_nugget"}
+  },
+  "result": {"id": "thaumcraft:void_metal_ingot",
+    "count": 1
+  }
+}

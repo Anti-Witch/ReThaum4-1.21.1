@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "thaumcraft:block/es_1",
+    "top": "thaumcraft:block/es_1",
+    "side": "thaumcraft:block/es_1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ELEMENTALAXE",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:thaumium_axe"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:shard_fire"
+    },
+    {
+      "item": "thaumcraft:shard_fire"
+    },
+    {
+      "item": "thaumcraft:shard_air"
+    },
+    {
+      "item": "thaumcraft:shard_air"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "aspects": {
+    "ignis": 30,
+    "aer": 30,
+    "instrumentum": 20
+  },
+  "result": {
+    "id": "thaumcraft:elemental_axe"
+  }
+}

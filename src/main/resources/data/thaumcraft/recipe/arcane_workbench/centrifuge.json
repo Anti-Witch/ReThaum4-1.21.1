@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CENTRIFUGE",
+  "vis": 100,
+  "crystals": {
+    "ordo": 1,
+    "perditio": 1
+  },
+  "pattern": [
+    " T ",
+    "RCP",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "thaumcraft:tube_normal"
+    },
+    "R": {
+      "item": "thaumcraft:morphic_resonator"
+    },
+    "C": {
+      "item": "thaumcraft:alchemical_brass_block"
+    },
+    "P": {
+      "item": "thaumcraft:mechanism_simple"
+    }
+  },
+  "result": {"id": "thaumcraft:centrifuge"
+  }
+}

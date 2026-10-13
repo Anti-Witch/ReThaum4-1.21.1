@@ -1,0 +1,52 @@
+{
+    "variants": {
+        "type=arcane": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_arcane"
+            }
+        },
+        "type=preserved": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_preserved"
+            }
+        },
+        "type=ancient": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_ancient"
+            }
+        },
+        "type=knowledge": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_knowledge"
+            }
+        },
+        "type=twisted": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_twisted"
+            }
+        },
+        "type=eldritch": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_eldritch"
+            }
+        },
+        "type=rites": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/crimson_rites"
+            }
+        },
+        "": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/curio_arcane"
+            }
+        }
+    }
+}

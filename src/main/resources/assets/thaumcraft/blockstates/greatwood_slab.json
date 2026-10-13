@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "thaumcraft:block/greatwood_slab" },
+    "type=double": { "model": "thaumcraft:block/greatwood" },
+    "type=top": { "model": "thaumcraft:block/greatwood_slab_top" }
+  }
+}

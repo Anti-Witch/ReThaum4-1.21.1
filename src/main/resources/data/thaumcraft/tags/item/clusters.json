@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:cluster_iron",
+    "thaumcraft:cluster_gold",
+    "thaumcraft:cluster_copper",
+    "thaumcraft:cluster_cinnabar"
+  ]
+}

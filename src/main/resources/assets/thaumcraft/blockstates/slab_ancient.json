@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "half=bottom,variant=default": {
+      "model": "thaumcraft:block/slab_ancient"
+    },
+    "half=top,variant=default": {
+      "model": "thaumcraft:block/slab_ancient_top"
+    },
+    "": {
+      "model": "thaumcraft:block/slab_ancient"
+    }
+  }
+}

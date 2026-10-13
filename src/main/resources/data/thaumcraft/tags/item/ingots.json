@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:thaumium_ingot",
+    "thaumcraft:void_metal_ingot",
+    "thaumcraft:brass_ingot"
+  ]
+}

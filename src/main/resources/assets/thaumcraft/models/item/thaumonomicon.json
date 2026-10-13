@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/thaumonomicon"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thaumcraft:tc_variant": 1.0
+      },
+      "model": "thaumcraft:item/thaumonomicon_cheat"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:wheat"
+  },
+  "aspects": {
+    "bestia": 3,
+    "fabrico": 3
+  },
+  "result": {
+    "id": "minecraft:string",
+    "count": 1
+  },
+  "group": "thaumcraft:hedge_transmutation"
+}

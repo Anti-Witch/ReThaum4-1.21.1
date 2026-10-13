@@ -1,0 +1,10 @@
+{
+    "variants": {
+        "": [
+            { "model": "thaumcraft:block/arcane_stone" },
+            { "model": "thaumcraft:block/arcane_stone", "x": 90 },
+            { "model": "thaumcraft:block/arcane_stone", "y": 90 },
+            { "model": "thaumcraft:block/arcane_stone", "x": 90, "y": 90 }
+        ]
+    }
+}

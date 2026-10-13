@@ -1,0 +1,1291 @@
+{
+  "entries": [
+    {
+      "key": "PHIAL",
+      "name": "tc.research_name.PHIAL",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:phial_empty"
+      ],
+      "location": [
+        0,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PHIAL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/phial_empty"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "CRUCIBLE",
+      "name": "tc.research_name.CRUCIBLE",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:crucible"
+      ],
+      "location": [
+        0,
+        0
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CRUCIBLE.1"
+        },
+        {
+          "text": "tc.research_page.CRUCIBLE.2"
+        },
+        {
+          "text": "tc.research_page.CRUCIBLE.3"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/crucible"
+          ]
+        },
+        {
+          "text": "tc.research_page.CRUCIBLE.4"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/shard_balanced_aer",
+            "thaumcraft:crucible/shard_balanced_aqua",
+            "thaumcraft:crucible/shard_balanced_ignis",
+            "thaumcraft:crucible/shard_balanced_ordo",
+            "thaumcraft:crucible/shard_balanced_perditio",
+            "thaumcraft:crucible/shard_balanced_terra"
+          ]
+        },
+        {
+          "text": "tc.research_page.CRUCIBLE.5"
+        }
+      ]
+    },
+    {
+      "key": "NITOR",
+      "name": "tc.research_name.NITOR",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:nitor"
+      ],
+      "location": [
+        2,
+        -1
+      ],
+      "aspects": [
+        "lux:3",
+        "ignis"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CRUCIBLE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NITOR.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/nitor"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ALUMENTUM",
+      "name": "tc.research_name.ALUMENTUM",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:alumentum"
+      ],
+      "location": [
+        2,
+        1
+      ],
+      "aspects": [
+        "potentia:3",
+        "ignis"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CRUCIBLE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ALUMENTUM.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/alumentum"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ALCHEMICALDUPLICATION",
+      "name": "tc.research_name.ALCHEMICALDUPLICATION",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:textures/misc/r_alchmult.png"
+      ],
+      "location": [
+        -4,
+        0
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "lucrum:3",
+        "fabrico:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TALLOW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ALCHEMICALDUPLICATION.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_gunpowder"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_slime"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_clay"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_glowstone"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_dye"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ALCHEMICALMANUFACTURE",
+      "name": "tc.research_name.ALCHEMICALMANUFACTURE",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:textures/misc/r_alchman.png"
+      ],
+      "location": [
+        -5,
+        -2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "permutatio:3",
+        "fabrico:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ALCHEMICALDUPLICATION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ALCHEMICALMANUFACTURE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/hedge_cobweb"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ENTROPICPROCESSING",
+      "name": "tc.research_name.ENTROPICPROCESSING",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:textures/misc/r_alchent.png"
+      ],
+      "location": [
+        -6,
+        1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio",
+        "perditio:3",
+        "fabrico"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ALCHEMICALDUPLICATION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ENTROPICPROCESSING.1"
+        }
+      ]
+    },
+    {
+      "key": "LIQUIDDEATH",
+      "name": "tc.research_name.LIQUIDDEATH",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:textures/misc/r_alchent.png"
+      ],
+      "location": [
+        -7,
+        3
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "mortuus:3",
+        "venenum:3",
+        "perditio",
+        "aqua"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ENTROPICPROCESSING"
+      ],
+      "triggers": {
+        "aspects": [
+          "mortuus",
+          "venenum"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.LIQUIDDEATH.1"
+        }
+      ]
+    },
+    {
+      "key": "BOTTLETAINT",
+      "name": "tc.research_name.BOTTLETAINT",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:bottle_taint"
+      ],
+      "location": [
+        -8,
+        1
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "vitium:5",
+        "praecantatio:3",
+        "perditio",
+        "aqua"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ENTROPICPROCESSING"
+      ],
+      "triggers": {
+        "aspects": [
+          "vitium"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.BOTTLETAINT.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/bottle_taint"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "THAUMIUM",
+      "name": "tc.research_name.THAUMIUM",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:thaumium_ingot"
+      ],
+      "location": [
+        -1,
+        3
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "metallum:3",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CRUCIBLE"
+      ],
+      "triggers": {
+        "aspects": [
+          "metallum"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.THAUMIUM.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/thaumium_ingot"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_axe"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_sword"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_pick"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_shovel"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_hoe"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_helm"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_chest"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_legs"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumium_boots"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PUREIRON",
+      "name": "tc.research_name.PUREIRON",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:cluster_iron"
+      ],
+      "location": [
+        -2,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "THAUMIUM"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PUREIRON.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/cluster_iron"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PUREGOLD",
+      "name": "tc.research_name.PUREGOLD",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:cluster_gold"
+      ],
+      "location": [
+        -4,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PUREIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PUREGOLD.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/cluster_gold"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PURECOPPER",
+      "name": "tc.research_name.PURECOPPER",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:cluster_copper"
+      ],
+      "location": [
+        -4,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:2",
+        "permutatio"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PUREIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PURECOPPER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/cluster_copper"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PURETIN",
+      "name": "tc.research_name.PURETIN",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:tin_ingot"
+      ],
+      "location": [
+        -4,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:2",
+        "vitreus"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PUREIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PURETIN.1"
+        }
+      ]
+    },
+    {
+      "key": "PURESILVER",
+      "name": "tc.research_name.PURESILVER",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:silver_ingot"
+      ],
+      "location": [
+        -3,
+        8
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PUREIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PURESILVER.1"
+        }
+      ]
+    },
+    {
+      "key": "PURELEAD",
+      "name": "tc.research_name.PURELEAD",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:lead_ingot"
+      ],
+      "location": [
+        -2,
+        9
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "ordo:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PUREIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PURELEAD.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSIRON",
+      "name": "tc.research_name.TRANSIRON",
+      "category": "ALCHEMY",
+      "icons": [
+        "minecraft:iron_nugget"
+      ],
+      "location": [
+        0,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "THAUMIUM"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSIRON.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSGOLD",
+      "name": "tc.research_name.TRANSGOLD",
+      "category": "ALCHEMY",
+      "icons": [
+        "minecraft:gold_nugget"
+      ],
+      "location": [
+        2,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TRANSIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSGOLD.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSCOPPER",
+      "name": "tc.research_name.TRANSCOPPER",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:copper_nugget"
+      ],
+      "location": [
+        2,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TRANSIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSCOPPER.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSTIN",
+      "name": "tc.research_name.TRANSTIN",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:tin_nugget"
+      ],
+      "location": [
+        2,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:2",
+        "vitreus"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TRANSIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSTIN.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSSILVER",
+      "name": "tc.research_name.TRANSSILVER",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:silver_nugget"
+      ],
+      "location": [
+        1,
+        8
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:2",
+        "lucrum"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TRANSIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSSILVER.1"
+        }
+      ]
+    },
+    {
+      "key": "TRANSLEAD",
+      "name": "tc.research_name.TRANSLEAD",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:lead_nugget"
+      ],
+      "location": [
+        0,
+        9
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "metallum:3",
+        "permutatio:2",
+        "ordo"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TRANSIRON"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TRANSLEAD.1"
+        }
+      ]
+    },
+    {
+      "key": "TALLOW",
+      "name": "tc.research_name.TALLOW",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:tallow"
+      ],
+      "location": [
+        -2,
+        0
+      ],
+      "aspects": [
+        "corpus:3",
+        "praecantatio"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CRUCIBLE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TALLOW.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/tallow"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/candle_white"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ETHEREALBLOOM",
+      "name": "tc.research_name.ETHEREALBLOOM",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:shimmerleaf"
+      ],
+      "location": [
+        -2,
+        -3
+      ],
+      "meta": [
+        "CONCEALED",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "praecantatio",
+        "herba:6",
+        "sano:3",
+        "vitium:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "CRUCIBLE"
+      ],
+      "triggers": {
+        "aspects": [
+          "vitium"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.ETHEREALBLOOM.1"
+        },
+        {
+          "text": "tc.research_page.ETHEREALBLOOM.2"
+        }
+      ]
+    },
+    {
+      "key": "BATHSALTS",
+      "name": "tc.research_name.BATHSALTS",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:bath_salts"
+      ],
+      "location": [
+        -4,
+        -4
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "cognitio:3",
+        "auram:3",
+        "ordo:3",
+        "sano:3"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.BATHSALTS.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/bath_salts"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "SANESOAP",
+      "name": "tc.research_name.SANESOAP",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:sanity_soap"
+      ],
+      "location": [
+        -3,
+        -6
+      ],
+      "aspects": [
+        "cognitio:5",
+        "ordo:5",
+        "sano:5",
+        "alienis:5"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BATHSALTS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.SANESOAP.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/sanity_soap"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ARCANESPA",
+      "name": "tc.research_name.ARCANESPA",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:spa"
+      ],
+      "location": [
+        -6,
+        -5
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "machina:3",
+        "ordo:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "BATHSALTS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCANESPA.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/spa"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "DISTILESSENTIA",
+      "name": "tc.research_name.DISTILESSENTIA",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:alembic"
+      ],
+      "location": [
+        5,
+        -1
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "aqua:3",
+        "limus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "NITOR",
+        "ALUMENTUM"
+      ],
+      "siblings": [
+        "JARLABEL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.DISTILESSENTIA.1"
+        },
+        {
+          "text": "tc.research_page.DISTILESSENTIA.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/filter"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/metal_alchemical"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "JARLABEL",
+      "name": "tc.research_name.JARLABEL",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:jar_normal"
+      ],
+      "location": [
+        4,
+        -3
+      ],
+      "meta": [
+        "ROUND",
+        "STUB"
+      ],
+      "parents": [
+        "DISTILESSENTIA"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.JARLABEL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/warded_jar"
+          ]
+        },
+        {
+          "text": "tc.research_page.JARLABEL.2"
+        },
+        {
+          "text": "tc.research_page.JARLABEL.3"
+        }
+      ]
+    },
+    {
+      "key": "JARVOID",
+      "name": "tc.research_name.JARVOID",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:jar_void"
+      ],
+      "location": [
+        5,
+        -5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "perditio:3",
+        "vacuos:6"
+      ],
+      "complexity": 1,
+      "parents": [
+        "JARLABEL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.JARVOID.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/jar_void"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "TUBES",
+      "name": "tc.research_name.TUBES",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:tube_normal"
+      ],
+      "location": [
+        7,
+        0
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "praecantatio:3",
+        "permutatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "DISTILESSENTIA"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TUBES.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube"
+          ]
+        },
+        {
+          "text": "tc.research_page.TUBES.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube_valve"
+          ]
+        },
+        {
+          "text": "tc.research_page.TUBES.3"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/resonator"
+          ]
+        },
+        {
+          "text": "tc.research_page.TUBES.4"
+        }
+      ]
+    },
+    {
+      "key": "TUBEFILTER",
+      "name": "tc.research_name.TUBEFILTER",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:tube_filter"
+      ],
+      "location": [
+        9,
+        1
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aqua:3",
+        "praecantatio:3",
+        "permutatio:3",
+        "ordo:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "TUBES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TUBEFILTER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube_filter"
+          ]
+        },
+        {
+          "text": "tc.research_page.TUBEFILTER.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube_restrict"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube_oneway"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ESSENTIACRYSTAL",
+      "name": "tc.research_name.ESSENTIACRYSTAL",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:crystal_essence"
+      ],
+      "location": [
+        8,
+        -2
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "aqua:5",
+        "vitreus:5",
+        "permutatio:3",
+        "praecantatio:5"
+      ],
+      "complexity": 1,
+      "parents": [
+        "TUBES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ESSENTIACRYSTAL.1"
+        }
+      ]
+    },
+    {
+      "key": "CENTRIFUGE",
+      "name": "tc.research_name.CENTRIFUGE",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:centrifuge"
+      ],
+      "location": [
+        10,
+        0
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "perditio:3",
+        "praecantatio:3",
+        "permutatio:3",
+        "fabrico:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "TUBEFILTER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CENTRIFUGE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/centrifuge"
+          ]
+        },
+        {
+          "text": "tc.research_page.CENTRIFUGE.2"
+        },
+        {
+          "text": "tc.research_page.CENTRIFUGE.3"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/tube_buffer"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "THAUMATORIUM",
+      "name": "tc.research_name.THAUMATORIUM",
+      "category": "ALCHEMY",
+      "icons": [
+        "thaumcraft:textures/misc/r_crucible.png"
+      ],
+      "location": [
+        10,
+        -2
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "aqua:3",
+        "praecantatio:6",
+        "permutatio:3",
+        "fabrico:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "CENTRIFUGE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.THAUMATORIUM.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:thaumatorium"
+          ]
+        },
+        {
+          "text": "tc.research_page.THAUMATORIUM.2"
+        },
+        {
+          "text": "tc.research_page.THAUMATORIUM.3"
+        }
+      ]
+    }
+  ]
+}

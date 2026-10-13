@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:slime_ball"
+  },
+  "aspects": {
+    "aqua": 5,
+    "victus": 5
+  },
+  "result": {
+    "id": "minecraft:slime_ball",
+    "count": 2
+  },
+  "group": "thaumcraft:hedge_duplication"
+}

@@ -1,0 +1,74 @@
+{
+  "temperature": 0.0,
+  "downfall": 0.0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 0,
+    "fog_color": 1052688,
+    "water_color": 0,
+    "water_fog_color": 0,
+    "grass_color": 2105376,
+    "foliage_color": 2105376,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 2000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "ambient_sound": "minecraft:ambient.basalt_deltas.loop"
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "thaumcraft:inhabited_zombie",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "thaumcraft:eldritch_guardian",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": []
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "thaumcraft:ancient_stone_circle",
+      "thaumcraft:barrow",
+      "thaumcraft:eldritch_obelisk",
+      "thaumcraft:ruined_tower"
+    ],
+    [],
+    [],
+    [
+      "thaumcraft:crystal_cluster_entropy",
+      "thaumcraft:crystal_cluster_order",
+      "thaumcraft:crystal_cluster_air",
+      "thaumcraft:crystal_cluster_fire",
+      "thaumcraft:crystal_cluster_water",
+      "thaumcraft:crystal_cluster_earth",
+      "thaumcraft:vishroom_patch"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ]
+}

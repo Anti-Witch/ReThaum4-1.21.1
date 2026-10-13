@@ -1,0 +1,47 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICARTIFACE",
+  "vis": 0,
+  "crystals": {
+    "aer": 25,
+    "ignis": 25,
+    "aqua": 25,
+    "terra": 25,
+    "ordo": 25,
+    "perditio": 25
+  },
+  "pattern": [
+    "123",
+    "ISI",
+    "456"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:shard_balanced"
+    },
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
+    "1": {
+      "item": "thaumcraft:shard_air"
+    },
+    "2": {
+      "item": "thaumcraft:shard_fire"
+    },
+    "3": {
+      "item": "thaumcraft:shard_water"
+    },
+    "4": {
+      "item": "thaumcraft:shard_earth"
+    },
+    "5": {
+      "item": "thaumcraft:shard_order"
+    },
+    "6": {
+      "item": "thaumcraft:shard_entropy"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:primal_charm"
+  }
+}

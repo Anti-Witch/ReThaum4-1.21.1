@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "thaumcraft:block/ancient_pillar", "x": 90, "y": 90 },
+    "axis=y": { "model": "thaumcraft:block/ancient_pillar" },
+    "axis=z": { "model": "thaumcraft:block/ancient_pillar", "x": 90 }
+  }
+}

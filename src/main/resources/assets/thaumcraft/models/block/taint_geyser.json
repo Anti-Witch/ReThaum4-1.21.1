@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumcraft:block/taint_geyser_side",
+    "top": "thaumcraft:block/taint_geyser_top",
+    "side": "thaumcraft:block/taint_geyser_side"
+  }
+}

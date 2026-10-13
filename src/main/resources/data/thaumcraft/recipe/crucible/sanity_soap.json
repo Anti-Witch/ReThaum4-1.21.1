@@ -1,0 +1,15 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "SANESOAP",
+  "catalyst": {
+    "item": "thaumcraft:flesh_block"
+  },
+  "aspects": {
+    "sensus": 75,
+    "alienis": 50,
+    "ordo": 75,
+    "victus": 50
+  },
+  "result": {"id": "thaumcraft:sanity_soap"
+  }
+}

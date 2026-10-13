@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "tag": "c:dusts/glowstone"
+  },
+  "aspects": {
+    "lux": 5,
+    "sensus": 5
+  },
+  "result": {
+    "id": "minecraft:glowstone_dust",
+    "count": 2
+  },
+  "group": "thaumcraft:hedge_duplication"
+}

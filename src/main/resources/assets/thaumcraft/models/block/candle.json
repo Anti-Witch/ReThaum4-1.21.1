@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "wax": "thaumcraft:block/candle_wax",
+    "flame": "thaumcraft:block/candle_flame",
+    "particle": "thaumcraft:block/candle"
+  },
+  "elements": [
+    {
+      "from": [6, 0, 6],
+      "to": [10, 11, 10],
+      "faces": {
+        "down":  { "texture": "#wax", "tintindex": 0 },
+        "up":    { "texture": "#wax", "tintindex": 0 },
+        "north": { "texture": "#wax", "tintindex": 0 },
+        "south": { "texture": "#wax", "tintindex": 0 },
+        "west":  { "texture": "#wax", "tintindex": 0 },
+        "east":  { "texture": "#wax", "tintindex": 0 }
+      }
+    },
+    {
+      "from": [7, 11, 7],
+      "to": [9, 15, 9],
+      "faces": {
+        "down":  { "texture": "#flame" },
+        "up":    { "texture": "#flame" },
+        "north": { "texture": "#flame" },
+        "south": { "texture": "#flame" },
+        "west":  { "texture": "#flame" },
+        "east":  { "texture": "#flame" }
+      }
+    }
+  ]
+}

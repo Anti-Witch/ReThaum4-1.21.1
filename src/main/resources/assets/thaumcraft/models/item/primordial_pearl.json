@@ -1,0 +1,23 @@
+{
+    "parent": "minecraft:item/generated", "textures": { "layer0": "thaumcraft:item/primordial_pearl" },
+    "overrides": [
+        {
+            "predicate": {
+                "type": 0
+            },
+            "model": "thaumcraft:item/primordial_pearl_0"
+        },
+        {
+            "predicate": {
+                "type": 1
+            },
+            "model": "thaumcraft:item/primordial_pearl_1"
+        },
+        {
+            "predicate": {
+                "type": 2
+            },
+            "model": "thaumcraft:item/primordial_pearl_2"
+        }
+    ]
+}

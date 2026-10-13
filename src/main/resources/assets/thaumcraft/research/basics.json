@@ -1,0 +1,287 @@
+{
+    "entries" :[
+        {
+            "key": "FIRSTSTEPS",    
+            "name": "research.FIRSTSTEPS.title",
+            "icons": [ "thaumcraft:textures/item/thaumonomicon.png" ],
+            "category": "BASICS", "location": [ 0,0 ], 
+            "parents": [ "!gotthaumonomicon" ],
+            "siblings": [ "KNOWLEDGETYPES", "!gotdream" ],
+            "meta": [ "ROUND","SPIKY" ],        
+            "stages": [
+                {   
+                    "text": "research.FIRSTSTEPS.stage.1", 
+                    "required_craft":["thaumcraft:arcane_workbench"], 
+                    "recipes": ["thaumcraft:salis_mundus_fake"]
+                },
+                {
+                    "text": "research.FIRSTSTEPS.stage.2",            
+                    "required_craft":["thaumcraft:thaumometer"], 
+                    "required_knowledge":["OBSERVATION;BASICS;1"], 
+                    "recipes": ["thaumcraft:thaumometer","thaumcraft:salis_mundus_fake"]
+                },
+                {
+                    "text": "research.FIRSTSTEPS.stage.3", 
+                    "recipes": ["thaumcraft:thaumometer","thaumcraft:salis_mundus_fake","thaumcraft:arcane_stone","thaumcraft:arcane_stone_brick"]
+                }
+            ]
+        },
+        {
+            "key": "KNOWLEDGETYPES",    
+            "name": "research.KNOWLEDGETYPES.title",
+            "icons": [ "thaumcraft:textures/misc/r_aspects.png" ],
+            "category": "BASICS", "location": [ 2,-1 ], 
+            "meta": [ "ROUND" , "HIDDEN" ],        
+            "stages": [{"text": "research.KNOWLEDGETYPES.stage.1"}]
+        },
+        {
+            "key": "FLUX",    
+            "name": "research.FLUX.title",
+            "icons": [ "thaumcraft:textures/misc/r_aspects.png" ],
+            "category": "BASICS", "location": [ -2,-2 ], 
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [
+                {"text": "research.FLUX.stage.1", "required_research":["f_toomuchflux"]},
+                {"text": "research.FLUX.stage.1"}
+            ],
+            "addenda": [
+                {"text": "research.FLUX.stage.2","required_research":["f_toomuchflux"]}
+            ]
+        },
+        {
+            "key": "WARP",    
+            "name": "research.WARP.title",
+            "icons": [ "thaumcraft:textures/misc/r_warp.png" ],
+            "category": "BASICS", "location": [ -4,-2 ], 
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [{"text": "research.WARP.stage.1", "recipes":["thaumcraft:sanity_checker"]}]
+        },
+        {
+            "key": "ORE",    
+            "name": "research.ORE.title",
+            "icons": [ "minecraft:iron_pickaxe" ],
+            "category": "BASICS", "location": [ -4,0 ], 
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [{"text": "research.ORE.stage.1"}],
+            "addenda": [
+                {"text": "research.ORE.amber","required_research":["!OREAMBER"]},
+                {"text": "research.ORE.cinnabar","required_research":["!ORECINNABAR"]},
+                {"text": "research.ORE.crystal","required_research":["!ORECRYSTAL"]}
+            ]
+        },
+        {
+            "key": "PLANTS",    
+            "name": "research.PLANTS.title",
+            "icons": [ "thaumcraft:sapling_greatwood","thaumcraft:sapling_silverwood" ],
+            "category": "BASICS", "location": [ -3,0 ], 
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [{"text": "research.PLANTS.stage.1"}],
+            "addenda": [                
+                {"text": "research.PLANTS.greatwood","required_research":["!PLANTWOOD"]},
+                {"text": "research.PLANTS.silverwood","required_research":["!PLANTWOOD"]},
+                {"text": "research.PLANTS.cinderpearl","required_research":["!PLANTCINDERPEARL"]},
+                {"text": "research.PLANTS.shimmerleaf","required_research":["!PLANTSHIMMERLEAF"]},
+                {"text": "research.PLANTS.vishroom","required_research":["!PLANTVISHROOM"]}
+            ]
+        },
+        {
+            "key": "CRYSTALFARMER",    
+            "name": "research.CRYSTALFARMER.title",
+            "icons": [ "thaumcraft:crystal_aer","thaumcraft:crystal_ignis","thaumcraft:crystal_aqua","thaumcraft:crystal_terra","thaumcraft:crystal_ordo","thaumcraft:crystal_perditio" ],
+            "category": "BASICS", "location": [ -5,1 ], 
+            "parents": [ "ORE", "INFUSION", "!ORECRYSTAL"],
+            "meta": [ "ROUND","HIDDEN" ],        
+            "stages": [
+                {
+                    "text": "research.CRYSTALFARMER.stage.1",
+                    "required_knowledge":["OBSERVATION;AUROMANCY;1","OBSERVATION;BASICS;1"],
+                    "required_item":[
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'aer'}]}",
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'terra'}]}",
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'ignis'}]}",
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'aqua'}]}",
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'ordo'}]}",
+                        "thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'perditio'}]}"
+                        ]
+                },
+                {
+                    "text": "research.CRYSTALFARMER.stage.2",     
+                    "recipes": ["thaumcraft:crystal_cluster_air","thaumcraft:crystal_cluster_fire",
+                            "thaumcraft:crystal_cluster_water","thaumcraft:crystal_cluster_earth",
+                            "thaumcraft:crystal_cluster_order","thaumcraft:crystal_cluster_entropy",
+                            "thaumcraft:crystal_cluster_flux"]
+                }
+            ]
+        },
+        {
+            "key": "PRIMPEARL",    
+            "name": "research.PRIMPEARL.title",
+            "icons": [ "thaumcraft:primordial_pearl" ],
+            "category": "BASICS", "location": [ -8,4 ], 
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [{"text": "research.PRIMPEARL.stage.1"}]
+        },
+        {
+            "key": "UNLOCKALCHEMY",    
+            "name": "research.UNLOCKALCHEMY.title",
+            "icons": [ "thaumcraft:textures/misc/r_crucible.png" ],
+            "category": "BASICS", "location": [ 0,2 ], 
+            "parents": [ "FIRSTSTEPS" ],
+            "meta": [ "ROUND","SPIKY" ],        
+            "aspects": ["aqua","mutatio"],
+            "complexity": 2,
+            "stages": [
+                    {
+                        "text": "research.UNLOCKALCHEMY.stage.1",
+                        "required_knowledge":["OBSERVATION;ALCHEMY;1","OBSERVATION;BASICS;1"]
+                    },
+                    {
+                        "text": "research.UNLOCKALCHEMY.stage.2",          
+                        "required_craft":["thaumcraft:crucible"]
+                    },
+                    {
+                        "text": "research.UNLOCKALCHEMY.stage.3",          
+                        "required_craft":["thaumcraft:nitor_yellow"],  
+                        "recipes": ["thaumcraft:nitor","thaumcraft:nitor_color"]
+                    }
+            ]
+        },
+        {
+            "key": "UNLOCKAUROMANCY",    
+            "name": "research.UNLOCKAUROMANCY.title",
+            "icons": [ "thaumcraft:textures/misc/r_thaumaturgy.png" ],
+            "category": "BASICS", "location": [ -2,4 ], 
+            "parents": [ "UNLOCKALCHEMY" ],
+            "meta": [ "ROUND","SPIKY" ],        
+            "aspects": ["aer","auram"],
+            "complexity": 2,
+            "stages": [
+                    {
+                        "text": "research.UNLOCKAUROMANCY.stage.1",
+                        "required_research":["m_deepdown","m_uphigh"]
+                    },
+                    {
+                        "text": "research.UNLOCKAUROMANCY.stage.2",
+                        "required_craft":["thaumcraft:vis_resonator","thaumcraft:caster_basic"],
+                        "recipes":["thaumcraft:vis_resonator","thaumcraft:caster_basic"]
+                    },
+                    {
+                        "text": "research.UNLOCKAUROMANCY.stage.3",
+                        "recipes":["thaumcraft:vis_resonator","thaumcraft:caster_basic"]
+                    }
+            ]
+        },
+        {
+            "key": "UNLOCKARTIFICE",
+            "name": "research.UNLOCKARTIFICE.title",
+            "icons": [ "thaumcraft:textures/misc/r_artifice.png" ],
+            "category": "BASICS", "location": [ 2,4 ],
+            "parents": [ "UNLOCKALCHEMY", "METALLURGY@2" ],
+            "meta": [ "ROUND","SPIKY" ],
+            "aspects": ["terra","machina"],
+            "complexity": 2,
+            "stages": [
+                {
+                    "text": "research.UNLOCKARTIFICE.stage.1",
+                    "required_knowledge":["OBSERVATION;ARTIFICE;1"],
+                    "required_research":["!sensus","!machina"]
+                },
+                {
+                    "text": "research.UNLOCKARTIFICE.stage.2",
+                    "recipes": ["thaumcraft:goggles"]
+                }
+            ]
+        },
+        {
+            "key": "UNLOCKINFUSION",
+            "name": "research.UNLOCKINFUSION.title",
+            "icons": [ "thaumcraft:textures/misc/r_enchant.png" ],
+            "category": "BASICS", "location": [ 0,4 ],
+            "parents": [ "UNLOCKALCHEMY" ],
+            "meta": [ "ROUND","SPIKY" ],
+            "aspects": ["ignis","praecantatio"],
+            "complexity": 2,
+            "stages": [
+                {
+                    "text": "research.UNLOCKINFUSION.stage.1",
+                    "required_knowledge":["OBSERVATION;INFUSION;1"],
+                    "required_research":["!auram","!praecantatio"]
+                },
+                {
+                    "text": "research.UNLOCKINFUSION.stage.2", 
+                    "recipes":["thaumcraft:enchanted_fabric","thaumcraft:robe_chest","thaumcraft:robe_legs","thaumcraft:robe_boots"]
+                }
+            ]
+        },
+        {
+            "key": "UNLOCKGOLEMANCY",
+            "name": "research.UNLOCKGOLEMANCY.title",
+            "icons": [ "thaumcraft:textures/misc/r_golemancy.png" ],
+            "category": "BASICS", "location": [ 0,6 ],
+            "parents": [ "UNLOCKARTIFICE", "UNLOCKAUROMANCY", "UNLOCKINFUSION" ],
+            "siblings": [ "BASEGOLEMANCY" ],
+            "meta": [ "ROUND","SPIKY","REVERSE" ],
+            "aspects": ["ordo","motus"],
+            "complexity": 3,
+            "stages": [
+                {
+                    "text": "research.UNLOCKGOLEMANCY.stage.1",
+                    "required_knowledge":["OBSERVATION;GOLEMANCY;1","OBSERVATION;BASICS;1"],
+                    "required_research":["f_golem"]
+                },
+                {
+                    "text": "research.UNLOCKGOLEMANCY.stage.2"
+                }
+            ]
+        },
+        {
+            "key": "CrimsonRites",
+            "name": "research.CrimsonRites.title",
+            "icons": [ "thaumcraft:crimson_rites" ],
+            "category": "BASICS", "location": [ -6,4 ],
+            "parents": [ "!CrimsonCultist" ],
+            "meta": [ "ROUND","HIDDEN","REVERSE" ],
+            "stages": [
+                {
+                    "text": "research.CrimsonRites.stage.1",  
+                    "required_item":["thaumcraft:crimson_rites"]
+                },
+                {
+                    "text": "research.CrimsonRites.stage.2"
+                }
+            ]
+        },
+        {
+            "key": "UNLOCKELDRITCH",
+            "name": "research.UNLOCKELDRITCH.title",
+            "icons": [ "thaumcraft:textures/misc/r_eldritch.png" ],
+            "category": "BASICS", "location": [ -4,6 ],
+            "parents": [ "CrimsonRites", "UNLOCKAUROMANCY" ],
+            "meta": [ "ROUND","SPIKY","HIDDEN" ],
+            "stages": [
+                {
+                    "text": "research.UNLOCKELDRITCH.stage.1",
+                    "required_knowledge":["OBSERVATION;BASICS;1","OBSERVATION;ELDRITCH;1"],
+                    "required_research":["f_VOIDSEED"],
+                    "warp": 5
+                },
+                {
+                    "text": "research.UNLOCKELDRITCH.stage.2"
+                }
+            ]
+        },
+        
+        {
+            "key": "FLUXRIFT",    
+            "name": "research.FLUXRIFT.title",
+            "icons": [ "thaumcraft:textures/misc/r_aspects.png" ],
+            "category": "BASICS", "location": [ 0,-3 ], 
+            "parents": [ "FLUX", "!FluxRift" ],        
+            "meta": [ "ROUND","HIDDEN" ],       
+            "stages": [
+                {"text": "research.FLUXRIFT.stage.1"}
+            ]
+        }
+    ]
+}
+    

@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "variant=default": [
+            {
+                "model": "thaumcraft:block/arcane_stone"
+            }
+        ],
+        "": [
+            {
+                "model": "thaumcraft:block/arcane_stone"
+            }
+        ]
+    }
+}

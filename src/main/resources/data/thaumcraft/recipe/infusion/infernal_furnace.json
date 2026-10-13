@@ -1,0 +1,23 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "INFERNALFURNACE",
+  "instability": 3,
+  "input": {
+    "item": "minecraft:blast_furnace"
+  },
+  "ingredients": [
+    { "item": "thaumcraft:shard_fire" },
+    { "item": "thaumcraft:shard_fire" },
+    { "item": "thaumcraft:shard_fire" },
+    { "item": "thaumcraft:shard_fire" },
+    { "item": "minecraft:nether_brick" },
+    { "item": "minecraft:nether_brick" }
+  ],
+  "aspects": {
+    "ignis": 50,
+    "fabrico": 30,
+    "praecantatio": 20
+  },
+  "result": {"id": "thaumcraft:infernal_furnace"
+  }
+}

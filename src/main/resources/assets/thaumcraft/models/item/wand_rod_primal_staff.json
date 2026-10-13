@@ -1,0 +1,7 @@
+{
+  "parent": "thaumcraft:item/wand_rod",
+  "textures": {
+    "particle": "thaumcraft:models/wand_rod_primal",
+    "rod": "thaumcraft:models/wand_rod_primal"
+  }
+}

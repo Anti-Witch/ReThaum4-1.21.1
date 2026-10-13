@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "FOCALMANIPULATION",
+  "instability": 5,
+  "input": {
+    "item": "thaumcraft:focus_advanced"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:quicksilver"
+    },
+    {
+      "item": "thaumcraft:primordial_pearl"
+    },
+    {
+      "item": "thaumcraft:quicksilver"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 25,
+    "ordo": 50,
+    "vacuos": 100
+  },
+  "result": {
+    "id": "thaumcraft:focus_advanced"
+  }
+}

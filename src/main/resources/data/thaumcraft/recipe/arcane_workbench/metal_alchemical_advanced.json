@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "ADVALCHEMYFURNACE",
+  "vis": 200,
+  "crystals": {
+    "terra": 1,
+    "ignis": 1
+  },
+  "pattern": [
+    " A ",
+    "VPV",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "thaumcraft:alchemical_brass_block"
+    },
+    "V": {
+      "item": "thaumcraft:plate_void"
+    },
+    "P": {
+      "item": "thaumcraft:primordial_pearl"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:alchemical_brass_advanced_block"
+  }
+}

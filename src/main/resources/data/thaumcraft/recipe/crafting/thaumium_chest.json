@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {"item": "thaumcraft:thaumium_ingot"}
+  },
+  "result": {"id": "thaumcraft:thaumium_chest",
+    "count": 1
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ELEMENTALSHOVEL",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:thaumium_shovel"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:shard_earth"
+    },
+    {
+      "item": "thaumcraft:shard_earth"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "aspects": {
+    "terra": 30,
+    "ordo": 30,
+    "instrumentum": 20
+  },
+  "result": {
+    "id": "thaumcraft:elemental_shovel"
+  }
+}

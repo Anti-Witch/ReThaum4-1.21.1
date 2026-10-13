@@ -1,0 +1,9 @@
+{
+  "loader": "neoforge:obj",
+  "model": "thaumcraft:models/obj/scanner.obj",
+  "flip_v": true,
+  "textures": {
+    "particle": "thaumcraft:models/scanner",
+    "texture": "thaumcraft:models/scanner"
+  }
+}

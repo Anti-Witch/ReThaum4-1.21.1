@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "DISTILESSENTIA",
+  "vis": 750,
+  "crystals": {
+    "ignis": 3
+  },
+  "pattern": [
+    "BFB",
+    "IGI",
+    "III"
+  ],
+  "key": {
+    "B": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "F": {
+      "item": "thaumcraft:smelter"
+    },
+    "I": {
+      "item": "thaumcraft:plate_void"
+    },
+    "G": {
+      "item": "thaumcraft:alchemical_brass_advanced_block"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:smelter_void"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ARMORVOIDFORTRESS",
+  "instability": 4,
+  "input": {
+    "item": "thaumcraft:void_legs"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:enchanted_fabric"
+    },
+    {
+      "item": "thaumcraft:enchanted_fabric"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 60,
+    "vacuos": 40,
+    "alienis": 40
+  },
+  "result": {
+    "id": "thaumcraft:void_robe_legs"
+  }
+}

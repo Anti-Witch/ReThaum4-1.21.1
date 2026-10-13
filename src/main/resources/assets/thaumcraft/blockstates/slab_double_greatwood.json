@@ -1,0 +1,14 @@
+{
+  "variants": {
+    "variant=default": [
+      {
+        "model": "thaumcraft:block/slab_double_greatwood"
+      }
+    ],
+    "": [
+      {
+        "model": "thaumcraft:block/slab_double_greatwood"
+      }
+    ]
+  }
+}

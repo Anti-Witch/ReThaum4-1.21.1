@@ -1,0 +1,22 @@
+{
+    "variants": {
+        "type=clockwork": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/mind_clockwork"
+            }
+        },
+        "type=biothaumic": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/mind_biothaumic"
+            }
+        },
+        "": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/mind_clockwork"
+            }
+        }
+    }
+}

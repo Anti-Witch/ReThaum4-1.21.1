@@ -1,0 +1,32 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICTHAUMATURGY",
+  "vis": 50,
+  "crystals": {
+    "aer": 1,
+    "aqua": 1,
+    "ignis": 1,
+    "terra": 1,
+    "ordo": 1,
+    "perditio": 1
+  },
+  "pattern": [
+    "SSS",
+    "WTW",
+    "WSW"
+  ],
+  "key": {
+    "S": {
+      "tag": "c:stones"
+    },
+    "W": {
+      "tag": "minecraft:planks"
+    },
+    "T": {
+      "item": "thaumcraft:table_wood"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:arcane_workbench"
+  }
+}

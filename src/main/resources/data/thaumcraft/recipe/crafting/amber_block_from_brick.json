@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "key": {
+    "A": {"item": "thaumcraft:amber_brick"}
+  },
+  "result": {"id": "thaumcraft:amber_block",
+    "count": 4
+  }
+}

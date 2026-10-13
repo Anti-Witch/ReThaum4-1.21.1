@@ -1,0 +1,147 @@
+{
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "has_precipitation": true,
+  "effects": {
+    "sky_color": 2237081,
+    "fog_color": 3750201,
+    "water_color": 3035999,
+    "water_fog_color": 329011,
+    "grass_color": 4212800,
+    "foliage_color": 4212800,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 4000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:witch",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:enderman",
+        "weight": 4,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "minecraft:zombie",
+        "weight": 19,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 15,
+        "minCount": 4,
+        "maxCount": 4
+      },
+      {
+        "type": "thaumcraft:brainy_zombie",
+        "weight": 32,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "thaumcraft:giant_brainy_zombie",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "thaumcraft:wisp",
+        "weight": 3,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "thaumcraft:eldritch_guardian",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 10,
+        "minCount": 8,
+        "maxCount": 8
+      }
+    ],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "thaumcraft:ancient_stone_circle",
+      "thaumcraft:barrow",
+      "thaumcraft:eldritch_obelisk",
+      "thaumcraft:ruined_tower"
+    ],
+    [],
+    [
+      "minecraft:ore_dirt",
+      "minecraft:ore_gravel",
+      "minecraft:ore_coal_upper",
+      "minecraft:ore_coal_lower",
+      "minecraft:ore_iron_upper",
+      "minecraft:ore_iron_middle",
+      "minecraft:ore_iron_small",
+      "minecraft:ore_gold",
+      "minecraft:ore_redstone",
+      "minecraft:ore_diamond",
+      "thaumcraft:ore_amber",
+      "thaumcraft:ore_cinnabar",
+      "thaumcraft:ore_quartz"
+    ],
+    [
+      "thaumcraft:crystal_cluster_entropy",
+      "thaumcraft:crystal_cluster_earth",
+      "thaumcraft:crystal_cluster_air",
+      "thaumcraft:crystal_cluster_water",
+      "thaumcraft:crystal_cluster_fire",
+      "thaumcraft:crystal_cluster_order",
+      "thaumcraft:vishroom_patch"
+    ],
+    [
+      "thaumcraft:greatwood_tree",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal"
+    ],
+    [],
+    [],
+    [
+      "minecraft:freeze_top_layer"
+    ],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    []
+  ]
+}

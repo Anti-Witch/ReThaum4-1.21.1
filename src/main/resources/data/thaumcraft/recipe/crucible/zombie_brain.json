@@ -1,0 +1,15 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "JARBRAIN",
+  "catalyst": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "aspects": {
+    "cognitio": 10,
+    "exanimis": 10,
+    "spiritus": 5
+  },
+  "result": {
+    "id": "thaumcraft:zombie_brain"
+  }
+}

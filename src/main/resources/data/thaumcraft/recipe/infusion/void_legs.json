@@ -1,0 +1,40 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "VOIDMETAL",
+  "instability": 4,
+  "input": {
+    "item": "thaumcraft:thaumium_legs"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_metal_ingot"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    }
+  ],
+  "aspects": {
+    "alienis": 25,
+    "vacuos": 25,
+    "praemunio": 20,
+    "tenebrae": 12
+  },
+  "result": {
+    "id": "thaumcraft:void_legs"
+  }
+}

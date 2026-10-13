@@ -1,0 +1,1513 @@
+{
+  "entries": [
+    {
+      "key": "BASEAUROMANCY",
+      "name": "research.BASEAUROMANCY.title",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        0
+      ],
+      "parents": [
+        "UNLOCKAUROMANCY"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "stages": [
+        {
+          "text": "research.BASEAUROMANCY.stage.1",
+          "recipes": [
+            "thaumcraft:vis_resonator",
+            "thaumcraft:caster_basic",
+            "thaumcraft:focus_basic"
+          ],
+          "required_craft": [
+            "thaumcraft:focus_basic"
+          ]
+        },
+        {
+          "text": "research.BASEAUROMANCY.stage.2",
+          "recipes": [
+            "thaumcraft:vis_resonator",
+            "thaumcraft:caster_basic",
+            "thaumcraft:focus_basic",
+            "thaumcraft:table_stone"
+          ],
+          "required_research": [
+            "f_onfire"
+          ],
+          "required_craft": [
+            "thaumcraft:wand_workbench"
+          ]
+        },
+        {
+          "text": "research.BASEAUROMANCY.stage.3",
+          "recipes": [
+            "thaumcraft:vis_resonator",
+            "thaumcraft:caster_basic",
+            "thaumcraft:focus_basic",
+            "thaumcraft:table_stone"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSADVANCED",
+      "name": "research.FOCUSADVANCED.title",
+      "icons": [
+        "thaumcraft:focus_advanced"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        -2
+      ],
+      "parents": [
+        "BASEAUROMANCY",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSADVANCED.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "recipes": [
+            "thaumcraft:focus_advanced"
+          ],
+          "required_craft": [
+            "thaumcraft:focus_advanced"
+          ]
+        },
+        {
+          "text": "research.FOCUSADVANCED.stage.2",
+          "recipes": [
+            "thaumcraft:focus_advanced"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSGREATER",
+      "name": "research.FOCUSGREATER.title",
+      "icons": [
+        "thaumcraft:focus_greater"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        -4
+      ],
+      "parents": [
+        "FOCUSADVANCED",
+        "PRIMPEARL"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSGREATER.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "f_onfire"
+          ],
+          "recipes": [
+            "thaumcraft:focus_greater"
+          ],
+          "required_craft": [
+            "thaumcraft:focus_greater"
+          ]
+        },
+        {
+          "text": "research.FOCUSGREATER.stage.2",
+          "recipes": [
+            "thaumcraft:focus_greater"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSELEMENTAL",
+      "name": "research.FOCUSELEMENTAL.title",
+      "icons": [
+        "focus:thaumcraft.AIR",
+        "focus:thaumcraft.FROST",
+        "focus:thaumcraft.EARTH"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        2
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSELEMENTAL.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!aer",
+            "!gelum",
+            "!terra"
+          ]
+        },
+        {
+          "text": "research.FOCUSELEMENTAL.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSFLUX",
+      "name": "research.FOCUSFLUX.title",
+      "icons": [
+        "focus:thaumcraft.FLUX"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        4
+      ],
+      "parents": [
+        "FOCUSELEMENTAL"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSFLUX.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!vitium"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSHEAL",
+      "name": "research.FOCUSHEAL.title",
+      "icons": [
+        "focus:thaumcraft.HEAL"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        0,
+        7
+      ],
+      "parents": [
+        "FOCUSFLUX"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSHEAL.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!victus"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSCURSE",
+      "name": "research.FOCUSCURSE.title",
+      "icons": [
+        "focus:thaumcraft.CURSE"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -2,
+        6
+      ],
+      "parents": [
+        "FOCUSFLUX",
+        "!Pechwand"
+      ],
+      "meta": [
+        "HIDDEN",
+        "REVERSE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSCURSE.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!mortuus"
+          ]
+        },
+        {
+          "text": "research.FOCUSCURSE.stage.2",
+          "warp": 2
+        }
+      ]
+    },
+    {
+      "key": "FOCUSBREAK",
+      "name": "research.FOCUSBREAK.title",
+      "icons": [
+        "focus:thaumcraft.BREAK"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        2,
+        6
+      ],
+      "parents": [
+        "FOCUSFLUX"
+      ],
+      "meta": [
+        "REVERSE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSBREAK.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!perditio"
+          ],
+          "required_item": [
+            "thaumcraft:enchanted_placeholder;1;{ench:[{id:33s,lvl:1s}]}",
+            "thaumcraft:enchanted_placeholder;1;{ench:[{id:35s,lvl:1s}]}"
+          ]
+        },
+        {
+          "text": "research.FOCUSBREAK.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSEXCHANGE",
+      "name": "research.FOCUSEXCHANGE.title",
+      "icons": [
+        "focus:thaumcraft.EXCHANGE"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        2,
+        4
+      ],
+      "parents": [
+        "FOCUSFLUX"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSEXCHANGE.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!permutatio"
+          ]
+        },
+        {
+          "text": "research.FOCUSEXCHANGE.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPLAN",
+      "name": "research.FOCUSPLAN.title",
+      "icons": [
+        "focus:thaumcraft.PLAN"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        3,
+        2
+      ],
+      "parents": [
+        "FOCUSEXCHANGE",
+        "FOCUSPROJECTILE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSPLAN.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!fabrico"
+          ]
+        },
+        {
+          "text": "research.FOCUSPLAN.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSRIFT",
+      "name": "research.FOCUSRIFT.title",
+      "icons": [
+        "focus:thaumcraft.RIFT"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        4,
+        5
+      ],
+      "parents": [
+        "FOCUSBREAK",
+        "FOCUSEXCHANGE"
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSRIFT.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;ELDRITCH;1",
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!vacuos"
+          ],
+          "warp": 2
+        },
+        {
+          "text": "research.FOCUSRIFT.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPROJECTILE",
+      "name": "research.FOCUSPROJECTILE.title",
+      "icons": [
+        "focus:thaumcraft.PROJECTILE"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        3,
+        0
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSPROJECTILE.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!motus"
+          ]
+        },
+        {
+          "text": "research.FOCUSPROJECTILE.stage.2",
+          "required_research": [
+            "f_arrow",
+            "f_fireball",
+            "f_spit"
+          ]
+        },
+        {
+          "text": "research.FOCUSPROJECTILE.stage.3"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSBOLT",
+      "name": "research.FOCUSBOLT.title",
+      "icons": [
+        "focus:thaumcraft.BOLT"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        7,
+        0
+      ],
+      "parents": [
+        "FOCUSPROJECTILE@2"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSBOLT.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1",
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_research": [
+            "!potentia"
+          ]
+        },
+        {
+          "text": "research.FOCUSBOLT.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSSCATTER",
+      "name": "research.FOCUSSCATTER.title",
+      "icons": [
+        "focus:thaumcraft.SCATTER"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        5,
+        -1
+      ],
+      "parents": [
+        "FOCUSBOLT",
+        "FOCUSPROJECTILE"
+      ],
+      "meta": [
+        "HIDDEN",
+        "REVERSE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSSCATTER.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1",
+            "THEORY;AUROMANCY;1"
+          ]
+        },
+        {
+          "text": "research.FOCUSSCATTER.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSMINE",
+      "name": "research.FOCUSMINE.title",
+      "icons": [
+        "focus:thaumcraft.MINE"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        5,
+        2
+      ],
+      "parents": [
+        "FOCUSPROJECTILE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSMINE.stage.1",
+          "required_knowledge": [
+            "THEORY;ARTIFICE;1",
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_item": [
+            "minecraft:tripwire_hook"
+          ],
+          "required_research": [
+            "!vinculum"
+          ]
+        },
+        {
+          "text": "research.FOCUSMINE.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSSPELLBAT",
+      "name": "research.FOCUSSPELLBAT.title",
+      "icons": [
+        "focus:thaumcraft.SPELLBAT"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        7,
+        4
+      ],
+      "parents": [
+        "FOCUSMINE",
+        "f_BAT",
+        "!Firebat"
+      ],
+      "meta": [
+        "REVERSE"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSSPELLBAT.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1",
+            "THEORY;ELDRITCH;1"
+          ],
+          "required_research": [
+            "!bestia"
+          ]
+        },
+        {
+          "text": "research.FOCUSSPELLBAT.stage.2",
+          "warp": 2
+        }
+      ]
+    },
+    {
+      "key": "FOCUSCLOUD",
+      "name": "research.FOCUSCLOUD.title",
+      "icons": [
+        "focus:thaumcraft.CLOUD"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        7,
+        2
+      ],
+      "parents": [
+        "FOCUSMINE",
+        "!DRAGONBREATH"
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSCLOUD.stage.1",
+          "required_knowledge": [
+            "THEORY;ALCHEMY;1",
+            "THEORY;AUROMANCY;1"
+          ],
+          "required_item": [
+            "minecraft:dragon_breath"
+          ],
+          "required_research": [
+            "!alkimia"
+          ]
+        },
+        {
+          "text": "research.FOCUSCLOUD.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "FOCUSSPLIT",
+      "name": "research.FOCUSSPLIT.title",
+      "icons": [
+        "focus:thaumcraft.SPLITTARGET",
+        "focus:thaumcraft.SPLITTRAJECTORY"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        5,
+        -3
+      ],
+      "parents": [
+        "FOCUSSCATTER"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSSPLIT.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1",
+            "THEORY;AUROMANCY;1"
+          ]
+        },
+        {
+          "text": "research.FOCUSSPLIT.stage.2"
+        }
+      ]
+    },
+    {
+      "key": "RECHARGEPEDESTAL",
+      "name": "research.RECHARGEPEDESTAL.title",
+      "icons": [
+        "thaumcraft:recharge_pedestal"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -3,
+        2
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "stages": [
+        {
+          "text": "research.RECHARGEPEDESTAL.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;1"
+          ]
+        },
+        {
+          "text": "research.RECHARGEPEDESTAL.stage.2",
+          "recipes": [
+            "thaumcraft:recharge_pedestal"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "VISAMULET",
+      "name": "research.VISAMULET.title",
+      "icons": [
+        "thaumcraft:amulet_vis"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -5,
+        4
+      ],
+      "parents": [
+        "RECHARGEPEDESTAL",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "research.VISAMULET.stage.1",
+          "required_knowledge": [
+            "THEORY;AUROMANCY;2"
+          ]
+        },
+        {
+          "text": "research.VISAMULET.stage.2",
+          "recipes": [
+            "thaumcraft:vis_amulet"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "WORKBENCHCHARGER",
+      "name": "research.WORKBENCHCHARGER.title",
+      "icons": [
+        "thaumcraft:arcane_workbench_charger"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -3,
+        4
+      ],
+      "parents": [
+        "RECHARGEPEDESTAL"
+      ],
+      "stages": [
+        {
+          "text": "research.WORKBENCHCHARGER.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1",
+            "THEORY;AUROMANCY;1"
+          ]
+        },
+        {
+          "text": "research.WORKBENCHCHARGER.stage.2",
+          "recipes": [
+            "thaumcraft:arcane_workbench_charger"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPOUCH",
+      "name": "research.FOCUSPOUCH.title",
+      "icons": [
+        "thaumcraft:focus_pouch"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -2,
+        -1
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "stages": [
+        {
+          "text": "research.FOCUSPOUCH.stage.1",
+          "required_knowledge": [
+            "OBSERVATION;AUROMANCY;1",
+            "OBSERVATION;ARTIFICE;1"
+          ]
+        },
+        {
+          "text": "research.FOCUSPOUCH.stage.2",
+          "recipes": [
+            "thaumcraft:focus_pouch"
+          ]
+        }
+      ]
+    },
+    
+    {
+      "key": "CAP_iron",
+      "name": "tc.research_name.CAP_iron",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        1,
+        4
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN",
+        "AUTOUNLOCK"
+      ]
+    },
+    {
+      "key": "ROD_wood",
+      "name": "tc.research_name.ROD_wood",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -4,
+        6
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN",
+        "AUTOUNLOCK"
+      ]
+    },
+    {
+      "key": "CAP_gold",
+      "name": "tc.research_name.CAP_gold",
+      "icons": [
+        "thaumcraft:wand_cap_gold"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        2,
+        1
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "metallum",
+        "lucrum",
+        "instrumentum"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_gold.1"
+        }
+      ]
+    },
+    {
+      "key": "CAP_copper",
+      "name": "tc.research_name.CAP_copper",
+      "icons": [
+        "thaumcraft:wand_cap_copper"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        2,
+        0
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "metallum",
+        "permutatio",
+        "instrumentum"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_copper.1"
+        }
+      ]
+    },
+    {
+      "key": "CAP_thaumium",
+      "name": "tc.research_name.CAP_thaumium",
+      "icons": [
+        "thaumcraft:wand_cap_thaumium"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        5,
+        4
+      ],
+      "parents": [
+        "CAP_gold",
+        "METALLURGY",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "metallum",
+        "praecantatio",
+        "instrumentum",
+        "auram"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_thaumium.1"
+        }
+      ]
+    },
+    {
+      "key": "CAP_silver",
+      "name": "tc.research_name.CAP_silver",
+      "icons": [
+        "thaumcraft:wand_cap_silver"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        5,
+        1
+      ],
+      "parents": [
+        "CAP_gold",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "metallum",
+        "lucrum",
+        "instrumentum",
+        "auram"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_silver.1"
+        }
+      ]
+    },
+    {
+      "key": "CAP_void",
+      "name": "tc.research_name.CAP_void",
+      "icons": [
+        "thaumcraft:wand_cap_void"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        4,
+        -2
+      ],
+      "parents": [
+        "CAP_thaumium"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "vacuos",
+        "alienis",
+        "instrumentum",
+        "praecantatio",
+        "auram"
+      ],
+      "complexity": 3,
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_void.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_greatwood",
+      "name": "tc.research_name.ROD_greatwood",
+      "icons": [
+        "thaumcraft:wand_rod_greatwood"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -5,
+        2
+      ],
+      "parents": [
+        "BASEAUROMANCY"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "instrumentum",
+        "arbor",
+        "praecantatio"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_greatwood.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_reed",
+      "name": "tc.research_name.ROD_reed",
+      "icons": [
+        "thaumcraft:wand_rod_reed"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -5,
+        -1
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "aer",
+        "herba",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_reed.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_blaze",
+      "name": "tc.research_name.ROD_blaze",
+      "icons": [
+        "thaumcraft:wand_rod_blaze"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -7,
+        0
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "ignis",
+        "potentia",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_blaze.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_obsidian",
+      "name": "tc.research_name.ROD_obsidian",
+      "icons": [
+        "thaumcraft:wand_rod_obsidian"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -8,
+        2
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "terra",
+        "ignis",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_obsidian.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_ice",
+      "name": "tc.research_name.ROD_ice",
+      "icons": [
+        "thaumcraft:wand_rod_ice"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -7,
+        4
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "gelum",
+        "aqua",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_ice.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_quartz",
+      "name": "tc.research_name.ROD_quartz",
+      "icons": [
+        "thaumcraft:wand_rod_quartz"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -5,
+        5
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "ordo",
+        "vitreus",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_quartz.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_bone",
+      "name": "tc.research_name.ROD_bone",
+      "icons": [
+        "thaumcraft:wand_rod_bone"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -3,
+        0
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "perditio",
+        "mortuus",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_bone.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_silverwood",
+      "name": "tc.research_name.ROD_silverwood",
+      "icons": [
+        "thaumcraft:wand_rod_silverwood"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -2,
+        5
+      ],
+      "parents": [
+        "ROD_greatwood",
+        "INFUSION"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "instrumentum",
+        "arbor",
+        "praecantatio"
+      ],
+      "complexity": 3,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_silverwood.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_greatwood_staff",
+      "name": "tc.research_name.ROD_greatwood_staff",
+      "icons": [
+        "thaumcraft:wand_rod_greatwood_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -1,
+        7
+      ],
+      "parents": [
+        "ROD_silverwood"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "instrumentum",
+        "arbor",
+        "praecantatio"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_greatwood_staff.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_obsidian_staff",
+      "name": "tc.research_name.ROD_obsidian_staff",
+      "icons": [
+        "thaumcraft:wand_rod_obsidian_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -9,
+        2
+      ],
+      "parents": [
+        "ROD_obsidian",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "terra",
+        "ignis",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_obsidian_staff.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_silverwood_staff",
+      "name": "tc.research_name.ROD_silverwood_staff",
+      "icons": [
+        "thaumcraft:wand_rod_silverwood_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -2,
+        7
+      ],
+      "parents": [
+        "ROD_silverwood",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "arbor",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_silverwood_staff.1"
+        }
+      ]
+    },
+    {
+      "key": "SCEPTRE",
+      "name": "tc.research_name.SCEPTRE",
+      "icons": [
+        "thaumcraft:textures/misc/r_thaumaturgy.png"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -1,
+        3
+      ],
+      "parents": [
+        "ROD_silverwood"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "fabrico",
+        "arbor",
+        "praecantatio"
+      ],
+      "complexity": 3,
+      "stages": [
+        {
+          "text": "tc.research_page.SCEPTRE.1"
+        }
+      ]
+    },
+    {
+      "key": "FOCALMANIPULATION",
+      "name": "tc.research_name.FOCALMANIPULATION",
+      "icons": [
+        "thaumcraft:focal_manipulator"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -3,
+        -8
+      ],
+      "parents": [
+        "FOCUSPOUCH"
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "praecantatio",
+        "instrumentum",
+        "fabrico",
+        "vitreus",
+        "potentia"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.FOCALMANIPULATION.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_ice_staff",
+      "name": "tc.research_name.ROD_ice_staff",
+      "icons": [
+        "thaumcraft:wand_rod_ice_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -8,
+        5
+      ],
+      "parents": [
+        "ROD_ice",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "gelum",
+        "aqua",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_ice_staff.1",
+          "recipes": [
+            "thaumcraft:wand_rod_ice_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_quartz_staff",
+      "name": "tc.research_name.ROD_quartz_staff",
+      "icons": [
+        "thaumcraft:wand_rod_quartz_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        4,
+        6
+      ],
+      "parents": [
+        "ROD_quartz",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "ordo",
+        "vitreus",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_quartz_staff.1",
+          "recipes": [
+            "thaumcraft:wand_rod_quartz_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_reed_staff",
+      "name": "tc.research_name.ROD_reed_staff",
+      "icons": [
+        "thaumcraft:wand_rod_reed_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -5,
+        -2
+      ],
+      "parents": [
+        "ROD_reed",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "aer",
+        "herba",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_reed_staff.1",
+          "recipes": [
+            "thaumcraft:wand_rod_reed_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_blaze_staff",
+      "name": "tc.research_name.ROD_blaze_staff",
+      "icons": [
+        "thaumcraft:wand_rod_blaze_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -8,
+        -1
+      ],
+      "parents": [
+        "ROD_blaze",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "ignis",
+        "potentia",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_blaze_staff.1",
+          "recipes": [
+            "thaumcraft:wand_rod_blaze_staff"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ROD_bone_staff",
+      "name": "tc.research_name.ROD_bone_staff",
+      "icons": [
+        "thaumcraft:wand_rod_bone_staff"
+      ],
+      "category": "AUROMANCY",
+      "location": [
+        -3,
+        1
+      ],
+      "parents": [
+        "ROD_bone",
+        "ROD_greatwood_staff"
+      ],
+      "meta": [
+        "ROUND",
+        "HIDDEN"
+      ],
+      "aspects": [
+        "instrumentum",
+        "perditio",
+        "mortuus",
+        "praecantatio"
+      ],
+      "complexity": 2,
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_bone_staff.1",
+          "warp": 1,
+          "recipes": [
+            "thaumcraft:wand_rod_bone_staff"
+          ]
+        }
+      ]
+    }
+  ]
+}

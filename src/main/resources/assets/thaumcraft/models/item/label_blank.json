@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/label"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thaumcraft:filled": 1
+      },
+      "model": "thaumcraft:item/label_filled"
+    }
+  ]
+}

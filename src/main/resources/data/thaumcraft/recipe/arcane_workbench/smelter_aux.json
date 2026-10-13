@@ -1,0 +1,37 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "DISTILESSENTIA",
+  "vis": 100,
+  "crystals": {
+    "aer": 1,
+    "terra": 1
+  },
+  "pattern": [
+    "WTW",
+    "RGR",
+    "IBI"
+  ],
+  "key": {
+    "W": {
+      "item": "thaumcraft:greatwood_planks"
+    },
+    "T": {
+      "item": "thaumcraft:tube_filter"
+    },
+    "R": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "G": {
+      "item": "thaumcraft:alchemical_brass_block"
+    },
+    "I": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "B": {
+      "item": "thaumcraft:bellows"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:smelter_aux"
+  }
+}

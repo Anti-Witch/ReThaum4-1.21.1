@@ -1,0 +1,266 @@
+{
+    "entries" :[
+        {
+        "key": "BASEINFUSION",    
+        "name": "research.BASEINFUSION.title",
+        "icons": [ "thaumcraft:textures/misc/r_enchant.png" ],
+        "category": "INFUSION", "location": [ 0,0 ], 
+        "parents": [ "UNLOCKINFUSION" ],        
+        "meta": [ "ROUND" , "HIDDEN" ],        
+        "stages": [
+                {
+                    "text": "research.BASEINFUSION.stage.1", 
+                    "recipes":["thaumcraft:banners","thaumcraft:baubles_stuff"]
+                }
+            ]
+        },
+        {
+        "key": "INFUSION",    
+        "name": "research.INFUSION.title",
+        "icons": [ "thaumcraft:infusion_matrix" ],
+        "category": "INFUSION", "location": [ 0,2 ], 
+        "parents": [ "BASEINFUSION" ],       
+        "meta": [ "SPIKY" ],        
+        "stages": [
+                {
+                    "text": "research.INFUSION.stage.1",
+                    "required_knowledge":["OBSERVATION;INFUSION;1","THEORY;INFUSION;1"],
+                    "required_item":["minecraft:stone","minecraft:feather","thaumcraft:phial_filled;1;{Aspects:[{amount:10,key:'aer'}]}"]
+                },
+                {
+                    "text": "research.INFUSION.stage.2",
+                    "required_craft":["thaumcraft:infusion_matrix"],  
+                    "recipes": ["thaumcraft:infusion_matrix"]
+                },
+                {
+                    "text": "research.INFUSION.stage.3",  
+                    "recipes": ["thaumcraft:infusion_matrix","thaumcraft:pedestal_arcane","thaumcraft:infusion_altar"]
+                }
+            ]
+        },
+        {
+        "key": "INFUSIONSTABLE",    
+        "name": "research.INFUSIONSTABLE.title",
+        "icons": [ "thaumcraft:stabilizer" ],
+        "category": "INFUSION", "location": [ 1,4 ], 
+        "parents": [ "INFUSION","METALLURGY@3","!INSTABILITY" ],       
+        "meta": [ "HIDDEN","REVERSE" ],        
+        "stages": [
+                {
+                    "text": "research.INFUSIONSTABLE.stage.1",
+                    "required_knowledge":["OBSERVATION;INFUSION;1","THEORY;INFUSION;1"],
+                    "required_item":["minecraft:redstone","thaumcraft:phial_filled;1;{Aspects:[{amount:10,key:'vitium'}]}"]
+                },
+                {
+                    "text": "research.INFUSIONSTABLE.stage.2",
+                    "recipes": ["thaumcraft:inlay","thaumcraft:stabilizer"]
+                }
+            ]
+        },
+        
+        {
+        "key": "INFUSIONANCIENT",    
+        "name": "research.INFUSIONANCIENT.title",
+        "icons": [ "thaumcraft:stone_ancient" ],
+        "category": "INFUSION", "location": [ 0,6 ], 
+        "parents": [ "INFUSION","!ORBLOCK1" ],        
+        "meta": [ "HIDDEN","REVERSE" ],       
+        "stages": [
+                {
+                    "text": "research.INFUSIONANCIENT.stage.1",
+                    "required_knowledge":["OBSERVATION;BASICS;1"],
+                    "required_item":["thaumcraft:stone_ancient"]
+                },
+                {
+                    "text": "research.INFUSIONANCIENT.stage.2",  
+                    "recipes": ["thaumcraft:pedestal_ancient","thaumcraft:infusion_altar_ancient"]
+                }
+            ]
+        },
+        {
+        "key": "INFUSIONELDRITCH",    
+        "name": "research.INFUSIONELDRITCH.title",
+        "icons": [ "thaumcraft:stone_eldritch_tile" ],
+        "category": "INFUSION", "location": [ -2,6 ], 
+        "parents": [ "INFUSION","!ORBLOCK2" ],        
+        "meta": [ "HIDDEN","REVERSE" ],       
+        "stages": [
+                {
+                    "text": "research.INFUSIONELDRITCH.stage.1",
+                    "required_knowledge":["OBSERVATION;ELDRITCH;1"],
+                    "required_item":["thaumcraft:stone_eldritch_tile"]
+                },
+                {
+                    "text": "research.INFUSIONELDRITCH.stage.2",  
+                    "recipes": ["thaumcraft:pedestal_eldritch","thaumcraft:infusion_altar_eldritch"],
+                    "warp": 2
+                }
+            ]
+        },
+        {
+        "key": "PAVINGSTONES",    
+        "name": "research.PAVINGSTONES.title",
+        "icons": [ "thaumcraft:paving_barrier", "thaumcraft:paving_travel" ],
+        "category": "INFUSION", "location": [ 0,-2 ], 
+        "parents": [ "BASEINFUSION" ],       
+        "stages": [
+                {
+                    "text": "research.PAVINGSTONES.stage.1",
+                    "recipes": ["thaumcraft:arcane_stone"],
+                    "required_knowledge":["OBSERVATION;INFUSION;1"],                 
+                    "required_craft":["thaumcraft:arcane_stone"]
+                },
+                {
+                    "text": "research.PAVINGSTONES.stage.2",  
+                    "recipes": ["thaumcraft:paving_barrier","thaumcraft:paving_travel","thaumcraft:arcane_stone","thaumcraft:arcane_brick"]
+                }
+            ]
+        },
+        {
+        "key": "BOOTSTRAVELLER",    
+        "name": "research.BOOTSTRAVELLER.title",
+        "icons": [ "thaumcraft:traveller_boots" ],
+        "category": "INFUSION", "location": [ -2,2 ], 
+        "parents": [ "INFUSION","RECHARGEPEDESTAL" ],       
+        "stages": [
+                {
+                    "text": "research.BOOTSTRAVELLER.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;1"],
+                    "required_research":["!motus","m_walker","m_runner","m_swimmer","m_jumper"]
+                },
+                {
+                    "text": "research.BOOTSTRAVELLER.stage.2",  
+                    "recipes": ["thaumcraft:traveller_boots"]
+                }
+            ]
+        },
+        {
+        "key": "ELEMENTALTOOLS",    
+        "name": "research.ELEMENTALTOOLS.title",
+        "icons": [ "thaumcraft:elemental_axe","thaumcraft:elemental_sword","thaumcraft:elemental_pick","thaumcraft:elemental_shovel","thaumcraft:elemental_hoe" ],
+        "category": "INFUSION", "location": [ -4,3 ], 
+        "parents": [ "BOOTSTRAVELLER","METALLURGY@3" ],       
+        "stages": [
+                {
+                    "text": "research.ELEMENTALTOOLS.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;1","THEORY;BASICS;1"],
+                    "required_craft":["thaumcraft:thaumium_axe","thaumcraft:thaumium_sword","thaumcraft:thaumium_pick","thaumcraft:thaumium_shovel","thaumcraft:thaumium_hoe"]
+                },
+                {
+                    "text": "research.ELEMENTALTOOLS.stage.2",  
+                    "recipes": ["thaumcraft:elemental_axe","thaumcraft:elemental_sword","thaumcraft:elemental_pick","thaumcraft:elemental_shovel","thaumcraft:elemental_hoe"]
+                }
+            ]
+        },
+        {
+        "key": "INFUSIONENCHANTMENT",    
+        "name": "research.INFUSIONENCHANTMENT.title",
+        "icons": [ "thaumcraft:textures/misc/r_aspects.png" ],
+        "category": "INFUSION", "location": [ -6,4 ], 
+        "parents": [ "ELEMENTALTOOLS" ],       
+        "stages": [
+                {
+                    "text": "research.INFUSIONENCHANTMENT.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;2"],
+                    "required_item":["thaumcraft:enchanted_placeholder;1;{ench:[{id:16s,lvl:1s}]}"]
+                },
+                {
+                    "text": "research.INFUSIONENCHANTMENT.stage.2",  
+                    "recipes": ["thaumcraft:ie_burrowing_fake","thaumcraft:ie_collector_fake","thaumcraft:ie_destructive_fake","thaumcraft:ie_refining_fake",
+                                "thaumcraft:ie_sounding_fake","thaumcraft:ie_arcing_fake","thaumcraft:ie_essence_fake","thaumcraft:ie_lamplight_fake"]
+                }
+            ]
+        },
+        {
+        "key": "RUNICSHIELDING",    
+        "name": "research.RUNICSHIELDING.title",
+        "icons": [ "thaumcraft:textures/misc/r_runicupg.png" ],
+        "category": "INFUSION", "location": [ -6,6 ], 
+        "parents": [ "INFUSIONENCHANTMENT" ],       
+        "stages": [
+                {
+                    "text": "research.RUNICSHIELDING.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;1"],
+                    "required_item":["thaumcraft:enchanted_placeholder;1;{ench:[{id:0s,lvl:1s}]}","thaumcraft:amber"]
+                },
+                {
+                    "text": "research.RUNICSHIELDING.stage.2",  
+                    "recipes": ["thaumcraft:runic_armor_fake_0","thaumcraft:runic_armor_fake_1","thaumcraft:runic_armor_fake_2"]
+                }
+            ]
+        },
+        {
+        "key": "ARMORFORTRESS",    
+        "name": "research.ARMORFORTRESS.title",
+        "icons": [ "thaumcraft:fortress_helm" ],
+        "category": "INFUSION", "location": [ -4,1 ], 
+        "parents": [ "METALLURGY@3", "BOOTSTRAVELLER" ],   
+        "stages": [
+                {
+                    "text": "research.ARMORFORTRESS.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;1"],
+                    "required_research":["!praemunio"]
+                },
+                {
+                    "text": "research.ARMORFORTRESS.stage.2",  
+                    "recipes": ["thaumcraft:fortress_helm","thaumcraft:fortress_chest","thaumcraft:fortress_legs"]
+                }
+            ]
+        },
+        {
+        "key": "FORTRESSMASK",    
+        "name": "research.FORTRESSMASK.title",
+        "icons": [ "thaumcraft:textures/misc/r_mask0.png","thaumcraft:textures/misc/r_mask1.png","thaumcraft:textures/misc/r_mask2.png" ],
+        "category": "INFUSION", "location": [ -5,0 ], 
+        "parents": [ "ARMORFORTRESS" ],   
+        "stages": [
+                {
+                    "text": "research.FORTRESSMASK.stage.1",
+                    "required_knowledge":["THEORY;INFUSION;1"]
+                },
+                {
+                    "text": "research.FORTRESSMASK.stage.2",  
+                    "recipes": ["thaumcraft:goggles_revealing","thaumcraft:mask_grinning_devil","thaumcraft:mask_angry_ghost","thaumcraft:mask_sipping_fiend"],
+                    "warp": 2
+                }
+            ]
+        },
+        {
+        "key": "CLOUDRING",    
+        "name": "research.CLOUDRING.title",
+        "icons": [ "thaumcraft:cloud_ring" ],
+        "category": "INFUSION", "location": [ 2,2 ], 
+        "parents": [ "INFUSION" ],       
+        "stages": [
+                {
+                    "text": "research.CLOUDRING.stage.1",
+                    "required_knowledge":["OBSERVATION;INFUSION;1"]
+                },
+                {
+                    "text": "research.CLOUDRING.stage.2",  
+                    "recipes": ["thaumcraft:cloud_ring"]
+                }
+            ]
+        },
+        {
+        "key": "CURIOSITYBAND",    
+        "name": "research.CURIOSITYBAND.title",
+        "icons": [ "thaumcraft:curiosity_band" ],
+        "category": "INFUSION", "location": [ 4,1 ], 
+        "parents": [ "CLOUDRING" ],       
+        "stages": [
+                {
+                    "text": "research.CURIOSITYBAND.stage.1",
+                    "required_knowledge":["OBSERVATION;BASICS;1","THEORY;INFUSION;1"]
+                },
+                {
+                    "text": "research.CURIOSITYBAND.stage.2",  
+                    "recipes": ["thaumcraft:curiosity_band"]
+                }
+            ]
+        }
+        
+        
+    ]
+}
+    

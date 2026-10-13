@@ -1,0 +1,40 @@
+{
+  "variants": {
+    "type=brass": {
+      "model": "thaumcraft:item/brass_nugget"
+    },
+    "type=copper": {
+      "model": "thaumcraft:item/copper_nugget"
+    },
+    "type=iron": {
+      "model": "thaumcraft:item/iron_nugget"
+    },
+    "type=lead": {
+      "model": "thaumcraft:item/lead_nugget"
+    },
+    "type=quicksilver": {
+      "model": "thaumcraft:item/quicksilver_nugget"
+    },
+    "type=silver": {
+      "model": "thaumcraft:item/silver_nugget"
+    },
+    "type=thaumium": {
+      "model": "thaumcraft:item/thaumium_nugget"
+    },
+    "type=tin": {
+      "model": "thaumcraft:item/tin_nugget"
+    },
+    "type=void": {
+      "model": "thaumcraft:item/void_metal_nugget"
+    },
+    "type=quartz": {
+      "model": "thaumcraft:item/quartz_nugget"
+    },
+    "type=rareearth": {
+      "model": "thaumcraft:item/nugget_rareearth"
+    },
+    "": {
+      "model": "thaumcraft:item/brass_nugget"
+    }
+  }
+}

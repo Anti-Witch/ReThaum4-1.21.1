@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "check_decay=true,decayable=true": {
+      "model": "thaumcraft:block/leaves_greatwood"
+    },
+    "check_decay=true,decayable=false": {
+      "model": "thaumcraft:block/leaves_greatwood"
+    },
+    "check_decay=false,decayable=true": {
+      "model": "thaumcraft:block/leaves_greatwood"
+    },
+    "check_decay=false,decayable=false": {
+      "model": "thaumcraft:block/leaves_greatwood"
+    },
+    "": [
+      {
+        "model": "thaumcraft:block/leaves_greatwood"
+      }
+    ]
+  }
+}

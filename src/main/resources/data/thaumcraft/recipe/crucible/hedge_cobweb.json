@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:string"
+  },
+  "aspects": {
+    "vinculum": 5,
+    "bestia": 5
+  },
+  "result": {
+    "id": "minecraft:cobweb",
+    "count": 1
+  },
+  "group": "thaumcraft:hedge_transmutation"
+}

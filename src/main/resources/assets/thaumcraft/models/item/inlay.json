@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "thaumcraft:block/inlay_connect_under",
+        "layer1": "thaumcraft:block/inlay_connect1"
+    }
+}

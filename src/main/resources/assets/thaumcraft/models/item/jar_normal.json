@@ -1,0 +1,63 @@
+{
+    "parent": "thaumcraft:block/jar_normal",
+    
+    "overrides": [
+        {
+            "predicate": { "fill": 0 },
+            "model": "thaumcraft:block/jar_normal"
+        },
+        {
+            "predicate": { "fill": 1 },
+            "model": "thaumcraft:block/jar_normal_25"
+        },
+        {
+            "predicate": { "fill": 2 },
+            "model": "thaumcraft:block/jar_normal_50"
+        },
+        {
+            "predicate": { "fill": 3 },
+            "model": "thaumcraft:block/jar_normal_75"
+        },
+        {
+            "predicate": { "fill": 4 },
+            "model": "thaumcraft:block/jar_normal_100"
+        }
+    ],
+"display": {
+    "thirdperson_righthand": {
+        "rotation": [ 75, 45, 0 ],
+        "translation": [ 0, 2.5, 0 ],
+        "scale": [ 0.375, 0.375, 0.375 ]
+    },
+    "thirdperson_lefthand": {
+        "rotation": [ 75, 45, 0 ],
+        "translation": [ 0, 2.5, 0 ],
+        "scale": [ 0.375, 0.375, 0.375 ]
+    },
+    "firstperson_righthand": {
+        "rotation": [ 0, 45, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0.4, 0.4, 0.4 ]
+    },
+    "firstperson_lefthand": {
+        "rotation": [ 0, 45, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0.4, 0.4, 0.4 ]
+    },
+    "ground": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 3, 0 ],
+        "scale": [ 0.25, 0.25, 0.25 ]
+    },
+    "gui": {
+        "rotation": [ 30, 225, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0.625, 0.625, 0.625 ]
+    },
+    "fixed": {
+        "rotation": [ 0, 0, 0 ],
+        "translation": [ 0, 0, 0 ],
+        "scale": [ 0.5, 0.5, 0.5 ]
+    }
+}
+}

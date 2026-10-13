@@ -1,0 +1,102 @@
+{
+    "variants": {
+        "type=sun": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/sun"
+            }
+        },
+        "type=stars_1": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/stars1"
+            }
+        },
+        "type=stars_2": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/stars2"
+            }
+        },
+        "type=stars_3": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/stars3"
+            }
+        },
+        "type=stars_4": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/stars4"
+            }
+        },
+        "type=moon_1": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon1"
+            }
+        },
+        "type=moon_2": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon2"
+            }
+        },
+        "type=moon_3": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon3"
+            }
+        },
+        "type=moon_4": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon4"
+            }
+        },
+        "type=moon_5": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon5"
+            }
+        },
+        "type=moon_6": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon6"
+            }
+        },
+        "type=moon_7": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon7"
+            }
+        },
+        "type=moon_8": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/moon8"
+            }
+        },
+        "": {
+            "model": "thaumcraft:block/item_layer",
+            "textures": {
+                "layer0": "thaumcraft:item/celestial/sheet",
+                "layer1": "thaumcraft:item/celestial/sun"
+            }
+        }
+    }
+}

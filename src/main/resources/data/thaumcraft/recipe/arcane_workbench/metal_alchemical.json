@@ -1,0 +1,32 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "TUBES",
+  "vis": 75,
+  "crystals": {
+    "aqua": 1,
+    "ordo": 1,
+    "perditio": 1
+  },
+  "pattern": [
+    "IVI",
+    "TWT",
+    "IVI"
+  ],
+  "key": {
+    "I": {
+      "item": "thaumcraft:plate_iron"
+    },
+    "V": {
+      "item": "thaumcraft:tube_valve"
+    },
+    "T": {
+      "item": "thaumcraft:tube_normal"
+    },
+    "W": {
+      "item": "thaumcraft:greatwood_planks"
+    }
+  },
+  "result": {"id": "thaumcraft:alchemical_brass_block",
+    "count": 2
+  }
+}

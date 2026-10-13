@@ -1,0 +1,15 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "BOTTLETAINT",
+  "catalyst": {
+    "item": "thaumcraft:phial_filled",
+    "nbt": "{aspect:\"vitium\"}"
+  },
+  "aspects": {
+    "vitium": 30,
+    "aqua": 30
+  },
+  "result": {"id": "thaumcraft:bottle_taint",
+    "count": 1
+  }
+}

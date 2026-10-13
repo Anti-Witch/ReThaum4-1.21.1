@@ -1,0 +1,35 @@
+{
+  "render_type": "minecraft:cutout",
+    "textures": {
+        "particle": "thaumcraft:block/liftertop",
+        "top": "thaumcraft:block/liftertop",
+        "side": "thaumcraft:block/lifterside",
+        "bottom": "thaumcraft:block/arcaneearbottom"
+    },
+    "elements": [
+        {
+            "from": [0,2,0],
+            "to": [16,16,16],
+            "faces": {
+                "up": {"texture": "#top", "cullface": "up"},
+                "down": {"texture": "#bottom"},
+                "west": {"texture": "#side", "cullface": "west"},
+                "east": {"texture": "#side", "cullface": "east"},
+                "north": {"texture": "#side", "cullface": "north"},
+                "south": {"texture": "#side", "cullface": "south"}
+            }
+        },
+        {
+            "from": [6,1,6],
+            "to": [10,2,10],
+            "faces": {
+                
+                "down": {"texture": "#bottom"},
+                "west": {"texture": "#side"},
+                "east": {"texture": "#side"},
+                "north": {"texture": "#side"},
+                "south": {"texture": "#side"}
+            }
+        }
+    ]
+}

@@ -1,0 +1,269 @@
+# RAW аудит текстур (автогенерація)
+
+- BOM/битих JSON: 15
+- Відсутніх текстур у моделях: 0
+- Відсутніх parent-моделей: 0
+- Порожніх (прозорих) текстур: 1
+- Смуг без mcmeta: 13
+- Java-посилань на відсутні текстури: 50
+- «Чужих» текстур: 126
+
+## Порожні
+- gui/gui_research_browser.png
+
+## Смуги без mcmeta
+- item/creative_node.png (32x128, 4 frames)
+- item/focus_1.png (16x480, 30 frames)
+- item/focus_2.png (16x480, 30 frames)
+- item/focus_3.png (16x480, 30 frames)
+- item/node.png (32x128, 4 frames)
+- item/redstone_relay.png (16x48, 3 frames)
+- item/verdant_charm.png (16x480, 30 frames)
+- item/verdant_charm_life.png (16x480, 30 frames)
+- item/verdant_charm_sustain.png (16x480, 30 frames)
+- misc/beam.png (32x64, 2 frames)
+- misc/beam3.png (64x128, 2 frames)
+- models/obelisk_side.png (16x48, 3 frames)
+- models/obelisk_side_2.png (16x48, 3 frames)
+
+## Java missing
+- `textures/block/golembuilder.png` <- src/main/java/thaumcraft/client/renderers/tile/GolemBuilderRenderer.java
+- `textures/block/infuser_ancient.png` <- src/main/java/thaumcraft/client/renderers/tile/InfusionMatrixRenderer.java
+- `textures/block/infuser_eldritch.png` <- src/main/java/thaumcraft/client/renderers/tile/InfusionMatrixRenderer.java
+- `textures/block/pattern_crafter_modes.png` <- src/main/java/thaumcraft/client/renderers/tile/PatternCrafterRenderer.java
+- `textures/foci/_effect.png` <- src/main/java/thaumcraft/client/gui/screens/FocalManipulatorScreen.java
+- `textures/foci/_medium.png` <- src/main/java/thaumcraft/client/gui/screens/FocalManipulatorScreen.java
+- `textures/gui/gui_base.png` <- src/main/java/thaumcraft/client/gui/widgets/SliderWidget.java, src/main/java/thaumcraft/client/gui/widgets/SpinnerWidget.java
+- `textures/gui/gui_logistics.png` <- src/main/java/thaumcraft/client/gui/screens/LogisticsScreen.java
+- `textures/gui/gui_potionsprayer.png` <- src/main/java/thaumcraft/client/gui/screens/PotionSprayerScreen.java
+- `textures/gui/gui_turret.png` <- src/main/java/thaumcraft/client/gui/screens/TurretScreen.java
+- `textures/gui/gui_turret_advanced.png` <- src/main/java/thaumcraft/client/gui/screens/TurretScreen.java
+- `textures/gui/gui_voidsiphon.png` <- src/main/java/thaumcraft/client/gui/screens/VoidSiphonScreen.java
+- `textures/gui/gui_wandtable2.png` <- src/main/java/thaumcraft/client/gui/screens/FocalManipulatorScreen.java
+- `textures/gui/gui_wandtable3.png` <- src/main/java/thaumcraft/client/gui/screens/FocalManipulatorScreen.java
+- `textures/misc/essentia.png` <- src/main/java/thaumcraft/client/fx/other/FXEssentiaStream.java, src/main/java/thaumcraft/client/fx/beams/FXBolt.java
+- `textures/misc/gear_brass.png` <- src/main/java/thaumcraft/client/renderers/tile/PatternCrafterRenderer.java
+- `textures/misc/golem/addon_armored.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/addon_fighter.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/addon_hauler.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/arms_basic.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/arms_breakers.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/arms_claws.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/arms_fine.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/head_basic.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/head_scout.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/head_smart.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/legs_climber.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/legs_flyer.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/legs_roller.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/legs_walker.png` <- src/main/java/thaumcraft/common/golems/GolemProperties.java
+- `textures/misc/golem/tag_armored.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_blastproof.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_breaker.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_brutal.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_climber.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_clumsy.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_deft.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_fighter.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_fireproof.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_flyer.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_fragile.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_hauler.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_heavy.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_light.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_ranged.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_repair.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_scout.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_smart.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/golem/tag_wheeled.png` <- src/main/java/thaumcraft/api/golems/EnumGolemTrait.java
+- `textures/misc/gridblock.png` <- src/main/java/thaumcraft/client/renderers/tile/DioptraRenderer.java
+
+## Чужі текстури
+- `block/arcane_ear_toggle_off.png` == ['block/arcaneearsideoff.png']
+- `block/arcane_ear_toggle_on.png` == ['block/arcaneearsideon.png']
+- `block/bellows.png` == ['models/bellows.png']
+- `block/centrifuge.png` == ['block/pipe_3.png']
+- `block/condenser.png` == ['block/alchemyblock.png']
+- `block/condenser_lattice.png` == ['block/metalbase.png']
+- `block/condenser_lattice_dirty.png` == ['block/metalbase.png']
+- `block/dioptra_side_on.png` == ['block/redstone_ring.png']
+- `block/dioptra_top.png` == ['block/woodplain.png']
+- `block/essentia_input.png` == ['block/pipe_valve.png']
+- `block/essentia_output.png` == ['block/pipe_valve.png']
+- `block/everfull_urn.png` == ['block/urn_side_0.png']
+- `block/infernal_furnace.png` == ['block/al_furnace_side.png']
+- `block/infuser_normal.png` == ['block/alchemyblock.png']
+- `block/inlay_connect0.png` == ['block/runeborder.png']
+- `block/inlay_connect1.png` == ['block/runeborder.png']
+- `block/inlay_connect2.png` == ['block/runeborder.png']
+- `block/inlay_connect3.png` == ['block/runeborder.png']
+- `block/inlay_connect_under.png` == ['block/runeborder.png']
+- `block/inlay_connect_under2.png` == ['block/runeborder.png']
+- `block/inlay_rune0.png` == ['block/runeborder.png']
+- `block/inlay_rune1.png` == ['block/runeborder.png']
+- `block/inlay_rune_half.png` == ['block/runeborder.png']
+- `block/inlay_under.png` == ['block/runeborder.png']
+- `block/inlay_under_half.png` == ['block/runeborder.png']
+- `block/ore_amber.png` == ['block/amberore.png']
+- `block/pattern_crafter.png` == ['block/runeborder.png']
+- `block/pillar_ancient.png` == ['block/es_3.png']
+- `block/pillar_eldritch.png` == ['block/er_2.png']
+- `block/pillar_normal.png` == ['block/es_2.png']
+- `block/porous_stone.png` == ['block/crust.png']
+- `block/potion_sprayer_bottom.png` == ['block/metalbase.png']
+- `block/potion_sprayer_side.png` == ['block/grate.png']
+- `block/potion_sprayer_top.png` == ['block/metalbase.png']
+- `block/rail_activator.png` == ['block/runeborder.png']
+- `block/rail_activator_powered.png` == ['block/runeborder.png']
+- `block/redstone_relay_off.png` == ['block/redstone_ring.png']
+- `block/redstone_relay_on.png` == ['block/redstone_ring.png']
+- `block/smelter_aux.png` == ['block/al_furnace_side.png']
+- `block/smelter_basic_front_off.png` == ['block/al_furnace_front_off.png']
+- `block/smelter_basic_front_on.png` == ['block/al_furnace_front_on.png']
+- `block/smelter_basic_side.png` == ['block/al_furnace_side.png']
+- `block/smelter_thaumium_front_off.png` == ['block/al_furnace_front_off.png']
+- `block/smelter_thaumium_front_on.png` == ['block/al_furnace_front_on.png']
+- `block/smelter_thaumium_side.png` == ['block/al_furnace_side.png']
+- `block/smelter_top.png` == ['block/al_furnace_top.png']
+- `block/smelter_vent.png` == ['block/grate.png']
+- `block/smelter_void_front_off.png` == ['block/al_furnace_front_off.png']
+- `block/smelter_void_front_on.png` == ['block/al_furnace_front_on.png']
+- `block/smelter_void_side.png` == ['block/al_furnace_side.png']
+- `block/stabilizer.png` == ['block/wandpedestal_side.png']
+- `block/taint_geyser_side.png` == ['block/taint_spore_stalk_1.png']
+- `block/taint_geyser_top.png` == ['block/taint_spore_stalk_2.png']
+- `block/vis_battery_0.png` == ['block/metalbase.png']
+- `block/vis_generator.png` == ['block/alchemyblockadv.png']
+- `block/vishroom.png` == ['block/manashroom.png']
+- `block/void_siphon.png` == ['block/obsidiantile.png']
+- `item/arcane_door_key.png` == ['item/keygold.png']
+- `item/banner_stand.png` == ['block/planks_greatwood.png']
+- `item/banner_symbol.png` == ['block/planks_greatwood.png']
+- `item/causality_collapser.png` == ['item/eldritch_object_2.png']
+- `item/charm_undying.png` == ['item/charm.png']
+- `item/cloud_ring.png` == ['item/bauble_ring.png']
+- `item/curiosity_band.png` == ['item/bauble_amulet.png']
+- `item/folio_omniscience.png` == ['item/discovery.png']
+- `item/golem.png` == ['item/golem_flesh.png']
+- `item/golem_placer.png` == ['item/ob_placer.png']
+- `item/mirrored_glass.png` == ['item/mirrorglass.png']
+- `item/primal_arrow.png` == ['item/el_arrow_order.png']
+- `item/primordial_pearl.png` == ['item/eldritch_object_3.png']
+- `item/redstone_relay.png` == ['item/golem_core_empty.png']
+- `item/salis_mundus.png` == ['item/dust.png']
+- `item/scribing_tools.png` == ['item/inkwell.png']
+- `item/seals/seal_breaker.png` == ['block/runeborder.png']
+- `item/seals/seal_breaker_advanced.png` == ['block/runeborder.png']
+- `item/seals/seal_butcher.png` == ['block/runeborder.png']
+- `item/seals/seal_empty.png` == ['block/runeborder.png']
+- `item/seals/seal_empty_advanced.png` == ['block/runeborder.png']
+- `item/seals/seal_fill.png` == ['block/runeborder.png']
+- `item/seals/seal_fill_advanced.png` == ['block/runeborder.png']
+- `item/seals/seal_guard.png` == ['block/runeborder.png']
+- `item/seals/seal_guard_advanced.png` == ['block/runeborder.png']
+- `item/seals/seal_harvest.png` == ['block/runeborder.png']
+- `item/seals/seal_lumber.png` == ['block/runeborder.png']
+- `item/seals/seal_pickup.png` == ['block/runeborder.png']
+- `item/seals/seal_pickup_advanced.png` == ['block/runeborder.png']
+- `item/seals/seal_provider.png` == ['block/runeborder.png']
+- `item/seals/seal_stock.png` == ['block/runeborder.png']
+- `item/seals/seal_use.png` == ['block/runeborder.png']
+- `item/spawner_egg.png` == ['item/brain.png']
+- `item/trunk_spawner.png` == ['item/brain.png']
+- `item/turret_placer.png` == ['block/grate.png']
+- `item/vis_crystal.png` == ['item/crystalessence.png']
+- `item/vis_crystal_base.png` == ['item/crystalessence.png']
+- `item/voidseer_charm.png` == ['item/charm.png']
+- `models/armor/cultist_leader_layer_1.png` == ['models/cultist_leader_armor.png']
+- `models/armor/cultist_leader_layer_2.png` == ['models/cultist_leader_armor.png']
+- `models/armor/cultist_plate_layer_1.png` == ['models/cultist_plate_armor.png']
+- `models/armor/cultist_plate_layer_2.png` == ['models/cultist_plate_armor.png']
+- `models/armor/cultist_robe_layer_1.png` == ['models/cultist_robe_armor.png']
+- `models/armor/cultist_robe_layer_2.png` == ['models/cultist_robe_armor.png']
+- `models/armor/fortress_layer_1.png` == ['models/fortress_armor.png']
+- `models/armor/fortress_layer_2.png` == ['models/fortress_armor.png']
+- `models/armor/robes_layer_1.png` == ['models/robes_1.png']
+- `models/armor/robes_layer_2.png` == ['models/robes_2.png']
+- `models/armor/robes_overlay_layer_1.png` == ['models/robes_1_overlay.png']
+- `models/armor/robes_overlay_layer_2.png` == ['models/robes_2_overlay.png']
+- `models/armor/special_layer_1.png` == ['models/goggles.png']
+- `models/armor/special_layer_2.png` == ['models/goggles.png']
+- `models/armor/thaumium_layer_1.png` == ['models/thaumium_1.png']
+- `models/armor/thaumium_layer_2.png` == ['models/thaumium_2.png']
+- `models/armor/void_layer_1.png` == ['models/void_1.png']
+- `models/armor/void_layer_2.png` == ['models/void_2.png']
+- `models/armor/voidrobe_layer_1.png` == ['models/void_robe_armor_overlay.png']
+- `models/armor/voidrobe_layer_2.png` == ['models/void_robe_armor_overlay.png']
+- `models/armor/voidrobe_trim_layer_1.png` == ['models/void_robe_armor.png']
+- `models/armor/voidrobe_trim_layer_2.png` == ['models/void_robe_armor.png']
+- `models/bore.png` == ['models/Bore.png']
+- `models/inkwell.png` == ['item/inkwell.png']
+- `models/thaumaturge_eyes.png` == ['models/Thaumaturge_eyes.png']
+- `models/wand_cap_silver_inert.png` == ['models/wand_cap_silver.png']
+- `models/wand_cap_thaumium_inert.png` == ['models/wand_cap_thaumium.png']
+- `models/wand_cap_void_inert.png` == ['models/wand_cap_void.png']
+- `models/wand_rod_greatwood_staff.png` == ['models/wand_rod_greatwood.png']
+- `models/wand_rod_obsidian_staff.png` == ['models/wand_rod_obsidian.png']
+- `models/wand_rod_silverwood_staff.png` == ['models/wand_rod_silverwood.png']
+
+## BOM / биті JSON
+- [BOM] `assets/thaumcraft/blockstates/obsidian_tile.json`
+- [BOM] `assets/thaumcraft/blockstates/obsidian_totem.json`
+- [BOM] `assets/thaumcraft/blockstates/charged_obsidian_totem.json`
+- [BOM] `assets/thaumcraft/models/item/obsidian_tile.json`
+- [BOM] `assets/thaumcraft/models/item/focus_warding.json`
+- [BOM] `assets/thaumcraft/models/item/obsidian_totem.json`
+- [BOM] `assets/thaumcraft/models/item/focus_shock.json`
+- [BOM] `assets/thaumcraft/models/item/focus_excavation.json`
+- [BOM] `assets/thaumcraft/models/item/focus_frost.json`
+- [BOM] `assets/thaumcraft/models/item/focus_fire.json`
+- [BOM] `assets/thaumcraft/models/item/charged_obsidian_totem.json`
+- [BOM] `assets/thaumcraft/models/block/obsidian_totem_body1.json`
+- [BOM] `assets/thaumcraft/models/block/obsidian_totem_body3.json`
+- [BOM] `assets/thaumcraft/models/block/obsidian_totem_body2.json`
+- [BOM] `assets/thaumcraft/models/block/obsidian_totem_body4.json`
+
+## Перевикористання (>=5 моделей)
+- `models/wand` — 155: item/wand_base, item/wand_c/blaze__copper, item/wand_c/blaze__gold, item/wand_c/blaze__iron, item/wand_c/blaze__silver, item/wand_c/blaze__silver_inert, item/wand_c/blaze__thaumium, item/wand_c/blaze__thaumium_inert, item/wand_c/blaze__void, item/wand_c/blaze__void_inert, item/wand_c/blaze_staff__copper, item/wand_c/blaze_staff__gold, item/wand_c/blaze_staff__iron, item/wand_c/blaze_staff__silver, item/wand_c/blaze_staff__silver_inert, item/wand_c/blaze_staff__thaumium, item/wand_c/blaze_staff__thaumium_inert, item/wand_c/blaze_staff__void, item/wand_c/blaze_staff__void_inert, item/wand_c/bone__copper, item/wand_c/bone__gold, item/wand_c/bone__iron, item/wand_c/bone__silver, item/wand_c/bone__silver_inert, item/wand_c/bone__thaumium, item/wand_c/bone__thaumium_inert, item/wand_c/bone__void, item/wand_c/bone__void_inert, item/wand_c/bone_staff__copper, item/wand_c/bone_staff__gold, item/wand_c/bone_staff__iron, item/wand_c/bone_staff__silver, item/wand_c/bone_staff__silver_inert, item/wand_c/bone_staff__thaumium, item/wand_c/bone_staff__thaumium_inert, item/wand_c/bone_staff__void, item/wand_c/bone_staff__void_inert, item/wand_c/greatwood__copper, item/wand_c/greatwood__gold, item/wand_c/greatwood__iron, item/wand_c/greatwood__silver, item/wand_c/greatwood__silver_inert, item/wand_c/greatwood__thaumium, item/wand_c/greatwood__thaumium_inert, item/wand_c/greatwood__void, item/wand_c/greatwood__void_inert, item/wand_c/greatwood_staff__copper, item/wand_c/greatwood_staff__gold, item/wand_c/greatwood_staff__iron, item/wand_c/greatwood_staff__silver, item/wand_c/greatwood_staff__silver_inert, item/wand_c/greatwood_staff__thaumium, item/wand_c/greatwood_staff__thaumium_inert, item/wand_c/greatwood_staff__void, item/wand_c/greatwood_staff__void_inert, item/wand_c/ice__copper, item/wand_c/ice__gold, item/wand_c/ice__iron, item/wand_c/ice__silver, item/wand_c/ice__silver_inert, item/wand_c/ice__thaumium, item/wand_c/ice__thaumium_inert, item/wand_c/ice__void, item/wand_c/ice__void_inert, item/wand_c/ice_staff__copper, item/wand_c/ice_staff__gold, item/wand_c/ice_staff__iron, item/wand_c/ice_staff__silver, item/wand_c/ice_staff__silver_inert, item/wand_c/ice_staff__thaumium, item/wand_c/ice_staff__thaumium_inert, item/wand_c/ice_staff__void, item/wand_c/ice_staff__void_inert, item/wand_c/obsidian__copper, item/wand_c/obsidian__gold, item/wand_c/obsidian__iron, item/wand_c/obsidian__silver, item/wand_c/obsidian__silver_inert, item/wand_c/obsidian__thaumium, item/wand_c/obsidian__thaumium_inert, item/wand_c/obsidian__void, item/wand_c/obsidian__void_inert, item/wand_c/obsidian_staff__copper, item/wand_c/obsidian_staff__gold, item/wand_c/obsidian_staff__iron, item/wand_c/obsidian_staff__silver, item/wand_c/obsidian_staff__silver_inert, item/wand_c/obsidian_staff__thaumium, item/wand_c/obsidian_staff__thaumium_inert, item/wand_c/obsidian_staff__void, item/wand_c/obsidian_staff__void_inert, item/wand_c/primal_staff__copper, item/wand_c/primal_staff__gold, item/wand_c/primal_staff__iron, item/wand_c/primal_staff__silver, item/wand_c/primal_staff__silver_inert, item/wand_c/primal_staff__thaumium, item/wand_c/primal_staff__thaumium_inert, item/wand_c/primal_staff__void, item/wand_c/primal_staff__void_inert, item/wand_c/quartz__copper, item/wand_c/quartz__gold, item/wand_c/quartz__iron, item/wand_c/quartz__silver, item/wand_c/quartz__silver_inert, item/wand_c/quartz__thaumium, item/wand_c/quartz__thaumium_inert, item/wand_c/quartz__void, item/wand_c/quartz__void_inert, item/wand_c/quartz_staff__copper, item/wand_c/quartz_staff__gold, item/wand_c/quartz_staff__iron, item/wand_c/quartz_staff__silver, item/wand_c/quartz_staff__silver_inert, item/wand_c/quartz_staff__thaumium, item/wand_c/quartz_staff__thaumium_inert, item/wand_c/quartz_staff__void, item/wand_c/quartz_staff__void_inert, item/wand_c/reed__copper, item/wand_c/reed__gold, item/wand_c/reed__iron, item/wand_c/reed__silver, item/wand_c/reed__silver_inert, item/wand_c/reed__thaumium, item/wand_c/reed__thaumium_inert, item/wand_c/reed__void, item/wand_c/reed__void_inert, item/wand_c/reed_staff__copper, item/wand_c/reed_staff__gold, item/wand_c/reed_staff__iron, item/wand_c/reed_staff__silver, item/wand_c/reed_staff__silver_inert, item/wand_c/reed_staff__thaumium, item/wand_c/reed_staff__thaumium_inert, item/wand_c/reed_staff__void, item/wand_c/reed_staff__void_inert, item/wand_c/silverwood__copper, item/wand_c/silverwood__gold, item/wand_c/silverwood__iron, item/wand_c/silverwood__silver, item/wand_c/silverwood__silver_inert, item/wand_c/silverwood__thaumium, item/wand_c/silverwood__thaumium_inert, item/wand_c/silverwood__void, item/wand_c/silverwood__void_inert, item/wand_c/silverwood_staff__copper, item/wand_c/silverwood_staff__gold, item/wand_c/silverwood_staff__iron, item/wand_c/silverwood_staff__silver, item/wand_c/silverwood_staff__silver_inert, item/wand_c/silverwood_staff__thaumium, item/wand_c/silverwood_staff__thaumium_inert, item/wand_c/silverwood_staff__void, item/wand_c/silverwood_staff__void_inert, item/wand_staff_base
+- `block/arcane_stone` — 28: block/arcane_brick_inner_stairs, block/arcane_brick_outer_stairs, block/arcane_brick_stairs, block/arcane_inner_stairs, block/arcane_outer_stairs, block/arcane_stairs, block/arcane_stone, block/arcane_stone_brick, block/arcane_stone_brick_inner_stairs, block/arcane_stone_brick_outer_stairs, block/arcane_stone_brick_slab, block/arcane_stone_brick_slab_top, block/arcane_stone_brick_stairs, block/arcane_stone_inner_stairs, block/arcane_stone_outer_stairs, block/arcane_stone_slab, block/arcane_stone_slab_top, block/arcane_stone_stairs, block/dioptra, block/hungry_chest, block/paving_stone, block/paving_stone_barrier, block/paving_stone_travel, block/slab_arcane_brick, block/slab_arcane_stone, block/slab_double_arcane_brick, block/slab_double_arcane_stone, block/stabilizer
+- `models/wand_cap_iron` — 21: item/wand_base, item/wand_c/blaze__iron, item/wand_c/blaze_staff__iron, item/wand_c/bone__iron, item/wand_c/bone_staff__iron, item/wand_c/greatwood__iron, item/wand_c/greatwood_staff__iron, item/wand_c/ice__iron, item/wand_c/ice_staff__iron, item/wand_c/obsidian__iron, item/wand_c/obsidian_staff__iron, item/wand_c/primal_staff__iron, item/wand_c/quartz__iron, item/wand_c/quartz_staff__iron, item/wand_c/reed__iron, item/wand_c/reed_staff__iron, item/wand_c/silverwood__iron, item/wand_c/silverwood_staff__iron, item/wand_cap, item/wand_cap_iron, item/wand_staff_base
+- `models/wand_rod_blaze` — 20: item/wand_c/blaze__copper, item/wand_c/blaze__gold, item/wand_c/blaze__iron, item/wand_c/blaze__silver, item/wand_c/blaze__silver_inert, item/wand_c/blaze__thaumium, item/wand_c/blaze__thaumium_inert, item/wand_c/blaze__void, item/wand_c/blaze__void_inert, item/wand_c/blaze_staff__copper, item/wand_c/blaze_staff__gold, item/wand_c/blaze_staff__iron, item/wand_c/blaze_staff__silver, item/wand_c/blaze_staff__silver_inert, item/wand_c/blaze_staff__thaumium, item/wand_c/blaze_staff__thaumium_inert, item/wand_c/blaze_staff__void, item/wand_c/blaze_staff__void_inert, item/wand_rod_blaze, item/wand_rod_blaze_staff
+- `models/wand_rod_bone` — 20: item/wand_c/bone__copper, item/wand_c/bone__gold, item/wand_c/bone__iron, item/wand_c/bone__silver, item/wand_c/bone__silver_inert, item/wand_c/bone__thaumium, item/wand_c/bone__thaumium_inert, item/wand_c/bone__void, item/wand_c/bone__void_inert, item/wand_c/bone_staff__copper, item/wand_c/bone_staff__gold, item/wand_c/bone_staff__iron, item/wand_c/bone_staff__silver, item/wand_c/bone_staff__silver_inert, item/wand_c/bone_staff__thaumium, item/wand_c/bone_staff__thaumium_inert, item/wand_c/bone_staff__void, item/wand_c/bone_staff__void_inert, item/wand_rod_bone, item/wand_rod_bone_staff
+- `models/wand_rod_ice` — 20: item/wand_c/ice__copper, item/wand_c/ice__gold, item/wand_c/ice__iron, item/wand_c/ice__silver, item/wand_c/ice__silver_inert, item/wand_c/ice__thaumium, item/wand_c/ice__thaumium_inert, item/wand_c/ice__void, item/wand_c/ice__void_inert, item/wand_c/ice_staff__copper, item/wand_c/ice_staff__gold, item/wand_c/ice_staff__iron, item/wand_c/ice_staff__silver, item/wand_c/ice_staff__silver_inert, item/wand_c/ice_staff__thaumium, item/wand_c/ice_staff__thaumium_inert, item/wand_c/ice_staff__void, item/wand_c/ice_staff__void_inert, item/wand_rod_ice, item/wand_rod_ice_staff
+- `models/wand_rod_quartz` — 20: item/wand_c/quartz__copper, item/wand_c/quartz__gold, item/wand_c/quartz__iron, item/wand_c/quartz__silver, item/wand_c/quartz__silver_inert, item/wand_c/quartz__thaumium, item/wand_c/quartz__thaumium_inert, item/wand_c/quartz__void, item/wand_c/quartz__void_inert, item/wand_c/quartz_staff__copper, item/wand_c/quartz_staff__gold, item/wand_c/quartz_staff__iron, item/wand_c/quartz_staff__silver, item/wand_c/quartz_staff__silver_inert, item/wand_c/quartz_staff__thaumium, item/wand_c/quartz_staff__thaumium_inert, item/wand_c/quartz_staff__void, item/wand_c/quartz_staff__void_inert, item/wand_rod_quartz, item/wand_rod_quartz_staff
+- `models/wand_rod_reed` — 20: item/wand_c/reed__copper, item/wand_c/reed__gold, item/wand_c/reed__iron, item/wand_c/reed__silver, item/wand_c/reed__silver_inert, item/wand_c/reed__thaumium, item/wand_c/reed__thaumium_inert, item/wand_c/reed__void, item/wand_c/reed__void_inert, item/wand_c/reed_staff__copper, item/wand_c/reed_staff__gold, item/wand_c/reed_staff__iron, item/wand_c/reed_staff__silver, item/wand_c/reed_staff__silver_inert, item/wand_c/reed_staff__thaumium, item/wand_c/reed_staff__thaumium_inert, item/wand_c/reed_staff__void, item/wand_c/reed_staff__void_inert, item/wand_rod_reed, item/wand_rod_reed_staff
+- `item/nitor` — 19: block/nitor_black, block/nitor_blue, block/nitor_brown, block/nitor_cyan, block/nitor_gray, block/nitor_green, block/nitor_light_blue, block/nitor_light_gray, block/nitor_lightblue, block/nitor_lime, block/nitor_magenta, block/nitor_orange, block/nitor_pink, block/nitor_purple, block/nitor_red, block/nitor_silver, block/nitor_white, block/nitor_yellow, item/nitor
+- `models/wand_cap_copper` — 18: item/wand_c/blaze__copper, item/wand_c/blaze_staff__copper, item/wand_c/bone__copper, item/wand_c/bone_staff__copper, item/wand_c/greatwood__copper, item/wand_c/greatwood_staff__copper, item/wand_c/ice__copper, item/wand_c/ice_staff__copper, item/wand_c/obsidian__copper, item/wand_c/obsidian_staff__copper, item/wand_c/primal_staff__copper, item/wand_c/quartz__copper, item/wand_c/quartz_staff__copper, item/wand_c/reed__copper, item/wand_c/reed_staff__copper, item/wand_c/silverwood__copper, item/wand_c/silverwood_staff__copper, item/wand_cap_copper
+- `models/wand_cap_gold` — 18: item/wand_c/blaze__gold, item/wand_c/blaze_staff__gold, item/wand_c/bone__gold, item/wand_c/bone_staff__gold, item/wand_c/greatwood__gold, item/wand_c/greatwood_staff__gold, item/wand_c/ice__gold, item/wand_c/ice_staff__gold, item/wand_c/obsidian__gold, item/wand_c/obsidian_staff__gold, item/wand_c/primal_staff__gold, item/wand_c/quartz__gold, item/wand_c/quartz_staff__gold, item/wand_c/reed__gold, item/wand_c/reed_staff__gold, item/wand_c/silverwood__gold, item/wand_c/silverwood_staff__gold, item/wand_cap_gold
+- `models/wand_cap_silver` — 18: item/wand_c/blaze__silver, item/wand_c/blaze_staff__silver, item/wand_c/bone__silver, item/wand_c/bone_staff__silver, item/wand_c/greatwood__silver, item/wand_c/greatwood_staff__silver, item/wand_c/ice__silver, item/wand_c/ice_staff__silver, item/wand_c/obsidian__silver, item/wand_c/obsidian_staff__silver, item/wand_c/primal_staff__silver, item/wand_c/quartz__silver, item/wand_c/quartz_staff__silver, item/wand_c/reed__silver, item/wand_c/reed_staff__silver, item/wand_c/silverwood__silver, item/wand_c/silverwood_staff__silver, item/wand_cap_silver
+- `models/wand_cap_silver_inert` — 18: item/wand_c/blaze__silver_inert, item/wand_c/blaze_staff__silver_inert, item/wand_c/bone__silver_inert, item/wand_c/bone_staff__silver_inert, item/wand_c/greatwood__silver_inert, item/wand_c/greatwood_staff__silver_inert, item/wand_c/ice__silver_inert, item/wand_c/ice_staff__silver_inert, item/wand_c/obsidian__silver_inert, item/wand_c/obsidian_staff__silver_inert, item/wand_c/primal_staff__silver_inert, item/wand_c/quartz__silver_inert, item/wand_c/quartz_staff__silver_inert, item/wand_c/reed__silver_inert, item/wand_c/reed_staff__silver_inert, item/wand_c/silverwood__silver_inert, item/wand_c/silverwood_staff__silver_inert, item/wand_cap_silver_inert
+- `models/wand_cap_thaumium` — 18: item/wand_c/blaze__thaumium, item/wand_c/blaze_staff__thaumium, item/wand_c/bone__thaumium, item/wand_c/bone_staff__thaumium, item/wand_c/greatwood__thaumium, item/wand_c/greatwood_staff__thaumium, item/wand_c/ice__thaumium, item/wand_c/ice_staff__thaumium, item/wand_c/obsidian__thaumium, item/wand_c/obsidian_staff__thaumium, item/wand_c/primal_staff__thaumium, item/wand_c/quartz__thaumium, item/wand_c/quartz_staff__thaumium, item/wand_c/reed__thaumium, item/wand_c/reed_staff__thaumium, item/wand_c/silverwood__thaumium, item/wand_c/silverwood_staff__thaumium, item/wand_cap_thaumium
+- `models/wand_cap_thaumium_inert` — 18: item/wand_c/blaze__thaumium_inert, item/wand_c/blaze_staff__thaumium_inert, item/wand_c/bone__thaumium_inert, item/wand_c/bone_staff__thaumium_inert, item/wand_c/greatwood__thaumium_inert, item/wand_c/greatwood_staff__thaumium_inert, item/wand_c/ice__thaumium_inert, item/wand_c/ice_staff__thaumium_inert, item/wand_c/obsidian__thaumium_inert, item/wand_c/obsidian_staff__thaumium_inert, item/wand_c/primal_staff__thaumium_inert, item/wand_c/quartz__thaumium_inert, item/wand_c/quartz_staff__thaumium_inert, item/wand_c/reed__thaumium_inert, item/wand_c/reed_staff__thaumium_inert, item/wand_c/silverwood__thaumium_inert, item/wand_c/silverwood_staff__thaumium_inert, item/wand_cap_thaumium_inert
+- `models/wand_cap_void` — 18: item/wand_c/blaze__void, item/wand_c/blaze_staff__void, item/wand_c/bone__void, item/wand_c/bone_staff__void, item/wand_c/greatwood__void, item/wand_c/greatwood_staff__void, item/wand_c/ice__void, item/wand_c/ice_staff__void, item/wand_c/obsidian__void, item/wand_c/obsidian_staff__void, item/wand_c/primal_staff__void, item/wand_c/quartz__void, item/wand_c/quartz_staff__void, item/wand_c/reed__void, item/wand_c/reed_staff__void, item/wand_c/silverwood__void, item/wand_c/silverwood_staff__void, item/wand_cap_void
+- `models/wand_cap_void_inert` — 18: item/wand_c/blaze__void_inert, item/wand_c/blaze_staff__void_inert, item/wand_c/bone__void_inert, item/wand_c/bone_staff__void_inert, item/wand_c/greatwood__void_inert, item/wand_c/greatwood_staff__void_inert, item/wand_c/ice__void_inert, item/wand_c/ice_staff__void_inert, item/wand_c/obsidian__void_inert, item/wand_c/obsidian_staff__void_inert, item/wand_c/primal_staff__void_inert, item/wand_c/quartz__void_inert, item/wand_c/quartz_staff__void_inert, item/wand_c/reed__void_inert, item/wand_c/reed_staff__void_inert, item/wand_c/silverwood__void_inert, item/wand_c/silverwood_staff__void_inert, item/wand_cap_void_inert
+- `item/banner` — 17: item/banner, item/banner_black, item/banner_blue, item/banner_brown, item/banner_cyan, item/banner_gray, item/banner_green, item/banner_light_blue, item/banner_light_gray, item/banner_lime, item/banner_magenta, item/banner_orange, item/banner_pink, item/banner_purple, item/banner_red, item/banner_white, item/banner_yellow
+- `block/planks_greatwood` — 13: block/arcane_workbench, block/banner, block/greatwood, block/greatwood_inner_stairs, block/greatwood_outer_stairs, block/greatwood_planks, block/greatwood_slab, block/greatwood_slab_top, block/greatwood_stairs, block/plank_greatwood, block/research_table, block/slab_double_greatwood, block/slab_greatwood
+- `models/wand_rod_greatwood` — 13: item/wand, item/wand_base, item/wand_c/greatwood__copper, item/wand_c/greatwood__gold, item/wand_c/greatwood__iron, item/wand_c/greatwood__silver, item/wand_c/greatwood__silver_inert, item/wand_c/greatwood__thaumium, item/wand_c/greatwood__thaumium_inert, item/wand_c/greatwood__void, item/wand_c/greatwood__void_inert, item/wand_rod, item/wand_rod_greatwood
+- `block/metalbase` — 11: block/alembic, block/alembic_normal, block/crucible, block/lamp_stand, block/placeholder_anvil, block/placeholder_bars, block/placeholder_cauldron, block/tube_core, block/tube_core_valve, block/tube_side, block/tube_side_restrict
+- `models/wand_rod_greatwood_staff` — 11: item/wand_c/greatwood_staff__copper, item/wand_c/greatwood_staff__gold, item/wand_c/greatwood_staff__iron, item/wand_c/greatwood_staff__silver, item/wand_c/greatwood_staff__silver_inert, item/wand_c/greatwood_staff__thaumium, item/wand_c/greatwood_staff__thaumium_inert, item/wand_c/greatwood_staff__void, item/wand_c/greatwood_staff__void_inert, item/wand_rod_greatwood_staff, item/wand_staff_base
+- `block/woodplain` — 10: block/arcane_ear_off, block/arcane_ear_on, block/arcane_workbench, block/arcane_workbench_charger, block/chest, block/focal_manipulator, block/pattern_crafter_inv, block/research_table, block/table_wood, block/workbench_charger
+- `block/planks_silverwood` — 10: block/plank_silverwood, block/silverwood, block/silverwood_inner_stairs, block/silverwood_outer_stairs, block/silverwood_planks, block/silverwood_slab, block/silverwood_slab_top, block/silverwood_stairs, block/slab_double_silverwood, block/slab_silverwood
+- `models/wand_rod_obsidian` — 10: item/wand_c/obsidian__copper, item/wand_c/obsidian__gold, item/wand_c/obsidian__iron, item/wand_c/obsidian__silver, item/wand_c/obsidian__silver_inert, item/wand_c/obsidian__thaumium, item/wand_c/obsidian__thaumium_inert, item/wand_c/obsidian__void, item/wand_c/obsidian__void_inert, item/wand_rod_obsidian
+- `models/wand_rod_obsidian_staff` — 10: item/wand_c/obsidian_staff__copper, item/wand_c/obsidian_staff__gold, item/wand_c/obsidian_staff__iron, item/wand_c/obsidian_staff__silver, item/wand_c/obsidian_staff__silver_inert, item/wand_c/obsidian_staff__thaumium, item/wand_c/obsidian_staff__thaumium_inert, item/wand_c/obsidian_staff__void, item/wand_c/obsidian_staff__void_inert, item/wand_rod_obsidian_staff
+- `models/wand_rod_primal` — 10: item/wand_c/primal_staff__copper, item/wand_c/primal_staff__gold, item/wand_c/primal_staff__iron, item/wand_c/primal_staff__silver, item/wand_c/primal_staff__silver_inert, item/wand_c/primal_staff__thaumium, item/wand_c/primal_staff__thaumium_inert, item/wand_c/primal_staff__void, item/wand_c/primal_staff__void_inert, item/wand_rod_primal_staff
+- `models/wand_rod_silverwood` — 10: item/wand_c/silverwood__copper, item/wand_c/silverwood__gold, item/wand_c/silverwood__iron, item/wand_c/silverwood__silver, item/wand_c/silverwood__silver_inert, item/wand_c/silverwood__thaumium, item/wand_c/silverwood__thaumium_inert, item/wand_c/silverwood__void, item/wand_c/silverwood__void_inert, item/wand_rod_silverwood
+- `models/wand_rod_silverwood_staff` — 10: item/wand_c/silverwood_staff__copper, item/wand_c/silverwood_staff__gold, item/wand_c/silverwood_staff__iron, item/wand_c/silverwood_staff__silver, item/wand_c/silverwood_staff__silver_inert, item/wand_c/silverwood_staff__thaumium, item/wand_c/silverwood_staff__thaumium_inert, item/wand_c/silverwood_staff__void, item/wand_c/silverwood_staff__void_inert, item/wand_rod_silverwood_staff
+- `block/animatedglow` — 9: block/effect_glimmer, block/jar_brain, block/jar_brain_item, block/jar_normal, block/jar_void, block/liquid_death, block/matrix_cost, block/matrix_speed, block/purifying_fluid
+- `block/smelter_top` — 9: block/smelter, block/smelter_basic_off, block/smelter_basic_on, block/smelter_thaumium, block/smelter_thaumium_off, block/smelter_thaumium_on, block/smelter_void, block/smelter_void_off, block/smelter_void_on
+- `block/crystal` — 8: block/crystal, block/crystal_air, block/crystal_earth, block/crystal_entropy, block/crystal_fire, block/crystal_order, block/crystal_water, block/recharge_pedestal
+- `block/es_1` — 7: block/ancient_pedestal_doorway, block/ancient_stone, block/ancient_stone_inner_stairs, block/ancient_stone_outer_stairs, block/ancient_stone_slab, block/ancient_stone_slab_top, block/ancient_stone_stairs
+- `block/obsidiantile` — 7: block/obsidian_tile, block/obsidian_totem_body1, block/obsidian_totem_body2, block/obsidian_totem_body3, block/obsidian_totem_body4, block/obsidian_totem_shaded, block/obsidian_totem_standalone
+- `block/es_p` — 6: block/ancient_inner_stairs, block/ancient_outer_stairs, block/ancient_stairs, block/ancient_stone_tile, block/pedestal_ancient, block/stone_ancient_tile
+- `item/shard` — 6: item/shard_air, item/shard_earth, item/shard_entropy, item/shard_fire, item/shard_order, item/shard_water
+- `block/alchemyblockadv` — 5: block/alchemical_brass_advanced_block, block/flux_scrubber, block/metal_alchemical_advanced, block/thaumatorium, block/thaumatorium_top
+- `block/condenser_lattice` — 5: block/condenser_lattice, block/condenser_lattice_core, block/condenser_lattice_core_dirty, block/condenser_lattice_dirty, block/condenser_lattice_side
+- `block/es_i_1` — 5: block/eldritch_stone, block/eldritch_stone_tile, block/pedestal_eldritch, block/slab_double_eldritch, block/slab_eldritch
+- `block/lifterside` — 5: block/levitator, block/levitator_off, block/levitator_on, block/redstone_relay_off, block/redstone_relay_on
+- `block/mirrorframe` — 5: block/mirror, block/mirror_essentia, block/mirror_item, item/mirror, item/mirror_on
+- `block/pipe_1` — 5: block/tube_core, block/tube_normal, block/tube_side, item/tube, item/tube_normal
+- `item/charm` — 5: item/charm, item/primal_charm, item/verdant_charm_0, item/verdant_charm_1, item/verdant_charm_2

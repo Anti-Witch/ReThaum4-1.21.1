@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:banner_white",
+    "thaumcraft:banner_orange",
+    "thaumcraft:banner_magenta",
+    "thaumcraft:banner_light_blue",
+    "thaumcraft:banner_yellow",
+    "thaumcraft:banner_lime",
+    "thaumcraft:banner_pink",
+    "thaumcraft:banner_gray",
+    "thaumcraft:banner_light_gray",
+    "thaumcraft:banner_cyan",
+    "thaumcraft:banner_purple",
+    "thaumcraft:banner_blue",
+    "thaumcraft:banner_brown",
+    "thaumcraft:banner_green",
+    "thaumcraft:banner_red",
+    "thaumcraft:banner_black",
+    "thaumcraft:banner_crimson_cult"
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "entries": [
+    {
+      "key": "ELDRITCHMINOR",
+      "name": "tc.research_name.ELDRITCHMINOR",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_eldritchminor.png"
+      ],
+      "location": [
+        1,
+        0
+      ],
+      "meta": [
+        "HIDDEN",
+        "ROUND",
+        "SPIKY"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELDRITCHMINOR.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/void_seed"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ELDRITCHMAJOR",
+      "name": "tc.research_name.ELDRITCHMAJOR",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_eldritchmajor.png"
+      ],
+      "location": [
+        -1,
+        0
+      ],
+      "meta": [
+        "HIDDEN",
+        "ROUND",
+        "SPIKY",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELDRITCHMAJOR.1"
+        },
+        {
+          "text": "tc.research_page.ELDRITCHMAJOR.2"
+        }
+      ]
+    },
+    {
+      "key": "OCULUS",
+      "name": "tc.research_name.OCULUS",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_eldritch.png"
+      ],
+      "location": [
+        -2,
+        2
+      ],
+      "meta": [
+        "CONCEALED",
+        "ROUND",
+        "SPIKY"
+      ],
+      "aspects": [
+        "cognitio:3",
+        "tenebrae:3",
+        "permutatio:3",
+        "iter:6",
+        "alienis:6"
+      ],
+      "complexity": 1,
+      "parents": [
+        "CRIMSON",
+        "ELDRITCHMAJOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.OCULUS.1"
+        },
+        {
+          "text": "tc.research_page.OCULUS.2"
+        }
+      ]
+    },
+    {
+      "key": "ENTEROUTER",
+      "name": "tc.research_name.ENTEROUTER",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_outer.png"
+      ],
+      "location": [
+        -3,
+        4
+      ],
+      "meta": [
+        "HIDDEN",
+        "ROUND",
+        "STUB"
+      ],
+      "complexity": 1,
+      "parents": [
+        "OCULUS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ENTEROUTER.1"
+        }
+      ]
+    },
+    {
+      "key": "OUTERREV",
+      "name": "tc.research_name.OUTERREV",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_outerrev.png"
+      ],
+      "location": [
+        -5,
+        3
+      ],
+      "meta": [
+        "LOST",
+        "SECONDARY",
+        "SPIKY"
+      ],
+      "aspects": [
+        "alienis:4",
+        "cognitio:4"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ENTEROUTER"
+      ],
+      "triggers": {
+        "items": [
+          "thaumcraft:eldritch_stone_tile"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.OUTERREV.1"
+        }
+      ]
+    },
+    {
+      "key": "PRIMPEARL",
+      "name": "tc.research_name.PRIMPEARL",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:primordial_pearl"
+      ],
+      "location": [
+        0,
+        4
+      ],
+      "meta": [
+        "LOST",
+        "SECONDARY",
+        "SPIKY"
+      ],
+      "aspects": [
+        "aer:8",
+        "terra:8",
+        "ignis:8",
+        "aqua:8",
+        "ordo:8",
+        "perditio:8"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ELDRITCHMINOR"
+      ],
+      "triggers": {
+        "items": [
+          "thaumcraft:primordial_pearl"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.PRIMPEARL.1"
+        },
+        {
+          "text": "tc.research_page.PRIMPEARL.2"
+        }
+      ]
+    },
+    {
+      "key": "PRIMNODE",
+      "name": "tc.research_name.PRIMNODE",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_nodes_2.png"
+      ],
+      "location": [
+        0,
+        6
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "auram",
+        "praecantatio",
+        "ordo",
+        "perditio"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PRIMPEARL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PRIMNODE.1"
+        }
+      ]
+    },
+    {
+      "key": "ADVALCHEMYFURNACE",
+      "name": "tc.research_name.ADVALCHEMYFURNACE",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:smelter_thaumium"
+      ],
+      "location": [
+        -2,
+        6
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "auram",
+        "praecantatio",
+        "ordo",
+        "perditio"
+      ],
+      "complexity": 1,
+      "parents": [
+        "PRIMPEARL",
+        "DISTILESSENTIA",
+        "VISPOWER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ADVALCHEMYFURNACE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/metal_alchemical_advanced"
+          ]
+        },
+        {
+          "text": "tc.research_page.ADVALCHEMYFURNACE.2"
+        }
+      ]
+    },
+    {
+      "key": "PRIMALCRUSHER",
+      "name": "tc.research_name.PRIMALCRUSHER",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:primal_crusher"
+      ],
+      "location": [
+        2,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "perfodio:6",
+        "instrumentum:6",
+        "perditio:6",
+        "vacuos:6",
+        "telum:6",
+        "alienis:6",
+        "lucrum:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "PRIMPEARL"
+      ],
+      "parents_hidden": [
+        "VOIDMETAL",
+        "ELEMENTALPICK",
+        "ELEMENTALSHOVEL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PRIMALCRUSHER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/primal_crusher"
+          ]
+        },
+        {
+          "text": "tc.research_page.PRIMALCRUSHER.2"
+        }
+      ]
+    },
+    {
+      "key": "SANITYCHECK",
+      "name": "tc.research_name.SANITYCHECK",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:sanity_checker"
+      ],
+      "location": [
+        2,
+        2
+      ],
+      "aspects": [
+        "cognitio:5",
+        "alienis:3",
+        "sensus:5"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ELDRITCHMINOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.SANITYCHECK.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/sanity_checker"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "VOIDMETAL",
+      "name": "tc.research_name.VOIDMETAL",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:void_metal_ingot"
+      ],
+      "location": [
+        2,
+        -2
+      ],
+      "aspects": [
+        "metallum:3",
+        "alienis:3",
+        "tenebrae:3",
+        "vacuos:5"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "ELDRITCHMINOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.VOIDMETAL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/void_metal_ingot"
+          ]
+        },
+        {
+          "text": "tc.research_page.VOIDMETAL.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_axe"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_sword"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_pick"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_shovel"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_hoe"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_helm"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_chest"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_legs"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/void_boots"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ESSENTIARESERVOIR",
+      "name": "tc.research_name.ESSENTIARESERVOIR",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:essentia_reservoir"
+      ],
+      "location": [
+        4,
+        -3
+      ],
+      "aspects": [
+        "aqua:5",
+        "vacuos:3",
+        "permutatio:3",
+        "praecantatio:5",
+        "vacuos:5"
+      ],
+      "complexity": 2,
+      "parents": [
+        "VOIDMETAL",
+        "CENTRIFUGE",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ESSENTIARESERVOIR.1"
+        },
+        {
+          "text": "tc.research_page.ESSENTIARESERVOIR.2"
+        }
+      ]
+    },
+    {
+      "key": "CAP_void",
+      "name": "tc.research_name.CAP_void",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:wand_cap_void"
+      ],
+      "location": [
+        5,
+        -1
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "vacuos:5",
+        "alienis:5",
+        "instrumentum:3",
+        "praecantatio:3",
+        "auram:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "CAP_thaumium",
+        "VOIDMETAL"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CAP_void.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/cap_void_inert"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/cap_void"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ARMORVOIDFORTRESS",
+      "name": "tc.research_name.ARMORVOIDFORTRESS",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:void_robe_helm"
+      ],
+      "location": [
+        0,
+        -3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "tutamen:5",
+        "alienis:3",
+        "pannus:3",
+        "tenebrae:3",
+        "vacuos:5"
+      ],
+      "complexity": 3,
+      "parents": [
+        "VOIDMETAL",
+        "ENCHFABRIC",
+        "ELDRITCHMAJOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARMORVOIDFORTRESS.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/void_robe_helm"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/void_robe_chest"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/void_robe_legs"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "FOCUSPRIMAL",
+      "name": "tc.research_name.FOCUSPRIMAL",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:textures/misc/r_eldritch.png"
+      ],
+      "location": [
+        4,
+        1
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "aer:6",
+        "aqua:6",
+        "ignis:6",
+        "terra:6",
+        "ordo:6",
+        "perditio:6",
+        "praecantatio:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ELDRITCHMINOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FOCUSPRIMAL.1"
+        }
+      ]
+    },
+    {
+      "key": "ROD_primal_staff",
+      "name": "tc.research_name.ROD_primal_staff",
+      "category": "ELDRITCH",
+      "icons": [
+        "thaumcraft:wand_rod_primal_staff"
+      ],
+      "location": [
+        6,
+        2
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "aer:9",
+        "terra:9",
+        "ignis:9",
+        "aqua:9",
+        "ordo:9",
+        "perditio:9",
+        "instrumentum:9",
+        "praecantatio:12"
+      ],
+      "complexity": 3,
+      "parents": [
+        "FOCUSPRIMAL"
+      ],
+      "parents_hidden": [
+        "ROD_silverwood_staff",
+        "ROD_bone_staff",
+        "ROD_greatwood_staff",
+        "ROD_blaze_staff",
+        "ROD_reed_staff",
+        "ROD_obsidian_staff",
+        "ROD_quartz_staff",
+        "ROD_ice_staff"
+      ],
+      "triggers": {
+        "entities": [
+          "PrimalOrb"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.ROD_primal_staff.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/rod_primal_staff"
+          ]
+        }
+      ]
+    }
+  ]
+}

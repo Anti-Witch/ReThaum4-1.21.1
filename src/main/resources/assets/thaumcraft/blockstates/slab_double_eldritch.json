@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "variant=default": [
+            {
+                "model": "thaumcraft:block/eldritch_stone"
+            }
+        ],
+        "": [
+            {
+                "model": "thaumcraft:block/eldritch_stone"
+            }
+        ]
+    }
+}

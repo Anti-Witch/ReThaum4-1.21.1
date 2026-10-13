@@ -1,0 +1,9 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CAP_silver",
+  "vis": 25,
+  "crystals": { "ordo": 1, "ignis": 1, "aer": 1 },
+  "pattern": ["NNN", "N N"],
+  "key": { "N": { "item": "thaumcraft:silver_nugget" } },
+  "result": { "id": "thaumcraft:wand_cap_silver_inert" }
+}

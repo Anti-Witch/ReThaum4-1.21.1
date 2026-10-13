@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/rail_flat",
+    "textures": {
+        "rail": "thaumcraft:block/rail_activator_powered"
+    }
+}

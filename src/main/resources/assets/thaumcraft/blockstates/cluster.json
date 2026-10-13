@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "type=cinnabar": {
+      "model": "thaumcraft:item/cluster_cinnabar"
+    },
+    "type=copper": {
+      "model": "thaumcraft:item/cluster_copper"
+    },
+    "type=gold": {
+      "model": "thaumcraft:item/cluster_gold"
+    },
+    "type=iron": {
+      "model": "thaumcraft:item/cluster_iron"
+    },
+    "type=lead": {
+      "model": "thaumcraft:block/cluster_lead"
+    },
+    "type=silver": {
+      "model": "thaumcraft:block/cluster_silver"
+    },
+    "type=tin": {
+      "model": "thaumcraft:block/cluster_tin"
+    },
+    "type=quartz": {
+      "model": "thaumcraft:block/item_layer",
+      "textures": {
+        "layer0": "thaumcraft:item/cluster_quartz"
+      }
+    },
+    "": {
+      "model": "thaumcraft:item/cluster_cinnabar"
+    }
+  }
+}

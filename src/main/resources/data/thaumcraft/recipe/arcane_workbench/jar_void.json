@@ -1,0 +1,19 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "JARVOID",
+  "vis": 50,
+  "aspects": {
+    "perditio": 1
+  },
+  "pattern": [
+    "J"
+  ],
+  "key": {
+    "J": {
+      "item": "thaumcraft:jar_normal"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:jar_void"
+  }
+}

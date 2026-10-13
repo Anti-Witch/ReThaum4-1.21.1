@@ -1,0 +1,29 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "FOCALMANIPULATION",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:focus_blank"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:quicksilver"
+    },
+    {
+      "tag": "c:gems/diamond"
+    },
+    {
+      "item": "thaumcraft:quicksilver"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 25,
+    "ordo": 50
+  },
+  "result": {
+    "id": "thaumcraft:focus_advanced"
+  }
+}

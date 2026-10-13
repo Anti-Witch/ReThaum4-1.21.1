@@ -1,0 +1,16 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:bucket"
+  },
+  "aspects": {
+    "ignis": 15,
+    "terra": 5
+  },
+  "result": {
+    "id": "minecraft:lava_bucket",
+    "count": 1
+  },
+  "group": "thaumcraft:hedge_transmutation"
+}

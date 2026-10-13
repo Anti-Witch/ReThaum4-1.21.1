@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "type=common": {
+      "model": "thaumcraft:item/loot_bag_common"
+    },
+    "type=uncommon": {
+      "model": "thaumcraft:item/loot_bag_uncommon"
+    },
+    "type=rare": {
+      "model": "thaumcraft:item/loot_bag_rare"
+    },
+    "": {
+      "model": "thaumcraft:item/loot_bag_common"
+    }
+  }
+}

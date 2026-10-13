@@ -1,0 +1,9 @@
+{
+  "type": "thaumcraft:ruined_tower",
+  "biomes": "#minecraft:is_overworld",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {},
+  "start_pool": "thaumcraft:ruined_tower/start",
+  "size": 7
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=found": {
+      "model": "thaumcraft:item/amulet_vis_found"
+    },
+    "type=crafted": {
+      "model": "thaumcraft:item/amulet_vis_crafted"
+    },
+    "": {
+      "model": "thaumcraft:item/amulet_vis_found"
+    }
+  }
+}

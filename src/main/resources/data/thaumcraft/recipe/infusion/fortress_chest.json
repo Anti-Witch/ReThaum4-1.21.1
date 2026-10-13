@@ -1,0 +1,35 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ARMORFORTRESS",
+  "instability": 3,
+  "input": {
+    "item": "thaumcraft:thaumium_chest"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:plate_thaumium"
+    },
+    {
+      "item": "thaumcraft:plate_thaumium"
+    },
+    {
+      "item": "thaumcraft:plate_thaumium"
+    },
+    {
+      "item": "thaumcraft:plate_thaumium"
+    },
+    {
+      "tag": "c:ingots/gold"
+    },
+    {
+      "tag": "c:leathers"
+    }
+  ],
+  "aspects": {
+    "metallum": 50,
+    "praemunio": 30,
+    "potentia": 25
+  },
+  "result": {"id": "thaumcraft:fortress_chest"
+  }
+}

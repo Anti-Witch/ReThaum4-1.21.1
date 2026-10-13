@@ -1,0 +1,13 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "CRUCIBLE",
+  "catalyst": {
+    "item": "minecraft:glass_bottle"
+  },
+  "aspects": {
+    "vacuos": 3
+  },
+  "result": {
+    "id": "thaumcraft:phial_empty"
+  }
+}

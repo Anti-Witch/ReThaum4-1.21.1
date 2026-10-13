@@ -1,0 +1,14 @@
+{
+  "type": "thaumcraft:crucible",
+  "catalyst": {
+    "item": "thaumcraft:tallow"
+  },
+  "result": {
+    "id": "thaumcraft:candle_white",
+    "count": 4
+  },
+  "aspects": {
+    "lux": 5
+  },
+  "research": "ALCHEMICALMANUFACTURE"
+}

@@ -1,0 +1,48 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "CORESORTING",
+  "instability": 3,
+  "aspects": {
+    "vacuos": 16,
+    "permutatio": 16,
+    "fames": 16,
+    "lucrum": 16
+  },
+  "input": {
+    "item": "thaumcraft:zombie_brain"
+  },
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "items": [
+        "thaumcraft:golem_core"
+      ],
+      "components": {
+        "thaumcraft:golem_core_type": 0
+      },
+      "strict": true
+    },
+    {
+      "item": "minecraft:comparator"
+    },
+    {
+      "type": "neoforge:components",
+      "items": [
+        "thaumcraft:golem_core"
+      ],
+      "components": {
+        "thaumcraft:golem_core_type": 1
+      },
+      "strict": true
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "components": {
+      "thaumcraft:golem_core_type": 10
+    }
+  }
+}

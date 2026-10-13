@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=brass": {
+      "model": "thaumcraft:item/plate_brass"
+    },
+    "type=thaumium": {
+      "model": "thaumcraft:item/plate_thaumium"
+    },
+    "type=void": {
+      "model": "thaumcraft:item/plate_void"
+    },
+    "type=iron": {
+      "model": "thaumcraft:item/plate_iron"
+    },
+    "": {
+      "model": "thaumcraft:item/plate_brass"
+    }
+  }
+}

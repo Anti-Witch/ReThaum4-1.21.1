@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "thaumcraft:block/arcane_workbench" },
+    "facing=south": { "model": "thaumcraft:block/arcane_workbench", "y": 180 },
+    "facing=east": { "model": "thaumcraft:block/arcane_workbench", "y": 90 },
+    "facing=west": { "model": "thaumcraft:block/arcane_workbench", "y": 270 }
+  }
+}

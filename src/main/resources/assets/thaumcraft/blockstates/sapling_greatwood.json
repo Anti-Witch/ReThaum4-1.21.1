@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "thaumcraft:block/sapling_greatwood"
+    },
+    "stage=1": {
+      "model": "thaumcraft:block/sapling_greatwood"
+    },
+    "": [
+      {
+        "model": "thaumcraft:block/sapling_greatwood"
+      }
+    ]
+  }
+}

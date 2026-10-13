@@ -1,0 +1,26 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "COREGATHER",
+  "vis": 10,
+  "crystals": {
+    "ordo": 5,
+    "ignis": 5
+  },
+  "pattern": [
+    " C ",
+    "CNC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:brick"
+    },
+    "N": {
+      "item": "thaumcraft:nitor"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "count": 1
+  }
+}

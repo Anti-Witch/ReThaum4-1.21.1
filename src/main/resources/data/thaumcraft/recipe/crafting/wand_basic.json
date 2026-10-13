@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  I",
+    " S ",
+    "I  "
+  ],
+  "key": {
+    "I": {
+      "item": "thaumcraft:wand_cap_iron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:wand",
+    "components": {
+      "thaumcraft:wand_rod": "wood",
+      "thaumcraft:wand_cap": "iron"
+    }
+  }
+}

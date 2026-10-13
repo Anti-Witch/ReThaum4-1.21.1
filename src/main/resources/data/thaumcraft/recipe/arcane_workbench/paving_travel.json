@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "PAVETRAVEL",
+  "vis": 50,
+  "aspects": {
+    "aer": 1,
+    "terra": 1
+  },
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:arcane_stone_brick"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:paving_stone_travel",
+    "count": 4
+  }
+}

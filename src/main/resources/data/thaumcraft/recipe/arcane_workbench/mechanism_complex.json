@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICARTIFACE",
+  "vis": 50,
+  "crystals": {
+    "ignis": 1,
+    "aqua": 1
+  },
+  "pattern": [
+    " M ",
+    "TQT",
+    " M "
+  ],
+  "key": {
+    "M": {
+      "item": "thaumcraft:mechanism_simple"
+    },
+    "T": {
+      "item": "thaumcraft:plate_thaumium"
+    },
+    "Q": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:mechanism_complex"
+  }
+}

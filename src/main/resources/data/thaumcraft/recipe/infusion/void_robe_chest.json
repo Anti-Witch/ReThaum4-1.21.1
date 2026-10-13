@@ -1,0 +1,36 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ARMORVOIDFORTRESS",
+  "instability": 4,
+  "input": {
+    "item": "thaumcraft:void_chest"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:enchanted_fabric"
+    },
+    {
+      "item": "thaumcraft:enchanted_fabric"
+    },
+    {
+      "item": "thaumcraft:enchanted_fabric"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "thaumcraft:void_seed"
+    },
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 75,
+    "vacuos": 50,
+    "alienis": 50
+  },
+  "result": {
+    "id": "thaumcraft:void_robe_chest"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CRUCIBLE",
+  "vis": 15,
+  "crystals": {
+    "aqua": 1
+  },
+  "pattern": [
+    "GWG"
+  ],
+  "key": {
+    "G": {
+      "tag": "c:ingots/gold"
+    },
+    "W": {
+      "item": "thaumcraft:silverwood_planks"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:filter",
+    "count": 2
+  }
+}

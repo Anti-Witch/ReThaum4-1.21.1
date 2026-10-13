@@ -1,0 +1,31 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "VISCHARGERELAY",
+  "vis": 100,
+  "crystals": {
+    "aer": 1,
+    "ordo": 1
+  },
+  "pattern": [
+    " R ",
+    "DID",
+    "SSS"
+  ],
+  "key": {
+    "R": {
+      "item": "thaumcraft:vis_resonator"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "I": {
+      "tag": "c:ingots/gold"
+    },
+    "S": {
+      "tag": "c:stones"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:recharge_pedestal"
+  }
+}

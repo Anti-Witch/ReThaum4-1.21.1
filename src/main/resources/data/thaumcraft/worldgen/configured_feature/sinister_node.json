@@ -1,0 +1,12 @@
+{
+  "type": "thaumcraft:sinister_node",
+  "config": {
+    "chance": 1.0,
+    "vertical_range": 16,
+    "prefer_caves": false,
+    "special_node_chance": 0.0,
+    "silverwood": false,
+    "sinister": true,
+    "small": false
+  }
+}

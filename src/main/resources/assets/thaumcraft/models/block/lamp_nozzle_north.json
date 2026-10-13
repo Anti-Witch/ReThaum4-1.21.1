@@ -1,0 +1,145 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "thaumcraft:models/bore",
+    "nozzle": "thaumcraft:models/bore"
+  },
+  "elements": [
+    {
+      "from": [
+        6.0,
+        6.0,
+        0.5
+      ],
+      "to": [
+        10.0,
+        10.0,
+        5.5
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            13.75,
+            10.5,
+            14.375,
+            11.5
+          ],
+          "texture": "#nozzle"
+        },
+        "up": {
+          "uv": [
+            13.75,
+            10.5,
+            14.375,
+            11.5
+          ],
+          "texture": "#nozzle"
+        },
+        "west": {
+          "uv": [
+            13.75,
+            11.5,
+            14.375,
+            12.5
+          ],
+          "texture": "#nozzle"
+        },
+        "north": {
+          "uv": [
+            14.375,
+            11.5,
+            14.875,
+            12.5
+          ],
+          "texture": "#nozzle"
+        },
+        "east": {
+          "uv": [
+            14.875,
+            11.5,
+            15.5,
+            12.5
+          ],
+          "texture": "#nozzle"
+        },
+        "south": {
+          "uv": [
+            13.25,
+            11.5,
+            13.75,
+            12.5
+          ],
+          "texture": "#nozzle"
+        }
+      }
+    },
+    {
+      "from": [
+        5.5,
+        5.5,
+        0.0
+      ],
+      "to": [
+        10.5,
+        10.5,
+        1.0
+      ],
+      "faces": {
+        "down": {
+          "uv": [
+            13.875,
+            12.75,
+            14.0,
+            14.0
+          ],
+          "texture": "#nozzle"
+        },
+        "up": {
+          "uv": [
+            13.875,
+            12.75,
+            14.0,
+            14.0
+          ],
+          "texture": "#nozzle"
+        },
+        "west": {
+          "uv": [
+            13.875,
+            14.0,
+            14.0,
+            15.25
+          ],
+          "texture": "#nozzle"
+        },
+        "north": {
+          "uv": [
+            14.0,
+            14.0,
+            14.625,
+            15.25
+          ],
+          "texture": "#nozzle"
+        },
+        "east": {
+          "uv": [
+            14.625,
+            14.0,
+            14.75,
+            15.25
+          ],
+          "texture": "#nozzle"
+        },
+        "south": {
+          "uv": [
+            13.25,
+            14.0,
+            13.875,
+            15.25
+          ],
+          "texture": "#nozzle"
+        }
+      }
+    }
+  ]
+}

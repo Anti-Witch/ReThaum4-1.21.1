@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "thaumcraft:block/pillar_eldritch"
+    },
+    "facing=south": {
+      "model": "thaumcraft:block/pillar_eldritch",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "thaumcraft:block/pillar_eldritch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "thaumcraft:block/pillar_eldritch",
+      "y": 270
+    },
+    "": [
+      {
+        "model": "thaumcraft:block/pillar_eldritch"
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumcraft:item/golem_core_blank"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 1
+      },
+      "model": "thaumcraft:item/golem_core_fill"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 2
+      },
+      "model": "thaumcraft:item/golem_core_empty"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 3
+      },
+      "model": "thaumcraft:item/golem_core_gather"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 4
+      },
+      "model": "thaumcraft:item/golem_core_harvest"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 5
+      },
+      "model": "thaumcraft:item/golem_core_guard"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 6
+      },
+      "model": "thaumcraft:item/golem_core_liquid"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 7
+      },
+      "model": "thaumcraft:item/golem_core_essentia"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 8
+      },
+      "model": "thaumcraft:item/golem_core_lumber"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 9
+      },
+      "model": "thaumcraft:item/golem_core_use"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 10
+      },
+      "model": "thaumcraft:item/golem_core_butcher"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 11
+      },
+      "model": "thaumcraft:item/golem_core_sorting"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 12
+      },
+      "model": "thaumcraft:item/golem_core_fish"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 13
+      },
+      "model": "thaumcraft:item/golem_core_bodyguard"
+    },
+    {
+      "predicate": {
+        "thaumcraft:tc_golem_core": 14
+      },
+      "model": "thaumcraft:item/golem_core_patrol"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "thaumcraft:item/wand_staff_base",
+  "textures": {
+    "particle": "thaumcraft:models/wand_rod_quartz",
+    "wand_rod": "thaumcraft:models/wand_rod_quartz",
+    "wand_cap": "thaumcraft:models/wand_cap_silver_inert"
+  }
+}

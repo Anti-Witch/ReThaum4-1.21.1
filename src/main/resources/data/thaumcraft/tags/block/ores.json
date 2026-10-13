@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:amber_ore",
+    "thaumcraft:cinnabar_ore",
+    "thaumcraft:quartz_ore",
+    "thaumcraft:deepslate_amber_ore",
+    "thaumcraft:deepslate_cinnabar_ore",
+    "thaumcraft:deepslate_quartz_ore"
+  ]
+}

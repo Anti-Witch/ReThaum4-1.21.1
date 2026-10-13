@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:thaumium_shovel",
+    "thaumcraft:void_shovel",
+    "thaumcraft:elemental_shovel"
+  ]
+}

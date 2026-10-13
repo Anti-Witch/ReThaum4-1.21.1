@@ -1,0 +1,20 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "ROD_greatwood",
+  "vis": 0,
+  "crystals": {
+    "perditio": 3
+  },
+  "pattern": [
+    " G",
+    "G "
+  ],
+  "key": {
+    "G": {
+      "item": "thaumcraft:greatwood_log"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:wand_rod_greatwood"
+  }
+}

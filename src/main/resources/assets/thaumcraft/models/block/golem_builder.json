@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "thaumcraft:block/golem_stone_top",
+    "side": "thaumcraft:block/golem_stone_side",
+    "bottom": "thaumcraft:block/golem_stone_side"
+  }
+}

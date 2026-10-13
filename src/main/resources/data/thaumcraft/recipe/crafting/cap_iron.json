@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["NNN", "N N"],
+  "key": { "N": { "item": "minecraft:iron_nugget" } },
+  "result": { "id": "thaumcraft:wand_cap_iron" }
+}

@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "type=rabbit": {
+      "model": "thaumcraft:block/item_layer",
+      "textures": {
+        "layer0": "thaumcraft:item/chunk_rabbit"
+      }
+    },
+    "type=pork": {
+      "model": "thaumcraft:item/chunks_pork"
+    },
+    "type=mutton": {
+      "model": "thaumcraft:block/item_layer",
+      "textures": {
+        "layer0": "thaumcraft:item/chunk_mutton"
+      }
+    },
+    "type=fish": {
+      "model": "thaumcraft:item/chunks_fish"
+    },
+    "type=chicken": {
+      "model": "thaumcraft:item/chunks_chicken"
+    },
+    "type=beef": {
+      "model": "thaumcraft:item/chunks_beef"
+    },
+    "": {
+      "model": "thaumcraft:block/item_layer",
+      "textures": {
+        "layer0": "thaumcraft:item/chunk_rabbit"
+      }
+    }
+  }
+}

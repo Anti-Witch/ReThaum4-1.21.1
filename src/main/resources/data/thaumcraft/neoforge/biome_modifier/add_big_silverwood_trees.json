@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#thaumcraft:is_magical",
+  "features": "thaumcraft:big_silverwood_tree",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ARMORFORTRESS",
+  "instability": 1,
+  "input": {
+    "item": "minecraft:iron_boots"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:thaumium_ingot"
+    },
+    {
+      "item": "thaumcraft:thaumium_ingot"
+    },
+    {
+      "item": "thaumcraft:thaumium_ingot"
+    }
+  ],
+  "aspects": {
+    "metallum": 15,
+    "praecantatio": 8,
+    "praemunio": 12
+  },
+  "result": {"id": "thaumcraft:thaumium_boots"
+  }
+}

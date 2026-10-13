@@ -1,0 +1,8 @@
+{
+  "render_type": "minecraft:cutout",
+    "parent": "thaumcraft:block/loot_urn_common",
+    "textures": {
+        "side": "thaumcraft:block/urn_side_2",
+        "particle": "thaumcraft:block/urn_side_2"
+    }
+}

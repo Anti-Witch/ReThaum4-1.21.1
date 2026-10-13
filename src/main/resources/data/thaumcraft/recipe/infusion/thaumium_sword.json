@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "THAUMIUM",
+  "instability": 2,
+  "central": {
+    "item": "minecraft:iron_sword"
+  },
+  "components": [
+    {
+      "item": "thaumcraft:thaumium_ingot"
+    },
+    {
+      "item": "thaumcraft:thaumium_ingot"
+    },
+    {
+      "item": "thaumcraft:quicksilver"
+    },
+    {
+      "item": "thaumcraft:quicksilver"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 20,
+    "instrumentum": 15,
+    "aversio": 10
+  },
+  "result": {
+    "id": "thaumcraft:thaumium_sword"
+  }
+}

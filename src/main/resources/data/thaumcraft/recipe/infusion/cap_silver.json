@@ -1,0 +1,12 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "CAP_silver",
+  "instability": 4,
+  "input": { "item": "thaumcraft:wand_cap_silver_inert" },
+  "ingredients": [
+    { "item": "thaumcraft:salis_mundus" },
+    { "item": "thaumcraft:salis_mundus" }
+  ],
+  "aspects": { "potentia": 6 },
+  "result": { "id": "thaumcraft:wand_cap_silver" }
+}

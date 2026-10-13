@@ -1,0 +1,262 @@
+{
+    "entries" :[
+        {
+        "key": "BASEARTIFICE",    
+        "name": "research.BASEARTIFICE.title",
+        "icons": [ "thaumcraft:textures/misc/r_artifice.png" ],
+        "category": "ARTIFICE", "location": [ 0,0 ], 
+        "parents": [ "UNLOCKARTIFICE" ],        
+        "meta": [ "ROUND" , "HIDDEN" ],        
+        "stages": [
+                {
+                    "text": "research.BASEARTIFICE.stage.1", 
+                    "recipes":["thaumcraft:goggles","thaumcraft:mechanism_simple","thaumcraft:mechanism_complex",
+                               "thaumcraft:mirrored_glass","thaumcraft:plate_iron"]
+                }
+            ]
+        },
+        {
+        "key": "HUNGRYCHEST",    
+        "name": "research.HUNGRYCHEST.title",
+        "icons": [ "thaumcraft:hungry_chest" ],
+        "category": "ARTIFICE", "location": [ 3,1 ], 
+        "parents": [ "BASEARTIFICE" ],    
+        "stages": [
+                {
+                    "text": "research.HUNGRYCHEST.stage.1",  
+                    "required_knowledge":["OBSERVATION;GOLEMANCY;1"],  
+                    "required_item":["oredict:chest","minecraft:hopper"]
+                },
+                {
+                    "text": "research.HUNGRYCHEST.stage.2",  
+                    "recipes": ["thaumcraft:hungry_chest"]
+                }
+            ]
+        },
+        {
+        "key": "LEVITATOR",    
+        "name": "research.LEVITATOR.title",
+        "icons": [ "thaumcraft:levitator" ],
+        "category": "ARTIFICE", "location": [ 5,3 ], 
+        "parents": [ "HUNGRYCHEST","METALLURGY@3" ],       
+        "stages": [
+                {
+                    "text": "research.LEVITATOR.stage.1",
+                    "required_knowledge":["OBSERVATION;ARTIFICE;1"],
+                    "required_research":["!volatus"]
+                },
+                {
+                    "text": "research.LEVITATOR.stage.2",  
+                    "recipes": ["thaumcraft:levitator"]
+                }
+            ]
+        },
+        {
+        "key": "INFERNALFURNACE",    
+        "name": "research.INFERNALFURNACE.title",
+        "icons": [ "thaumcraft:infernal_furnace" ],
+        "category": "ARTIFICE", "location": [ 3,-1 ], 
+        "parents": [ "BASEARTIFICE" ],       
+        "stages": [
+                {
+                    "text": "research.INFERNALFURNACE.stage.1",
+                    "required_knowledge":["OBSERVATION;ARTIFICE;1"],                 
+                    "required_research":["!ignis","m_hellandback"],
+                    "required_item":["minecraft:obsidian","minecraft:nether_brick","minecraft:blaze_rod"]
+                },
+                {
+                    "text": "research.INFERNALFURNACE.stage.2",  
+                    "recipes": ["thaumcraft:infernal_furnace","thaumcraft:triple_meat_treat_fake"]
+                }
+            ],
+            "addenda": [
+                {"text": "research.INFERNALFURNACE.bellows","required_research":["BELLOWS"]}
+            ]
+        },
+        {
+        "key": "BELLOWS",    
+        "name": "research.BELLOWS.title",
+        "icons": [ "thaumcraft:bellows" ],
+        "category": "ARTIFICE", "location": [ 5,-3 ], 
+        "parents": [ "INFERNALFURNACE" ],    
+        "stages": [
+                {
+                    "text": "research.BELLOWS.stage.1",  
+                    "required_knowledge":["OBSERVATION;GOLEMANCY;1"],  
+                    "required_item":["thaumcraft:crystal_essence;1;{Aspects:[{amount:1,key:'aer'}]}"]
+                },
+                {
+                    "text": "research.BELLOWS.stage.2",  
+                    "recipes": ["thaumcraft:bellows"]
+                }
+            ]
+        },
+        {
+        "key": "REDSTONERELAY",    
+        "name": "research.REDSTONERELAY.title",
+        "icons": [ "thaumcraft:redstone_relay" ],
+        "category": "ARTIFICE", "location": [ 0,-2 ], 
+        "parents": [ "BASEARTIFICE" ],       
+        "stages": [
+                {
+                    "text": "research.REDSTONERELAY.stage.1",
+                    "required_knowledge":["OBSERVATION;ARTIFICE;1"],
+                    "required_research":["!potentia","!machina"],
+                    "required_item":["minecraft:redstone_torch"]
+                },
+                {
+                    "text": "research.REDSTONERELAY.stage.2",  
+                    "recipes": ["thaumcraft:redstone_relay"]
+                }
+            ]
+        },
+        {
+        "key": "ARCANEEAR",    
+        "name": "research.ARCANEEAR.title",
+        "icons": [ "thaumcraft:arcane_ear" ],
+        "category": "ARTIFICE", "location": [ 0,-4 ], 
+        "parents": [ "REDSTONERELAY" ],       
+        "stages": [
+                {
+                    "text": "research.ARCANEEAR.stage.1",
+                    "required_knowledgeauram":["OBSERVATION;ARTIFICE;1"],
+                    "required_research":["!sensus"],
+                    "required_item":["minecraft:noteblock"]
+                },
+                {
+                    "text": "research.ARCANEEAR.stage.2",  
+                    "recipes": ["thaumcraft:arcane_ear","thaumcraft:arcane_ear_toggle"]
+                }
+            ]
+        },
+        
+        {
+        "key": "MIRROR",    
+        "name": "research.MIRROR.title",
+        "icons": [ "thaumcraft:mirror" ],
+        "category": "ARTIFICE", "location": [ -6,0 ], 
+        "parents": [ "ARCANELAMP", "INFUSION" ],       
+        "stages": [
+                {
+                    "text": "research.MIRROR.stage.1",
+                    "required_knowledge":["THEORY;ARTIFICE;1","OBSERVATION;ARTIFICE;1"],
+                    "required_item":["minecraft:ender_pearl","thaumcraft:mirrored_glass"],
+                    "required_research":["f_TELEPORT"]
+                },
+                {
+                    "text": "research.MIRROR.stage.2",  
+                    "recipes": ["thaumcraft:mirror"]
+                }
+            ]
+        },
+        {
+        "key": "MIRRORHAND",    
+        "name": "research.MIRRORHAND.title",
+        "icons": [ "thaumcraft:hand_mirror" ],
+        "category": "ARTIFICE", "location": [ -7,1 ], 
+        "parents": [ "MIRROR" ],       
+        "stages": [
+                {
+                    "text": "research.MIRRORHAND.stage.1",
+                    "required_knowledge":["THEORY;ARTIFICE;1"]
+                },
+                {
+                    "text": "research.MIRRORHAND.stage.2",  
+                    "recipes": ["thaumcraft:hand_mirror"]
+                }
+            ]
+        },
+        {
+        "key": "MIRRORESSENTIA",    
+        "name": "research.MIRRORESSENTIA.title",
+        "icons": [ "thaumcraft:mirror_essentia" ],
+        "category": "ARTIFICE", "location": [ -7,-1 ], 
+        "parents": [ "MIRROR" ],       
+        "stages": [
+                {
+                    "text": "research.MIRRORESSENTIA.stage.1",
+                    "required_knowledge":["THEORY;ARTIFICE;1"]
+                },
+                {
+                    "text": "research.MIRRORESSENTIA.stage.2",  
+                    "recipes": ["thaumcraft:mirror_essentia"]
+                }
+            ]
+        },
+        {
+        "key": "ARCANELAMP",    
+        "name": "research.ARCANELAMP.title",
+        "icons": [ "thaumcraft:arcane_lamp" ],
+        "category": "ARTIFICE", "location": [ -3,0 ], 
+        "parents": [ "BASEARTIFICE" ],       
+        "stages": [
+                {
+                    "text": "research.ARCANELAMP.stage.1",
+                    "required_knowledge":["OBSERVATION;ARTIFICE;1"],
+                    "required_research":["!lux"]
+                },
+                {
+                    "text": "research.ARCANELAMP.stage.2",  
+                    "recipes": ["thaumcraft:arcane_lamp"]
+                }
+            ]
+        },
+        {
+        "key": "LAMPGROWTH",    
+        "name": "research.LAMPGROWTH.title",
+        "icons": [ "thaumcraft:lamp_growth" ],
+        "category": "ARTIFICE", "location": [ -4,1 ], 
+        "parents": [ "ARCANELAMP", "INFUSION" ],   
+        "stages": [
+                {
+                    "text": "research.LAMPGROWTH.stage.1",
+                    "required_knowledge":["THEORY;ARTIFICE;1"],
+                    "required_research":["!herba"],
+                    "required_item":["minecraft:bone_meal"]
+                },
+                {
+                    "text": "research.LAMPGROWTH.stage.2",  
+                    "recipes": ["thaumcraft:lamp_growth"]
+                }
+            ]
+        },
+        {
+        "key": "LAMPFERTILITY",    
+        "name": "research.LAMPFERTILITY.title",
+        "icons": [ "thaumcraft:lamp_fertility" ],
+        "category": "ARTIFICE", "location": [ -4,-1 ], 
+        "parents": [ "ARCANELAMP", "INFUSION" ],      
+        "stages": [
+                {
+                    "text": "research.LAMPFERTILITY.stage.1",
+                    "required_knowledge":["THEORY;ARTIFICE;1"],
+                    "required_research":["!desiderium"],
+                    "required_item":["minecraft:wheat","minecraft:carrot"]
+                },
+                {
+                    "text": "research.LAMPFERTILITY.stage.2",  
+                    "recipes": ["thaumcraft:lamp_fertility"]
+                }
+            ]
+        },      
+        
+        {
+        "key": "ARCANEBORE", "name": "research.ARCANEBORE.title",
+        "icons": [ "thaumcraft:arcane_bore" ], "category": "ARTIFICE", "location": [ -3, -6 ], 
+        "parents": [ "INFUSION", "FOCUSBREAK" ], 
+        "stages": [    
+            {
+                "text": "research.ARCANEBORE.stage.1",
+                "required_knowledge":["THEORY;GOLEMANCY;1","OBSERVATION;ARTIFICE;1","OBSERVATION;AUROMANCY;1"]
+            },
+            {
+                "text": "research.ARCANEBORE.stage.2",  
+                "recipes": []
+            }
+        ]
+        }
+        
+        
+    ]
+}
+    

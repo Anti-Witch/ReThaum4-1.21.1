@@ -1,0 +1,623 @@
+{
+  "entries": [
+    {
+      "key": "ASPECTS",
+      "name": "tc.research_name.ASPECTS",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_aspects.png"
+      ],
+      "location": [
+        0,
+        0
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ASPECTS.1"
+        },
+        {
+          "text": "tc.research_page.ASPECTS.2"
+        },
+        {
+          "text": "tc.research_page.ASPECTS.3"
+        }
+      ]
+    },
+    {
+      "key": "PECH",
+      "name": "tc.research_name.PECH",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_pech.png"
+      ],
+      "location": [
+        -4,
+        -4
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PECH.1"
+        },
+        {
+          "text": "tc.research_page.PECH.2"
+        }
+      ]
+    },
+    {
+      "key": "NODES",
+      "name": "tc.research_name.NODES",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_nodes.png"
+      ],
+      "location": [
+        -2,
+        0
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODES.1"
+        },
+        {
+          "text": "tc.research_page.NODES.2"
+        },
+        {
+          "text": "tc.research_page.NODES.3"
+        }
+      ]
+    },
+    {
+      "key": "WARP",
+      "name": "tc.research_name.WARP",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_warp.png"
+      ],
+      "location": [
+        0,
+        2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.WARP.1"
+        },
+        {
+          "text": "tc.research_page.WARP.2"
+        },
+        {
+          "text": "tc.research_page.WARP.3"
+        }
+      ]
+    },
+    {
+      "key": "RESEARCH",
+      "name": "tc.research_name.RESEARCH",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:inkwell"
+      ],
+      "location": [
+        2,
+        0
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RESEARCH.1"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumometer"
+          ]
+        },
+        {
+          "text": "tc.research_page.RESEARCH.3"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.4"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/scribing_tools"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/scribing_tools"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/scribing_tools"
+          ]
+        },
+        {
+          "text": "tc.research_page.RESEARCH.5"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.6"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.7"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.8"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.9"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.10"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.11"
+        },
+        {
+          "text": "tc.research_page.RESEARCH.12"
+        }
+      ]
+    },
+    {
+      "key": "KNOWFRAG",
+      "name": "tc.research_name.KNOWFRAG",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:salis_mundus"
+      ],
+      "location": [
+        3,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "parents": [
+        "RESEARCH"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.KNOWFRAG.1"
+        }
+      ]
+    },
+    {
+      "key": "THAUMONOMICON",
+      "name": "tc.research_name.THAUMONOMICON",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:thaumonomicon"
+      ],
+      "location": [
+        1,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "parents": [
+        "RESEARCH"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.THAUMONOMICON.1"
+        }
+      ]
+    },
+    {
+      "key": "ORE",
+      "name": "tc.research_name.ORE",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:amber_ore"
+      ],
+      "location": [
+        -2,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ORE.1"
+        },
+        {
+          "text": "tc.research_page.ORE.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crucible/cluster_cinnabar",
+            "thaumcraft:crucible/cluster_copper",
+            "thaumcraft:crucible/cluster_gold",
+            "thaumcraft:crucible/cluster_iron"
+          ]
+        },
+        {
+          "text": "tc.research_page.ORE.3"
+        },
+        {
+          "text": "tc.research_page.ORE.4"
+        }
+      ]
+    },
+    {
+      "key": "PLANTS",
+      "name": "tc.research_name.PLANTS",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:greatwood_sapling"
+      ],
+      "location": [
+        -2,
+        -4
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PLANTS.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/greatwood_planks"
+          ]
+        },
+        {
+          "text": "tc.research_page.PLANTS.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/silverwood_planks"
+          ]
+        },
+        {
+          "text": "tc.research_page.PLANTS.3"
+        },
+        {
+          "text": "tc.research_page.PLANTS.4"
+        },
+        {
+          "text": "tc.research_page.PLANTS.5"
+        },
+        {
+          "text": "tc.research_page.PLANTS.6"
+        }
+      ]
+    },
+    {
+      "key": "ENCHANT",
+      "name": "tc.research_name.ENCHANT",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_enchant.png"
+      ],
+      "location": [
+        -4,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ENCHANT.1"
+        },
+        {
+          "text": "tc.research_page.ENCHANT.2"
+        }
+      ]
+    },
+    {
+      "key": "NODETAPPER1",
+      "name": "tc.research_name.NODETAPPER1",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_nodetap1.png"
+      ],
+      "location": [
+        -4,
+        1
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "auram:3",
+        "praecantatio:3",
+        "motus:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NODES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODETAPPER1.1"
+        }
+      ]
+    },
+    {
+      "key": "NODEPRESERVE",
+      "name": "tc.research_name.NODEPRESERVE",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_nodepreserve.png"
+      ],
+      "location": [
+        -6,
+        2
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "auram:3",
+        "lucrum:3",
+        "sensus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NODETAPPER1"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODEPRESERVE"
+        }
+      ]
+    },
+    {
+      "key": "NODEJAR",
+      "name": "tc.research_name.NODEJAR",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:jar_node"
+      ],
+      "location": [
+        -7,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "auram:6",
+        "lucrum:3",
+        "permutatio:3",
+        "motus:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "NODEPRESERVE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODEJAR.1"
+        },
+        {
+          "text": "tc.research_page.NODEJAR.2"
+        }
+      ]
+    },
+    {
+      "key": "NODETAPPER2",
+      "name": "tc.research_name.NODETAPPER2",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_nodetap2.png"
+      ],
+      "location": [
+        -3,
+        3
+      ],
+      "meta": [
+        "ROUND",
+        "SPIKY"
+      ],
+      "aspects": [
+        "auram:6",
+        "praecantatio:3",
+        "motus:3",
+        "permutatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NODETAPPER1"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.NODETAPPER2.1"
+        }
+      ]
+    },
+    {
+      "key": "RESEARCHER1",
+      "name": "tc.research_name.RESEARCHER1",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_researcher1.png"
+      ],
+      "location": [
+        4,
+        1
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "cognitio:3",
+        "sensus:3",
+        "ordo:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "RESEARCH"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RESEARCHER1.1"
+        }
+      ]
+    },
+    {
+      "key": "DECONSTRUCTOR",
+      "name": "tc.research_name.DECONSTRUCTOR",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:deconstruction_table"
+      ],
+      "location": [
+        6,
+        2
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "cognitio:3",
+        "fabrico:3",
+        "perditio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "RESEARCHER1"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.DECONSTRUCTOR.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/deconstruction_table"
+          ]
+        },
+        {
+          "text": "tc.research_page.DECONSTRUCTOR.2"
+        }
+      ]
+    },
+    {
+      "key": "RESEARCHER2",
+      "name": "tc.research_name.RESEARCHER2",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_researcher2.png"
+      ],
+      "location": [
+        3,
+        3
+      ],
+      "meta": [
+        "ROUND",
+        "SPIKY"
+      ],
+      "aspects": [
+        "cognitio:6",
+        "ordo:3",
+        "sensus:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "RESEARCHER1"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RESEARCHER2.1"
+        }
+      ]
+    },
+    {
+      "key": "RESEARCHDUPE",
+      "name": "tc.research_name.RESEARCHDUPE",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:textures/misc/r_resdupe.png"
+      ],
+      "location": [
+        4,
+        5
+      ],
+      "meta": [
+        "ROUND"
+      ],
+      "aspects": [
+        "cognitio:6",
+        "permutatio:3",
+        "sensus:3",
+        "lucrum:3",
+        "fabrico:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "RESEARCHER2"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RESEARCHDUPE.1"
+        }
+      ]
+    },
+    {
+      "key": "CRIMSON",
+      "name": "tc.research_name.CRIMSON",
+      "category": "BASICS",
+      "icons": [
+        "thaumcraft:crimson_rites"
+      ],
+      "location": [
+        0,
+        4
+      ],
+      "meta": [
+        "HIDDEN",
+        "ROUND",
+        "SPIKY",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.CRIMSON.1"
+        }
+      ]
+    }
+  ]
+}

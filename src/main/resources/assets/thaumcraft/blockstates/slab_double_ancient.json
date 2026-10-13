@@ -1,0 +1,14 @@
+{
+    "variants": {
+        "variant=default": [
+            {
+                "model": "thaumcraft:block/ancient_stone"
+            }
+        ],
+        "": [
+            {
+                "model": "thaumcraft:block/ancient_stone"
+            }
+        ]
+    }
+}

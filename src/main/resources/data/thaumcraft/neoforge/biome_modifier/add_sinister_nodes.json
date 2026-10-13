@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "thaumcraft:eerie",
+  "features": [
+    "thaumcraft:sinister_node"
+  ],
+  "step": "surface_structures"
+}

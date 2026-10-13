@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "thaumcraft:phial_empty"},
+    {"item": "minecraft:feather"},
+    {"tag": "c:dyes/black"}
+  ],
+  "result": {"id": "thaumcraft:scribing_tools",
+    "count": 1
+  }
+}

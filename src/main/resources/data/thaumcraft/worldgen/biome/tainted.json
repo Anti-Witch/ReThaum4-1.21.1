@@ -1,0 +1,72 @@
+{
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "has_precipitation": true,
+  "effects": {
+    "sky_color": 329011,
+    "fog_color": 329011,
+    "water_color": 329011,
+    "water_fog_color": 329011,
+    "grass_color": 329011,
+    "foliage_color": 329011,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    }
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "thaumcraft:taintacle",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 1
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "thaumcraft:taint_crust",
+      "thaumcraft:taint_feature",
+      "thaumcraft:taint_geyser"
+    ],
+    [],
+    [
+      "thaumcraft:ore_cinnabar",
+      "thaumcraft:ore_amber"
+    ],
+    [
+      "thaumcraft:crystal_cluster_entropy"
+    ],
+    [
+      "thaumcraft:taint_weed"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:spring_water",
+      "minecraft:spring_lava"
+    ],
+    []
+  ]
+}

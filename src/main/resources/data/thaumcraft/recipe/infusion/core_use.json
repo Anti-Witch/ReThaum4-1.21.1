@@ -1,0 +1,40 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "COREUSE",
+  "instability": 3,
+  "aspects": {
+    "instrumentum": 20,
+    "machina": 20,
+    "humanus": 20
+  },
+  "input": {
+    "type": "neoforge:components",
+    "items": [
+      "thaumcraft:golem_core"
+    ],
+    "components": {
+      "thaumcraft:golem_core_type": 1
+    },
+    "strict": true
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:comparator"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    },
+    {
+      "item": "minecraft:shears"
+    },
+    {
+      "item": "minecraft:lever"
+    }
+  ],
+  "result": {
+    "id": "thaumcraft:golem_core",
+    "components": {
+      "thaumcraft:golem_core_type": 8
+    }
+  }
+}

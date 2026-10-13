@@ -1,0 +1,6 @@
+{
+    "textures":  {
+                     "layer0":  "thaumcraft:item/focus_fire"
+                 },
+    "parent":  "minecraft:item/generated"
+}

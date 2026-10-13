@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "thaumcraft:greatwood_tree",
+    "thaumcraft:silverwood_tree"
+  ],
+  "step": "vegetal_decoration"
+}

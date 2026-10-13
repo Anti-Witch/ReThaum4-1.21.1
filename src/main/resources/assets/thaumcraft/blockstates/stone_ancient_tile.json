@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "thaumcraft:block/stone_ancient_tile"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ROD_quartz",
+  "instability": 3,
+  "input": {
+    "item": "minecraft:quartz_block"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:shard_balanced"
+    },
+    {
+      "item": "thaumcraft:shard_order"
+    }
+  ],
+  "aspects": {
+    "ordo": 12,
+    "praecantatio": 6,
+    "vitreus": 6
+  },
+  "result": {
+    "id": "thaumcraft:wand_rod_quartz"
+  }
+}

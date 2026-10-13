@@ -1,0 +1,11 @@
+{
+  "loader": "neoforge:obj",
+  "model": "thaumcraft:models/obj/vis_relay_charger.obj",
+  "flip_v": true,
+  "automatic_culling": false,
+  "emissive_ambient": false,
+  "textures": {
+    "particle": "thaumcraft:models/vis_relay",
+    "texture": "thaumcraft:models/vis_relay"
+  }
+}

@@ -1,0 +1,1775 @@
+{
+  "entries": [
+    {
+      "key": "BASICARTIFACE",
+      "name": "tc.research_name.BASICARTIFACE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:amber"
+      ],
+      "location": [
+        0,
+        1
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.BASICARTIFACE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/primal_charm"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/mirrored_glass"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ARCANESTONE",
+      "name": "tc.research_name.ARCANESTONE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:arcane_stone"
+      ],
+      "location": [
+        5,
+        -2
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCANESTONE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/arcane_stone"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/arcane_stone_brick"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/arcane_stone_brick_slab"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/arcane_stone_brick_stairs"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "GRATE",
+      "name": "tc.research_name.GRATE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_artifice.png"
+      ],
+      "location": [
+        2,
+        -1
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GRATE.1"
+        }
+      ]
+    },
+    {
+      "key": "TABLE",
+      "name": "tc.research_name.TABLE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:table_wood"
+      ],
+      "location": [
+        0,
+        -1
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.TABLE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/table_wood"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ARCTABLE",
+      "name": "tc.research_name.ARCTABLE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:arcane_workbench"
+      ],
+      "location": [
+        -1,
+        -3
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "parents": [
+        "TABLE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCTABLE.1"
+        }
+      ]
+    },
+    {
+      "key": "RESTABLE",
+      "name": "tc.research_name.RESTABLE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:research_table"
+      ],
+      "location": [
+        1,
+        -3
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "parents": [
+        "TABLE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RESTABLE.1"
+        }
+      ]
+    },
+    {
+      "key": "THAUMOMETER",
+      "name": "tc.research_name.THAUMOMETER",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:thaumometer"
+      ],
+      "location": [
+        2,
+        1
+      ],
+      "meta": [
+        "AUTOUNLOCK",
+        "ROUND",
+        "STUB"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.THAUMOMETER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:crafting/thaumometer"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PAVETRAVEL",
+      "name": "tc.research_name.PAVETRAVEL",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:paving_stone_travel"
+      ],
+      "location": [
+        4,
+        -4
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "iter:3",
+        "terra:3",
+        "volatus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ARCANESTONE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PAVETRAVEL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/paving_travel"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "PAVEWARD",
+      "name": "tc.research_name.PAVEWARD",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:paving_stone_barrier"
+      ],
+      "location": [
+        6,
+        -4
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "motus:3",
+        "vinculum:3",
+        "bestia:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "ARCANESTONE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PAVEWARD.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/paving_barrier"
+          ]
+        },
+        {
+          "text": "tc.research_page.PAVEWARD.2"
+        }
+      ]
+    },
+    {
+      "key": "GOGGLES",
+      "name": "tc.research_name.GOGGLES",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:goggles"
+      ],
+      "location": [
+        4,
+        1
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "sensus:3",
+        "auram:3",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "THAUMOMETER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.GOGGLES.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/goggles"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ARCANEEAR",
+      "name": "tc.research_name.ARCANEEAR",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:arcane_ear"
+      ],
+      "location": [
+        6,
+        0
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "sensus:3",
+        "potentia:3",
+        "aer:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOGGLES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCANEEAR.1"
+        }
+      ]
+    },
+    {
+      "key": "SINSTONE",
+      "name": "tc.research_name.SINSTONE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:compass_stone"
+      ],
+      "location": [
+        6,
+        2
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "sensus:3",
+        "tenebrae:3",
+        "alienis:3",
+        "auram:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "GOGGLES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.SINSTONE.1"
+        }
+      ]
+    },
+    {
+      "key": "LEVITATOR",
+      "name": "tc.research_name.LEVITATOR",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:levitator"
+      ],
+      "location": [
+        -3,
+        -3
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "motus:3",
+        "volatus:3",
+        "aer:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "NITOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.LEVITATOR.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/levitator"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "INFERNALFURNACE",
+      "name": "tc.research_name.INFERNALFURNACE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_infernalfurnace.png"
+      ],
+      "location": [
+        -4,
+        -1
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "ignis:6",
+        "metallum:3",
+        "fabrico:3",
+        "auram:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "NITOR",
+        "ALUMENTUM"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.INFERNALFURNACE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infernalfurnace"
+          ]
+        },
+        {
+          "text": "tc.research_page.INFERNALFURNACE.2"
+        }
+      ]
+    },
+    {
+      "key": "BELLOWS",
+      "name": "tc.research_name.BELLOWS",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:bellows"
+      ],
+      "location": [
+        -6,
+        -2
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "aer:6",
+        "machina:3",
+        "motus:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "INFERNALFURNACE"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.BELLOWS.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/bellows"
+          ]
+        },
+        {
+          "text": "tc.research_page.BELLOWS.2"
+        }
+      ]
+    },
+    {
+      "key": "ENCHFABRIC",
+      "name": "tc.research_name.ENCHFABRIC",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:enchanted_fabric"
+      ],
+      "location": [
+        0,
+        3
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "pannus:3",
+        "praecantatio:3"
+      ],
+      "complexity": 1,
+      "stages": [
+        {
+          "text": "tc.research_page.ENCHFABRIC.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/enchanted_fabric"
+          ]
+        },
+        {
+          "text": "tc.research_page.ENCHFABRIC.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/robe_chest"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/robe_legs"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/robe_boots"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "INFUSION",
+      "name": "tc.research_name.INFUSION",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:infusion_matrix"
+      ],
+      "location": [
+        -4,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "praecantatio:6",
+        "machina:3",
+        "fabrico:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "DISTILESSENTIA"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.INFUSION.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/infusion_matrix"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:arcane_workbench/pedestal_arcane"
+          ]
+        },
+        {
+          "text": "tc.research_page.INFUSION.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusionaltar"
+          ]
+        },
+        {
+          "text": "tc.research_page.INFUSION.3"
+        },
+        {
+          "text": "tc.research_page.INFUSION.4"
+        },
+        {
+          "text": "tc.research_page.INFUSION.5"
+        }
+      ]
+    },
+    {
+      "key": "FLUXSCRUB",
+      "name": "tc.research_name.FLUXSCRUB",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:flux_scrubber"
+      ],
+      "location": [
+        -8,
+        -3
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "vinculum:3",
+        "aer:3",
+        "aqua:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "VISPOWER",
+        "BELLOWS",
+        "TUBES"
+      ],
+      "parents_hidden": [
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.FLUXSCRUB.1"
+        }
+      ]
+    },
+    {
+      "key": "RUNICARMOR",
+      "name": "tc.research_name.RUNICARMOR",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:ring_runic"
+      ],
+      "location": [
+        3,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "tutamen:6",
+        "aer:3",
+        "praecantatio:3",
+        "potentia:3",
+        "cognitio:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "ENCHFABRIC"
+      ],
+      "parents_hidden": [
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICARMOR.1"
+        },
+        {
+          "text": "tc.research_page.RUNICARMOR.2"
+        }
+      ]
+    },
+    {
+      "key": "RUNICCHARGED",
+      "name": "tc.research_name.RUNICCHARGED",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:ring_runic"
+      ],
+      "location": [
+        2,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "tutamen:3",
+        "potentia:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "RUNICARMOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICCHARGED.1"
+        }
+      ]
+    },
+    {
+      "key": "RUNICHEALING",
+      "name": "tc.research_name.RUNICHEALING",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:ring_runic"
+      ],
+      "location": [
+        4,
+        3
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "tutamen:3",
+        "sano:4",
+        "aqua:4"
+      ],
+      "complexity": 2,
+      "parents": [
+        "RUNICARMOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICHEALING.1"
+        }
+      ]
+    },
+    {
+      "key": "RUNICKINETIC",
+      "name": "tc.research_name.RUNICKINETIC",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:girdle_runic"
+      ],
+      "location": [
+        2,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "tutamen:3",
+        "aer:6"
+      ],
+      "complexity": 2,
+      "parents": [
+        "RUNICARMOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICKINETIC.1"
+        }
+      ]
+    },
+    {
+      "key": "RUNICEMERGENCY",
+      "name": "tc.research_name.RUNICEMERGENCY",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:amulet_runic"
+      ],
+      "location": [
+        4,
+        5
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "tutamen:3",
+        "terra:4",
+        "vacuos:4"
+      ],
+      "complexity": 2,
+      "parents": [
+        "RUNICARMOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICEMERGENCY.1"
+        }
+      ]
+    },
+    {
+      "key": "BANNERS",
+      "name": "tc.research_name.BANNERS",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:banner_crimson_cult"
+      ],
+      "location": [
+        4,
+        8
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "sensus:3",
+        "pannus:3",
+        "praecantatio"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "thaumcraft:banner_white"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.BANNERS.1"
+        }
+      ]
+    },
+    {
+      "key": "RUNICAUGMENTATION",
+      "name": "tc.research_name.RUNICAUGMENTATION",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_runicupg.png"
+      ],
+      "location": [
+        6,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "praecantatio:3",
+        "tutamen:3",
+        "permutatio:4",
+        "lucrum:4"
+      ],
+      "complexity": 1,
+      "parents": [
+        "RUNICARMOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.RUNICAUGMENTATION.1"
+        },
+        {
+          "text": "tc.research_page.RUNICAUGMENTATION.2"
+        }
+      ]
+    },
+    {
+      "key": "BOOTSTRAVELLER",
+      "name": "tc.research_name.BOOTSTRAVELLER",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:traveller_boots"
+      ],
+      "location": [
+        -1,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "iter:3",
+        "terra:3",
+        "volatus:3",
+        "aqua:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ENCHFABRIC",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.BOOTSTRAVELLER.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/traveller_boots"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "HOVERHARNESS",
+      "name": "tc.research_name.HOVERHARNESS",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:hover_harness"
+      ],
+      "location": [
+        1,
+        7
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "volatus:6",
+        "iter:6",
+        "aer:6",
+        "machina:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "BOOTSTRAVELLER"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.HOVERHARNESS.1"
+        },
+        {
+          "text": "tc.research_page.HOVERHARNESS.2"
+        }
+      ]
+    },
+    {
+      "key": "HOVERGIRDLE",
+      "name": "tc.research_name.HOVERGIRDLE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:girdle_hover"
+      ],
+      "location": [
+        2,
+        7
+      ],
+      "meta": [
+        "HIDDEN",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "volatus:6",
+        "iter:3",
+        "aer:3",
+        "motus:6"
+      ],
+      "complexity": 3,
+      "parents": [
+        "HOVERHARNESS"
+      ],
+      "triggers": {
+        "aspects": [
+          "volatus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.HOVERGIRDLE.1"
+        }
+      ]
+    },
+    {
+      "key": "MIRROR",
+      "name": "tc.research_name.MIRROR",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:mirror_item"
+      ],
+      "location": [
+        -1,
+        8
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "iter:6",
+        "alienis:3",
+        "tenebrae:3",
+        "vitreus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "INFUSION"
+      ],
+      "triggers": {
+        "entities": [
+          "Enderman"
+        ],
+        "items": [
+          "minecraft:ender_pearl"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.MIRROR.1"
+        },
+        {
+          "text": "tc.research_page.MIRROR.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/mirror"
+          ]
+        },
+        {
+          "text": "tc.research_page.MIRROR.3"
+        }
+      ]
+    },
+    {
+      "key": "MIRRORHAND",
+      "name": "tc.research_name.MIRRORHAND",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:hand_mirror"
+      ],
+      "location": [
+        1,
+        9
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "instrumentum:6",
+        "alienis:3",
+        "vitreus:3",
+        "iter:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "MIRROR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.MIRRORHAND.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/hand_mirror"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "MIRRORESSENTIA",
+      "name": "tc.research_name.MIRRORESSENTIA",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:mirror_essentia"
+      ],
+      "location": [
+        -1,
+        10
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "iter:6",
+        "alienis:3",
+        "aqua:3",
+        "praecantatio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "MIRROR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.MIRRORESSENTIA.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/mirror_essentia"
+          ]
+        },
+        {
+          "text": "tc.research_page.MIRRORESSENTIA.2"
+        }
+      ]
+    },
+    {
+      "key": "ARCANEBORE",
+      "name": "tc.research_name.ARCANEBORE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_artifice.png"
+      ],
+      "location": [
+        -3,
+        8
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "perfodio:6",
+        "motus:3",
+        "machina:3",
+        "instrumentum:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "FOCUSEXCAVATION",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCANEBORE.1"
+        },
+        {
+          "text": "tc.research_page.ARCANEBORE.2"
+        },
+        {
+          "text": "tc.research_page.ARCANEBORE.3"
+        }
+      ]
+    },
+    {
+      "key": "ARCANELAMP",
+      "name": "tc.research_name.ARCANELAMP",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:lamp_arcane"
+      ],
+      "location": [
+        -3,
+        1
+      ],
+      "meta": [
+        "SECONDARY"
+      ],
+      "aspects": [
+        "lux:3",
+        "sensus:3",
+        "tenebrae:3"
+      ],
+      "complexity": 1,
+      "parents": [
+        "NITOR"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ARCANELAMP.1"
+        },
+        {
+          "text": "tc.research_page.ARCANELAMP.2"
+        }
+      ]
+    },
+    {
+      "key": "LAMPGROWTH",
+      "name": "tc.research_name.LAMPGROWTH",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:lamp_growth"
+      ],
+      "location": [
+        -4,
+        3
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "lux:3",
+        "herba:6",
+        "victus:3",
+        "messis:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARCANELAMP",
+        "INFUSION"
+      ],
+      "triggers": {
+        "aspects": [
+          "lux",
+          "messis"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.LAMPGROWTH.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/lamp_growth"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "LAMPFERTILITY",
+      "name": "tc.research_name.LAMPFERTILITY",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:lamp_fertility"
+      ],
+      "location": [
+        -2,
+        3
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "bestia:6",
+        "victus:6",
+        "lux:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARCANELAMP",
+        "INFUSION"
+      ],
+      "triggers": {
+        "aspects": [
+          "lux",
+          "victus"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.LAMPFERTILITY.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/lamp_fertility"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "BONEBOW",
+      "name": "tc.research_name.BONEBOW",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:bow_bone"
+      ],
+      "location": [
+        -7,
+        1
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "telum:3",
+        "aer:3",
+        "motus:3"
+      ],
+      "complexity": 1,
+      "triggers": {
+        "items": [
+          "minecraft:bow"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.BONEBOW.1"
+        }
+      ]
+    },
+    {
+      "key": "PRIMALARROW",
+      "name": "tc.research_name.PRIMALARROW",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:primal_arrow"
+      ],
+      "location": [
+        -9,
+        0
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "telum:3",
+        "aer:3",
+        "ignis:3",
+        "aqua:3",
+        "terra:3",
+        "ordo:3",
+        "perditio:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "BONEBOW"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.PRIMALARROW.1"
+        },
+        {
+          "text": "tc.research_page.PRIMALARROW.2"
+        },
+        {
+          "text": "tc.research_page.PRIMALARROW.3"
+        }
+      ]
+    },
+    {
+      "key": "ELEMENTALAXE",
+      "name": "tc.research_name.ELEMENTALAXE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:elemental_axe"
+      ],
+      "location": [
+        -7,
+        4
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "aqua:3",
+        "motus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELEMENTALAXE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/elemental_axe"
+          ]
+        },
+        {
+          "text": "tc.research_page.ELEMENTALAXE.2"
+        }
+      ]
+    },
+    {
+      "key": "ELEMENTALPICK",
+      "name": "tc.research_name.ELEMENTALPICK",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:elemental_pick"
+      ],
+      "location": [
+        -7,
+        3
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "ignis:3",
+        "sensus:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELEMENTALPICK.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/elemental_pick"
+          ]
+        },
+        {
+          "text": "tc.research_page.ELEMENTALPICK.2"
+        }
+      ]
+    },
+    {
+      "key": "ELEMENTALSWORD",
+      "name": "tc.research_name.ELEMENTALSWORD",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:elemental_sword"
+      ],
+      "location": [
+        -7,
+        5
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "telum:3",
+        "aer:3",
+        "potentia:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELEMENTALSWORD.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/elemental_sword"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ELEMENTALSHOVEL",
+      "name": "tc.research_name.ELEMENTALSHOVEL",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:elemental_shovel"
+      ],
+      "location": [
+        -7,
+        6
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "terra:3",
+        "fabrico:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELEMENTALSHOVEL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/elemental_shovel"
+          ]
+        },
+        {
+          "text": "tc.research_page.ELEMENTALSHOVEL.2"
+        }
+      ]
+    },
+    {
+      "key": "ELEMENTALHOE",
+      "name": "tc.research_name.ELEMENTALHOE",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:elemental_hoe"
+      ],
+      "location": [
+        -7,
+        7
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "instrumentum:3",
+        "victus:3",
+        "messis:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSION"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.ELEMENTALHOE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/elemental_hoe"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "WARDEDARCANA",
+      "name": "tc.research_name.WARDEDARCANA",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_artifice.png"
+      ],
+      "location": [
+        -5,
+        -4
+      ],
+      "aspects": [
+        "instrumentum:6",
+        "cognitio:3",
+        "machina:3",
+        "tutamen:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.WARDEDARCANA.1"
+        },
+        {
+          "text": "tc.research_page.WARDEDARCANA.2"
+        },
+        {
+          "text": "tc.research_page.WARDEDARCANA.3"
+        },
+        {
+          "text": "tc.research_page.WARDEDARCANA.4"
+        }
+      ]
+    },
+    {
+      "key": "JARBRAIN",
+      "name": "tc.research_name.JARBRAIN",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:jar_brain"
+      ],
+      "location": [
+        -5,
+        9
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "fames:3",
+        "cognitio:3",
+        "exanimis:3",
+        "lucrum:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "INFUSION"
+      ],
+      "triggers": {
+        "entities": [
+          "BrainyZombie",
+          "GiantBrainyZombie"
+        ],
+        "items": [
+          "thaumcraft:quicksilver"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.JARBRAIN.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/jar_brain"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "INFUSIONENCHANTMENT",
+      "name": "tc.research_name.INFUSIONENCHANTMENT",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_enchant.png"
+      ],
+      "location": [
+        -6,
+        11
+      ],
+      "meta": [
+        "CONCEALED"
+      ],
+      "aspects": [
+        "praecantatio:6",
+        "cognitio:3",
+        "telum:3",
+        "tutamen:3",
+        "instrumentum:3"
+      ],
+      "complexity": 3,
+      "parents": [
+        "JARBRAIN"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.INFUSIONENCHANTMENT.1"
+        },
+        {
+          "text": "tc.research_page.INFUSIONENCHANTMENT.2"
+        },
+        {
+          "text": "tc.research_page.INFUSIONENCHANTMENT.3"
+        }
+      ]
+    },
+    {
+      "key": "ARMORFORTRESS",
+      "name": "tc.research_name.ARMORFORTRESS",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:fortress_helm"
+      ],
+      "location": [
+        -8,
+        9
+      ],
+      "meta": [
+        "HIDDEN"
+      ],
+      "aspects": [
+        "metallum:3",
+        "tutamen:5",
+        "fabrico:5"
+      ],
+      "complexity": 2,
+      "parents": [
+        "THAUMIUM",
+        "INFUSIONENCHANTMENT"
+      ],
+      "triggers": {
+        "aspects": [
+          "tutamen"
+        ]
+      },
+      "stages": [
+        {
+          "text": "tc.research_page.ARMORFORTRESS.1"
+        },
+        {
+          "text": "tc.research_page.ARMORFORTRESS.2"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/fortress_helm"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/fortress_chest"
+          ]
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/fortress_legs"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "HELMGOGGLES",
+      "name": "tc.research_name.HELMGOGGLES",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:goggles"
+      ],
+      "location": [
+        -9,
+        7
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "sensus:5",
+        "auram:3",
+        "tutamen:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARMORFORTRESS"
+      ],
+      "parents_hidden": [
+        "GOGGLES"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.HELMGOGGLES.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/goggles_revealing"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "MASKGRINNINGDEVIL",
+      "name": "tc.research_name.MASKGRINNINGDEVIL",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_mask0.png"
+      ],
+      "location": [
+        -10,
+        8
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "sano:5",
+        "cognitio:5",
+        "tutamen:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARMORFORTRESS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.MASKGRINNINGDEVIL.1"
+        }
+      ]
+    },
+    {
+      "key": "MASKANGRYGHOST",
+      "name": "tc.research_name.MASKANGRYGHOST",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_mask1.png"
+      ],
+      "location": [
+        -10,
+        9
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "perditio:5",
+        "mortuus:5",
+        "tutamen:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARMORFORTRESS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.MASKANGRYGHOST.1"
+        }
+      ]
+    },
+    {
+      "key": "MASKSIPPINGFIEND",
+      "name": "tc.research_name.MASKSIPPINGFIEND",
+      "category": "ARTIFICE",
+      "icons": [
+        "thaumcraft:textures/misc/r_mask2.png"
+      ],
+      "location": [
+        -10,
+        10
+      ],
+      "meta": [
+        "CONCEALED",
+        "SECONDARY"
+      ],
+      "aspects": [
+        "exanimis:5",
+        "victus:5",
+        "tutamen:3"
+      ],
+      "complexity": 2,
+      "parents": [
+        "ARMORFORTRESS"
+      ],
+      "stages": [
+        {
+          "text": "tc.research_page.MASKSIPPINGFIEND.1"
+        }
+      ]
+    }
+  ]
+}

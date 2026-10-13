@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "BASICTHAUMATURGY",
+  "vis": 10,
+  "crystals": {
+    "aer": 1,
+    "ordo": 1
+  },
+  "pattern": [
+    "  F",
+    " S ",
+    "I  "
+  ],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "S": {
+      "item": "thaumcraft:shard_order"
+    },
+    "I": {
+      "tag": "c:dyes/black"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:scribing_tools"
+  }
+}

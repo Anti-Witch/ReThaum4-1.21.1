@@ -1,0 +1,24 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "ROD_ice_staff",
+  "vis": 0,
+  "crystals": {
+    "ordo": 14
+  },
+  "pattern": [
+    "  S",
+    " G ",
+    "G  "
+  ],
+  "key": {
+    "S": {
+      "item": "thaumcraft:primal_charm"
+    },
+    "G": {
+      "item": "thaumcraft:wand_rod_ice"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:wand_rod_ice_staff"
+  }
+}

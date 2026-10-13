@@ -1,0 +1,24 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "ESSENTIACRYSTAL",
+  "instability": 0,
+  "aspects": {
+    "aer": 10,
+    "vitreus": 10,
+    "vinculum": 5
+  },
+  "input": {
+    "item": "thaumcraft:shard_air"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:wheat_seeds"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ],
+  "result": {
+    "id": "thaumcraft:crystal_air"
+  }
+}

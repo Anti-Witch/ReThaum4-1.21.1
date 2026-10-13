@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "INFUSION",
+  "instability": 1,
+  "input": {
+    "item": "minecraft:gold_ingot"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:crystal_essence"
+    },
+    {
+      "item": "minecraft:feather"
+    }
+  ],
+  "aspects": {
+    "aer": 50
+  },
+  "result": {
+    "id": "thaumcraft:cloud_ring"
+  }
+}

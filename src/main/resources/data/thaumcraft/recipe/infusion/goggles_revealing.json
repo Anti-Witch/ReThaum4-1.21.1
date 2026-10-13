@@ -1,0 +1,30 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "HELMGOGGLES",
+  "instability": 2,
+  "input": {
+    "item": "thaumcraft:goggles"
+  },
+  "ingredients": [
+    {
+      "item": "thaumcraft:thaumometer"
+    },
+    {
+      "tag": "c:gems/diamond"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    },
+    {
+      "tag": "c:gems/diamond"
+    }
+  ],
+  "aspects": {
+    "praecantatio": 20,
+    "sensus": 30,
+    "auram": 15
+  },
+  "result": {
+    "id": "thaumcraft:goggles"
+  }
+}

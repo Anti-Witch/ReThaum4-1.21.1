@@ -1,0 +1,9 @@
+{
+  "type": "thaumcraft:ancient_stone_circle",
+  "biomes": "#minecraft:is_overworld",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {},
+  "start_pool": "thaumcraft:ancient_stone_circle/start",
+  "size": 7
+}

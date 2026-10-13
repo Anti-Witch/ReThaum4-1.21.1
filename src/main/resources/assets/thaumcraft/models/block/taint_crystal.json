@@ -1,0 +1,21 @@
+{
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "particle": "thaumcraft:block/taint_fibres",
+        "crystal": "thaumcraft:block/taint_fibres"
+    },
+    "elements": [
+        {   
+            "from": [ 4, 0, 4 ],
+            "to": [ 12, 8, 12 ],
+            "faces": {
+                "up":    { "uv": [ 4,  4, 12, 12 ], "texture": "#crystal" },
+                "down":  { "uv": [ 4,  4, 12, 12 ], "texture": "#crystal" },
+                "north": { "uv": [ 4,  8, 12, 16 ], "texture": "#crystal" },
+                "south": { "uv": [ 4,  8, 12, 16 ], "texture": "#crystal" },
+                "west":  { "uv": [ 4,  8, 12, 16 ], "texture": "#crystal" },
+                "east":  { "uv": [ 4,  8, 12, 16 ], "texture": "#crystal" }
+            }
+        }
+    ]
+}

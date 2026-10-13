@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "thaumcraft:block/deconstruction_table" },
+    "facing=south": { "model": "thaumcraft:block/deconstruction_table", "y": 180 },
+    "facing=east": { "model": "thaumcraft:block/deconstruction_table", "y": 90 },
+    "facing=west": { "model": "thaumcraft:block/deconstruction_table", "y": 270 }
+  }
+}

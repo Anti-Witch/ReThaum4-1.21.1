@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "thaumcraft:tube_normal",
+    "thaumcraft:tube_restricted",
+    "thaumcraft:tube_filter",
+    "thaumcraft:tube_valve",
+    "thaumcraft:tube_buffer",
+    "thaumcraft:tube_oneway"
+  ]
+}

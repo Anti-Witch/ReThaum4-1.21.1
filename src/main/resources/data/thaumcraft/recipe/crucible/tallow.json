@@ -1,0 +1,13 @@
+{
+  "type": "thaumcraft:crucible",
+  "research": "ALCHEMICALDUPLICATION",
+  "catalyst": {
+    "item": "minecraft:rotten_flesh"
+  },
+  "aspects": {
+    "ignis": 1
+  },
+  "result": {
+    "id": "thaumcraft:tallow"
+  }
+}

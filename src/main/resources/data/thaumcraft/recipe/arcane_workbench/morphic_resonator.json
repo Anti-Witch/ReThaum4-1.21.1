@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:arcane_workbench_shaped",
+  "research": "CRUCIBLE",
+  "vis": 50,
+  "crystals": {
+    "aer": 1,
+    "ignis": 1
+  },
+  "pattern": [
+    " G ",
+    "BSB",
+    " G "
+  ],
+  "key": {
+    "G": {
+      "tag": "c:glass_panes"
+    },
+    "B": {
+      "item": "thaumcraft:plate_brass"
+    },
+    "S": {
+      "item": "thaumcraft:quicksilver"
+    }
+  },
+  "result": {
+    "id": "thaumcraft:morphic_resonator"
+  }
+}

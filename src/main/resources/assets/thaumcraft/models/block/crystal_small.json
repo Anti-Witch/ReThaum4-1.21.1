@@ -1,0 +1,112 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "crystal": "thaumcraft:block/crystal",
+    "particle": "thaumcraft:block/crystal"
+  },
+  "elements": [
+    {
+      "from": [6.5, 0.0, 6.5],
+      "to": [9.5, 7.0, 9.5],
+      "faces": {
+        "down": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "north": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#crystal",
+          "tintindex": 0
+        }
+      }
+    },
+    {
+      "from": [7.75, 0.0, 6.75],
+      "to": [10.25, 6.0, 9.25],
+      "faces": {
+        "down": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "north": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#crystal",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [9.0, 0.0, 8.0],
+        "axis": "z",
+        "angle": -22.5,
+        "rescale": false
+      }
+    },
+    {
+      "from": [6.75, 0.0, 7.75],
+      "to": [9.25, 5.5, 10.25],
+      "faces": {
+        "down": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "up": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "north": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "south": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "west": {
+          "texture": "#crystal",
+          "tintindex": 0
+        },
+        "east": {
+          "texture": "#crystal",
+          "tintindex": 0
+        }
+      },
+      "rotation": {
+        "origin": [8.0, 0.0, 9.0],
+        "axis": "x",
+        "angle": 22.5,
+        "rescale": false
+      }
+    }
+  ]
+}
