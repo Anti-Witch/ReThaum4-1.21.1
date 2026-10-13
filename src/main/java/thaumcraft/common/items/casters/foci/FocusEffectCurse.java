@@ -11,10 +11,14 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXBlockBamf;
 import thaumcraft.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 
@@ -58,9 +62,12 @@ public class FocusEffectCurse extends FocusEffect {
         }
         
         Level world = getPackage().world;
-        
-        // TODO: Send particle effect packet
-        // PacketHandler.sendToAllAround(new PacketFXBlockBamf(...))
+
+        // TC4: dark "bamf" puff (sound + flair) at the impact point
+        Vec3 curseHit = target.getLocation();
+        PacketHandler.sendToAllAround(
+                new PacketFXBlockBamf(curseHit.x, curseHit.y, curseHit.z, 6946821, true, true, null),
+                world, curseHit.x, curseHit.y, curseHit.z, 64.0);
         
         if (target.getType() == HitResult.Type.ENTITY && target instanceof EntityHitResult entityHit) {
             Entity hitEntity = entityHit.getEntity();
@@ -159,9 +166,7 @@ public class FocusEffectCurse extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used dark red/purple curse particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.curse(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override

@@ -25,6 +25,7 @@ import thaumcraft.common.lib.network.misc.PacketSealToClient;
 import thaumcraft.common.lib.network.misc.PacketSelectThaumotoriumRecipeToServer;
 import thaumcraft.common.lib.network.misc.PacketAspectPlaceToServer;
 import thaumcraft.common.lib.network.misc.PacketAspectCombinationToServer;
+import thaumcraft.common.lib.network.misc.PacketFlyToServer;
 import thaumcraft.common.lib.network.misc.PacketScanItemToServer;
 import thaumcraft.common.lib.network.playerdata.PacketFocusNameToServer;
 import thaumcraft.common.lib.network.playerdata.PacketFocusNodesToServer;
@@ -92,6 +93,7 @@ public class PacketHandler {
 
         // Server-bound packets (client -> server)
         registrar.playToServer(PacketTileToServer.TYPE, PacketTileToServer.STREAM_CODEC, PacketTileToServer::handle);
+        registrar.playToServer(PacketFlyToServer.TYPE, PacketFlyToServer.STREAM_CODEC, PacketFlyToServer::handle);
         registrar.playToServer(PacketSyncProgressToServer.TYPE, PacketSyncProgressToServer.STREAM_CODEC, PacketSyncProgressToServer::handle);
         registrar.playToServer(PacketSyncResearchFlagsToServer.TYPE, PacketSyncResearchFlagsToServer.STREAM_CODEC, PacketSyncResearchFlagsToServer::handle);
         registrar.playToServer(PacketFocusChangeToServer.TYPE, PacketFocusChangeToServer.STREAM_CODEC, PacketFocusChangeToServer::handle);
@@ -109,6 +111,16 @@ public class PacketHandler {
 
     public static <MSG> void sendToPlayer(MSG packet, ServerPlayer player) {
         PacketDistributor.sendToPlayer(player, (CustomPacketPayload) packet);
+    }
+
+    /**
+     * TC4 {@code PacketHandler.INSTANCE.sendToAllAround(...)}: send a packet to
+     * every player within {@code range} blocks of the given position.
+     */
+    public static <MSG> void sendToAllAround(MSG packet, Level level, double x, double y, double z, double range) {
+        if (level instanceof ServerLevel serverLevel) {
+            PacketDistributor.sendToPlayersNear(serverLevel, null, x, y, z, range, (CustomPacketPayload) packet);
+        }
     }
 
     public static <MSG> void sendToAll(MSG packet) {

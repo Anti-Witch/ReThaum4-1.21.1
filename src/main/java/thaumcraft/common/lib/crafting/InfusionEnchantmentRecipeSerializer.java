@@ -1,31 +1,35 @@
 package thaumcraft.common.lib.crafting;
 
-import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.core.Holder;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.RegistryOps;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import thaumcraft.Thaumcraft;
+import net.minecraft.world.item.enchantment.Enchantment;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
-import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
+import thaumcraft.common.lib.enchantment.InfusionEnchantment;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Serializer for TC4 style infusion enchantment recipes.
+ */
 public class InfusionEnchantmentRecipeSerializer implements RecipeSerializer<InfusionEnchantmentRecipe> {
 
     public static final InfusionEnchantmentRecipeSerializer INSTANCE = new InfusionEnchantmentRecipeSerializer();
-    public static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath(Thaumcraft.MODID, "infusion_enchantment");
 
-    /**
-     * Codec for an AspectList (serialized as a map of aspect name -> amount).
-     */
+    /** AspectList <-> {"aspect": amount} map. */
     public static final Codec<AspectList> ASPECT_LIST_CODEC = Codec.unboundedMap(Codec.STRING, Codec.INT)
             .xmap(
                     map -> {
@@ -52,12 +56,21 @@ public class InfusionEnchantmentRecipeSerializer implements RecipeSerializer<Inf
 
     public static final MapCodec<InfusionEnchantmentRecipe> CODEC = RecordCodecBuilder.mapCodec(inst ->
             inst.group(
-                            Codec.STRING.fieldOf("enchantment").forGetter(r -> r.enchantment.name()),
-                            ASPECT_LIST_CODEC.fieldOf("aspects").forGetter(r -> r.getAspects()),
-                            COMPONENTS_CODEC.fieldOf("components").forGetter(r -> r.getComponents())
+                            ResourceKey.codec(Registries.ENCHANTMENT).fieldOf("enchantment")
+                                    .forGetter(InfusionEnchantmentRecipe::getEnchantmentKey),
+                            Codec.STRING.optionalFieldOf("research", InfusionEnchantment.RESEARCH)
+                                    .forGetter(InfusionEnchantmentRecipe::getResearch),
+                            Codec.INT.optionalFieldOf("instability", 0)
+                                    .forGetter(InfusionEnchantmentRecipe::getInstability),
+                            ASPECT_LIST_CODEC.optionalFieldOf("aspects", new AspectList())
+                                    .forGetter(InfusionEnchantmentRecipe::getAspects),
+                            COMPONENTS_CODEC.optionalFieldOf("components", NonNullList.create())
+                                    .forGetter(InfusionEnchantmentRecipe::getComponents),
+                            RegistryOps.<Enchantment, InfusionEnchantmentRecipe>retrieveGetter(Registries.ENCHANTMENT)
                     )
-                    .apply(inst, (enchantmentName, aspects, components) ->
-                            new InfusionEnchantmentRecipe(null, EnumInfusionEnchantment.valueOf(enchantmentName.toUpperCase()), aspects, components))
+                    .apply(inst, (enchantmentKey, research, instability, aspects, components, getter) ->
+                            new InfusionEnchantmentRecipe(getter.getOrThrow(enchantmentKey), research,
+                                    instability, aspects, components))
     );
 
     public static final StreamCodec<RegistryFriendlyByteBuf, InfusionEnchantmentRecipe> STREAM_CODEC =
@@ -74,12 +87,9 @@ public class InfusionEnchantmentRecipeSerializer implements RecipeSerializer<Inf
     }
 
     public static void toNetwork(RegistryFriendlyByteBuf buffer, InfusionEnchantmentRecipe recipe) {
-        buffer.writeVarInt(recipe.enchantment.ordinal());
-
-        buffer.writeVarInt(recipe.getComponents().size());
-        for (Ingredient component : recipe.getComponents()) {
-            Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, component);
-        }
+        ByteBufCodecs.holderRegistry(Registries.ENCHANTMENT).encode(buffer, recipe.getEnchantment());
+        buffer.writeUtf(recipe.getResearch());
+        buffer.writeVarInt(recipe.getInstability());
 
         Aspect[] aspectArray = recipe.getAspects().getAspects();
         buffer.writeVarInt(aspectArray.length);
@@ -87,17 +97,19 @@ public class InfusionEnchantmentRecipeSerializer implements RecipeSerializer<Inf
             buffer.writeUtf(aspect.getTag());
             buffer.writeVarInt(recipe.getAspects().getAmount(aspect));
         }
+
+        buffer.writeVarInt(recipe.getComponents().size());
+        for (Ingredient component : recipe.getComponents()) {
+            Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, component);
+        }
     }
 
     public static InfusionEnchantmentRecipe fromNetwork(RegistryFriendlyByteBuf buffer) {
-        int enchantmentOrdinal = buffer.readVarInt();
-        EnumInfusionEnchantment enchantment = EnumInfusionEnchantment.values()[enchantmentOrdinal];
+        Holder<Enchantment> enchantment =
+                ByteBufCodecs.holderRegistry(Registries.ENCHANTMENT).decode(buffer);
 
-        int componentCount = buffer.readVarInt();
-        NonNullList<Ingredient> components = NonNullList.withSize(componentCount, Ingredient.EMPTY);
-        for (int i = 0; i < componentCount; i++) {
-            components.set(i, Ingredient.CONTENTS_STREAM_CODEC.decode(buffer));
-        }
+        String research = buffer.readUtf();
+        int instability = buffer.readVarInt();
 
         AspectList aspects = new AspectList();
         int aspectCount = buffer.readVarInt();
@@ -110,6 +122,12 @@ public class InfusionEnchantmentRecipeSerializer implements RecipeSerializer<Inf
             }
         }
 
-        return new InfusionEnchantmentRecipe(null, enchantment, aspects, components);
+        int componentCount = buffer.readVarInt();
+        NonNullList<Ingredient> components = NonNullList.withSize(componentCount, Ingredient.EMPTY);
+        for (int i = 0; i < componentCount; i++) {
+            components.set(i, Ingredient.CONTENTS_STREAM_CODEC.decode(buffer));
+        }
+
+        return new InfusionEnchantmentRecipe(enchantment, research, instability, aspects, components);
     }
 }

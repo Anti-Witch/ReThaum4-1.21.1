@@ -903,6 +903,11 @@
           "text": "tc.research_page.HOVERHARNESS.1"
         },
         {
+          "recipes": [
+            "thaumcraft:infusion/hover_harness"
+          ]
+        },
+        {
           "text": "tc.research_page.HOVERHARNESS.2"
         }
       ]
@@ -940,6 +945,11 @@
       "stages": [
         {
           "text": "tc.research_page.HOVERGIRDLE.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/hover_girdle"
+          ]
         }
       ]
     },
@@ -1708,6 +1718,11 @@
       "stages": [
         {
           "text": "tc.research_page.MASKGRINNINGDEVIL.1"
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/mask_grinning_devil"
+          ]
         }
       ]
     },
@@ -1737,7 +1752,13 @@
       ],
       "stages": [
         {
-          "text": "tc.research_page.MASKANGRYGHOST.1"
+          "text": "tc.research_page.MASKANGRYGHOST.1",
+          "warp": 1
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/mask_angry_ghost"
+          ]
         }
       ]
     },
@@ -1767,7 +1788,13 @@
       ],
       "stages": [
         {
-          "text": "tc.research_page.MASKSIPPINGFIEND.1"
+          "text": "tc.research_page.MASKSIPPINGFIEND.1",
+          "warp": 1
+        },
+        {
+          "recipes": [
+            "thaumcraft:infusion/mask_sipping_fiend"
+          ]
         }
       ]
     }

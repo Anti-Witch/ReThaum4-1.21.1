@@ -29,11 +29,10 @@ public class ClientEvents {
     public static void onClientTick(ClientTickEvent.Pre event) {
         // Process key bindings
         KeyHandler.onClientTick(event);
-        
-        // TODO: Add other client tick processing as needed
-        // - Radial menu updates
-        // - Goggle/HUD overlay updates
-        // - Client-side particle systems
+
+        // TC4 ParticleEngine.updateParticles: spawn particles that were queued
+        // with a delay (focus effects stagger their sprites this way).
+        thaumcraft.client.fx.FXDispatcher.tickDelayedParticles();
     }
     
 

@@ -16,9 +16,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.FocusPackage;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
 import thaumcraft.init.ModEntities;
 
 import javax.annotation.Nullable;
@@ -44,9 +46,19 @@ public class EntityFocusProjectile extends ThrowableProjectile {
             SynchedEntityData.defineId(EntityFocusProjectile.class, EntityDataSerializers.INT);
     private static final EntityDataAccessor<Integer> DATA_OWNER_ID = 
             SynchedEntityData.defineId(EntityFocusProjectile.class, EntityDataSerializers.INT);
+    /**
+     * Focus effect keys carried by this projectile ("thaumcraft.FIRE%..."). The
+     * full focus package is not synced to tracking clients, so the effect keys
+     * needed for the particle trail travel in synced entity data (TC4 sent the
+     * package in the custom spawn packet).
+     */
+    private static final EntityDataAccessor<String> DATA_PARTS = 
+            SynchedEntityData.defineId(EntityFocusProjectile.class, EntityDataSerializers.STRING);
     
     private FocusPackage focusPackage;
     private Entity seekTarget;
+    /** TC4 EntityFocusProjectile.firstParticle - one full effect burst per projectile. */
+    private boolean firstParticle = true;
     
     public EntityFocusProjectile(EntityType<? extends EntityFocusProjectile> type, Level level) {
         super(type, level);
@@ -63,6 +75,7 @@ public class EntityFocusProjectile extends ThrowableProjectile {
         super(ModEntities.FOCUS_PROJECTILE.get(), pack.world);
         
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
         
         // Find owner from package
         LivingEntity owner = findOwner(pack);
@@ -87,6 +100,40 @@ public class EntityFocusProjectile extends ThrowableProjectile {
     protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder builder) {
         builder.define(DATA_SPECIAL, 0);
         builder.define(DATA_OWNER_ID, 0);
+        builder.define(DATA_PARTS, "");
+    }
+
+    /**
+     * Store the focus effect keys for the client-side particle trail.
+     */
+    public void setFocusParts(String[] parts) {
+        if (parts == null || parts.length == 0) {
+            this.entityData.set(DATA_PARTS, "");
+            return;
+        }
+        this.entityData.set(DATA_PARTS, String.join("%", parts));
+    }
+
+    /**
+     * Focus effect keys carried by this projectile (empty on the server side
+     * until a package is assigned).
+     */
+    public String[] getFocusParts() {
+        String parts = this.entityData.get(DATA_PARTS);
+        return parts.isEmpty() ? new String[0] : parts.split("%");
+    }
+
+    private void setPartsFromPackage(FocusPackage pack) {
+        if (pack == null) {
+            setFocusParts(new String[0]);
+            return;
+        }
+        FocusEffect[] effects = pack.getFocusEffects();
+        String[] keys = new String[effects.length];
+        for (int i = 0; i < effects.length; i++) {
+            keys[i] = effects[i].getKey();
+        }
+        setFocusParts(keys);
     }
     
     public void setSpecial(int special) {
@@ -202,11 +249,37 @@ public class EntityFocusProjectile extends ThrowableProjectile {
             return;
         }
         
+        // Client-side particle trail (TC4 EntityFocusProjectile.renderParticle)
+        if (level().isClientSide) {
+            renderParticle(1.0f);
+        }
+        
         // Handle seeking behavior
         int special = getSpecial();
         if (special == SPECIAL_SEEKING_HOSTILE || special == SPECIAL_SEEKING_FRIENDLY) {
             updateSeeking(special == SPECIAL_SEEKING_FRIENDLY);
         }
+    }
+    
+    /**
+     * TC4 EntityFocusProjectile.renderParticle: spawn the coloured mote trail
+     * behind the projectile and, on the very first tick, one full burst of the
+     * focus effect's own particles so the projectile matches the cast focus.
+     */
+    public void renderParticle(float coeff) {
+        String[] parts = getFocusParts();
+        if (parts.length == 0) return;
+        
+        double px = xOld + (getX() - xOld) * coeff;
+        double py = yOld + (getY() - yOld) * coeff + getBbHeight() / 2.0f;
+        double pz = zOld + (getZ() - zOld) * coeff;
+        
+        FocusFX.projectileTrail(level(), parts, px, py, pz,
+                random.nextGaussian() * 0.01,
+                random.nextGaussian() * 0.01,
+                random.nextGaussian() * 0.01,
+                firstParticle);
+        firstParticle = false;
     }
     
     /**
@@ -352,6 +425,7 @@ public class EntityFocusProjectile extends ThrowableProjectile {
     
     public void setFocusPackage(FocusPackage pack) {
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
     }
 }
 

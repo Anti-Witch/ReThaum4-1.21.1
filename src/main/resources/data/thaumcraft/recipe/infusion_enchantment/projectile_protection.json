@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:projectile_protection",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 1,
+  "aspects": {
+    "praecantatio": 4,
+    "tutamen": 4,
+    "volatus": 4
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

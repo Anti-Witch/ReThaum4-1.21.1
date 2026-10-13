@@ -422,6 +422,14 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> JAR_BRAIN = registerBlock("jar_brain",
             BlockJar::createBrain);
 
+    /**
+     * Node in a Jar (TC4 blockJar metadata 2). Registered without a BlockItem:
+     * the matching item is ItemJarNode (ModItems.JAR_NODE), which carries the
+     * captured node in its NBT.
+     */
+    public static final DeferredHolder<Block, Block> JAR_NODE = registerBlockNoItem("jar_node",
+            BlockJar::createNodeJar);
+
     // ==================== Essentia Tubes ====================
 
     public static final DeferredHolder<Block, Block> TUBE_NORMAL = registerBlock("tube_normal",

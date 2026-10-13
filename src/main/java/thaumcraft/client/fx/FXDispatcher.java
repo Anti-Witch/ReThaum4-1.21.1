@@ -247,7 +247,7 @@ public class FXDispatcher {
         if (level == null) return;
 
         FXGeneric particle = new FXGeneric(level, x, y, z, mx, my, mz);
-        particle.setMaxAge(part.age);
+        particle.setMaxAge(Math.max(1, part.age));
         particle.setColorRange(part.redStart, part.greenStart, part.blueStart,
                 part.redEnd, part.greenEnd, part.blueEnd);
         particle.setAlphaKeyframes(part.alpha != null && part.alpha.length > 0

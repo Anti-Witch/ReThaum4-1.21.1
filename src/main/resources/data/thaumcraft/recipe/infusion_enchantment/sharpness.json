@@ -1,0 +1,18 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:sharpness",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 2,
+  "aspects": {
+    "praecantatio": 4,
+    "telum": 8
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_sword"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

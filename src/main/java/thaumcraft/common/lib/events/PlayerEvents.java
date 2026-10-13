@@ -115,6 +115,20 @@ public class PlayerEvents {
     // ==================== Tick Events ====================
     
     /**
+     * TC4 ItemHoverHarness/Hover: if the harness is no longer worn, stop hovering
+     * and hand back the flight abilities we granted. Runs on both sides so the
+     * client stops flying immediately as well.
+     */
+    @SubscribeEvent
+    public static void hoverHarnessCheck(net.neoforged.neoforge.event.tick.PlayerTickEvent.Post event) {
+        Player player = event.getEntity();
+        ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+        if (!(chest.getItem() instanceof thaumcraft.common.items.armor.ItemHoverHarness)) {
+            thaumcraft.common.items.armor.Hover.onHarnessRemoved(player);
+        }
+    }
+    
+    /**
      * Player tick event - handles periodic sync and warp effects
      */
     @SubscribeEvent

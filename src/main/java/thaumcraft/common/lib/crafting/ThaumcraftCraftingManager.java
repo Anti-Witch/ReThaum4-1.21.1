@@ -280,6 +280,37 @@ public class ThaumcraftCraftingManager {
         
         return null;
     }
+
+    /**
+     * Find a matching infusion <b>enchantment</b> recipe for the given altar state.
+     *
+     * TC4 checks the normal infusion recipes first and only then falls back to
+     * the enchantment recipes, so this is a separate lookup.
+     *
+     * @param pedestalItems Items on the pedestals
+     * @param centralItem The item on the central pedestal
+     * @param player The player crafting
+     * @param level The world
+     * @return The matching infusion enchantment recipe, or null if none found
+     */
+    public static InfusionEnchantmentRecipe findMatchingInfusionEnchantmentRecipe(List<ItemStack> pedestalItems,
+                                                                                 ItemStack centralItem,
+                                                                                 Player player,
+                                                                                 Level level) {
+        if (centralItem.isEmpty() || level == null || player == null) {
+            return null;
+        }
+
+        for (RecipeHolder<?> holder : level.getRecipeManager().getAllRecipesFor(ModRecipeTypes.INFUSION.get())) {
+            if (holder.value() instanceof InfusionEnchantmentRecipe enchantmentRecipe) {
+                if (enchantmentRecipe.matchesInfusion(pedestalItems, centralItem, level, player)) {
+                    return enchantmentRecipe;
+                }
+            }
+        }
+
+        return null;
+    }
     
     // ==================== Object Tag Generation ====================
     

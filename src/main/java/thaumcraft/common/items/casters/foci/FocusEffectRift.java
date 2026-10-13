@@ -14,6 +14,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
 import thaumcraft.common.blocks.misc.BlockHole;
 
 import javax.annotation.Nullable;
@@ -159,9 +160,7 @@ public class FocusEffectRift extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used blue/purple void particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.rift(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override

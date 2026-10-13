@@ -1,0 +1,23 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:infinity",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 5,
+  "aspects": {
+    "praecantatio": 8,
+    "telum": 16,
+    "vacuos": 16,
+    "permutatio": 16
+  },
+  "components": [
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "minecraft:arrow"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

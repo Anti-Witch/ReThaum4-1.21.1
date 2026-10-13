@@ -38,6 +38,9 @@ import thaumcraft.common.items.tools.ItemThaumometer;
  *   1 = NORMAL, 2 = DARK, 3 = HUNGRY, 4 = PURE, 5 = TAINTED, 6 = UNSTABLE
  * Node modifiers only affect opacity/pulsing (BRIGHT brighter, PALE dimmer,
  * FADING flicker), exactly like TC4.
+ *
+ * The same billboard is used by JarNodeRenderer for nodes trapped inside a jar
+ * (TC4 TileJarRenderer delegates to TileNodeRenderer with size 0.7).
  */
 public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
 
@@ -160,30 +163,51 @@ public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
         // Base alpha fades with distance (TC4)
         float alpha = Mth.clamp((viewDistance - (float) distance) / viewDistance, 0.05F, 1.0F);
 
-        // Modifier affects opacity only (TC4)
-        NodeModifier mod = tile.getNodeModifier();
-        if (mod == NodeModifier.BRIGHT) {
-            alpha *= 1.5F;
-        } else if (mod == NodeModifier.PALE) {
-            alpha *= 0.66F;
-        } else if (mod == NodeModifier.FADING) {
-            alpha *= Mth.sin(age / 3.0F) * 0.25F + 0.33F;
+        renderNodeBillboard(poseStack, buffer, 0.5D, 0.5D, 0.5D, tile.getAspects(), tile.getNodeType(), tile.getNodeModifier(),
+                nt, age, alpha, 1.0F, reveal, depthIgnore, tile.getBlockPos().getX());
+    }
+
+    /**
+     * Draw the TC4 node billboard (aspect swirls plus the type-specific core)
+     * centred on the given block-relative position. Used by the world node
+     * renderer and by JarNodeRenderer (nodes trapped inside a jar).
+     *
+     * @param reveal      true when the node is fully revealed (goggles, thaumometer or a jar)
+     * @param depthIgnore true to disable the depth test (x-ray through blocks)
+     * @param size        TC4 "size" multiplier (1.0 for world nodes, 0.7 inside a jar)
+     * @param phaseSeed   animation phase offset (TC4 uses the block x coordinate)
+     */
+    public static void renderNodeBillboard(PoseStack poseStack, MultiBufferSource buffer,
+                                           double cx, double cy, double cz,
+                                           AspectList aspects, NodeType type, NodeModifier mod,
+                                           long nt, float age, float alpha, float size,
+                                           boolean reveal, boolean depthIgnore, int phaseSeed) {
+        if (type == null) {
+            return;
         }
-        alpha = Mth.clamp(alpha, 0.05F, 1.0F);
 
         RenderType additive = depthIgnore ? NODE_ADDITIVE_DEPTHLESS : NODE_ADDITIVE;
         RenderType translucent = depthIgnore ? NODE_TRANSLUCENT_DEPTHLESS : NODE_TRANSLUCENT;
 
-        // Animation frame, phase-shifted by X coordinate like TC4
-        int frame = (int) (Math.abs(nt / 40000000L + tile.getBlockPos().getX()) % FRAMES);
+        // Animation frame, phase-shifted by the block X coordinate like TC4
+        int frame = (int) (Math.abs(nt / 40000000L + phaseSeed) % FRAMES);
 
         poseStack.pushPose();
-        poseStack.translate(0.5D, 0.5D, 0.5D);
+        poseStack.translate(cx, cy, cz);
         poseStack.mulPose(Minecraft.getInstance().getEntityRenderDispatcher().cameraOrientation());
         poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
 
-        AspectList aspects = tile.getAspects();
-        if (aspects != null && aspects.size() > 0 && reveal && tile.getLevel() != null) {
+        if (aspects != null && aspects.size() > 0 && reveal) {
+            // Modifier affects opacity only (TC4)
+            if (mod == NodeModifier.BRIGHT) {
+                alpha *= 1.5F;
+            } else if (mod == NodeModifier.PALE) {
+                alpha *= 0.66F;
+            } else if (mod == NodeModifier.FADING) {
+                alpha *= Mth.sin(age / 3.0F) * 0.25F + 0.33F;
+            }
+            alpha = Mth.clamp(alpha, 0.05F, 1.0F);
+
             // Per-aspect colored swirls (strip 0)
             int count = 0;
             float average = 0.0F;
@@ -198,7 +222,7 @@ public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
                 float aspectAlpha = Mth.clamp(altBlend ? alpha * 1.5F : alpha, 0.0F, 1.0F);
 
                 float scale = Mth.sin(age / Math.max(1.0F, 14.0F - count)) * 0.25F + 0.5F;
-                scale = 0.2F + scale * (amount / 50.0F);
+                scale = (0.2F + scale * (amount / 50.0F)) * size;
 
                 long period = 5000L + 500L * count;
                 float angle = (nt / 5000000L % period) / (float) period * (float) (Math.PI * 2.0);
@@ -211,9 +235,8 @@ public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
             average /= aspects.size();
 
             // Core swirl, strip selected by node type
-            NodeType type = tile.getNodeType();
             float coreScale = 0.1F + average / 150.0F;
-            coreScale = Math.min(coreScale, 1.75F);
+            coreScale = Math.min(coreScale, 1.75F) * size;
             if (type == NodeType.HUNGRY) {
                 coreScale *= 0.75F;
             }
@@ -224,7 +247,7 @@ public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
             // Not revealed with goggles/thaumometer (or an empty node): TC4 draws
             // the faint white outline only - no aspect colors, no modifier pulse.
             drawStrip(poseStack, buffer, additive,
-                    1, frame, 0.5F, 0.0F, 0xFFFFFF, 0.1F);
+                    1, frame, 0.5F * size, 0.0F, 0xFFFFFF, 0.1F);
         }
 
         poseStack.popPose();
@@ -252,8 +275,8 @@ public class TileNodeRenderer implements BlockEntityRenderer<TileNode> {
                 || player.getOffhandItem().getItem() instanceof ItemThaumometer;
     }
 
-    private void drawStrip(PoseStack poseStack, MultiBufferSource buffer, RenderType renderType,
-                           int strip, int frame, float scale, float angle, int color, float alpha) {
+    private static void drawStrip(PoseStack poseStack, MultiBufferSource buffer, RenderType renderType,
+                                  int strip, int frame, float scale, float angle, int color, float alpha) {
         poseStack.pushPose();
         if (angle != 0.0F) {
             poseStack.mulPose(Axis.ZP.rotation(angle));

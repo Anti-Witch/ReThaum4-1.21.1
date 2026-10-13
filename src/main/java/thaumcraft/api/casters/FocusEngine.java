@@ -271,13 +271,25 @@ public class FocusEngine {
         // executing it. Nodes that are not bound can neither supply targets nor
         // spawn a projectile (getPackage()/getRemainingPackage() are null).
         bindNodes(pack);
+
+        // TC4 FocusEngine.castFocusPackage: every effect is notified that the
+        // spell was cast. This is where the per-effect casting sounds live.
+        for (FocusEffect effect : pack.getFocusEffects()) {
+            effect.onCast(caster);
+        }
         
         // Find root node
         IFocusElement root = pack.nodes.get(0);
         if (root instanceof FocusMedium medium) {
             if (root instanceof FocusMediumRoot rootMedium) {
-                // Root mediums (touch, self) generate their own targets and pass
-                // them to the rest of the chain; they have no intermediary step.
+                // Root mediums (touch, bolt) generate their own targets and pass
+                // them to the rest of the chain. TC4 feeds the caster's look
+                // trajectory into the chain and calls execute() on the medium
+                // first - that call is what draws the cast beam / lightning zap.
+                Vec3 look = caster.getLookAngle();
+                Vec3 eyePos = caster.getEyePosition().subtract(0.0, 0.1, 0.0);
+                rootMedium.execute(new Trajectory(eyePos, look));
+
                 FocusPackage rest = ((FocusNode) root).getRemainingPackage();
                 if (rest == null) {
                     return true;

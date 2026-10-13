@@ -51,10 +51,15 @@ public class ModBlockEntities {
                             ModBlocks.JAR_NORMAL.get()
                     ).build(null));
 
+    /**
+     * Node in a Jar. One block entity type per block: the node jar block owns
+     * this type (previously it was also registered against the normal jar block,
+     * which meant two block entity types claimed the same block).
+     */
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileJarNode>> JAR_NODE =
             BLOCK_ENTITIES.register("jar_node",
                     () -> BlockEntityType.Builder.of(TileJarNode::new,
-                            ModBlocks.JAR_NORMAL.get()
+                            ModBlocks.JAR_NODE.get()
                     ).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TileJarVoid>> JAR_VOID =

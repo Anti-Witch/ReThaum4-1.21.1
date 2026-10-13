@@ -1,0 +1,18 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:power",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 2,
+  "aspects": {
+    "praecantatio": 4,
+    "telum": 8
+  },
+  "components": [
+    {
+      "item": "minecraft:bow"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

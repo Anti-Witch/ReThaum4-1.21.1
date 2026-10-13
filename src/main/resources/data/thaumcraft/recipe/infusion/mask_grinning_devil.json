@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "MASKGRINNINGDEVIL",
+  "instability": 8,
+  "apply_to_input": true,
+  "input": {
+    "item": "thaumcraft:fortress_helm"
+  },
+  "ingredients": [
+    { "item": "minecraft:black_dye" },
+    { "tag": "c:ingots/iron" },
+    { "tag": "c:leathers" },
+    { "item": "thaumcraft:shimmerleaf" },
+    { "item": "thaumcraft:zombie_brain" },
+    { "tag": "c:ingots/iron" }
+  ],
+  "aspects": {
+    "cognitio": 64,
+    "sano": 64,
+    "tutamen": 16
+  },
+  "result": {
+    "id": "thaumcraft:fortress_helm",
+    "components": {
+      "minecraft:custom_data": { "mask": 0 }
+    }
+  }
+}

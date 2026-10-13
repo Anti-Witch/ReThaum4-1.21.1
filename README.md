@@ -71,11 +71,26 @@
 Готовий jar кидаєш у `mods/` на NeoForge 1.21.1. Додаткових залежностей не треба
 (Curios вбудований всередину).
 
+## Права та ліцензія
+
+**Оригінальний Thaumcraft 4 належить Azanor** (2013–2015) — усі права на оригінальний мод,
+його код, текстури, моделі та звуки залишаються за ним.
+
+Усе, що зроблено або змінено **понад** оригінал цим портом (код порту, виправлення, адаптація
+під NeoForge 1.21.1) — **не** належить Azanor і розповсюджується за ліцензією **MIT** (див. `LICENSE`).
+
+Деталі по джерелах — у [CREDITS.md](CREDITS.md):
+- **OpenTC4** (IgnoreLicensesCN) — декомпільований еталон, MIT.
+- **Thaumcraft 6 Source Code 1.20.1** (Neutronis228) — початкова база порту.
+- **Thaumcraft-1.20.1** (DreamYao520) — референс.
+
 ## Подяки
 
-- Оригінальний **Thaumcraft 4** — Azanor.
-- Декомпільований код для звірки — OpenTC4.
-- Порт — спільнота.
+- **Azanor** — за оригінальний Thaumcraft 4.
+- **IgnoreLicensesCN** — за OpenTC4 (декомпільований код для звірки).
+- **Neutronis228** — за початкову базу порту.
+- **DreamYao520** — за референсний порт.
+- Усі, хто тестував і допомагав.
 
 ---
 
@@ -92,5 +107,9 @@ focus projectile FX, infusion enchantments, golem upgrades/seals, ~126 research
 pages whose recipes aren't ported yet, armour gear models.
 
 Build with JDK 21: `./gradlew build`. Drop the jar into `mods/` on NeoForge 1.21.1.
+
+**Licensing**: the original Thaumcraft 4 belongs to **Azanor** — all rights reserved
+to him. The port work and modifications ("Thaumcraft 4 Reforged") are licensed
+under **MIT** (see `LICENSE` and `CREDITS.md`).
 
 </details>

@@ -13,9 +13,11 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.FocusPackage;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
 import thaumcraft.init.ModEntities;
 
 import javax.annotation.Nullable;
@@ -32,6 +34,9 @@ public class EntityFocusCloud extends Entity {
     
     private static final EntityDataAccessor<Float> DATA_RADIUS = 
             SynchedEntityData.defineId(EntityFocusCloud.class, EntityDataSerializers.FLOAT);
+    /** Focus effect keys, synced so tracking clients can draw the cloud particles. */
+    private static final EntityDataAccessor<String> DATA_PARTS = 
+            SynchedEntityData.defineId(EntityFocusCloud.class, EntityDataSerializers.STRING);
     
     /** Cooldown map to prevent hitting the same target too often */
     private static final Map<Long, Long> COOLDOWN_MAP = new HashMap<>();
@@ -53,6 +58,7 @@ public class EntityFocusCloud extends Entity {
         super(ModEntities.FOCUS_CLOUD.get(), pack.world);
         
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
         this.duration = duration;
         this.noPhysics = true;
         
@@ -73,6 +79,36 @@ public class EntityFocusCloud extends Entity {
     @Override
     protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder builder) {
         builder.define(DATA_RADIUS, 0.5f);
+        builder.define(DATA_PARTS, "");
+    }
+
+    /**
+     * Store the focus effect keys for the client-side particles.
+     */
+    public void setFocusParts(String[] parts) {
+        if (parts == null || parts.length == 0) {
+            this.entityData.set(DATA_PARTS, "");
+            return;
+        }
+        this.entityData.set(DATA_PARTS, String.join("%", parts));
+    }
+
+    public String[] getFocusParts() {
+        String parts = this.entityData.get(DATA_PARTS);
+        return parts.isEmpty() ? new String[0] : parts.split("%");
+    }
+
+    private void setPartsFromPackage(FocusPackage pack) {
+        if (pack == null) {
+            setFocusParts(new String[0]);
+            return;
+        }
+        FocusEffect[] effects = pack.getFocusEffects();
+        String[] keys = new String[effects.length];
+        for (int i = 0; i < effects.length; i++) {
+            keys[i] = effects[i].getKey();
+        }
+        setFocusParts(keys);
     }
     
     public void setRadius(float radius) {
@@ -141,12 +177,10 @@ public class EntityFocusCloud extends Entity {
     }
     
     /**
-     * Render particles on the client.
+     * Render particles on the client (TC4 EntityFocusCloud.onUpdate).
      */
     private void renderCloudParticles(float radius) {
-        // TODO: Implement particle rendering
-        // Original used FXDispatcher.drawFocusCloudParticle
-        // and called effect.renderParticleFX
+        FocusFX.cloudParticles(level(), getFocusParts(), getX(), getY(), getZ(), radius);
     }
     
     /**
@@ -258,6 +292,7 @@ public class EntityFocusCloud extends Entity {
     
     public void setFocusPackage(FocusPackage pack) {
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
     }
 }
 

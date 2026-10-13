@@ -542,6 +542,13 @@ ModDataComponents.DATA_COMPONENTS.register(modEventBus);
                 ModBlockEntities.JAR_VOID.get(),
                 thaumcraft.client.renderers.tile.JarRenderer::new
             );
+
+            // Node in a Jar renderer (the trapped node is drawn by the BER, the
+            // jar itself is the normal jar block model)
+            event.registerBlockEntityRenderer(
+                ModBlockEntities.JAR_NODE.get(),
+                thaumcraft.client.renderers.tile.JarNodeRenderer::new
+            );
             
             // Pedestal renderers
             event.registerBlockEntityRenderer(

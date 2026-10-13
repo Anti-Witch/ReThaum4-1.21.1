@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:blast_protection",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 1,
+  "aspects": {
+    "praecantatio": 4,
+    "tutamen": 4,
+    "perditio": 4
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

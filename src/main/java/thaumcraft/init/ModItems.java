@@ -764,7 +764,7 @@ public class ModItems {
     // ==================== Essentia Containers ====================
 
     public static final DeferredHolder<Item, Item> JAR_NODE = ITEMS.register("jar_node",
-            () -> new ItemJarNode(ModBlocks.JAR_NORMAL.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
+            () -> new ItemJarNode(ModBlocks.JAR_NODE.get(), new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     // ==================== Essentia Containers (MISSING CLASSES - TODO) ====================
     // public static final DeferredHolder<Item, Item> JAR_VOID = ITEMS.register("jar_void",
@@ -828,9 +828,6 @@ public class ModItems {
     //
     // public static final DeferredHolder<Item, Item> BELT_FANCY = ITEMS.register("belt_fancy",
     //         thaumcraft.common.items.baubles.ItemBeltFancy::new);
-    //
-    // public static final DeferredHolder<Item, Item> GIRDLE_HOVER = ITEMS.register("girdle_hover",
-    //         thaumcraft.common.items.baubles.ItemGirdleHover::new);
     //
     // public static final DeferredHolder<Item, Item> RING_APPRENTICE = ITEMS.register("ring_apprentice",
     //         thaumcraft.common.items.baubles.ItemRingApprentice::new);
@@ -936,9 +933,13 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> PRIMAL_ARROW = ITEMS.register("primal_arrow",
             () -> new Item(new Item.Properties().stacksTo(64)));
 
-    // Baubles - Hover Harness (TC4: allows creative flight)
+    // Baubles - Hover Harness (TC4: chestplate that enables Potentia-powered flight)
     public static final DeferredHolder<Item, Item> HOVER_HARNESS = ITEMS.register("hover_harness",
-            ItemMaterial::uncommon);
+            thaumcraft.common.items.armor.ItemHoverHarness::new);
+
+    // Thaumostatic Girdle (TC4: belt bauble, reduces fall damage and boosts the harness)
+    public static final DeferredHolder<Item, Item> GIRDLE_HOVER = ITEMS.register("girdle_hover",
+            thaumcraft.common.items.baubles.ItemGirdleHover::new);
 
     // Runic Baubles (TC4: protection items)
     public static final DeferredHolder<Item, Item> AMULET_RUNIC = ITEMS.register("amulet_runic",

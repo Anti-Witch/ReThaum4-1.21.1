@@ -13,9 +13,11 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.FocusPackage;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
 import thaumcraft.init.ModEntities;
 
 import javax.annotation.Nullable;
@@ -29,6 +31,9 @@ public class EntityFocusMine extends ThrowableProjectile {
     
     private static final EntityDataAccessor<Boolean> DATA_ARMED = 
             SynchedEntityData.defineId(EntityFocusMine.class, EntityDataSerializers.BOOLEAN);
+    /** Focus effect keys, synced so tracking clients can draw the mine particles. */
+    private static final EntityDataAccessor<String> DATA_PARTS = 
+            SynchedEntityData.defineId(EntityFocusMine.class, EntityDataSerializers.STRING);
     
     private FocusPackage focusPackage;
     private boolean targetFriendly;
@@ -49,6 +54,7 @@ public class EntityFocusMine extends ThrowableProjectile {
         super(ModEntities.FOCUS_MINE.get(), pack.world);
         
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
         this.targetFriendly = targetFriendly;
         
         // Find owner from package
@@ -66,6 +72,36 @@ public class EntityFocusMine extends ThrowableProjectile {
     @Override
     protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData.Builder builder) {
         builder.define(DATA_ARMED, false);
+        builder.define(DATA_PARTS, "");
+    }
+
+    /**
+     * Store the focus effect keys for the client-side particles.
+     */
+    public void setFocusParts(String[] parts) {
+        if (parts == null || parts.length == 0) {
+            this.entityData.set(DATA_PARTS, "");
+            return;
+        }
+        this.entityData.set(DATA_PARTS, String.join("%", parts));
+    }
+
+    public String[] getFocusParts() {
+        String parts = this.entityData.get(DATA_PARTS);
+        return parts.isEmpty() ? new String[0] : parts.split("%");
+    }
+
+    private void setPartsFromPackage(FocusPackage pack) {
+        if (pack == null) {
+            setFocusParts(new String[0]);
+            return;
+        }
+        FocusEffect[] effects = pack.getFocusEffects();
+        String[] keys = new String[effects.length];
+        for (int i = 0; i < effects.length; i++) {
+            keys[i] = effects[i].getKey();
+        }
+        setFocusParts(keys);
     }
     
     public boolean isArmed() {
@@ -142,11 +178,10 @@ public class EntityFocusMine extends ThrowableProjectile {
     }
     
     /**
-     * Render particles on the client when armed.
+     * Render particles on the client when armed (TC4 EntityFocusMine.onUpdate).
      */
     private void renderMineParticles() {
-        // TODO: Implement particle rendering
-        // Original called effect.renderParticleFX
+        FocusFX.mineParticles(level(), getFocusParts(), getX(), getY(), getZ());
     }
     
     /**
@@ -255,6 +290,7 @@ public class EntityFocusMine extends ThrowableProjectile {
     
     public void setFocusPackage(FocusPackage pack) {
         this.focusPackage = pack;
+        setPartsFromPackage(pack);
     }
     
     public boolean isTargetingFriendly() {

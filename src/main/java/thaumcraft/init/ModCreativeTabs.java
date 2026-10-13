@@ -409,6 +409,7 @@ public class ModCreativeTabs {
 
                         // === Special Armor ===
                         output.accept(ModItems.TRAVELLER_BOOTS.get());
+                        output.accept(ModItems.HOVER_HARNESS.get());
 
                         // === Fortress Armor ===
                         output.accept(ModItems.FORTRESS_HELM.get());
@@ -442,6 +443,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.AMULET_VIS_FOUND.get());
                         output.accept(ModItems.AMULET_VIS_CRAFTED.get());
                         output.accept(ModItems.CLOUD_RING.get());
+                        output.accept(ModItems.GIRDLE_HOVER.get());
                         // TC6-removed: output.accept(ModItems.CURIOSITY_BAND.get());
                         // TC6-removed: charm_undying / verdant_charm* / voidseer_charm (no TC4 charms)
 

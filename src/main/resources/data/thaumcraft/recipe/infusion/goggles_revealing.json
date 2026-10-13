@@ -1,30 +1,30 @@
 {
   "type": "thaumcraft:infusion",
   "research": "HELMGOGGLES",
-  "instability": 2,
+  "instability": 5,
+  "apply_to_input": true,
   "input": {
-    "item": "thaumcraft:goggles"
+    "item": "thaumcraft:fortress_helm"
   },
   "ingredients": [
     {
-      "item": "thaumcraft:thaumometer"
+      "item": "minecraft:slime_ball"
     },
     {
-      "tag": "c:gems/diamond"
-    },
-    {
-      "item": "thaumcraft:salis_mundus"
-    },
-    {
-      "tag": "c:gems/diamond"
+      "item": "thaumcraft:goggles"
     }
   ],
   "aspects": {
-    "praecantatio": 20,
-    "sensus": 30,
-    "auram": 15
+    "sensus": 32,
+    "auram": 16,
+    "tutamen": 16
   },
   "result": {
-    "id": "thaumcraft:goggles"
+    "id": "thaumcraft:fortress_helm",
+    "components": {
+      "minecraft:custom_data": {
+        "goggles": true
+      }
+    }
   }
 }

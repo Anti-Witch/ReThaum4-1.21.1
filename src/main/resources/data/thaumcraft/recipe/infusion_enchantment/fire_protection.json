@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:fire_protection",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 1,
+  "aspects": {
+    "praecantatio": 4,
+    "tutamen": 4,
+    "ignis": 4
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

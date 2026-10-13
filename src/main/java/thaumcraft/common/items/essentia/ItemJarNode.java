@@ -1,89 +1,76 @@
 package thaumcraft.common.items.essentia;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.core.BlockPos;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.component.CustomData;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.block.Block;
+import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.aspects.IEssentiaContainerItem;
 import thaumcraft.api.nodes.NodeModifier;
 import thaumcraft.api.nodes.NodeType;
 
 import java.util.List;
 
 /**
- * ItemJarNode - The "Node in a Jar" item.
- * Contains a captured aura node that can be placed back into the world.
- * Right-click with wand on node -> captures node into jar (if player has empty jar).
- * Right-click with jar on block -> places jar with node inside.
+ * ItemJarNode - The "Node in a Jar" item (TC4 ItemJarNode).
+ *
+ * Carries a captured aura node in its NBT: the aspects (vis), the node type,
+ * the node modifier and the node id (TC4 keys: "Aspects", "nodetype",
+ * "nodemod", "nodeid"). Placing it creates a {@link thaumcraft.common.tiles.TileJarNode}
+ * via BlockJar; breaking that jar returns this item with the same data.
  */
-public class ItemJarNode extends BlockItem {
+public class ItemJarNode extends BlockItem implements IEssentiaContainerItem {
 
     public ItemJarNode(Block block, Properties properties) {
         super(block, properties.stacksTo(1).rarity(net.minecraft.world.item.Rarity.UNCOMMON));
     }
 
     @Override
-    public InteractionResult place(BlockPlaceContext context) {
-        Level level = context.getLevel();
-        Player player = context.getPlayer();
-        ItemStack stack = context.getItemInHand();
-        BlockPos pos = context.getClickedPos();
-
-        if (!level.isClientSide && stack.has(net.minecraft.core.component.DataComponents.CUSTOM_DATA)) {
-            // Will be handled by onPlace in Block
-        }
-        return super.place(context);
+    public String getDescriptionId() {
+        return "item.thaumcraft.jar_node";
     }
+
+    // ==================== Display ====================
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
-
-        if (stack.has(net.minecraft.core.component.DataComponents.CUSTOM_DATA)) {
-            CompoundTag tag = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-
-            // Node type
-            if (tag.contains("nodetype")) {
-                NodeType type = NodeType.values()[tag.getInt("nodetype")];
-                tooltip.add(Component.translatable("nodetype." + type.name().toLowerCase() + ".name")
-                        .withStyle(ChatFormatting.BLUE));
+        // TC4 ItemJarNode.addInformation: "§9<node type>[, <modifier>]" plus aspects
+        NodeType type = getNodeType(stack);
+        if (type != null) {
+            MutableComponent desc = Component.translatable("nodetype." + type.name() + ".name")
+                    .withStyle(ChatFormatting.BLUE);
+            NodeModifier mod = getNodeModifier(stack);
+            if (mod != null) {
+                desc.append(", ").append(Component.translatable("nodemod." + mod.name() + ".name"));
             }
+            tooltip.add(desc);
+        }
 
-            // Node modifier
-            if (tag.contains("nodemod")) {
-                NodeModifier mod = NodeModifier.values()[tag.getInt("nodemod")];
-                tooltip.add(Component.translatable("nodemod." + mod.name().toLowerCase() + ".name")
-                        .withStyle(ChatFormatting.GREEN));
-            }
-
-            // Aspects
-            AspectList aspects = getAspects(stack);
-            if (aspects != null && aspects.size() > 0) {
-                tooltip.add(Component.literal("Aspects:").withStyle(ChatFormatting.GRAY));
-                for (var aspect : aspects.getAspects()) {
-                    int amount = aspects.getAmount(aspect);
-                    tooltip.add(Component.literal("  " + aspect.getName() + ": " + amount)
-                            .withStyle(net.minecraft.ChatFormatting.WHITE));
+        AspectList aspects = getAspects(stack);
+        if (aspects != null) {
+            for (Aspect aspect : aspects.getAspectsSorted()) {
+                if (aspect != null) {
+                    tooltip.add(Component.literal(aspect.getName() + " x " + aspects.getAmount(aspect))
+                            .withStyle(style -> style.withColor(aspect.getColor())));
                 }
             }
         }
+
+        super.appendHoverText(stack, context, tooltip, flag);
     }
 
-    /**
-     * Get the aspects stored in this jar.
-     */
+    // ==================== IEssentiaContainerItem (aspects stored in NBT) ====================
+
+    @Override
     public AspectList getAspects(ItemStack itemstack) {
-        if (itemstack.has(net.minecraft.core.component.DataComponents.CUSTOM_DATA)) {
+        if (itemstack.has(DataComponents.CUSTOM_DATA)) {
             AspectList aspects = new AspectList();
             aspects.readFromNBT(itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag());
             return aspects.size() > 0 ? aspects : null;
@@ -91,46 +78,64 @@ public class ItemJarNode extends BlockItem {
         return null;
     }
 
-    /**
-     * Set the aspects in this jar. NOTE: the NBT has to be written back onto the
-     * item - writing into a copied tag silently discards the data.
-     */
+    @Override
     public void setAspects(ItemStack itemstack, AspectList aspects) {
         CompoundTag tag = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
         aspects.writeToNBT(tag);
         itemstack.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
     }
 
+    @Override
+    public boolean ignoreContainedAspects() {
+        return false;
+    }
+
+    // ==================== Node attributes ====================
+
     /**
-     * Set node attributes (type, modifier, id).
+     * Set node attributes (type, modifier, id). TC4 keys: nodetype/nodemod/nodeid.
      */
     public void setNodeAttributes(ItemStack itemstack, NodeType type, NodeModifier mod, String id) {
         CompoundTag tag = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-        tag.putInt("nodetype", type.ordinal());
+        tag.putInt("nodetype", type == null ? NodeType.NORMAL.ordinal() : type.ordinal());
         if (mod != null) {
             tag.putInt("nodemod", mod.ordinal());
+        } else {
+            tag.remove("nodemod");
         }
-        tag.putString("nodeid", id);
+        tag.putString("nodeid", id == null ? "" : id);
         itemstack.set(DataComponents.CUSTOM_DATA, CustomData.of(tag));
     }
 
     public NodeType getNodeType(ItemStack itemstack) {
-        if (!itemstack.has(DataComponents.CUSTOM_DATA)) return null;
-        if (!itemstack.has(DataComponents.CUSTOM_DATA)) return null;
-        CompoundTag tag = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-        return tag.contains("nodetype") ? NodeType.values()[tag.getInt("nodetype")] : null;
+        CompoundTag tag = getCustomTag(itemstack);
+        if (tag == null || !tag.contains("nodetype")) {
+            return null;
+        }
+        NodeType[] types = NodeType.values();
+        int ordinal = tag.getInt("nodetype");
+        return ordinal >= 0 && ordinal < types.length ? types[ordinal] : null;
     }
 
     public NodeModifier getNodeModifier(ItemStack itemstack) {
-        if (!itemstack.has(DataComponents.CUSTOM_DATA)) return null;
-        if (!itemstack.has(DataComponents.CUSTOM_DATA)) return null;
-        CompoundTag tag = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-        return tag.contains("nodemod") ? NodeModifier.values()[tag.getInt("nodemod")] : null;
+        CompoundTag tag = getCustomTag(itemstack);
+        if (tag == null || !tag.contains("nodemod")) {
+            return null;
+        }
+        NodeModifier[] modifiers = NodeModifier.values();
+        int ordinal = tag.getInt("nodemod");
+        return ordinal >= 0 && ordinal < modifiers.length ? modifiers[ordinal] : null;
     }
 
     public String getNodeId(ItemStack itemstack) {
-        if (!itemstack.has(DataComponents.CUSTOM_DATA)) return "0";
-        CompoundTag tag = itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-        return tag.getString("nodeid");
+        CompoundTag tag = getCustomTag(itemstack);
+        return tag == null ? "" : tag.getString("nodeid");
+    }
+
+    private static CompoundTag getCustomTag(ItemStack itemstack) {
+        if (itemstack == null || !itemstack.has(DataComponents.CUSTOM_DATA)) {
+            return null;
+        }
+        return itemstack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
     }
 }

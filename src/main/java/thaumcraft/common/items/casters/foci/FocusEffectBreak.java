@@ -19,6 +19,9 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXFocusPartImpact;
 import thaumcraft.common.lib.utils.TCCompat;
 
 import javax.annotation.Nullable;
@@ -64,10 +67,13 @@ public class FocusEffectBreak extends FocusEffect {
         Level world = getPackage().world;
         BlockPos pos = blockHit.getBlockPos();
         BlockState state = world.getBlockState(pos);
-        
-        // TODO: Send particle effect packet
-        // PacketHandler.sendToAllAround(new PacketFXFocusPartImpact(...))
-        
+
+        // TC4: impact burst at the centre of the broken block
+        PacketHandler.sendToAllAround(
+                new PacketFXFocusPartImpact(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
+                        new String[] { getKey() }),
+                world, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 64.0);
+
         Entity caster = getCaster();
         if (!(caster instanceof ServerPlayer player)) {
             return false;
@@ -170,9 +176,7 @@ public class FocusEffectBreak extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used breaking/entropy particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.breakBlock(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override

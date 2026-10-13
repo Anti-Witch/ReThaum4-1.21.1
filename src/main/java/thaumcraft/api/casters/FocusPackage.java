@@ -126,6 +126,20 @@ public class FocusPackage {
         }
         return effects;
     }
+
+    /**
+     * TC4 {@code FocusPackage.getFocusEffects()}: all effect nodes in this
+     * package as an array (used for cast sounds, FX packets and trail colours).
+     */
+    public FocusEffect[] getFocusEffects() {
+        List<FocusEffect> effects = new ArrayList<>();
+        for (IFocusElement element : nodes) {
+            if (element instanceof FocusEffect effect) {
+                effects.add(effect);
+            }
+        }
+        return effects.toArray(new FocusEffect[0]);
+    }
     
     /**
      * Create a simple focus package with basic settings.

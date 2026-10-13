@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:looting",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 3,
+  "aspects": {
+    "praecantatio": 4,
+    "telum": 4,
+    "lucrum": 8
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_sword"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

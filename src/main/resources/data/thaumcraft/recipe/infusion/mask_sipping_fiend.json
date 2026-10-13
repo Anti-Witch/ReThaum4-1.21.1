@@ -1,0 +1,28 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "MASKSIPPINGFIEND",
+  "instability": 8,
+  "apply_to_input": true,
+  "input": {
+    "item": "thaumcraft:fortress_helm"
+  },
+  "ingredients": [
+    { "item": "minecraft:red_dye" },
+    { "tag": "c:ingots/iron" },
+    { "tag": "c:leathers" },
+    { "item": "minecraft:ghast_tear" },
+    { "item": "minecraft:milk_bucket" },
+    { "tag": "c:ingots/iron" }
+  ],
+  "aspects": {
+    "exanimis": 64,
+    "victus": 64,
+    "tutamen": 16
+  },
+  "result": {
+    "id": "thaumcraft:fortress_helm",
+    "components": {
+      "minecraft:custom_data": { "mask": 2 }
+    }
+  }
+}

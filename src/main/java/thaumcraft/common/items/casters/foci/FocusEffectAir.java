@@ -15,6 +15,10 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXFocusPartImpact;
+import thaumcraft.init.ModSounds;
 
 import javax.annotation.Nullable;
 
@@ -56,10 +60,12 @@ public class FocusEffectAir extends FocusEffect {
         
         Level world = getPackage().world;
         Vec3 hitPos = target.getLocation();
-        
-        // TODO: Send particle effect packet
-        // PacketHandler.sendToAllAround(new PacketFXFocusPartImpact(...))
-        
+
+        // TC4: spawn the impact burst for every nearby client
+        PacketHandler.sendToAllAround(
+                new PacketFXFocusPartImpact(hitPos.x, hitPos.y, hitPos.z, new String[] { getKey() }),
+                world, hitPos.x, hitPos.y, hitPos.z, 64.0);
+
         // Play wind sound at impact
         world.playSound(null, hitPos.x, hitPos.y, hitPos.z, 
             SoundEvents.ENDER_DRAGON_FLAP, SoundSource.PLAYERS, 0.5f, 0.66f);
@@ -119,17 +125,15 @@ public class FocusEffectAir extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used FXDispatcher.GenPart with wind/air particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.air(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override
     public void onCast(Entity caster) {
         if (caster != null && caster.level() != null) {
-            // TODO: Use custom Thaumcraft wind sound (SoundsTC.wind)
+            // TC4 FocusEffectAir.onCast: SoundsTC.wind
             caster.level().playSound(null, caster.blockPosition().above(), 
-                SoundEvents.ENDER_DRAGON_FLAP, SoundSource.PLAYERS, 
+                ModSounds.WIND.get(), SoundSource.PLAYERS, 
                 0.125f, 2.0f);
         }
     }

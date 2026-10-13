@@ -2,9 +2,12 @@ package thaumcraft.common.tiles.crafting;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -37,8 +40,10 @@ import thaumcraft.api.crafting.IInfusionStabiliserExt;
 import thaumcraft.api.wands.IWandable;
 import thaumcraft.common.blocks.basic.BlockPillarTC;
 import thaumcraft.common.blocks.devices.BlockPedestal;
+import thaumcraft.common.lib.crafting.InfusionEnchantmentRecipe;
 import thaumcraft.common.lib.crafting.InfusionRecipeType;
 import thaumcraft.common.lib.crafting.ThaumcraftCraftingManager;
+import thaumcraft.common.lib.enchantment.InfusionEnchantment;
 import thaumcraft.common.lib.events.EssentiaHandler;
 import thaumcraft.common.lib.network.PacketHandler;
 import thaumcraft.common.lib.network.fx.PacketFXBlockArc;
@@ -183,6 +188,10 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
             tag.putString("RecipeOutputType", "@");
             tag.put("RecipeOutput", outStack.save(registries, new CompoundTag()));
         }
+        if (recipeOutput instanceof Holder<?> outHolder && outHolder.unwrapKey().isPresent()) {
+            tag.putString("RecipeOutputType", "E");
+            tag.putString("RecipeOutputEnchantment", outHolder.unwrapKey().get().location().toString());
+        }
         if (recipePlayer != null) {
             tag.putString("RecipePlayer", recipePlayer);
         }
@@ -208,6 +217,13 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
         String outputType = tag.getString("RecipeOutputType");
         if (outputType.equals("@") && tag.contains("RecipeOutput")) {
             recipeOutput = ItemStack.parseOptional(registries, tag.getCompound("RecipeOutput"));
+        } else if (outputType.equals("E") && tag.contains("RecipeOutputEnchantment")) {
+            ResourceLocation enchId = ResourceLocation.tryParse(tag.getString("RecipeOutputEnchantment"));
+            if (enchId != null) {
+                recipeOutput = registries.lookupOrThrow(Registries.ENCHANTMENT)
+                        .get(ResourceKey.create(Registries.ENCHANTMENT, enchId))
+                        .orElse(null);
+            }
         }
         recipePlayer = tag.getString("RecipePlayer");
         if (recipePlayer.isEmpty()) {
@@ -463,11 +479,48 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
             }
             recipeEssentia = al2;
             recipePlayer = player.getUUID().toString();
+            recipeXP = 0;
             crafting = true;
             
             level.playSound(null, worldPosition, ModSounds.CRAFT_START.get(), SoundSource.BLOCKS, 0.5f, 1.0f);
             syncTile(false);
             setChanged();
+        } else {
+            // TC4: if no normal infusion recipe matches, try the infusion
+            // enchantment recipes (vanilla enchantments applied to the item).
+            InfusionEnchantmentRecipe enchantmentRecipe = ThaumcraftCraftingManager.findMatchingInfusionEnchantmentRecipe(
+                    components, recipeInput, player, level);
+            if (enchantmentRecipe != null) {
+                recipeType = 1;
+                recipeIngredients = new ArrayList<>(components);
+                recipeOutput = enchantmentRecipe.getEnchantment();
+                recipeInstability = enchantmentRecipe.calcInstability(recipeInput);
+
+                // TC4: base essentia cost plus the enchantment modifier
+                AspectList esscost = enchantmentRecipe.getAspects().copy();
+                float essmod = enchantmentRecipe.getEssentiaMod(recipeInput);
+                for (Aspect as : esscost.getAspects()) {
+                    esscost.add(as, (int)(esscost.getAmount(as) * essmod));
+                }
+
+                // The altar cost multiplier (ancient/eldritch pedestals) applies here too
+                AspectList al2 = new AspectList();
+                for (Aspect as : esscost.getAspects()) {
+                    int adjusted = (int)(esscost.getAmount(as) * costMult);
+                    if (adjusted > 0) {
+                        al2.add(as, adjusted);
+                    }
+                }
+                recipeEssentia = al2;
+
+                recipeXP = enchantmentRecipe.calcXP(recipeInput);
+                recipePlayer = player.getUUID().toString();
+                crafting = true;
+
+                level.playSound(null, worldPosition, ModSounds.CRAFT_START.get(), SoundSource.BLOCKS, 0.5f, 1.0f);
+                syncTile(false);
+                setChanged();
+            }
         }
     }
 
@@ -511,6 +564,29 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
         }
 
         if (countDelay < 1) countDelay = 1;
+
+        // TC4: infusion enchantment recipes consume experience from nearby
+        // players before any essentia is drained. The infusion stalls until the
+        // required amount of levels has been paid.
+        if (recipeType == 1 && recipeXP > 0) {
+            if (drainPlayerExperience()) {
+                countDelay = 20;
+                return;
+            }
+            // No player with levels nearby - unstable waiting
+            Aspect[] waiting = recipeEssentia.getAspects();
+            if (waiting != null && waiting.length > 0 && level.random.nextInt(3) == 0) {
+                Aspect as = waiting[level.random.nextInt(waiting.length)];
+                recipeEssentia.add(as, 1);
+                stability -= 0.25f;
+                syncTile(false);
+                setChanged();
+            }
+            return;
+        }
+        if (recipeType == 1) {
+            countDelay = 10;
+        }
 
         // Draw essentia
         if (recipeEssentia.visSize() > 0) {
@@ -581,10 +657,40 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
         setChanged();
     }
 
+    /**
+     * TC4: infusion enchantment recipes draw experience levels from players
+     * standing within 10 blocks of the altar. One level is consumed per call.
+     *
+     * @return true if a level was consumed
+     */
+    private boolean drainPlayerExperience() {
+        List<Player> targets = level.getEntitiesOfClass(Player.class,
+                new AABB(worldPosition).inflate(10.0));
+        for (Player target : targets) {
+            if (target.experienceLevel > 0) {
+                target.giveExperienceLevels(-1);
+                recipeXP--;
+                target.hurt(level.damageSources().magic(), level.random.nextInt(2));
+
+                if (level instanceof net.minecraft.server.level.ServerLevel serverLevel) {
+                    PacketHandler.sendToAllTrackingChunk(
+                            new PacketFXInfusionSource(worldPosition, worldPosition, target.getId()),
+                            serverLevel, worldPosition);
+                }
+                level.playSound(null, target.getX(), target.getY(), target.getZ(),
+                        SoundEvents.FIRE_EXTINGUISH, SoundSource.PLAYERS, 1.0f, 2.0f + level.random.nextFloat() * 0.4f);
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void cancelCrafting() {
         crafting = false;
         recipeEssentia = new AspectList();
         recipeInstability = 0;
+        recipeXP = 0;
+        recipeType = 0;
         level.playSound(null, worldPosition, ModSounds.CRAFT_FAIL.get(), SoundSource.BLOCKS, 1.0f, 0.6f);
         syncTile(false);
     }
@@ -631,6 +737,16 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
                 }
                 
                 pedestal.setItemFromInfusion(qs);
+            } else if (recipeOutput instanceof Holder<?> outHolder && outHolder.value() instanceof Enchantment) {
+                // Infusion enchantment recipe: add one level of the enchantment
+                // to the item that is sitting on the central pedestal.
+                @SuppressWarnings("unchecked")
+                Holder<Enchantment> enchHolder = (Holder<Enchantment>) outHolder;
+                ItemStack temp = pedestal.getItem(0);
+                InfusionEnchantment.addLevel(temp, enchHolder);
+                pedestal.setChanged();
+                syncTile(false);
+                te.setChanged();
             } else if (recipeOutput instanceof Enchantment ench) {
                 ItemStack temp = pedestal.getItem(0);
                 Holder<Enchantment> enchHolder = TCCompat.enchantment(this.getLevel(), ench);
@@ -652,6 +768,8 @@ public class TileInfusionMatrix extends TileThaumcraft implements IAspectContain
             
             recipeEssentia = new AspectList();
             recipeInstability = 0;
+            recipeXP = 0;
+            recipeType = 0;
             syncTile(false);
             setChanged();
             

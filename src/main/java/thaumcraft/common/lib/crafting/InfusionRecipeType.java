@@ -5,11 +5,14 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeInput;
@@ -51,10 +54,25 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
     private final ItemStack result;
     private final String research;
     private final int instability;
+    /**
+     * TC4 infusion recipes could return an Object[] {"tag", value} which applied
+     * the NBT to the central item instead of producing a brand new stack (used
+     * by the fortress helm upgrades: goggles and the three faceplates).
+     * When true, the output is the input stack with the result's custom data
+     * merged into it (so damage and other upgrades such as goggles/masks are
+     * preserved).
+     */
+    private final boolean applyToInput;
 
     public InfusionRecipeType(ResourceLocation id, String group, Ingredient centralItem,
                               NonNullList<Ingredient> components, AspectList aspects,
                               ItemStack result, String research, int instability) {
+        this(id, group, centralItem, components, aspects, result, research, instability, false);
+    }
+
+    public InfusionRecipeType(ResourceLocation id, String group, Ingredient centralItem,
+                              NonNullList<Ingredient> components, AspectList aspects,
+                              ItemStack result, String research, int instability, boolean applyToInput) {
         this.id = id;
         this.group = group;
         this.centralItem = centralItem;
@@ -63,6 +81,7 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
         this.result = result;
         this.research = research;
         this.instability = instability;
+        this.applyToInput = applyToInput;
     }
 
     /**
@@ -174,7 +193,19 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
      * Override this in subclasses for recipes that modify the output based on input properties.
      */
     public ItemStack getRecipeOutput(Player player, ItemStack input, List<ItemStack> pedestalItems) {
-        return result.copy();
+        if (!applyToInput) {
+            return result.copy();
+        }
+        // TC4 Object[]{"tag", value} outputs: keep the central stack (damage,
+        // existing goggles/mask upgrades) and merge the recipe's custom data in.
+        ItemStack out = input.copy();
+        CustomData resultData = result.get(DataComponents.CUSTOM_DATA);
+        if (resultData != null) {
+            CompoundTag merged = out.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
+            merged.merge(resultData.copyTag());
+            out.set(DataComponents.CUSTOM_DATA, CustomData.of(merged));
+        }
+        return out;
     }
 
     /**
@@ -236,10 +267,11 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
                                 Ingredient.CODEC.optionalFieldOf("input", Ingredient.EMPTY).forGetter(r -> r.centralItem),
                                 COMPONENTS_CODEC.optionalFieldOf("ingredients", NonNullList.create()).forGetter(r -> r.components),
                                 ASPECT_LIST_CODEC.optionalFieldOf("aspects", new AspectList()).forGetter(r -> r.aspects),
-                                ItemStack.STRICT_CODEC.fieldOf("result").forGetter(r -> r.result)
+                                ItemStack.STRICT_CODEC.fieldOf("result").forGetter(r -> r.result),
+                                Codec.BOOL.optionalFieldOf("apply_to_input", false).forGetter(r -> r.applyToInput)
                         )
-                        .apply(inst, (group, research, instability, centralItem, components, aspects, result) ->
-                                new InfusionRecipeType(null, group, centralItem, components, aspects, result, research, instability))
+                        .apply(inst, (group, research, instability, centralItem, components, aspects, result, applyToInput) ->
+                                new InfusionRecipeType(null, group, centralItem, components, aspects, result, research, instability, applyToInput))
         );
 
         public static final StreamCodec<RegistryFriendlyByteBuf, InfusionRecipeType> STREAM_CODEC =
@@ -275,6 +307,7 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
             }
 
             ItemStack.STREAM_CODEC.encode(buffer, recipe.result);
+            buffer.writeBoolean(recipe.applyToInput);
         }
 
         public static InfusionRecipeType fromNetwork(RegistryFriendlyByteBuf buffer) {
@@ -302,8 +335,9 @@ public class InfusionRecipeType implements Recipe<RecipeInput>, IThaumcraftRecip
             }
 
             ItemStack result = ItemStack.STREAM_CODEC.decode(buffer);
+            boolean applyToInput = buffer.readBoolean();
 
-            return new InfusionRecipeType(null, group, centralItem, components, aspects, result, research, instability);
+            return new InfusionRecipeType(null, group, centralItem, components, aspects, result, research, instability, applyToInput);
         }
     }
 }

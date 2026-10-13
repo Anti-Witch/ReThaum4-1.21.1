@@ -1,0 +1,22 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:bane_of_arthropods",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 2,
+  "aspects": {
+    "praecantatio": 4,
+    "telum": 4,
+    "bestia": 4
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_sword"
+    },
+    {
+      "item": "thaumcraft:amber"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

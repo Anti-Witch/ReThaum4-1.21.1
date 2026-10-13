@@ -22,6 +22,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+import thaumcraft.api.casters.FocusEffect;
+import thaumcraft.api.casters.FocusEngine;
 import thaumcraft.api.casters.FocusPackage;
 import thaumcraft.init.ModEntities;
 
@@ -43,6 +45,8 @@ public class EntitySpellBat extends Monster implements IEntityWithComplexSpawn {
     public LivingEntity owner;
     private UUID ownerUUID;
     private FocusPackage focusPackage;
+    /** Cached focus effects (client side) for the particle trail. */
+    private FocusEffect[] effects;
     private int attackTime;
     public int damBonus = 0;
     public int color = 0xFFFFFF;
@@ -165,9 +169,29 @@ public class EntitySpellBat extends Monster implements IEntityWithComplexSpawn {
             return;
         }
         
-        // Client-side particle effects
+        // Client-side particle effects (TC4 EntitySpellBat.onUpdate)
         if (level().isClientSide && isAlive() && focusPackage != null) {
-            // TODO: Render focus effect particles
+            if (effects == null) {
+                effects = focusPackage.getFocusEffects();
+                if (effects.length > 0) {
+                    int r = 0, g = 0, b = 0;
+                    for (FocusEffect ef : effects) {
+                        java.awt.Color c = new java.awt.Color(FocusEngine.getElementColor(ef.getKey()));
+                        r += c.getRed();
+                        g += c.getGreen();
+                        b += c.getBlue();
+                    }
+                    color = new java.awt.Color(r / effects.length, g / effects.length, b / effects.length).getRGB();
+                }
+            }
+            if (effects.length > 0) {
+                FocusEffect eff = effects[random.nextInt(effects.length)];
+                eff.renderParticleFX(level(),
+                        getX() + random.nextGaussian() * 0.125,
+                        getY() + getBbHeight() / 2.0f + random.nextGaussian() * 0.125,
+                        getZ() + random.nextGaussian() * 0.125,
+                        0.0, 0.0, 0.0);
+            }
         }
     }
     

@@ -21,9 +21,13 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import thaumcraft.common.items.essentia.ItemJarNode;
+import thaumcraft.common.tiles.TileJarNode;
 import thaumcraft.common.tiles.essentia.TileJar;
 import thaumcraft.common.tiles.essentia.TileJarBrain;
 import thaumcraft.common.tiles.essentia.TileJarVoid;
@@ -32,13 +36,16 @@ import thaumcraft.init.ModItems;
 import thaumcraft.init.ModSounds;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Warded jars for storing essentia.
- * Different variants:
+ * Different variants (TC4 uses block metadata, the port uses one block per variant):
  * - Normal jar: Standard essentia storage (250 capacity)
  * - Void jar: Destroys excess essentia when full
  * - Brain jar: Stores XP orbs
+ * - Node jar: A jar with an aura node trapped inside (TC4 metadata 2)
  */
 public class BlockJar extends Block implements EntityBlock {
 
@@ -47,7 +54,8 @@ public class BlockJar extends Block implements EntityBlock {
     public enum JarType {
         NORMAL(250),
         VOID(250),
-        BRAIN(0); // Brain jar stores XP, not essentia
+        BRAIN(0), // Brain jar stores XP, not essentia
+        NODE(0);  // Node jar stores a frozen aura node, not essentia
 
         private final int capacity;
 
@@ -63,12 +71,21 @@ public class BlockJar extends Block implements EntityBlock {
     private final JarType jarType;
 
     public BlockJar(JarType type) {
-        super(BlockBehaviour.Properties.of()
+        super(createProperties(type));
+        this.jarType = type;
+    }
+
+    private static BlockBehaviour.Properties createProperties(JarType type) {
+        BlockBehaviour.Properties properties = BlockBehaviour.Properties.of()
                 .mapColor(MapColor.NONE)
                 .strength(0.3f)
                 .sound(SoundType.GLASS)
-                .noOcclusion());
-        this.jarType = type;
+                .noOcclusion();
+        if (type == JarType.NODE) {
+            // TC4 BlockJar.getLightValue: metadata 2 (node jar) emits light 11
+            properties.lightLevel(state -> 11);
+        }
+        return properties;
     }
 
     public JarType getJarType() {
@@ -83,6 +100,12 @@ public class BlockJar extends Block implements EntityBlock {
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
+
+        // Node jar: the trapped node is frozen, TC4 BlockJar.onBlockActivated only
+        // handles TileJarFillable/TileJarBrain and otherwise just consumes the click.
+        if (blockEntity instanceof TileJarNode) {
+            return InteractionResult.SUCCESS;
+        }
 
         // Brain jar: right-clicking ejects a random amount of the stored XP (TC4)
         if (blockEntity instanceof TileJarBrain brain) {
@@ -149,8 +172,22 @@ public class BlockJar extends Block implements EntityBlock {
     @Override
     public void setPlacedBy(Level level, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
+        if (level.isClientSide) {
+            return;
+        }
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+
+        // Node jar: restore the trapped node from the item (TC4 ItemJarNode.onItemUse)
+        if (blockEntity instanceof TileJarNode node) {
+            if (stack.getItem() instanceof ItemJarNode item) {
+                node.applyFromItem(item, stack);
+            }
+            return;
+        }
+
         // TC4 BlockJar.onBlockPlacedBy: the label side faces the player who placed the jar
-        if (!level.isClientSide && placer != null && level.getBlockEntity(pos) instanceof TileJar jar) {
+        if (blockEntity instanceof TileJar jar && placer != null) {
             jar.setFacing(placer.getDirection().getOpposite().ordinal());
         }
     }
@@ -168,6 +205,23 @@ public class BlockJar extends Block implements EntityBlock {
         super.onRemove(state, level, pos, newState, isMoving);
     }
 
+    /**
+     * TC4 BlockJar.getDrops for metadata 2: a jar containing a node drops the
+     * "node in a jar" item carrying the node's aspects/type/modifier/id. All the
+     * other variants fall through to the normal loot table.
+     */
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootParams.Builder params) {
+        if (jarType == JarType.NODE) {
+            List<ItemStack> drops = new ArrayList<>();
+            if (params.getOptionalParameter(LootContextParams.BLOCK_ENTITY) instanceof TileJarNode node && node.drop) {
+                drops.add(node.createItemStack());
+            }
+            return drops;
+        }
+        return super.getDrops(state, params);
+    }
+
     @Override
     public boolean hasAnalogOutputSignal(BlockState state) {
         return true;
@@ -176,6 +230,10 @@ public class BlockJar extends Block implements EntityBlock {
     @Override
     public int getAnalogOutputSignal(BlockState state, Level level, BlockPos pos) {
         BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (blockEntity instanceof TileJarNode) {
+            // TC4: a node jar is not a TileJarFillable, so it has no comparator output
+            return 0;
+        }
         if (blockEntity instanceof TileJarBrain brain) {
             return brain.getComparatorOutput();
         }
@@ -192,6 +250,7 @@ public class BlockJar extends Block implements EntityBlock {
         return switch (jarType) {
             case BRAIN -> new TileJarBrain(pos, state);
             case VOID -> new TileJarVoid(pos, state);
+            case NODE -> new TileJarNode(pos, state);
             default -> new TileJar(pos, state);
         };
     }
@@ -199,10 +258,11 @@ public class BlockJar extends Block implements EntityBlock {
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide && jarType != JarType.BRAIN) {
+        // TC4: the node trapped inside the jar is frozen and never ticks
+        if (jarType == JarType.NODE || (level.isClientSide && jarType != JarType.BRAIN)) {
             return null;
         }
-        
+
         return switch (jarType) {
             case BRAIN -> {
                 if (type == ModBlockEntities.JAR_BRAIN.get()) {
@@ -216,7 +276,7 @@ public class BlockJar extends Block implements EntityBlock {
             }
             case VOID -> type == ModBlockEntities.JAR_VOID.get() ?
                     (lvl, pos, st, te) -> TileJarVoid.serverTick(lvl, pos, st, (TileJarVoid) te) : null;
-            default -> type == ModBlockEntities.JAR.get() ? 
+            default -> type == ModBlockEntities.JAR.get() ?
                     (lvl, pos, st, te) -> TileJar.serverTick(lvl, pos, st, (TileJar) te) : null;
         };
     }
@@ -243,6 +303,15 @@ public class BlockJar extends Block implements EntityBlock {
     }
 
     /**
+     * Create a jar holding a trapped aura node (TC4 blockJar metadata 2).
+     * The block is not registered with a plain BlockItem: the "node in a jar"
+     * item (ItemJarNode) is registered separately in ModItems.
+     */
+    public static BlockJar createNodeJar() {
+        return new BlockJar(JarType.NODE);
+    }
+
+    /**
      * Split an XP amount into orb-sized chunks (vanilla ExperienceOrb#getXPSplit
      * was removed in 1.21, so the classic thresholds are reproduced here).
      */
@@ -260,7 +329,3 @@ public class BlockJar extends Block implements EntityBlock {
         return 1;
     }
 }
-
-
-
-

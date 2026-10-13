@@ -1,0 +1,19 @@
+{
+  "type": "thaumcraft:infusion_enchantment",
+  "enchantment": "minecraft:respiration",
+  "research": "INFUSIONENCHANTMENT",
+  "instability": 2,
+  "aspects": {
+    "praecantatio": 4,
+    "aer": 8,
+    "aqua": 8
+  },
+  "components": [
+    {
+      "item": "minecraft:sugar_cane"
+    },
+    {
+      "item": "thaumcraft:salis_mundus"
+    }
+  ]
+}

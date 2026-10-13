@@ -11,10 +11,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.phys.Vec3;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXFocusPartImpact;
 
 import javax.annotation.Nullable;
 
@@ -56,10 +60,13 @@ public class FocusEffectFire extends FocusEffect {
         }
         
         Level world = getPackage().world;
-        
-        // TODO: Send particle effect packet
-        // PacketHandler.sendToAllAround(new PacketFXFocusPartImpact(...))
-        
+
+        // TC4: impact particle burst
+        Vec3 hitPos = target.getLocation();
+        PacketHandler.sendToAllAround(
+                new PacketFXFocusPartImpact(hitPos.x, hitPos.y, hitPos.z, new String[] { getKey() }),
+                world, hitPos.x, hitPos.y, hitPos.z, 64.0);
+
         if (target.getType() == HitResult.Type.ENTITY && target instanceof EntityHitResult entityHit) {
             Entity hitEntity = entityHit.getEntity();
             
@@ -119,9 +126,7 @@ public class FocusEffectFire extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used FXDispatcher.GenPart with fire particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.fire(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override

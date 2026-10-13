@@ -3,6 +3,7 @@
   "values": [
     "thaumcraft:jar_normal",
     "thaumcraft:jar_void",
-    "thaumcraft:jar_brain"
+    "thaumcraft:jar_brain",
+    "thaumcraft:jar_node"
   ]
 }

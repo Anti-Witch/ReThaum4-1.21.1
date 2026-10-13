@@ -19,6 +19,7 @@ import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusEffect;
 import thaumcraft.api.casters.NodeSetting;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.client.fx.FocusFX;
 import thaumcraft.common.lib.utils.TCCompat;
 
 import javax.annotation.Nullable;
@@ -161,9 +162,7 @@ public class FocusEffectExchange extends FocusEffect {
     @Override
     public void renderParticleFX(Level level, double posX, double posY, double posZ,
                                   double motionX, double motionY, double motionZ) {
-        // TODO: Implement particle effects
-        // Original used exchange/swap particles
-        // For now, this is a placeholder - will need client-side particle system
+        FocusFX.exchange(level, posX, posY, posZ, motionX, motionY, motionZ);
     }
 
     @Override

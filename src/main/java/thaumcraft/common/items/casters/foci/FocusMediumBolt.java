@@ -10,7 +10,12 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.api.casters.FocusEffect;
+import thaumcraft.api.casters.FocusEngine;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXZap;
 
+import java.awt.Color;
 import java.util.Optional;
 import java.util.function.Predicate;
 
@@ -73,11 +78,11 @@ public class FocusMediumBolt extends FocusMediumTouch {
             end = start.add(direction.scale(start.distanceTo(entityHit.getEntity().position())));
         }
         
-        // TODO: Send visual zap effect packet
-        // Calculate color based on focus effects
-        // int color = calculateEffectColor();
-        // PacketHandler.sendToAllAround(new PacketFXZap(start, end, color, getPackage().getPower() * 0.66f), ...)
-        
+        // TC4 FocusMediumBolt.execute: lightning zap between source and target
+        PacketHandler.sendToAllAround(
+                new PacketFXZap(start, end, calculateEffectColor(), getPackage().getPower() * 0.66f),
+                getPackage().world, start.x, start.y, start.z, 64.0);
+
         return true;
     }
     
@@ -209,12 +214,23 @@ public class FocusMediumBolt extends FocusMediumTouch {
     }
     
     /**
-     * Calculate a combined color from all focus effects for the zap visual.
-     * TODO: Implement when FocusEngine is available
+     * Calculate a combined color from all focus effects for the zap visual
+     * (TC4 FocusMediumBolt.execute averages the effect colours).
      */
     private int calculateEffectColor() {
-        // Default to blue energy color
-        return 0x5599FF;
+        if (getPackage() == null) return 0x5599FF;
+
+        FocusEffect[] effects = getPackage().getFocusEffects();
+        if (effects.length == 0) return 0x5599FF;
+
+        int r = 0, g = 0, b = 0;
+        for (FocusEffect effect : effects) {
+            Color c = new Color(FocusEngine.getElementColor(effect.getKey()));
+            r += c.getRed();
+            g += c.getGreen();
+            b += c.getBlue();
+        }
+        return new Color(r / effects.length, g / effects.length, b / effects.length).getRGB();
     }
 }
 

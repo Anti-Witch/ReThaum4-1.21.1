@@ -30,6 +30,11 @@ import java.util.List;
  */
 public class ItemFortressArmor extends ArmorItem implements IGoggles, IRevealer {
     
+    /** TC4 counted helmet, chestplate and leggings (no fortress boots). */
+    private static final EquipmentSlot[] FORTRESS_SLOTS = {
+            EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS
+    };
+    
     public ItemFortressArmor(Type type) {
         super(ThaumcraftMaterials.ARMORMAT_FORTRESS, type, 
                 new Item.Properties()
@@ -72,7 +77,7 @@ public class ItemFortressArmor extends ArmorItem implements IGoggles, IRevealer 
         // Show mask variant
         if (hasMask(stack)) {
             int maskType = getMaskType(stack);
-            tooltip.add(Component.translatable("item.thaumcraft.fortress_helm.mask." + maskType)
+            tooltip.add(Component.translatable("item.fortress_helm.mask." + maskType)
                     .withStyle(ChatFormatting.GOLD));
         }
         
@@ -147,10 +152,13 @@ public class ItemFortressArmor extends ArmorItem implements IGoggles, IRevealer 
     
     /**
      * Count how many fortress armor pieces the player is wearing.
+     * TC4 counted the helmet, chestplate and leggings (there is no fortress
+     * boot), i.e. 3 pieces maximum.
      */
     public static int countFortressPieces(Player player) {
         int count = 0;
-        for (ItemStack armor : player.getArmorSlots()) {
+        for (EquipmentSlot slot : FORTRESS_SLOTS) {
+            ItemStack armor = player.getItemBySlot(slot);
             if (!armor.isEmpty() && armor.getItem() instanceof ItemFortressArmor) {
                 count++;
             }
@@ -159,15 +167,29 @@ public class ItemFortressArmor extends ArmorItem implements IGoggles, IRevealer 
     }
     
     /**
-     * Calculate bonus armor from wearing multiple fortress pieces.
-     * Wearing 2+ pieces grants bonus armor.
+     * TC4 ISpecialArmor set bonus (ItemFortressArmor.getProperties):
+     * {@code set = 0.875 + 0.125 per worn fortress piece + 0.05 per masked piece}.
+     * The resulting factor multiplies the damage absorption ratio of every
+     * fortress piece, so each additional piece protects the others.
+     *
+     * A full set (helm, chest, legs + a faceplate) therefore has a factor of
+     * 1.30: normal damage is absorbed at (3+8+6)/25 * 1.3 = 88%, magic at
+     * 17/35 * 1.3 = 63% and fire/explosions at 17/20 * 1.3 = 110% (i.e. the
+     * full set effectively grants fire immunity while the armor lasts, exactly
+     * like TC4).
      */
-    public static int getSetBonus(Player player) {
-        int pieces = countFortressPieces(player);
-        if (pieces >= 2) {
-            return pieces - 1; // +1 armor per piece after the first
+    public static double getSetBonus(Player player) {
+        double set = 0.875D;
+        for (EquipmentSlot slot : FORTRESS_SLOTS) {
+            ItemStack piece = player.getItemBySlot(slot);
+            if (!piece.isEmpty() && piece.getItem() instanceof ItemFortressArmor) {
+                set += 0.125D;
+                if (hasMask(piece)) {
+                    set += 0.05D;
+                }
+            }
         }
-        return 0;
+        return set;
     }
 }
 

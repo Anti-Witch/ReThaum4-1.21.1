@@ -6,7 +6,10 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Monster;
@@ -37,6 +40,7 @@ import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.capabilities.IPlayerKnowledge;
 import thaumcraft.api.capabilities.ThaumcraftCapabilities;
+import thaumcraft.common.items.armor.ItemFortressArmor;
 import thaumcraft.init.ModBlocks;
 import thaumcraft.init.ModItems;
 
@@ -113,7 +117,7 @@ public class EntityEvents {
         // Attacker-related effects
         Entity attacker = source.getEntity();
         if (attacker instanceof Player attackingPlayer) {
-            handlePlayerAttack(attackingPlayer, event.getEntity(), event.getAmount());
+            handlePlayerAttack(attackingPlayer, event.getEntity(), event.getAmount(), source);
         }
     }
 
@@ -156,8 +160,16 @@ public class EntityEvents {
             }
         }
         
-        // Fortress armor wither mask effect
-        // TODO: Check for fortress armor with wither mask
+        // Angry Ghost faceplate (TC4 EventHandlerRunic.entityHurt):
+        // when struck in melee the attacker has a damage/10 chance to wither
+        ItemStack helm = player.getItemBySlot(EquipmentSlot.HEAD);
+        if (helm.getItem() instanceof ItemFortressArmor && ItemFortressArmor.getMaskType(helm) == 1) {
+            Entity directAttacker = source.getDirectEntity();
+            if (directAttacker instanceof LivingEntity livingAttacker
+                    && player.getRandom().nextFloat() < amount / 10.0F) {
+                livingAttacker.addEffect(new MobEffectInstance(MobEffects.WITHER, 80), player);
+            }
+        }
         
         // Runic shield effect visuals
         float absorption = player.getAbsorptionAmount();
@@ -169,9 +181,16 @@ public class EntityEvents {
     /**
      * Handle player attacking - fortress armor life leech.
      */
-    private static void handlePlayerAttack(Player player, LivingEntity target, float damage) {
-        // Fortress armor life leech mask
-        // TODO: Check for fortress helm with leech mask and heal player
+    private static void handlePlayerAttack(Player player, LivingEntity target, float damage, DamageSource source) {
+        if (player.level().isClientSide) return;
+        // Sipping Fiend faceplate (TC4 EventHandlerRunic.entityHurt):
+        // direct melee hits have a damage/12 chance to steal 1 HP
+        ItemStack helm = player.getItemBySlot(EquipmentSlot.HEAD);
+        if (helm.getItem() instanceof ItemFortressArmor && ItemFortressArmor.getMaskType(helm) == 2
+                && source.getDirectEntity() == player
+                && player.getRandom().nextFloat() < damage / 12.0F) {
+            player.heal(1.0F);
+        }
     }
 
     /**

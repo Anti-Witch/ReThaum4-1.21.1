@@ -36,10 +36,12 @@ public class KeyHandler {
     // Key mappings
     public static KeyMapping keyF;
     public static KeyMapping keyG;
+    public static KeyMapping keyH;
     
     // State tracking
     private static boolean keyPressedF = false;
     private static boolean keyPressedG = false;
+    private static boolean keyPressedH = false;
     
     // Radial menu state
     public static boolean radialActive = false;
@@ -48,6 +50,7 @@ public class KeyHandler {
     // Timestamps for key presses (for detecting hold vs tap)
     public static long lastPressF = 0L;
     public static long lastPressG = 0L;
+    public static long lastPressH = 0L;
     
     /**
      * Initialize key mappings. Call this during mod construction.
@@ -69,6 +72,14 @@ public class KeyHandler {
                 GLFW.GLFW_KEY_G,
                 KEY_CATEGORY
         );
+
+        // TC4: 'H' toggles the Thaumostatic Harness hover (keyH)
+        keyH = new KeyMapping(
+                "key.thaumcraft.hover",
+                InputConstants.Type.KEYSYM,
+                GLFW.GLFW_KEY_H,
+                KEY_CATEGORY
+        );
     }
     
     /**
@@ -76,11 +87,12 @@ public class KeyHandler {
      * Called during RegisterKeyMappingsEvent (on the mod event bus).
      */
     public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
-        if (keyF == null || keyG == null) {
+        if (keyF == null || keyG == null || keyH == null) {
             init();
         }
         event.register(keyF);
         event.register(keyG);
+        event.register(keyH);
         Thaumcraft.LOGGER.info("Registered Thaumcraft key mappings");
     }
     
@@ -102,6 +114,9 @@ public class KeyHandler {
             if (keyPressedG) {
                 keyPressedG = false;
             }
+            if (keyPressedH) {
+                keyPressedH = false;
+            }
             return;
         }
         
@@ -112,6 +127,9 @@ public class KeyHandler {
         
         // Process G key (misc toggle)
         processKeyG(player);
+        
+        // Process H key (Thaumostatic Harness hover toggle)
+        processKeyH(player);
     }
     
     /**
@@ -210,6 +228,30 @@ public class KeyHandler {
                 lastPressG = System.currentTimeMillis();
             }
             keyPressedG = false;
+        }
+    }
+    
+    /**
+     * Process the H key: toggle the Thaumostatic Harness hover state
+     * (TC4 KeyHandler keyH).
+     */
+    private static void processKeyH(Player player) {
+        if (keyH == null) return;
+        
+        if (keyH.isDown()) {
+            if (!keyPressedH) {
+                lastPressH = System.currentTimeMillis();
+                ItemStack chest = player.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.CHEST);
+                if (chest.getItem() instanceof thaumcraft.common.items.armor.ItemHoverHarness) {
+                    thaumcraft.common.items.armor.Hover.toggleHover(player, chest);
+                }
+            }
+            keyPressedH = true;
+        } else {
+            if (keyPressedH) {
+                lastPressH = System.currentTimeMillis();
+            }
+            keyPressedH = false;
         }
     }
     

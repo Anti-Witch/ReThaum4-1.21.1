@@ -84,10 +84,13 @@ public class WarpEvents {
             
             int eff = player.level().random.nextInt(warp) + gearWarp;
             
-            // Check for Sanity Checker mask (fortress helm with mask=0)
-            // TODO: Implement when armor is ported
-            // ItemStack helm = player.getInventory().armor.get(3);
-            // if (helm.getItem() instanceof ItemFortressArmor...) eff -= 2 + random.nextInt(4);
+            // Grinning Devil faceplate (mask 0): damps the severity of warp events
+            // (TC4 WarpEvents: eff -= 2 + random.nextInt(4))
+            ItemStack helm = player.getItemBySlot(net.minecraft.world.entity.EquipmentSlot.HEAD);
+            if (helm.getItem() instanceof thaumcraft.common.items.armor.ItemFortressArmor
+                    && thaumcraft.common.items.armor.ItemFortressArmor.getMaskType(helm) == 0) {
+                eff -= 2 + player.level().random.nextInt(4);
+            }
             
             // Send warp event packet (visual/audio distortion on client)
             // TODO: PacketHandler.sendTo(new PacketMiscEvent((byte)0), serverPlayer);

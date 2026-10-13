@@ -10,6 +10,9 @@ import net.minecraft.world.phys.Vec3;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.casters.FocusMediumRoot;
 import thaumcraft.api.casters.Trajectory;
+import thaumcraft.api.casters.FocusEffect;
+import thaumcraft.common.lib.network.PacketHandler;
+import thaumcraft.common.lib.network.fx.PacketFXFocusEffect;
 
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -171,8 +174,26 @@ public class FocusMediumTouch extends FocusMediumRoot {
 
     @Override
     public boolean execute(Trajectory trajectory) {
-        // Touch medium doesn't need additional execution - targets are supplied directly
-        // TODO: Send particle effect packets
+        // TC4 FocusMediumTouch.execute: draw a short burst of the focus effect
+        // particles at the caster's hand so every nearby player sees the cast.
+        if (getPackage() != null && getPackage().world != null) {
+            FocusEffect[] effects = getPackage().getFocusEffects();
+            if (effects.length > 0) {
+                String[] keys = new String[effects.length];
+                for (int i = 0; i < effects.length; i++) {
+                    keys[i] = effects[i].getKey();
+                }
+                PacketHandler.sendToAllAround(
+                        new PacketFXFocusEffect(
+                                (float) trajectory.source.x, (float) trajectory.source.y, (float) trajectory.source.z,
+                                (float) trajectory.direction.x / 2.0f,
+                                (float) trajectory.direction.y / 2.0f,
+                                (float) trajectory.direction.z / 2.0f,
+                                keys),
+                        getPackage().world,
+                        trajectory.source.x, trajectory.source.y, trajectory.source.z, 64.0);
+            }
+        }
         return true;
     }
 }

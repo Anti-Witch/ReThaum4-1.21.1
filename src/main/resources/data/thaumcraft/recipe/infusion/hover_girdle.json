@@ -1,0 +1,26 @@
+{
+  "type": "thaumcraft:infusion",
+  "research": "HOVERGIRDLE",
+  "instability": 8,
+  "input": {
+    "item": "minecraft:leather"
+  },
+  "ingredients": [
+    { "item": "thaumcraft:shard_air" },
+    { "item": "minecraft:feather" },
+    { "tag": "c:ingots/gold" },
+    { "item": "thaumcraft:shard_earth" },
+    { "item": "minecraft:feather" },
+    { "tag": "c:ingots/gold" },
+    { "tag": "c:ingots/gold" }
+  ],
+  "aspects": {
+    "volatus": 16,
+    "potentia": 32,
+    "aer": 32,
+    "iter": 16
+  },
+  "result": {
+    "id": "thaumcraft:girdle_hover"
+  }
+}
