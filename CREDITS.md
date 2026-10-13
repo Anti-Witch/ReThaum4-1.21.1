@@ -1,52 +1,61 @@
-# Credits / Права та ліцензії
+# Credits & Licensing
 
-## Оригінальний Thaumcraft 4
+## Original Thaumcraft 4
 
-**Усі права на оригінальний мод належать Azanor** (2013–2015).
-Код, текстури, моделі, звуки, локалізації, назви, концепції та будь-який інший контент
-оригінального Thaumcraft 4 — це власність Azanor. Цей порт не претендує на них
-і не переліцензовує їх.
+**All rights to the original mod belong to Azanor** (2013–2015).
+The code, textures, models, sounds, localisations, names, concepts and any other content of the
+original Thaumcraft 4 are Azanor's property. This port does not claim them and does not relicense
+them.
 
-- Оригінал: https://github.com/Azanor/thaumcraft-beta
+- Original: https://github.com/Azanor/thaumcraft-beta
 - Azanor: https://github.com/Azanor
 
-## На чому зроблено цей порт
+## What this port is built on
 
-1. **OpenTC4** — декомпільований код Thaumcraft 4 (1.7.10), використаний як еталон
-   для звірки механік, а також як джерело оригінальних ассетів.
-   Автор: IgnoreLicensesCN.
+1. **OpenTC4** — decompiled Thaumcraft 4 (1.7.10) source, used as the reference for mechanics and
+   as the source of the original assets.
+   Author: IgnoreLicensesCN.
    https://github.com/IgnoreLicensesCN/OpenTC4
-   Ліцензія: автор залишив вибір ліцензії на користь **MIT**.
+   License: the author chose **MIT**.
 
-2. **Thaumcraft 6 Source Code 1.20.1** — початкова база коду для порту.
-   Автор: Neutronis228.
+2. **Thaumcraft 6 Source Code 1.20.1** — the initial code base for this port.
+   Author: Neutronis228.
    https://github.com/Neutronis228/Thaumcraft-6-Source-Code-1.20.1
 
-3. **Thaumcraft-1.20.1** (референс) — людський приклад портування Thaumcraft 4.2
-   на сучасні версії, використаний для звірки.
-   Автор: DreamYao520.
+3. **Thaumcraft-1.20.1** — a human reference port of Thaumcraft 4.2 to modern versions, used for
+   cross-checking.
+   Author: DreamYao520.
    https://github.com/DreamYao520/Thaumcraft-1.20.1
 
-## Що належить цьому порту
+## What belongs to this port
 
-Усе, що зроблено, змінено або додано **понад** оригінал — тобто код порту,
-виправлення, нові механіки, адаптація під NeoForge 1.21.1 — належить
-учасникам «Thaumcraft 4 Reforged» і розповсюджується за ліцензією **MIT**
-(див. `LICENSE`).
+Everything created, changed or added **on top of** the original — i.e. the port code, fixes, new
+mechanics, the NeoForge 1.21.1 adaptation — belongs to the "Thaumcraft 4 Reforged" contributors and
+is distributed under the **MIT** license (see `LICENSE`).
 
-## Ліцензія
+## License summary
 
-- **Оригінальний Thaumcraft 4**: усі права Azanor. Не покривається MIT цього репо.
-- **OpenTC4**: MIT (за рішенням автора).
-- **Порт «Thaumcraft 4 Reforged»** (усе зроблене/модифіковане не Azanor): **MIT**.
+- **Original Thaumcraft 4**: all rights reserved by Azanor. Not covered by this repo's MIT.
+- **OpenTC4**: MIT (author's choice).
+- **"Thaumcraft 4 Reforged" port work** (everything made/modified that isn't Azanor's): **MIT**.
 
 ---
 
-# Credits (English)
+<details>
+<summary>Українською</summary>
 
-- Original **Thaumcraft 4** by **Azanor** — all rights to the original mod,
-  its code and assets belong to Azanor (2013–2015).
-- **OpenTC4** by IgnoreLicensesCN — decompiled TC4 reference (MIT).
-- **Thaumcraft 6 Source Code 1.20.1** by Neutronis228 — initial port base.
-- **Thaumcraft-1.20.1** by DreamYao520 — human reference port.
-- Port work and modifications ("Thaumcraft 4 Reforged") are licensed under **MIT**.
+**Усі права на оригінальний Thaumcraft 4 належать Azanor** (2013–2015). Код, текстури, моделі,
+звуки, локалізації, назви та концепції оригіналу — його власність. Цей порт не претендує на них
+і не переліцензовує їх.
+
+Джерела, на яких зроблено порт:
+- **OpenTC4** (IgnoreLicensesCN) — декомпільований код TC4, еталон механік і джерело ассетів;
+  автор обрав ліцензію **MIT**.
+- **Thaumcraft 6 Source Code 1.20.1** (Neutronis228) — початкова база коду порту.
+- **Thaumcraft-1.20.1** (DreamYao520) — людський референс порту TC4.2.
+
+Усе, що зроблено або змінено **понад** оригінал (код порту, виправлення, адаптація під
+NeoForge 1.21.1), належить учасникам «Thaumcraft 4 Reforged» і розповсюджується за ліцензією
+**MIT** (див. `LICENSE`).
+
+</details>

@@ -1,242 +1,367 @@
+# Port status — what's done, what isn't
+
+An honest list of the current state of the Thaumcraft 4 → 1.21.1 port.
+Last updated: 13 October 2026.
+
+---
+
+## Research & Thaumonomicon
+
+**Works:**
+- The full TC4 research tree: **201 entries** in 6 categories — Basics (19), Thaumaturgy (42),
+  Alchemy (35), Artifice (50), Golemancy (39), Eldritch (16). It used to be a TC6 set of 156
+  entries, of which 142 originals were missing and 97 were extra — all reworked.
+- **310 pages** of text with `tc.research_page.*` keys, `<BR>/<PAGE>/<IMG>` markup like the original.
+- Recipe pages resolve (158 links; previously none worked).
+- Connection lines are drawn like TC4 — curved with a wiggle, not straight.
+- The Thaumonomicon is obtained by **right-clicking a bookshelf with a wand** (the WandTrigger
+  mechanism existed but its `init()` was never called — now it is).
+- Category tabs are always open, Eldritch appears after ELDRITCHMINOR. `@N` in parents is stripped.
+- 24 discovery triggers, 104 recipes remapped from deleted TC6 gates to TC4 keys.
+- Research table (both tables + inkwell), theorycrafting, warp, knowledge sync with the server.
+
+**Not done:**
+- ~126 pages reference recipes that don't exist in the port yet: Focal Manipulator, infusion
+  enchantment pages, golem upgrades, runes, masks, pure metals (Pure Tin/Silver/Lead), etc.
+  Those pages currently show an empty recipe.
+- No 3D blueprint previews (TC4 could rotate multiblocks on the page).
+- No IMAGE / ASPECTS / SMELTING / INFUSION_ENCHANTMENT page types.
+- Research texts are English-only; the Ukrainian locale has no research pages (309 pages untranslated).
+
+---
+
+## Wands & caps
+
+**Works:**
+- Wand assembly on the arcane workbench: rod + two caps (vis is drained from the wand in the slot).
+- Sceptres: +50% capacity, −0.1 cost — like the original.
+- All TC4 rods and caps, including staffs (blaze, ice, quartz, bone, reed, primal).
+- In hand the wand is a real 3D model (orientation fixed: it used to lie horizontally because the
+  geometry was along Z while the transforms were vanilla "handheld").
+- In the inventory it's a compact diagonal stick, with no fake glint (the port had
+  `isFoil` returning `true` always; TC4 has no glint).
+- **Node charging**: hold right-click on a node and vis flows into the wand. This was completely
+  dead: `TileNode.onUsingWandTick` existed but the wand never called it, and the helpers were
+  stubs. Research gates (NODETAPPER1/2, NODEPRESERVE) and the "wood+iron can't drain" rule work.
+- **Foci** (fire, shock, excavation) fire. They were completely broken: focus nodes never received
+  a FocusPackage (no projectile spawned) and castFocusPackage only ran the first node, so TOUCH
+  foci (excavation) never ran at all.
+- **Focus particles**: projectiles have a trail, impacts burst with effect-specific particles
+  (10 presets 1:1 from TC4), cast sounds returned (onCast was never called — it was silent).
+- HUD: golden dial, **6 aspect capsules around the circle** (TC4: +90° rotation, offset 32),
+  gain/loss arrows, focus in the centre. Fixed: staffs showed half capacity, Shift numbers were
+  always "0".
+- Focus insert/remove (F / Shift+F), focus pouch.
+
+**Not done:**
+- No WAVE/CHARGE cast animation (a plain hand swing exists).
+- No wand recharging on a pedestal (WandItem isn't IRechargable).
+- No node vis sync to the client — the node renderer shows stale colours until you rejoin.
+- Preset focus recipes (creative only).
+- HUD cosmetics: no cost markers on capsules (hud 136,0), no +90° rotation for the bottom dial.
+
+---
+
+## Alchemy
+
+**Works:**
+- Crucible: heating, dissolving thrown and held items, 49 recipes, phial from jars/alembics.
+  Aspects no longer burn in a cold crucible (spill only when heat > 150).
+- **Spills**: an overfilled crucible places flux goo/gas around itself (3×3×3), levels 0..7, gas
+  rises and dissipates, goo spreads and taints the land. Previously it only "polluted aura" with
+  no blocks, and BlockFluxGas didn't exist at all.
+- **Alembics**: `BlockAlembic.newBlockEntity()` returned `null` — alembics had no tile entities and
+  distillation didn't work. `TileAlembic` is hooked up and is an IAspectSource now.
+- **Tubes**: `BlockTube.newBlockEntity()` also returned `null` — tubes were dead. Now they have
+  block entities and tickers. The chain furnace → alembic → tubes → jars works.
+- Jars with filters (labels), essentia reservoir, centrifuge.
+- Flux goo: fixed a crash when two level-7 blocks merged.
+
+**Not done:**
+- Furnace variants (aux/thaumium/void/vent) — no tile entities, decorative only.
+- No TC4 multiblocks (BlockMetalDevice/BlockAlchemyFurnace) — the port uses separate blocks.
+- Balance differences: bellows, complex-aspect decomposition into primals.
+- `ALCHEMICAL_BRASS_BLOCK` is a plain decorative block.
+
+---
+
+## Infusion (runic matrix)
+
+**Works:**
+- **Wand activation**: `TileInfusionMatrix.onCasterRightClick()` was dead code — the class didn't
+  implement IWandable, so right-clicking with a wand did nothing. Now it works.
+- Structure (4 pillars + centre pedestal), craft start, cycle, essentia drain from jars,
+  instability (24 events), completion, cancellation — checked against decompiled TC4 4.2.3.5.
+- **63 infusion recipes**.
+- **Infusion enchantments**: 22 recipes (protection…infinity) — items get enchanted through the
+  matrix, with player XP drained, like TC4.
+- **NBT outputs**: `goggles_revealing` is now real — fortress helm + slime ball + goggles → a helm
+  with `custom_data {goggles:true}`, keeping damage and masks.
+- Animations: correct textures (infuser_arcane/ancient/eldritch — it used to draw a quarter of a
+  block texture), a real additive halo (triangle fan), wobble.
+- Particles: item/block streams from pedestals to the matrix, rune particles, sparks at negative
+  stability, particles on asymmetric stabilisers.
+- Sounds: infuserstart, infuser, craftstart, craftfail, wand.
+- Fixed: crash (`UUID.fromString` on a player name), component-eating timing, item protection by
+  the inlay grid and stabiliser, matrix explosion when broken mid-craft.
+
+**Not done:**
+- Research pages for infusion enchantments (text/render in the Thaumonomicon) and a JEI category.
+- Custom TC4 enchantments `EnchantmentRepair` / `EnchantmentHaste` (InfEnchRepair/InfEnchHaste) —
+  missing, so those two recipes aren't added.
+- OBJ pillar rendering (pillar.obj + TileInfusionPillar) — pillars render simplified.
+- matrix_speed / matrix_cost blocks (INFUSIONBOOST).
+
+---
+
+## Aura & nodes
+
+**Works:**
+- Per-dimension aura (vis + flux), background threads.
+- Nodes: types (normal/unstable/dark/pure/tainted/hungry), modifiers (bright/faint/pale), random
+  aspects. Creative now places a **random** node (previously a fixed NORMAL with 50 of each primal).
+- Thaumometer sees nodes through walls (x-ray, depth-test off) in a view cone at distance 48.
+- Goggles of Revealing: reveal only from the helmet slot (previously any armour piece with
+  IGoggles, even a chestplate without goggles); without goggles nodes draw a faint outline.
+- **Node in a Jar**: the jar is fully functional — the node inside is alive and glowing,
+  right-clicking with a wand releases it back into the world, breaking it drops a `jar_node` item
+  with all node data (type, modifier, aspects); place it back and the node is there. It used to be
+  a stub and the node was simply lost.
+
+**Not done:**
+- In-world aspect icons above nodes/jars with `showIngamePopups` — never called.
+- Node vis sync to the client (see above).
+
+---
+
+## Armour
+
+**Works:**
+- Goggles of Revealing: node x-ray, 5% vis discount.
+- Traveller's Boots: speed + step assist (STEP_HEIGHT +0.4) + fall reduction (−0.25).
+- Void Robe: self-repair, dyeing, warp 2 (fixed from 3).
+- Cultist robe/boots: discount 1, warp 1 (added to boots).
+- Goggle repair with gold, goggle recipe with gold (was thaumium/brass).
+- **Hover Harness**: chestplate fuelled by **Potentia** (ENERGY aspect, not Aer), creative-style
+  flight, 1 Potentia per 360 ticks (288 with the girdle), toggle key **H**, sounds, speed ×0.7.
+  Refuels from jars and phials. Harness and girdle recipes as in TC4.
+- **Fortress**: ISpecialArmor formulas work — magic /35, fire and explosions /20, rest /25, a full
+  set + mask gives effective fire immunity (~110%), durability wears by absorbed damage.
+  Set multiplier `0.875 + 0.125/piece + 0.05/mask` — as TC4.
+- **Masks**: Angry Ghost withers attackers, Sipping Fiend heals HP on hit, Grinning Devil softens
+  warp events. Infusion recipes for the helm-goggles and all three masks added.
+
+**Not done:**
+- Hover Harness GUI with a jar slot (in the port a jar is a block, not an NBT item).
+- 3D armour models (fortress/cultist/praetor) — placeholders, need custom 128×64 gear models.
+- Cultist leader: the port invented warp, TC4 has none (noted, untouched).
+
+---
+
+## Golemancy
+
+**Works:**
+- 15 golem cores (TC4 variants), 8 materials, 13 recipes.
+- Basic spawn/behaviour.
+
+**Not done:**
+- Golem upgrades (all `golem_upgrade_*` were removed as TC6 content — a TC4 version is needed).
+- Seals (48 files) — assets remain, items removed, nothing wired up.
+- Full AI/behaviour parity.
+
+---
+
+## Misc
+
+**Works:**
+- Aspect orbs: mobs killed by a player drop coloured orbs (50% per primal, 1..N vis) that fly to a
+  hotbar wand and charge it. Full EntityAspectOrb rewrite for TC4.
+- Labels: right-click a jar/alembic/filter tube to set an aspect filter, shift-right-click to
+  remove and drop a clean label. Previously no block implemented ILabelable — the label was dead.
+- Deconstruction table: breaks items into aspect points (1:1 TC4 mechanics, GUI, render, arcane
+  recipe).
+- Devices: arcane workbench, research table, lamps (on/off), bellows, brain box, charger (OBJ),
+  ear, pedestals, mirrors (2 layers), crucible-cauldron, 3D chest.
+- Taint, flux goo/gas, taintacles, wisp essence with aspects.
+- Data migrated to the 1.21.1 format: `c:` tags instead of `forge:`, `loot_table/`, `structure/`,
+  112 replacements in 61 files.
+
+**Not done:**
+- Brain-in-a-jar XP interaction (TODO in BlockJar).
+- Arcane Bore — block missing, recipe removed, research has a missing icon.
+- Flux rifts — TC6 content, not removed (dead weight).
+- 40 blockstates without textures (disabled content).
+- focus_blank / focus_advanced — unclear if they're TC4 at all.
+
+---
+
+## Rendering & models
+
+**Works:**
+- 53 models got the correct `render_type` (tubes, pedestals, lamps, urns, bellows).
+- Leaves — `cutout_mipped` (transparent), grass — `cutout_mipped`, 3 items with biome tint.
+- Jars translucent, crystals as JSON clusters size 0..3, candles as BER, stabiliser as OBJ BER.
+- Armour: 22 layer textures, materials, tint.
+- Thaumometer: TC4 model in hand, hexagon in the inventory.
+- Wands: 162 combo models, rod/cap as 2D.
+
+**Not done:**
+- Thaumonomicon blur on software rendering (llvmpipe, no GPU) — left as is; it's fine on a real GPU.
+- Some BERs (e.g. vis relay — cube_all instead of OBJ).
+- 3D armour models (see above).
+
+---
+
+## Localisation
+
+**Works:**
+- `uk_ua` (primary) + `en_us`, 49+ keys from recent fixes, staff rods, phials, taint,
+  `tc.addaspectdiscovery` / `tc.addaspectpool` messages, `got.thaumonomicon`.
+- The interface is fully Ukrainian (menus, creative, tooltips).
+
+**Not done:**
+- Research texts are English-only (309 pages).
+- Some new items/blocks may only have en_us.
+
+---
+
+## What's next
+
+Everything that was in progress is finished:
+1. Hover Harness + Fortress — done (flight, armour formulas, masks, recipes).
+2. Node in a Jar — done.
+3. Focus particles — done (trail, impact, sounds).
+4. Infusion enchantments — done (22 recipes + NBT outputs).
+
+Next candidates:
+- Research pages for infusion enchantments and a JEI category.
+- Custom TC4 Repair/Haste enchantments (for InfEnchRepair/InfEnchHaste).
+- 3D armour models for fortress/cultist/praetor.
+- Golem upgrades and seals.
+- The remaining ~126 recipes for research pages.
+
+---
+
+<details>
+<summary>Українською</summary>
+
 # Стан порту — що зроблено, що ні
 
 Це чесний список поточного стану порту Thaumcraft 4 на 1.21.1.
 Оновлено: 13 жовтня 2026.
 
----
-
 ## Дослідження і Таумономікон
 
 **Працює:**
 - Уся гілка досліджень TC4: **201 дослідження** у 6 категоріях — Основи (19), Тауматургія (42),
-  Алхімія (35), Мистецтво (50), Големантія (39), Ельдрітч (16). Раніше стояв TC6-набір зі 156 записів,
-  з яких 142 оригінальних не було взагалі, а 97 були зайві — усе перебрано.
-- **310 сторінок** тексту з ключами `tc.research_page.*`, розмітка `<BR>/<PAGE>/<IMG>` як в оригіналі.
-- Рецепти на сторінках досліджень відкриваються (158 посилань резолвляться; раніше не працювало жодне).
-- Лінії між вузлами малюються як у TC4 — з вигином і «хитанням» (wiggle), а не прямими.
-- Таумономікон видається, коли тицяєш **жезлом по книжковій полиці** (механізм WandTrigger був написаний,
-  але його init() ніколи не викликався — тепер викликається).
-- Вкладки категорій відкриті завжди, Ельдрітч — після ELDRITCHMINOR. `@N` у батьках зрізається правильно.
-- 24 discovery-тригери, 104 рецепти перемарковані з видалених TC6-гейтів на TC4-ключі.
-- Стіл досліджень (обидва столи + чорнильниця), теоркрафт, warp, синхронізація знань із сервером.
+  Алхімія (35), Мистецтво (50), Големантія (39), Ельдрітч (16). Раніше стояв TC6-набір зі 156
+  записів, з яких 142 оригінальних не було взагалі, а 97 були зайві — усе перебрано.
+- **310 сторінок** тексту, розмітка `<BR>/<PAGE>/<IMG>` як в оригіналі.
+- Рецепти на сторінках відкриваються (158 посилань; раніше не працювало жодне).
+- Лінії між вузлами малюються як у TC4 — з вигином і «хитанням», а не прямими.
+- Таумономікон видається ПКМ жезлом по книжковій полиці.
+- Вкладки категорій відкриті завжди, Ельдрітч — після ELDRITCHMINOR.
+- 24 discovery-тригери, 104 рецепти перемарковані з TC6-гейтів на TC4-ключі.
+- Стіл досліджень, теоркрафт, warp, синхронізація знань.
 
 **Не зроблено:**
-- ~126 сторінок посилаються на рецепти, яких у порті ще немає: Focal Manipulator (стіл апгрейду фокусів),
-  infusion-зачарування, голем-апгрейди, рунічні рецепти, маски, чисті метали (Pure Tin/Silver/Lead) тощо.
-  Поки що такі сторінки показують порожній рецепт.
-- Немає 3D-прев'ю блюпринтів (у TC4 мультиблоки на сторінках можна було крутити).
-- Немає типів сторінок IMAGE / ASPECTS / SMELTING / INFUSION_ENCHANTMENT.
-- Тексти досліджень є лише англійською (`en_us`). В українській локалізації 0 сторінок досліджень —
-  перекладати 309 сторінок ще не бралися.
-
----
+- ~126 сторінок посилаються на рецепти, яких ще немає (Focal Manipulator, infusion-зачарування,
+  голем-апгрейди, рунічні, маски, чисті метали).
+- Немає 3D-прев'ю блюпринтів і типів сторінок IMAGE/ASPECTS/SMELTING/INFUSION_ENCHANTMENT.
+- Тексти досліджень лише англійською (309 сторінок).
 
 ## Жезли і набалдашники
 
 **Працює:**
-- Збірка жезла на аркан-верстаку: стрижень + два наконечники (слот із жезлом, з нього списується vis).
-- Скіпетри: +50% ємності, −0.1 до витрат — як в оригіналі.
-- Усі стрижні й наконечники TC4, включно з посохами (blaze, ice, quartz, bone, reed, primal).
-- У руці жезл — справжня 3D-модель (виправлено орієнтацію: лежав горизонтально, бо геометрія була
-  вздовж Z, а трансформи — ванільні «handheld»).
-- В інвентарі — компактна діагональна паличка, без фальшивого блиску (у порті `isFoil` повертав `true`
-  завжди, у TC4 glint немає).
-- **Заряджання від вузлів**: затискаєш ПКМ на вузлі — vis тече в жезл. Це було повністю мертве:
-  `TileNode.onUsingWandTick` існував, але жезл його ніколи не викликав, а хелпери були заглушками.
-  Тепер працюють і гейти досліджень (NODETAPPER1/2, NODEPRESERVE), і правило «дерево+залізо не тягне».
-- **Фокуси** (вогонь, блискавка, копання) — стріляють. Були повністю неробочі: вузли фокуса не отримували
-  FocusPackage (снаряд не спавнився), а castFocusPackage виконував лише перший вузол, тому TOUCH-фокуси
-  (копання) не запускались узагалі.
-- **Частинки фокусів**: снаряд має трейл, при влучанні — спалах/частинки за ефектом (10 пресетів 1:1 з TC4),
-  звуки касту повернулись (onCast не викликався взагалі — тому було тихо).
-- HUD: золоте коло, **6 капсул аспектів по колу** (як у TC4 — з обертанням +90° і відступом 32),
-  стрілки приросту/витрати, фокус у центрі. Виправлено: посохи показували половину ємності,
-  цифри при Shift завжди були «0».
+- Збірка на аркан-верстаку (стрижень + 2 наконечники), скіпетри (+50%, −0.1).
+- Усі стрижні/наконечники/посохи TC4. 3D-жезл у руці (орієнтацію виправлено), 2D-іконки.
+- В інвентарі — компактна діагональна паличка, без фальшивого блиску (isFoil був `true` завжди).
+- Заряджання від вузлів (було повністю мертве), гейти NODETAPPER1/2, NODEPRESERVE.
+- Фокуси (вогонь/блискавка/копання) стріляють, частинки й звуки касту працюють.
+- HUD: коло з 6 капсулами аспектів, стрілки, фокус у центрі.
 - Вставляння/знімання фокусів (F / Shift+F), focus pouch.
 
 **Не зроблено:**
-- Немає анімації WAVE/CHARGE у жезла при касті (звичайний змах руки є).
-- Немає заряджання жезла на п'єдесталі (WandItem не IRechargable).
-- Немає синхронізації vis вузла на клієнт — рендерер вузла показує застарілі кольори, поки не перезайдеш.
-- Рецепти пресет-фокусів (лише креатив).
-- Косметика HUD: немає позначок витрат на капсулах (hud 136,0), немає повороту на +90° для діала знизу.
-
----
+- Анімація WAVE/CHARGE, заряджання на п'єдесталі, синк vis вузлів, рецепти пресет-фокусів,
+  косметика HUD (позначки витрат).
 
 ## Алхімія
 
 **Працює:**
-- Тигель: нагрів, розчинення кинутих предметів і з руки, 49 рецептів, фляга з банок/алембіків.
-  Аспекти більше не спалюються в холодному тиглі (сплеск лише при нагріві > 150).
-- **Протікання**: переповнений тигель ставить flux goo/gas навколо себе (3×3×3), рівні 0..7,
-  газ піднімається й розсіюється, goo розтікається й тейнить землю. Раніше було лише «забруднення аури»
-  без блоків, а BlockFluxGas не існував взагалі.
-- **Алембіки**: `BlockAlembic.newBlockEntity()` повертав `null` — алембіки не мали тайлів, дистиляція
-  не працювала. Підключено `TileAlembic`, він став IAspectSource.
-- **Труби**: `BlockTube.newBlockEntity()` теж повертав `null` — труби були мертві. Тепер мають BE й тикери.
-  Ланцюг печі → алембік → труби → банки працює.
-- Банки з фільтрами (ярлики), резервуар есенції, центрифуга.
-- Flux goo: виправлено краш при злитті двох рівнів 7.
+- Тигель (нагрів, розчинення, 49 рецептів), протікання flux goo/gas (раніше лише «аура»).
+- Алембіки й труби (обидва повертали `null` BE — були мертві), ланцюг печі → алембік → труби → банки.
+- Банки з фільтрами, резервуар, центрифуга. Виправлено краш flux goo при злитті рівнів 7.
 
 **Не зроблено:**
-- Варіанти печі (aux/thaumium/void/vent) — без тайлів, декоративні.
-- TC4-мультиблока (BlockMetalDevice/BlockAlchemyFurnace) немає — порт використовує окремі блоки.
-- Розбіжності в балансі: белоуси, розклад складних аспектів на примали.
-- `ALCHEMICAL_BRASS_BLOCK` — просто декоративний блок.
+- Варіанти печі (aux/thaumium/void/vent) без тайлів, TC4-мультиблоків немає, розбіжності балансу.
 
----
-
-## Інфузія (рунічна матриця)
+## Інфузія
 
 **Працює:**
-- **Активація жезлом**: `TileInfusionMatrix.onCasterRightClick()` був мертвим кодом — клас не реалізовував
-  IWandable, тому ПКМ жезлом нічого не робив. Тепер працює.
-- Структура (4 стовпи + центральний п'єдестал), старт крафту, цикл, викачка есенції з банок,
-  нестабільність (24 події), завершення, скасування — звірено з декомпільованим TC4 4.2.3.5.
-- **63 рецепти інфузії**.
-- **Infusion-зачарування** (InfusionEnchantmentRecipe): 22 рецепти (protection…infinity) — предмет
-  зачаровується через матрицю, з дрейн рівнів досвіду гравця, як у TC4.
-- **NBT-виводи**: `goggles_revealing` (окуляри одкровення з інфузії) тепер справжній — шолом
-  fortress + slime ball + окуляри → шолом з `custom_data {goggles:true}`, зберігає пошкодження й маску.
-- Анімації: правильні текстури (infuser_arcane/ancient/eldritch — раніше малювалась четвертина
-  block-текстури), справжній аддитивний «halo» (triangle fan), wobble.
-- Частинки: потоки предметів/блоків від п'єдесталів до матриці, рунні частинки, іскри при
-  негативній стабільності, частинки на асиметричних стабілізаторах.
-- Звуки: infuserstart, infuser, craftstart, craftfail, wand.
-- Виправлено краш (`UUID.fromString` на імені гравця), таймінг з'їдання компонентів, захист
-  предметів сіткою інлеїв і стабілізатором, вибух матриці при зламуванні під час крафту.
+- Активація жезлом (була мертвим кодом), структура, цикл, нестабільність, 63 рецепти.
+- Infusion-зачарування: 22 рецепти, дрейн досвіду гравця.
+- NBT-виводи: goggles_revealing (шолом fortress + slime + окуляри).
+- Анімації (правильні текстури infuser, halo, wobble), частинки потоків, звуки.
+- Виправлено краш UUID, таймінг, захист предметів, вибух матриці.
 
 **Не зроблено:**
-- Сторінки досліджень для infusion-зачарувань (текст/рендер у Таумономіконі) і категорія в JEI.
-- Кастомні зачарування TC4 `EnchantmentRepair` / `EnchantmentHaste` (InfEnchRepair/InfEnchHaste) —
-  їх у порті немає, тож ці два рецепти не додані.
-- OBJ-рендер стовпа (pillar.obj + TileInfusionPillar) — стовпи рендеряться спрощено.
-- Блоки matrix_speed / matrix_cost (INFUSIONBOOST).
-
----
+- Сторінки досліджень для infusion-зачарувань і JEI-категорія.
+- Кастомні зачарування Repair/Haste (InfEnchRepair/InfEnchHaste).
+- OBJ-рендер стовпа, блоки matrix_speed/cost.
 
 ## Аура і вузли
 
 **Працює:**
-- Аура окремо по вимірах (vis + flux), фонові потоки.
-- Вузли: типи (normal/unstable/dark/pure/tainted/hungry), модифікатори (bright/faint/pale),
-  випадкові аспекти. З креативу тепер ставиться **випадковий** вузол (раніше — фіксований NORMAL з 50 кожного праймала).
-- Таумометр бачить вузли крізь стіни (x-ray, depth-test off) у конусі зору на відстані 48.
-- Окуляри одкровення: reveal лише зі слота шолома (раніше — від будь-якого елемента броні з IGoggles,
-  навіть нагрудника без окулярів), без окулярів вузли малюються слабким контуром.
-- **Node in a Jar**: банка з вузлом повноцінна — вузол усередині живий і світиться, ПКМ жезлом
-  випускає його назад у світ, при руйнуванні випадає `jar_node` з усіма даними (тип, модифікатор, аспекти),
-  поставив назад — вузол на місці. Раніше це була заглушка, і вузол просто губився.
+- Аура по вимірах, вузли з випадковими типами/модифікаторами/аспектами (креатив теж).
+- Таумометр бачить вузли крізь стіни, конус зору, дистанція 48.
+- Окуляри: reveal лише зі шолома; без окулярів — слабкий контур.
+- Node in a Jar: банка з вузлом жива, ПКМ жезлом випускає вузол, дроп `jar_node` з даними.
 
 **Не зроблено:**
-- Світові іконки аспектів над вузлами/банками при `showIngamePopups` — не викликається ніде.
-- Синхронізація vis вузла на клієнт (див. вище).
-
----
+- Світові іконки аспектів (`showIngamePopups`), синк vis вузлів на клієнт.
 
 ## Броня
 
 **Працює:**
-- Окуляри одкровення: x-ray вузлів, дисконт vis 5%.
-- Чоботи мандрівника: швидкість + крок-асист (STEP_HEIGHT +0.4) + зменшення падіння (−0.25).
-- Void Robe: самополагодження, фарбування, warp 2 (виправлено з 3).
-- Cultist robe/чоботи: дисконт 1, warp 1 (чоботам додано).
-- Ремонт окулярів золотом, рецепт окулярів з золотом (було таумій/латунь).
-- **Hover Harness**: нагрудник із банкою **Potentia** (аспект ENERGY, не Aer), політ creative-стилю,
-  1 Potentia за 360 тіків (288 з поясом), перемикач — клавіша **H**, звуки, швидкість ×0.7.
-  Заправляється з банок і фіалів. Рецепти харнеса й пояса — як у TC4.
-- **Fortress**: формули ISpecialArmor працюють — магія /35, вогонь і вибухи /20, решта /25,
-  повний сет + маска дає фактичний імунітет до вогню (~110%), знос рахується за поглинуту шкоду.
-  Сет-множник `0.875 + 0.125/елемент + 0.05/маска` — як у TC4.
-- **Маски**: Angry Ghost жалить атакуючого Wither'ом, Sipping Fiend підживлює HP при ударі,
-  Grinning Devil пом'якшує warp-події. Додано інфузійні рецепти шолома-окулярів і всіх трьох масок.
+- Окуляри одкровення (x-ray, дисконт 5%), чоботи мандрівника (крок-асист, падіння).
+- Void Robe (warp 2), Cultist (warp 1), ремонт окулярів золотом.
+- Hover Harness: політ на Potentia (клавіша H), рецепти, заправка з банок/фіалів.
+- Fortress: формули ISpecialArmor, сет-множник, імунітет до вогню з маскою.
+- Маски: Angry Ghost (Wither), Sipping Fiend (+HP), Grinning Devil (warp). Рецепти додано.
 
 **Не зроблено:**
-- ГУІ Hover Harness зі слотом під банку (у порті банка — блок, а не предмет з NBT).
-- 3D-моделі броні (fortress/cultist/praetor) — поки заглушки, потрібні кастомні gear-моделі 128×64.
-- Cultist leader: порт вигадав warp, у TC4 його немає (занотовано, не чіпали).
-
----
+- ГУІ Hover Harness зі слотом під банку, 3D-моделі броні, вигаданий warp у cultist leader.
 
 ## Големи
 
-**Працює:**
-- 15 ядер големів (TC4-варіанти), 8 матеріалів, 13 рецептів.
-- Базовий спавн/поведінка.
+**Працює:** 15 ядер, 8 матеріалів, 13 рецептів, базовий спавн.
 
-**Не зроблено:**
-- Голем-апгрейди (усі `golem_upgrade_*` прибрані як TC6-контент — потрібно зробити TC4-версію).
-- Печатки (seal-система, 48 файлів) — ассети лишились, предмети прибрані, нічого не підключено.
-- Повний паритет AI/поведінки.
-
----
+**Не зроблено:** апгрейди, печатки (seal-система), повний паритет AI.
 
 ## Різне
 
-**Працює:**
-- Аспект-орби: моби, вбиті гравцем, дропають кольорові орби (50% на примал, 1..N vis), які летять
-  до жезла в хотбарі й заряджають його. Повний перепис EntityAspectOrb під TC4.
-- Ярлики: ПКМ по банці/алембіку/фільтруючій трубі ставить фільтр аспекту, Shift+ПКМ — знімає й дропає
-  чистий ярлик. Раніше жоден блок не реалізовував ILabelable — ярлик був мертвий.
-- Стіл розщеплення: розкладає предмети на аспекти в пул гравця (механіка 1:1 з TC4, GUI, рендер,
-  аркан-рецепт).
-- Пристрої: аркан-верстак, стіл досліджень, лампи (on/off), міхи, brain_box, заряджач (OBJ),
-  вухо, п'єдестали, дзеркала (2 шари), тигель-казан, 3D-скриня.
-- Тейнт, flux goo/gas, taintacles, wisp essence з аспектами.
-- Дані мігровано на формат 1.21.1: `c:`-теги замість `forge:`, `loot_table/`, `structure/`,
-  112 замін у 61 файлі.
+**Працює:** аспект-орби з мобів, ярлики (банки/труби/алембіки), стіл розщеплення, пристрої,
+тейнг, flux goo/gas, міграція даних на 1.21.1 (c:-теги, loot_table, structure).
 
-**Не зроблено:**
-- Мозок у банці (brain jar) — XP-взаємодія (TODO в BlockJar).
-- Аркан-бур (Arcane Bore) — блок відсутній, рецепт прибрано, дослідження з missing-іконкою.
-- Flux rifts — TC6-контент, не видалені (лежать мертвим вантажем).
-- 40 blockstates-заготовок без текстур (вимкнений контент).
-- focus_blank / focus_advanced — під питанням, чи вони взагалі TC4.
-
----
+**Не зроблено:** мозок у банці (XP), аркан-бур, flux rifts (TC6), 40 blockstates без текстур.
 
 ## Рендеринг і моделі
 
-**Працює:**
-- 53 моделі отримали правильний `render_type` (труби, п'єдестали, лампи, урни, міхи).
-- Листя — `cutout_mipped` (прозоре), трава — `cutout_mipped`, 3 предмети з біом-tint.
-- Банки translucent, кристали — JSON-кластери розмірів 0..3, свічки — BER, стабілізатор — OBJ-BER.
-- Броня: 22 шари-текстури, матеріали, tint.
-- Таумометр: TC4-модель у руці, гексагон в інвентарі.
-- Жезли: 162 combo-моделі, rod/cap — 2D.
+**Працює:** 53 моделі з правильним render_type, листя/трава cutout_mipped, банки translucent,
+кристали-кластери, свічки BER, стабілізатор OBJ-BER, броня 22 шари, таумометр, жезли 162 комбо.
 
-**Не зроблено:**
-- Розмиття Таумономікона на програмному рендерингу (llvmpipe без GPU) — лишили як є,
-  на реальній відеокарті має бути чітко.
-- Деякі BER (наприклад, vis_relay — cube_all замість OBJ).
-- 3D-моделі броні (див. вище).
-
----
+**Не зроблено:** розмиття Таумономікона на llvmpipe, деякі BER (vis relay), 3D-моделі броні.
 
 ## Локалізація
 
-**Працює:**
-- `uk_ua` (основна) + `en_us`, 49+ ключів останніми правками, staff-роди, фіали, тейнт,
-  повідомлення `tc.addaspectdiscovery` / `tc.addaspectpool`, `got.thaumonomicon`.
-- Інтерфейс повністю українською (меню, креатив, підказки).
+**Працює:** uk_ua (основна) + en_us, інтерфейс повністю українською.
 
-**Не зроблено:**
-- Тексти досліджень лише англійською (309 сторінок).
-- Частина нових предметів/блоків може мати лише en_us.
+**Не зроблено:** тексти досліджень лише англійською (309 сторінок).
 
----
+## Що далі
 
-## Що зараз у роботі
+Усе, що було в роботі, завершено: Hover Harness + Fortress, вузол у банці, частинки фокусів,
+infusion-зачарування. Наступні кандидати: сторінки досліджень для infusion-зачарувань і JEI,
+кастомні зачарування Repair/Haste, 3D-моделі броні, голем-апгрейди й печатки, решта ~126 рецептів.
 
-Усе, що було в роботі, — завершено:
-1. Hover Harness + Fortress — зроблено (політ, формули броні, маски, рецепти).
-2. Вузол у банці — зроблено.
-3. Частинки фокусів — зроблено (трейл, влучання, звуки).
-4. Infusion-зачарування — зроблено (22 рецепти + NBT-виводи).
-
-Наступні кандидати:
-- Сторінки досліджень для infusion-зачарувань і категорія JEI.
-- Кастомні зачарування TC4 Repair/Haste (для InfEnchRepair/InfEnchHaste).
-- 3D-моделі броні fortress/cultist/praetor.
-- Голем-апгрейди й печатки.
-- Решта ~126 рецептів для сторінок досліджень.
+</details>
